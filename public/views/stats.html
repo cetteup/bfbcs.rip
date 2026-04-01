@@ -1921,6 +1921,1143 @@
                         </div>
                     </div>
                     <div class="clear"></div>
+                    <h2>Vehicle stats</h2>
+                    <div class="stcol_1">
+                        <table class="stable sortable">
+                            <thead>
+                            <tr>
+                                <th class="left">Name</th>
+                                <th>Class</th>
+                                <th class="{sorter:'dps'}">Time</th>
+                                <th class="{sorter:'dps'}">Kills</th>
+                                <th class="{sorter:'dps'}">Roadkills</th>
+                                <th class="{sorter:'dps'}">Dist. driven</th>
+                                <th>Avg speed</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr onmouseover="bfbcs.showDetail('vehicle','veh_0','veha_0')" id="veha_0">
+                                <td class="left">HMMWV 4WD</td>
+                                <td class="right stars none">light</td>
+                                <td>{{formatTime .Values.c_hmv__si_g}}</td>
+                                <td>{{formatNumber .Values.c__hmv_ki_g}}</td>
+                                <td>{{formatNumber .Values.c_rok_hmv_kwi_g}}</td>
+                                <td>{{formatNumber .Values.c_hmv__ddw_g}}</td>
+                                <td>{{if gt .Values.c_hmv__si_g 0.0}}{{printf "%.2f d/s" (div .Values.c_hmv__ddw_g .Values.c_hmv__si_g)}}{{else}}-{{end}}</td>
+                            </tr>
+                            <tr onmouseover="bfbcs.showDetail('vehicle','veh_1','veha_1')" id="veha_1">
+                                <td class="left">VODNIK 4WD</td>
+                                <td class="right stars none">light</td>
+                                <td>{{formatTime .Values.c_vodn__si_g}}</td>
+                                <td>{{formatNumber .Values.c__vodn_ki_g}}</td>
+                                <td>{{formatNumber .Values.c_rok_vodn_kwi_g}}</td>
+                                <td>{{formatNumber .Values.c_vodn__ddw_g}}</td>
+                                <td>{{if gt .Values.c_vodn__si_g 0.0}}{{printf "%.2f d/s" (div .Values.c_vodn__ddw_g .Values.c_vodn__si_g)}}{{else}}-{{end}}</td>
+                            </tr>
+                            <tr onmouseover="bfbcs.showDetail('vehicle','veh_2','veha_2')" id="veha_2">
+                                <td class="left">COBRA 4WD</td>
+                                <td class="right stars none">light</td>
+                                <td>{{formatTime .Values.c_cobr__si_g}}</td>
+                                <td>{{formatNumber .Values.c__cobr_ki_g}}</td>
+                                <td>{{formatNumber .Values.c_rok_cobr_kwi_g}}</td>
+                                <td>{{formatNumber .Values.c_cobr__ddw_g}}</td>
+                                <td>{{if gt .Values.c_cobr__si_g 0.0}}{{printf "%.2f d/s" (div .Values.c_cobr__ddw_g .Values.c_cobr__si_g)}}{{else}}-{{end}}</td>
+                            </tr>
+                            <tr onmouseover="bfbcs.showDetail('vehicle','veh_3','veha_3')" id="veha_3">
+                                <td class="left">Quad Bike</td>
+                                <td class="right stars none">light</td>
+                                <td>{{formatTime .Values.c_quad__si_g}}</td>
+                                <td>{{formatNumber .Values.c__quad_ki_g}}</td>
+                                <td>{{formatNumber .Values.c_rok_quad_kwi_g}}</td>
+                                <td>{{formatNumber .Values.c_quad__ddw_g}}</td>
+                                <td>{{if gt .Values.c_quad__si_g 0.0}}{{printf "%.2f d/s" (div .Values.c_quad__ddw_g .Values.c_quad__si_g)}}{{else}}-{{end}}</td>
+                            </tr>
+                            <tr onmouseover="bfbcs.showDetail('vehicle','veh_4','veha_4')" id="veha_4">
+                                <td class="left">Cav</td>
+                                <td class="right stars none">light</td>
+                                <td>{{formatTime .Values.c_cav__si_g}}</td>
+                                <td>{{formatNumber .Values.c__cav_ki_g}}</td>
+                                <td>{{formatNumber .Values.c_rok_cav_kwi_g}}</td>
+                                <td>{{formatNumber .Values.c_cav__ddw_g}}</td>
+                                <td>{{if gt .Values.c_cav__si_g 0.0}}{{printf "%.2f d/s" (div .Values.c_cav__ddw_g .Values.c_cav__si_g)}}{{else}}-{{end}}</td>
+                            </tr>
+                            <tr onmouseover="bfbcs.showDetail('vehicle','veh_5','veha_5')" id="veha_5">
+                                <td class="left">Truck</td>
+                                <td class="right stars none">light</td>
+                                <td>{{formatTime .Values.c_tru__si_g}}</td>
+                                <td>{{formatNumber .Values.c__tru_ki_g}}</td>
+                                <td>{{formatNumber .Values.c_rok_tru_kwi_g}}</td>
+                                <td>{{formatNumber .Values.c_tru__ddw_g}}</td>
+                                <td>{{if gt .Values.c_tru__si_g 0.0}}{{printf "%.2f d/s" (div .Values.c_tru__ddw_g .Values.c_tru__si_g)}}{{else}}-{{end}}</td>
+                            </tr>
+                            <tr onmouseover="bfbcs.showDetail('vehicle','veh_9','veha_9')" id="veha_9">
+                                <td class="left">M1A2 Abrams</td>
+                                <td class="right stars gold3">heavy</td>
+                                <td>{{formatTime .Values.c_m1a2__si_g}}</td>
+                                <td>{{formatNumber .Values.c__m1a2_ki_g}}</td>
+                                <td>{{formatNumber .Values.c_rok_m1a2_kwi_g}}</td>
+                                <td>{{formatNumber .Values.c_m1a2__ddw_g}}</td>
+                                <td>{{if gt .Values.c_m1a2__si_g 0.0}}{{printf "%.2f d/s" (div .Values.c_m1a2__ddw_g .Values.c_m1a2__si_g)}}{{else}}-{{end}}</td>
+                            </tr>
+                            <tr onmouseover="bfbcs.showDetail('vehicle','veh_10','veha_10')" id="veha_10">
+                                <td class="left">T-90 MBT</td>
+                                <td class="right stars gold3">heavy</td>
+                                <td>{{formatTime .Values.c_t90__si_g}}</td>
+                                <td>{{formatNumber .Values.c__t90_ki_g}}</td>
+                                <td>{{formatNumber .Values.c_rok_t90_kwi_g}}</td>
+                                <td>{{formatNumber .Values.c_t90__ddw_g}}</td>
+                                <td>{{if gt .Values.c_t90__si_g 0.0}}{{printf "%.2f d/s" (div .Values.c_t90__ddw_g .Values.c_t90__si_g)}}{{else}}-{{end}}</td>
+                            </tr>
+                            <tr onmouseover="bfbcs.showDetail('vehicle','veh_11','veha_11')" id="veha_11">
+                                <td class="left">M3A3 Bradley</td>
+                                <td class="right stars gold3">heavy</td>
+                                <td>{{formatTime .Values.c_m3a3__si_g}}</td>
+                                <td>{{formatNumber .Values.c__m3a3_ki_g}}</td>
+                                <td>{{formatNumber .Values.c_rok_m3a3_kwi_g}}</td>
+                                <td>{{formatNumber .Values.c_m3a3__ddw_g}}</td>
+                                <td>{{if gt .Values.c_m3a3__si_g 0.0}}{{printf "%.2f d/s" (div .Values.c_m3a3__ddw_g .Values.c_m3a3__si_g)}}{{else}}-{{end}}</td>
+                            </tr>
+                            <tr onmouseover="bfbcs.showDetail('vehicle','veh_12','veha_12')" id="veha_12">
+                                <td class="left">BMD-3 Bakhcha</td>
+                                <td class="right stars gold3">heavy</td>
+                                <td>{{formatTime .Values.c_bmd3__si_g}}</td>
+                                <td>{{formatNumber .Values.c__bmd3_ki_g}}</td>
+                                <td>{{formatNumber .Values.c_rok_bmd3_kwi_g}}</td>
+                                <td>{{formatNumber .Values.c_bmd3__ddw_g}}</td>
+                                <td>{{if gt .Values.c_bmd3__si_g 0.0}}{{printf "%.2f d/s" (div .Values.c_bmd3__ddw_g .Values.c_bmd3__si_g)}}{{else}}-{{end}}</td>
+                            </tr>
+                            <tr onmouseover="bfbcs.showDetail('vehicle','veh_13','veha_13')" id="veha_13">
+                                <td class="left">BMD-3 Bakhcha AA</td>
+                                <td class="right stars gold3">heavy</td>
+                                <td>{{formatTime .Values.c_bmda__si_g}}</td>
+                                <td>{{formatNumber .Values.c__bmda_ki_g}}</td>
+                                <td>{{formatNumber .Values.c_rok_bmda_kwi_g}}</td>
+                                <td>{{formatNumber .Values.c_bmda__ddw_g}}</td>
+                                <td>{{if gt .Values.c_bmda__si_g 0.0}}{{printf "%.2f d/s" (div .Values.c_bmda__ddw_g .Values.c_bmda__si_g)}}{{else}}-{{end}}</td>
+                            </tr>
+                            <tr onmouseover="bfbcs.showDetail('vehicle','veh_17','veha_17')" id="veha_17">
+                                <td class="left">Personal Water Craft</td>
+                                <td class="right stars none">water</td>
+                                <td>{{formatTime .Values.c_jets__si_g}}</td>
+                                <td>{{formatNumber .Values.c__jets_ki_g}}</td>
+                                <td>{{formatNumber .Values.c_rok_jets_kwi_g}}</td>
+                                <td>{{formatNumber .Values.c_jets__ddw_g}}</td>
+                                <td>{{if gt .Values.c_jets__si_g 0.0}}{{printf "%.2f d/s" (div .Values.c_jets__ddw_g .Values.c_jets__si_g)}}{{else}}-{{end}}</td>
+                            </tr>
+                            <tr onmouseover="bfbcs.showDetail('vehicle','veh_18','veha_18')" id="veha_18">
+                                <td class="left">Patrol Boat</td>
+                                <td class="right stars none">water</td>
+                                <td>{{formatTime .Values.c_PBLB__si_g}}</td>
+                                <td>{{formatNumber .Values.c__PBLB_ki_g}}</td>
+                                <td>{{formatNumber .Values.c_rok_PBLB_kwi_g}}</td>
+                                <td>{{formatNumber .Values.c_PBLB__ddw_g}}</td>
+                                <td>{{if gt .Values.c_PBLB__si_g 0.0}}{{printf "%.2f d/s" (div .Values.c_PBLB__ddw_g .Values.c_PBLB__si_g)}}{{else}}-{{end}}</td>
+                            </tr>
+                            <tr onmouseover="bfbcs.showDetail('vehicle','veh_19','veha_19')" id="veha_19">
+                                <td class="left">PBR Vietnam</td>
+                                <td class="right stars none">water</td>
+                                <td>{{formatTime .Values.c_pbrv__si_g}}</td>
+                                <td>{{formatNumber .Values.c__pbrv_ki_g}}</td>
+                                <td>{{formatNumber .Values.c_rok_pbrv_kwi_g}}</td>
+                                <td>{{formatNumber .Values.c_pbrv__ddw_g}}</td>
+                                <td>{{if gt .Values.c_pbrv__si_g 0.0}}{{printf "%.2f d/s" (div .Values.c_pbrv__ddw_g .Values.c_pbrv__si_g)}}{{else}}-{{end}}</td>
+                            </tr>
+                            <tr onmouseover="bfbcs.showDetail('vehicle','veh_20','veha_20')" id="veha_20">
+                                <td class="left">UH-60 Transport</td>
+                                <td class="right stars gold1">air</td>
+                                <td>{{formatTime .Values.c_ah60__si_g}}</td>
+                                <td>{{formatNumber .Values.c__ah60_ki_g}}</td>
+                                <td>{{formatNumber .Values.c_rok_ah60_kwi_g}}</td>
+                                <td>{{formatNumber .Values.c_ah60__ddw_g}}</td>
+                                <td>{{if gt .Values.c_ah60__si_g 0.0}}{{printf "%.2f d/s" (div .Values.c_ah60__ddw_g .Values.c_ah60__si_g)}}{{else}}-{{end}}</td>
+                            </tr>
+                            <tr onmouseover="bfbcs.showDetail('vehicle','veh_21','veha_21')" id="veha_21">
+                                <td class="left">AH-64 Apache</td>
+                                <td class="right stars gold1">air</td>
+                                <td>{{formatTime .Values.c_ah64__si_g}}</td>
+                                <td>{{formatNumber .Values.c__ah64_ki_g}}</td>
+                                <td>{{formatNumber .Values.c_rok_ah64_kwi_g}}</td>
+                                <td>{{formatNumber .Values.c_ah64__ddw_g}}</td>
+                                <td>{{if gt .Values.c_ah64__si_g 0.0}}{{printf "%.2f d/s" (div .Values.c_ah64__ddw_g .Values.c_ah64__si_g)}}{{else}}-{{end}}</td>
+                            </tr>
+                            <tr onmouseover="bfbcs.showDetail('vehicle','veh_22','veha_22')" id="veha_22">
+                                <td class="left">MI-28 Havoc</td>
+                                <td class="right stars gold1">air</td>
+                                <td>{{formatTime .Values.c_MI28__si_g}}</td>
+                                <td>{{formatNumber .Values.c__MI28_ki_g}}</td>
+                                <td>{{formatNumber .Values.c_rok_MI28_kwi_g}}</td>
+                                <td>{{formatNumber .Values.c_MI28__ddw_g}}</td>
+                                <td>{{if gt .Values.c_MI28__si_g 0.0}}{{printf "%.2f d/s" (div .Values.c_MI28__ddw_g .Values.c_MI28__si_g)}}{{else}}-{{end}}</td>
+                            </tr>
+                            <tr onmouseover="bfbcs.showDetail('vehicle','veh_23','veha_23')" id="veha_23">
+                                <td class="left">Mi-24 Hind</td>
+                                <td class="right stars gold1">air</td>
+                                <td>{{formatTime .Values.c_havoc__si_g}}</td>
+                                <td>{{formatNumber .Values.c__havoc_ki_g}}</td>
+                                <td>{{formatNumber .Values.c_rok_havoc_kwi_g}}</td>
+                                <td>{{formatNumber .Values.c_havoc__ddw_g}}</td>
+                                <td>{{if gt .Values.c_havoc__si_g 0.0}}{{printf "%.2f d/s" (div .Values.c_havoc__ddw_g .Values.c_havoc__si_g)}}{{else}}-{{end}}</td>
+                            </tr>
+                            <tr onmouseover="bfbcs.showDetail('vehicle','veh_24','veha_24')" id="veha_24">
+                                <td class="left">UAV</td>
+                                <td class="right stars gold1">air</td>
+                                <td>{{formatTime .Values.c_uav__si_g}}</td>
+                                <td>{{formatNumber .Values.c__uav_ki_g}}</td>
+                                <td>{{formatNumber .Values.c_rok_uav_kwi_g}}</td>
+                                <td>{{formatNumber .Values.c_uav__ddw_g}}</td>
+                                <td>{{if gt .Values.c_uav__si_g 0.0}}{{printf "%.2f d/s" (div .Values.c_uav__ddw_g .Values.c_uav__si_g)}}{{else}}-{{end}}</td>
+                            </tr>
+                            <tr onmouseover="bfbcs.showDetail('vehicle','veh_26','veha_26')" id="veha_26">
+                                <td class="left">Heavy MG X312</td>
+                                <td class="right stars silv">stationary</td>
+                                <td>{{formatTime .Values.c_XM312__si_g}}</td>
+                                <td>{{formatNumber .Values.c__XM312_ki_g}}</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr onmouseover="bfbcs.showDetail('vehicle','veh_27','veha_27')" id="veha_27">
+                                <td class="left">Heavy MG KORD</td>
+                                <td class="right stars silv">stationary</td>
+                                <td>{{formatTime .Values.c_KORD__si_g}}</td>
+                                <td>{{formatNumber .Values.c__KORD_ki_g}}</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr onmouseover="bfbcs.showDetail('vehicle','veh_28','veha_28')" id="veha_28">
+                                <td class="left">Stationary AT KORN</td>
+                                <td class="right stars silv">stationary</td>
+                                <td>{{formatTime .Values.c_KORN__si_g}}</td>
+                                <td>{{formatNumber .Values.c__KORN_ki_g}}</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr onmouseover="bfbcs.showDetail('vehicle','veh_29','veha_29')" id="veha_29">
+                                <td class="left">Stationary AT TOW2</td>
+                                <td class="right stars silv">stationary</td>
+                                <td>{{formatTime .Values.c_TOW2__si_g}}</td>
+                                <td>{{formatNumber .Values.c__TOW2_ki_g}}</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr onmouseover="bfbcs.showDetail('vehicle','veh_30','veha_30')" id="veha_30">
+                                <td class="left">Anti-Air Gun</td>
+                                <td class="right stars silv">stationary</td>
+                                <td>{{formatTime .Values.c_aav__si_g}}</td>
+                                <td>{{formatNumber .Values.c__aav_ki_g}}</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr onmouseover="bfbcs.showDetail('vehicle','veh_31','veha_31')" id="veha_31">
+                                <td class="left">VADS</td>
+                                <td class="right stars silv">stationary</td>
+                                <td>{{formatTime .Values.c_VADS__si_g}}</td>
+                                <td>{{formatNumber .Values.c__VADS_ki_g}}</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="stcol_2">
+                        <div class="itemdetails" id="veh_0">
+                            <div class="name">HMMWV 4WD</div>
+                            <img src="/static/img/bfbcs/vehicles_normal/humv.png" alt="HMMWV 4WD"
+                                 width="180" height="45"/>
+                            <div class="desc">High Mobility Multipurpose Wheeled Vehicle with 4WD it seats 4 and is
+                                armed with a .50 caliber HMG in a 360 degree weapons ring mount.
+                            </div>
+                            <br/>
+                            <div class="name">Class stars</div>
+                            <div class="stars bron inactive">Bronze
+                                <div>7/10</div>
+                            </div>
+                            <div class="stars silv inactive">Silver
+                                <div>7/25</div>
+                            </div>
+                            <div class="stars gold0 inactive">Gold
+                                <div>7/50</div>
+                            </div>
+                            <div class="stars plat inactive">Platin
+                                <div>7/500</div>
+                            </div>
+                            <br/>
+                            <div class="name">Vehicle stars (calculated)</div>
+                            <div class="stars bron inactive">Bronze
+                                <div></div>
+                            </div>
+                            <div class="stars silv inactive">Silver
+                                <div></div>
+                            </div>
+                            <div class="stars gold0 inactive">Gold
+                                <div></div>
+                            </div>
+                            <div class="stars plat inactive">Platin
+                                <div></div>
+                            </div>
+                            <br/></div>
+                        <div class="itemdetails" id="veh_1">
+                            <div class="name">VODNIK 4WD</div>
+                            <img src="/static/img/bfbcs/vehicles_normal/vodnik.png" alt="VODNIK 4WD"
+                                 width="180" height="45"/>
+                            <div class="desc">High Mobility Multipurpose Combat Vehicle with 4WD it seats 4 and is armed
+                                with a 12.7mm caliber HMG in a 360 degree turret.
+                            </div>
+                            <br/>
+                            <div class="name">Class stars</div>
+                            <div class="stars bron inactive">Bronze
+                                <div>7/10</div>
+                            </div>
+                            <div class="stars silv inactive">Silver
+                                <div>7/25</div>
+                            </div>
+                            <div class="stars gold0 inactive">Gold
+                                <div>7/50</div>
+                            </div>
+                            <div class="stars plat inactive">Platin
+                                <div>7/500</div>
+                            </div>
+                            <br/>
+                            <div class="name">Vehicle stars (calculated)</div>
+                            <div class="stars bron inactive">Bronze
+                                <div></div>
+                            </div>
+                            <div class="stars silv inactive">Silver
+                                <div></div>
+                            </div>
+                            <div class="stars gold0 inactive">Gold
+                                <div></div>
+                            </div>
+                            <div class="stars plat inactive">Platin
+                                <div></div>
+                            </div>
+                            <br/></div>
+                        <div class="itemdetails" id="veh_2">
+                            <div class="name">COBRA 4WD</div>
+                            <img src="/static/img/bfbcs/vehicles_normal/cobra.png" alt="COBRA 4WD"
+                                 width="180" height="45"/>
+                            <div class="desc">4WD, Light Armored Vehicle with a crew of 4, armed with a .50 caliber HMG
+                                in a 360 degree weapon ring mount.
+                            </div>
+                            <br/>
+                            <div class="name">Class stars</div>
+                            <div class="stars bron inactive">Bronze
+                                <div>7/10</div>
+                            </div>
+                            <div class="stars silv inactive">Silver
+                                <div>7/25</div>
+                            </div>
+                            <div class="stars gold0 inactive">Gold
+                                <div>7/50</div>
+                            </div>
+                            <div class="stars plat inactive">Platin
+                                <div>7/500</div>
+                            </div>
+                            <br/>
+                            <div class="name">Vehicle stars (calculated)</div>
+                            <div class="stars bron inactive">Bronze
+                                <div></div>
+                            </div>
+                            <div class="stars silv inactive">Silver
+                                <div></div>
+                            </div>
+                            <div class="stars gold0 inactive">Gold
+                                <div></div>
+                            </div>
+                            <div class="stars plat inactive">Platin
+                                <div></div>
+                            </div>
+                            <br/></div>
+                        <div class="itemdetails" id="veh_3">
+                            <div class="name">Quad Bike</div>
+                            <img src="/static/img/bfbcs/vehicles_normal/quadbike.png" alt="Quad Bike"
+                                 width="180" height="45"/>
+                            <div class="desc">A 2 person Ultra-light Tactical Vehicle designed to operate over any
+                                terrain, in all weather and at any altitude.
+                            </div>
+                            <br/>
+                            <div class="name">Class stars</div>
+                            <div class="stars bron inactive">Bronze
+                                <div>7/10</div>
+                            </div>
+                            <div class="stars silv inactive">Silver
+                                <div>7/25</div>
+                            </div>
+                            <div class="stars gold0 inactive">Gold
+                                <div>7/50</div>
+                            </div>
+                            <div class="stars plat inactive">Platin
+                                <div>7/500</div>
+                            </div>
+                            <br/>
+                            <div class="name">Vehicle stars (calculated)</div>
+                            <div class="stars bron inactive">Bronze
+                                <div></div>
+                            </div>
+                            <div class="stars silv inactive">Silver
+                                <div></div>
+                            </div>
+                            <div class="stars gold0 inactive">Gold
+                                <div></div>
+                            </div>
+                            <div class="stars plat inactive">Platin
+                                <div></div>
+                            </div>
+                            <br/></div>
+                        <div class="itemdetails" id="veh_4">
+                            <div class="name">Cav</div>
+                            <img src="/static/img/bfbcs/vehicles_normal/cav.png" alt="Cav" width="180"
+                                 height="45"/>
+                            <div class="desc"></div>
+                            <br/>
+                            <div class="name">Class stars</div>
+                            <div class="stars bron inactive">Bronze
+                                <div>7/10</div>
+                            </div>
+                            <div class="stars silv inactive">Silver
+                                <div>7/25</div>
+                            </div>
+                            <div class="stars gold0 inactive">Gold
+                                <div>7/50</div>
+                            </div>
+                            <div class="stars plat inactive">Platin
+                                <div>7/500</div>
+                            </div>
+                            <br/>
+                            <div class="name">Vehicle stars (calculated)</div>
+                            <div class="stars bron inactive">Bronze
+                                <div></div>
+                            </div>
+                            <div class="stars silv inactive">Silver
+                                <div></div>
+                            </div>
+                            <div class="stars gold0 inactive">Gold
+                                <div></div>
+                            </div>
+                            <div class="stars plat inactive">Platin
+                                <div></div>
+                            </div>
+                            <br/></div>
+                        <div class="itemdetails" id="veh_5">
+                            <div class="name">Truck</div>
+                            <img src="/static/img/bfbcs/vehicles_normal/truck.png" alt="Truck"
+                                 width="180" height="45"/>
+                            <div class="desc"></div>
+                            <br/>
+                            <div class="name">Class stars</div>
+                            <div class="stars bron inactive">Bronze
+                                <div>7/10</div>
+                            </div>
+                            <div class="stars silv inactive">Silver
+                                <div>7/25</div>
+                            </div>
+                            <div class="stars gold0 inactive">Gold
+                                <div>7/50</div>
+                            </div>
+                            <div class="stars plat inactive">Platin
+                                <div>7/500</div>
+                            </div>
+                            <br/>
+                            <div class="name">Vehicle stars (calculated)</div>
+                            <div class="stars bron inactive">Bronze
+                                <div></div>
+                            </div>
+                            <div class="stars silv inactive">Silver
+                                <div></div>
+                            </div>
+                            <div class="stars gold0 inactive">Gold
+                                <div></div>
+                            </div>
+                            <div class="stars plat inactive">Platin
+                                <div></div>
+                            </div>
+                            <br/></div>
+                        <div class="itemdetails" id="veh_9">
+                            <div class="name">M1A2 Abrams</div>
+                            <img src="/static/img/bfbcs/vehicles_normal/m1a2.png" alt="M1A2 Abrams"
+                                 width="180" height="45"/>
+                            <div class="desc">U.S. Main Battle Tank armed with a 120mm smoothbore cannon and remotely
+                                operated .50 caliber HMG. Crew: 2
+                            </div>
+                            <br/>
+                            <div class="name">Class stars</div>
+                            <div class="stars bron">Bronze
+                                <div>10/10</div>
+                            </div>
+                            <div class="stars silv">Silver
+                                <div>25/25</div>
+                            </div>
+                            <div class="stars gold3">Gold 3x
+                                <div>160/200</div>
+                            </div>
+                            <div class="stars plat inactive">Platin
+                                <div>160/500</div>
+                            </div>
+                            <br/>
+                            <div class="name">Vehicle stars (calculated)</div>
+                            <div class="stars bron">Bronze
+                                <div></div>
+                            </div>
+                            <div class="stars silv inactive">Silver
+                                <div></div>
+                            </div>
+                            <div class="stars gold0 inactive">Gold
+                                <div></div>
+                            </div>
+                            <div class="stars plat inactive">Platin
+                                <div></div>
+                            </div>
+                            <br/></div>
+                        <div class="itemdetails" id="veh_10">
+                            <div class="name">T-90 MBT</div>
+                            <img src="/static/img/bfbcs/vehicles_normal/t90.png" alt="T-90 MBT"
+                                 width="180" height="45"/>
+                            <div class="desc">Russian Main Battle Tank armed with a 125mm smoothbore cannon and 12.7mm
+                                HMG. Crew: 2
+                            </div>
+                            <br/>
+                            <div class="name">Class stars</div>
+                            <div class="stars bron">Bronze
+                                <div>10/10</div>
+                            </div>
+                            <div class="stars silv">Silver
+                                <div>25/25</div>
+                            </div>
+                            <div class="stars gold3">Gold 3x
+                                <div>160/200</div>
+                            </div>
+                            <div class="stars plat inactive">Platin
+                                <div>160/500</div>
+                            </div>
+                            <br/>
+                            <div class="name">Vehicle stars (calculated)</div>
+                            <div class="stars bron">Bronze
+                                <div></div>
+                            </div>
+                            <div class="stars silv">Silver
+                                <div></div>
+                            </div>
+                            <div class="stars gold0 inactive">Gold
+                                <div></div>
+                            </div>
+                            <div class="stars plat inactive">Platin
+                                <div></div>
+                            </div>
+                            <br/></div>
+                        <div class="itemdetails" id="veh_11">
+                            <div class="name">M3A3 Bradley</div>
+                            <img src="/static/img/bfbcs/vehicles_normal/m3a3.png" alt="M3A3 Bradley"
+                                 width="180" height="45"/>
+                            <div class="desc">Infantry Fighting Vehicle armed with a 30mm chain gun, .50 caliber HMG and
+                                2 passenger firing ports. Seats: 4
+                            </div>
+                            <br/>
+                            <div class="name">Class stars</div>
+                            <div class="stars bron">Bronze
+                                <div>10/10</div>
+                            </div>
+                            <div class="stars silv">Silver
+                                <div>25/25</div>
+                            </div>
+                            <div class="stars gold3">Gold 3x
+                                <div>160/200</div>
+                            </div>
+                            <div class="stars plat inactive">Platin
+                                <div>160/500</div>
+                            </div>
+                            <br/>
+                            <div class="name">Vehicle stars (calculated)</div>
+                            <div class="stars bron">Bronze
+                                <div></div>
+                            </div>
+                            <div class="stars silv">Silver
+                                <div></div>
+                            </div>
+                            <div class="stars gold1">Gold 1x
+                                <div></div>
+                            </div>
+                            <div class="stars plat inactive">Platin
+                                <div></div>
+                            </div>
+                            <br/></div>
+                        <div class="itemdetails" id="veh_12">
+                            <div class="name">BMD-3 Bakhcha</div>
+                            <img src="/static/img/bfbcs/vehicles_normal/bmda.png" alt="BMD-3 Bakhcha"
+                                 width="180" height="45"/>
+                            <div class="desc">Infantry Fighting Vehicle armed with a 30mm auto cannon, 12.7mm HMG and 2
+                                passenger firing ports.
+                            </div>
+                            <br/>
+                            <div class="name">Class stars</div>
+                            <div class="stars bron">Bronze
+                                <div>10/10</div>
+                            </div>
+                            <div class="stars silv">Silver
+                                <div>25/25</div>
+                            </div>
+                            <div class="stars gold3">Gold 3x
+                                <div>160/200</div>
+                            </div>
+                            <div class="stars plat inactive">Platin
+                                <div>160/500</div>
+                            </div>
+                            <br/>
+                            <div class="name">Vehicle stars (calculated)</div>
+                            <div class="stars bron inactive">Bronze
+                                <div></div>
+                            </div>
+                            <div class="stars silv inactive">Silver
+                                <div></div>
+                            </div>
+                            <div class="stars gold0 inactive">Gold
+                                <div></div>
+                            </div>
+                            <div class="stars plat inactive">Platin
+                                <div></div>
+                            </div>
+                            <br/></div>
+                        <div class="itemdetails" id="veh_13">
+                            <div class="name">BMD-3 Bakhcha AA</div>
+                            <img src="/static/img/bfbcs/vehicles_normal/bmd3aa.png"
+                                 alt="BMD-3 Bakhcha AA" width="180" height="45"/>
+                            <div class="desc">Anti-aircraft variant of the BMD-3, armed with an AA-Gun, Grenade Launcher
+                                and 2 side mounted passenger firing ports. Seats: 4
+                            </div>
+                            <br/>
+                            <div class="name">Class stars</div>
+                            <div class="stars bron">Bronze
+                                <div>10/10</div>
+                            </div>
+                            <div class="stars silv">Silver
+                                <div>25/25</div>
+                            </div>
+                            <div class="stars gold3">Gold 3x
+                                <div>160/200</div>
+                            </div>
+                            <div class="stars plat inactive">Platin
+                                <div>160/500</div>
+                            </div>
+                            <br/>
+                            <div class="name">Vehicle stars (calculated)</div>
+                            <div class="stars bron inactive">Bronze
+                                <div></div>
+                            </div>
+                            <div class="stars silv inactive">Silver
+                                <div></div>
+                            </div>
+                            <div class="stars gold0 inactive">Gold
+                                <div></div>
+                            </div>
+                            <div class="stars plat inactive">Platin
+                                <div></div>
+                            </div>
+                            <br/></div>
+                        <div class="itemdetails" id="veh_17">
+                            <div class="name">Personal Water Craft</div>
+                            <img src="/static/img/bfbcs/vehicles_normal/jetski.png"
+                                 alt="Personal Water Craft" width="180" height="45"/>
+                            <div class="desc">Unarmed 2 person high speed Personal Water Craft (PWC).</div>
+                            <br/>
+                            <div class="name">Class stars</div>
+                            <div class="stars bron inactive">Bronze
+                                <div>9/10</div>
+                            </div>
+                            <div class="stars silv inactive">Silver
+                                <div>9/25</div>
+                            </div>
+                            <div class="stars gold0 inactive">Gold
+                                <div>9/50</div>
+                            </div>
+                            <div class="stars plat inactive">Platin
+                                <div>9/500</div>
+                            </div>
+                            <br/>
+                            <div class="name">Vehicle stars (calculated)</div>
+                            <div class="stars bron inactive">Bronze
+                                <div></div>
+                            </div>
+                            <div class="stars silv inactive">Silver
+                                <div></div>
+                            </div>
+                            <div class="stars gold0 inactive">Gold
+                                <div></div>
+                            </div>
+                            <div class="stars plat inactive">Platin
+                                <div></div>
+                            </div>
+                            <br/></div>
+                        <div class="itemdetails" id="veh_18">
+                            <div class="name">Patrol Boat</div>
+                            <img src="/static/img/bfbcs/vehicles_normal/patrolboat.png"
+                                 alt="Patrol Boat" width="180" height="45"/>
+                            <div class="desc">Modern .50 caliber machine gun. Lightweight, highly mobile and offers
+                                little to no recoil. Exceptional Force Multiplier.
+                            </div>
+                            <br/>
+                            <div class="name">Class stars</div>
+                            <div class="stars bron inactive">Bronze
+                                <div>9/10</div>
+                            </div>
+                            <div class="stars silv inactive">Silver
+                                <div>9/25</div>
+                            </div>
+                            <div class="stars gold0 inactive">Gold
+                                <div>9/50</div>
+                            </div>
+                            <div class="stars plat inactive">Platin
+                                <div>9/500</div>
+                            </div>
+                            <br/>
+                            <div class="name">Vehicle stars (calculated)</div>
+                            <div class="stars bron inactive">Bronze
+                                <div></div>
+                            </div>
+                            <div class="stars silv inactive">Silver
+                                <div></div>
+                            </div>
+                            <div class="stars gold0 inactive">Gold
+                                <div></div>
+                            </div>
+                            <div class="stars plat inactive">Platin
+                                <div></div>
+                            </div>
+                            <br/></div>
+                        <div class="itemdetails" id="veh_19">
+                            <div class="name">PBR Vietnam</div>
+                            <img src="/static/img/bfbcs/vehicles_normal/pbr.png" alt="PBR Vietnam"
+                                 width="180" height="45"/>
+                            <div class="desc"></div>
+                            <br/>
+                            <div class="name">Class stars</div>
+                            <div class="stars bron inactive">Bronze
+                                <div>9/10</div>
+                            </div>
+                            <div class="stars silv inactive">Silver
+                                <div>9/25</div>
+                            </div>
+                            <div class="stars gold0 inactive">Gold
+                                <div>9/50</div>
+                            </div>
+                            <div class="stars plat inactive">Platin
+                                <div>9/500</div>
+                            </div>
+                            <br/>
+                            <div class="name">Vehicle stars (calculated)</div>
+                            <div class="stars bron inactive">Bronze
+                                <div></div>
+                            </div>
+                            <div class="stars silv inactive">Silver
+                                <div></div>
+                            </div>
+                            <div class="stars gold0 inactive">Gold
+                                <div></div>
+                            </div>
+                            <div class="stars plat inactive">Platin
+                                <div></div>
+                            </div>
+                            <br/></div>
+                        <div class="itemdetails" id="veh_20">
+                            <div class="name">UH-60 Transport</div>
+                            <img src="/static/img/bfbcs/vehicles_normal/ah60.png"
+                                 alt="UH-60 Transport" width="180" height="45"/>
+                            <div class="desc">Tactical Transport Helicopter manned by a crew of 2, capable of
+                                transporting 3 fully armed troops and armed with 2 x 7.62mm Miniguns.
+                            </div>
+                            <br/>
+                            <div class="name">Class stars</div>
+                            <div class="stars bron">Bronze
+                                <div>10/10</div>
+                            </div>
+                            <div class="stars silv">Silver
+                                <div>25/25</div>
+                            </div>
+                            <div class="stars gold1">Gold 1x
+                                <div>57/100</div>
+                            </div>
+                            <div class="stars plat inactive">Platin
+                                <div>57/500</div>
+                            </div>
+                            <br/>
+                            <div class="name">Vehicle stars (calculated)</div>
+                            <div class="stars bron">Bronze
+                                <div></div>
+                            </div>
+                            <div class="stars silv inactive">Silver
+                                <div></div>
+                            </div>
+                            <div class="stars gold0 inactive">Gold
+                                <div></div>
+                            </div>
+                            <div class="stars plat inactive">Platin
+                                <div></div>
+                            </div>
+                            <br/></div>
+                        <div class="itemdetails" id="veh_21">
+                            <div class="name">AH-64 Apache</div>
+                            <img src="/static/img/bfbcs/vehicles_normal/ah64.png" alt="AH-64 Apache"
+                                 width="180" height="45"/>
+                            <div class="desc">U.S. Attack Helicopter armed with 30mm chain gun and dual 70mm rocket
+                                pods. Crew: 2. Armor protection up to and including .50 caliber muntion.
+                            </div>
+                            <br/>
+                            <div class="name">Class stars</div>
+                            <div class="stars bron">Bronze
+                                <div>10/10</div>
+                            </div>
+                            <div class="stars silv">Silver
+                                <div>25/25</div>
+                            </div>
+                            <div class="stars gold1">Gold 1x
+                                <div>57/100</div>
+                            </div>
+                            <div class="stars plat inactive">Platin
+                                <div>57/500</div>
+                            </div>
+                            <br/>
+                            <div class="name">Vehicle stars (calculated)</div>
+                            <div class="stars bron">Bronze
+                                <div></div>
+                            </div>
+                            <div class="stars silv">Silver
+                                <div></div>
+                            </div>
+                            <div class="stars gold0 inactive">Gold
+                                <div></div>
+                            </div>
+                            <div class="stars plat inactive">Platin
+                                <div></div>
+                            </div>
+                            <br/></div>
+                        <div class="itemdetails" id="veh_22">
+                            <div class="name">MI-28 Havoc</div>
+                            <img src="/static/img/bfbcs/vehicles_normal/mi28havoc.png"
+                                 alt="MI-28 Havoc" width="180" height="45"/>
+                            <div class="desc">Russian Attack Helicopter armed with 30mm chain gun and dual 80mm rocket
+                                pods. Crew: 2. Armor protection up to .50 caliber.
+                            </div>
+                            <br/>
+                            <div class="name">Class stars</div>
+                            <div class="stars bron">Bronze
+                                <div>10/10</div>
+                            </div>
+                            <div class="stars silv">Silver
+                                <div>25/25</div>
+                            </div>
+                            <div class="stars gold1">Gold 1x
+                                <div>57/100</div>
+                            </div>
+                            <div class="stars plat inactive">Platin
+                                <div>57/500</div>
+                            </div>
+                            <br/>
+                            <div class="name">Vehicle stars (calculated)</div>
+                            <div class="stars bron inactive">Bronze
+                                <div></div>
+                            </div>
+                            <div class="stars silv inactive">Silver
+                                <div></div>
+                            </div>
+                            <div class="stars gold0 inactive">Gold
+                                <div></div>
+                            </div>
+                            <div class="stars plat inactive">Platin
+                                <div></div>
+                            </div>
+                            <br/></div>
+                        <div class="itemdetails" id="veh_23">
+                            <div class="name">Mi-24 Hind</div>
+                            <img src="/static/img/bfbcs/vehicles_normal/mi24hind.png" alt="Mi-24 Hind"
+                                 width="180" height="45"/>
+                            <div class="desc">Large Helicopter Gunship operated by a crew of 2 and capable of
+                                transporting 2 fully armed troops.
+                            </div>
+                            <br/>
+                            <div class="name">Class stars</div>
+                            <div class="stars bron">Bronze
+                                <div>10/10</div>
+                            </div>
+                            <div class="stars silv">Silver
+                                <div>25/25</div>
+                            </div>
+                            <div class="stars gold1">Gold 1x
+                                <div>57/100</div>
+                            </div>
+                            <div class="stars plat inactive">Platin
+                                <div>57/500</div>
+                            </div>
+                            <br/>
+                            <div class="name">Vehicle stars (calculated)</div>
+                            <div class="stars bron inactive">Bronze
+                                <div></div>
+                            </div>
+                            <div class="stars silv inactive">Silver
+                                <div></div>
+                            </div>
+                            <div class="stars gold0 inactive">Gold
+                                <div></div>
+                            </div>
+                            <div class="stars plat inactive">Platin
+                                <div></div>
+                            </div>
+                            <br/></div>
+                        <div class="itemdetails" id="veh_24">
+                            <div class="name">UAV</div>
+                            <img src="/static/img/bfbcs/vehicles_normal/uav.png" alt="UAV" width="180"
+                                 height="45"/>
+                            <div class="desc">UAV capable of lasing targets for air strikes or monitoring battlefield
+                                operations. It can be armed with either a .50 HMG or Smoke Dispenser.
+                            </div>
+                            <br/>
+                            <div class="name">Class stars</div>
+                            <div class="stars bron">Bronze
+                                <div>10/10</div>
+                            </div>
+                            <div class="stars silv">Silver
+                                <div>25/25</div>
+                            </div>
+                            <div class="stars gold1">Gold 1x
+                                <div>57/100</div>
+                            </div>
+                            <div class="stars plat inactive">Platin
+                                <div>57/500</div>
+                            </div>
+                            <br/>
+                            <div class="name">Vehicle stars (calculated)</div>
+                            <div class="stars bron inactive">Bronze
+                                <div></div>
+                            </div>
+                            <div class="stars silv inactive">Silver
+                                <div></div>
+                            </div>
+                            <div class="stars gold0 inactive">Gold
+                                <div></div>
+                            </div>
+                            <div class="stars plat inactive">Platin
+                                <div></div>
+                            </div>
+                            <br/></div>
+                        <div class="itemdetails" id="veh_26">
+                            <div class="name">Heavy MG X312</div>
+                            <img src="/static/img/bfbcs/vehicles_normal/x312.png" alt="Heavy MG X312"
+                                 width="180" height="45"/>
+                            <div class="desc">Modern U.S Military .50 caliber Machine Gun procured to replace the
+                                80-year-old Browning .50 Caliber.
+                            </div>
+                            <br/>
+                            <div class="name">Class stars</div>
+                            <div class="stars bron">Bronze
+                                <div>10/10</div>
+                            </div>
+                            <div class="stars silv">Silver
+                                <div>25/25</div>
+                            </div>
+                            <div class="stars gold0 inactive">Gold
+                                <div>25/50</div>
+                            </div>
+                            <div class="stars plat inactive">Platin
+                                <div>25/500</div>
+                            </div>
+                            <br/>
+                            <div class="name">Vehicle stars (calculated)</div>
+                            <div class="stars bron inactive">Bronze
+                                <div></div>
+                            </div>
+                            <div class="stars silv inactive">Silver
+                                <div></div>
+                            </div>
+                            <div class="stars gold0 inactive">Gold
+                                <div></div>
+                            </div>
+                            <div class="stars plat inactive">Platin
+                                <div></div>
+                            </div>
+                            <br/></div>
+                        <div class="itemdetails" id="veh_27">
+                            <div class="name">Heavy MG KORD</div>
+                            <img src="/static/img/bfbcs/vehicles_normal/kord.png" alt="Heavy MG KORD"
+                                 width="180" height="45"/>
+                            <div class="desc">Russian 12.7mm HMG providing less recoil and improved accuracy at longer
+                                ranges.
+                            </div>
+                            <br/>
+                            <div class="name">Class stars</div>
+                            <div class="stars bron">Bronze
+                                <div>10/10</div>
+                            </div>
+                            <div class="stars silv">Silver
+                                <div>25/25</div>
+                            </div>
+                            <div class="stars gold0 inactive">Gold
+                                <div>25/50</div>
+                            </div>
+                            <div class="stars plat inactive">Platin
+                                <div>25/500</div>
+                            </div>
+                            <br/>
+                            <div class="name">Vehicle stars (calculated)</div>
+                            <div class="stars bron">Bronze
+                                <div></div>
+                            </div>
+                            <div class="stars silv inactive">Silver
+                                <div></div>
+                            </div>
+                            <div class="stars gold0 inactive">Gold
+                                <div></div>
+                            </div>
+                            <div class="stars plat inactive">Platin
+                                <div></div>
+                            </div>
+                            <br/></div>
+                        <div class="itemdetails" id="veh_28">
+                            <div class="name">Stationary AT KORN</div>
+                            <img src="/static/img/bfbcs/vehicles_normal/korn.png"
+                                 alt="Stationary AT KORN" width="180" height="45"/>
+                            <div class="desc">Russian made supersonic, Anti-Tank wire Guided Missile (ATGM) designed to
+                                destroy main battle tanks and engage low flying helicopters.
+                            </div>
+                            <br/>
+                            <div class="name">Class stars</div>
+                            <div class="stars bron">Bronze
+                                <div>10/10</div>
+                            </div>
+                            <div class="stars silv">Silver
+                                <div>25/25</div>
+                            </div>
+                            <div class="stars gold0 inactive">Gold
+                                <div>25/50</div>
+                            </div>
+                            <div class="stars plat inactive">Platin
+                                <div>25/500</div>
+                            </div>
+                            <br/>
+                            <div class="name">Vehicle stars (calculated)</div>
+                            <div class="stars bron inactive">Bronze
+                                <div></div>
+                            </div>
+                            <div class="stars silv inactive">Silver
+                                <div></div>
+                            </div>
+                            <div class="stars gold0 inactive">Gold
+                                <div></div>
+                            </div>
+                            <div class="stars plat inactive">Platin
+                                <div></div>
+                            </div>
+                            <br/></div>
+                        <div class="itemdetails" id="veh_29">
+                            <div class="name">Stationary AT TOW2</div>
+                            <img src="/static/img/bfbcs/vehicles_normal/tow2.png"
+                                 alt="Stationary AT TOW2" width="180" height="45"/>
+                            <div class="desc">Tube Launched Optically tracked Wire guided Missile system with a range of
+                                4,000 meters designed to engage armor and low-level slow moving aircraft.
+                            </div>
+                            <br/>
+                            <div class="name">Class stars</div>
+                            <div class="stars bron">Bronze
+                                <div>10/10</div>
+                            </div>
+                            <div class="stars silv">Silver
+                                <div>25/25</div>
+                            </div>
+                            <div class="stars gold0 inactive">Gold
+                                <div>25/50</div>
+                            </div>
+                            <div class="stars plat inactive">Platin
+                                <div>25/500</div>
+                            </div>
+                            <br/>
+                            <div class="name">Vehicle stars (calculated)</div>
+                            <div class="stars bron inactive">Bronze
+                                <div></div>
+                            </div>
+                            <div class="stars silv inactive">Silver
+                                <div></div>
+                            </div>
+                            <div class="stars gold0 inactive">Gold
+                                <div></div>
+                            </div>
+                            <div class="stars plat inactive">Platin
+                                <div></div>
+                            </div>
+                            <br/></div>
+                        <div class="itemdetails" id="veh_30">
+                            <div class="name">Anti-Air Gun</div>
+                            <img src="/static/img/bfbcs/vehicles_normal/zu23.png" alt="Anti-Air Gun"
+                                 width="180" height="45"/>
+                            <div class="desc">Russian 23mm auto cannon capable of anti-air defense and light ground
+                                support.
+                            </div>
+                            <br/>
+                            <div class="name">Class stars</div>
+                            <div class="stars bron">Bronze
+                                <div>10/10</div>
+                            </div>
+                            <div class="stars silv">Silver
+                                <div>25/25</div>
+                            </div>
+                            <div class="stars gold0 inactive">Gold
+                                <div>25/50</div>
+                            </div>
+                            <div class="stars plat inactive">Platin
+                                <div>25/500</div>
+                            </div>
+                            <br/>
+                            <div class="name">Vehicle stars (calculated)</div>
+                            <div class="stars bron inactive">Bronze
+                                <div></div>
+                            </div>
+                            <div class="stars silv inactive">Silver
+                                <div></div>
+                            </div>
+                            <div class="stars gold0 inactive">Gold
+                                <div></div>
+                            </div>
+                            <div class="stars plat inactive">Platin
+                                <div></div>
+                            </div>
+                            <br/></div>
+                        <div class="itemdetails" id="veh_31">
+                            <div class="name">VADS</div>
+                            <img src="/static/img/bfbcs/vehicles_normal/vads.png" alt="VADS"
+                                 width="180" height="45"/>
+                            <div class="desc"></div>
+                            <br/>
+                            <div class="name">Class stars</div>
+                            <div class="stars bron">Bronze
+                                <div>10/10</div>
+                            </div>
+                            <div class="stars silv">Silver
+                                <div>25/25</div>
+                            </div>
+                            <div class="stars gold0 inactive">Gold
+                                <div>25/50</div>
+                            </div>
+                            <div class="stars plat inactive">Platin
+                                <div>25/500</div>
+                            </div>
+                            <br/>
+                            <div class="name">Vehicle stars (calculated)</div>
+                            <div class="stars bron inactive">Bronze
+                                <div></div>
+                            </div>
+                            <div class="stars silv inactive">Silver
+                                <div></div>
+                            </div>
+                            <div class="stars gold0 inactive">Gold
+                                <div></div>
+                            </div>
+                            <div class="stars plat inactive">Platin
+                                <div></div>
+                            </div>
+                            <br/></div>
+                    </div>
+                    <div class="clear"></div>
+                    <br/>
                 </div>
             </div>
         </div>
