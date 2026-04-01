@@ -118,7 +118,7 @@ def main():
 
     # Add rank icons
     print("Adding rank icon URLs...")
-    for i in range(1, 51):
+    for i in range(0, 51):
         rank = f"r{i:03d}"
         urls.append(f"/web/20140209014926im_/http://files2.bfbcs.com/img/bfbcs/ranks/{rank}.png")
         urls.append(f"/web/20140209014926im_/http://files2.bfbcs.com/img/bfbcs/ranks_big/{rank}.png")
