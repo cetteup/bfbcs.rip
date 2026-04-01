@@ -51,6 +51,8 @@ func formatTime(value string) string {
 
 func getRankName(rank float64) string {
 	switch int(rank) {
+	case 0:
+		return "RECRUIT"
 	case 1:
 		return "PRIVATE I"
 	case 2:
