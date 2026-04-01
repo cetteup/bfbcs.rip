@@ -1,7 +1,6 @@
 package main
 
 import (
-	"encoding/json"
 	"fmt"
 	"html/template"
 	"io"
@@ -12,21 +11,10 @@ import (
 
 	"github.com/labstack/echo/v5"
 	"github.com/labstack/echo/v5/middleware"
+
+	"github.com/cetteup/bfbcs.rip/cmd/server/internal/handler"
+	"github.com/cetteup/bfbcs.rip/internal/pkg/archive"
 )
-
-type Player struct {
-	Pid       int    `json:"pid"`
-	Name      string `json:"name"`
-	Platform  string `json:"platform"`
-	Namespace string `json:"namespace"`
-	Added     string `json:"added"`
-	Updated   string `json:"updated"`
-}
-
-type PlayerStats struct {
-	Player Player                 `json:"player"`
-	Values map[string]interface{} `json:"values"`
-}
 
 type TemplateRenderer struct {
 	templates *template.Template
@@ -139,6 +127,9 @@ func main() {
 		templates: templates,
 	}
 
+	client := archive.NewClient(archive.BaseURL)
+	h := handler.NewHandler(client)
+
 	// Serve static files
 	e.Static("/static", "public/static")
 
@@ -146,83 +137,8 @@ func main() {
 		return c.String(http.StatusOK, "Hello, World!")
 	})
 
-	e.GET("/stats_pc/:name", func(c *echo.Context) error {
-		name := c.Param("name")
-		url := "https://api.battlefield.rip/archive/bfbc2/players/pc/" + name + "/stats?key=all"
-		resp, err := http.Get(url)
-		if err != nil {
-			return c.String(http.StatusInternalServerError, "Error fetching stats")
-		}
-		defer resp.Body.Close()
-		if resp.StatusCode != 200 {
-			return c.String(http.StatusNotFound, "Player not found")
-		}
-		var stats PlayerStats
-		if err := json.NewDecoder(resp.Body).Decode(&stats); err != nil {
-			return c.String(http.StatusInternalServerError, "Error parsing stats")
-		}
-		return c.Render(http.StatusOK, "stats.html", stats)
-	})
-
-	e.POST("/stats_pc", func(c *echo.Context) error {
-		name := c.FormValue("searchplayer[name]")
-		if name == "" {
-			return c.String(http.StatusBadRequest, "Player name is required")
-		}
-		return c.Redirect(http.StatusFound, "/stats_pc/"+name)
-	})
-
-	e.GET("/stats_xbox360/:name", func(c *echo.Context) error {
-		name := c.Param("name")
-		url := "https://api.battlefield.rip/archive/bfbc2/players/xbox360/" + name + "/stats?key=all"
-		resp, err := http.Get(url)
-		if err != nil {
-			return c.String(http.StatusInternalServerError, "Error fetching stats")
-		}
-		defer resp.Body.Close()
-		if resp.StatusCode != 200 {
-			return c.String(http.StatusNotFound, "Player not found")
-		}
-		var stats PlayerStats
-		if err := json.NewDecoder(resp.Body).Decode(&stats); err != nil {
-			return c.String(http.StatusInternalServerError, "Error parsing stats")
-		}
-		return c.Render(http.StatusOK, "stats.html", stats)
-	})
-
-	e.POST("/stats_xbox360", func(c *echo.Context) error {
-		name := c.FormValue("searchplayer[name]")
-		if name == "" {
-			return c.String(http.StatusBadRequest, "Player name is required")
-		}
-		return c.Redirect(http.StatusFound, "/stats_xbox360/"+name)
-	})
-
-	e.GET("/stats_ps3/:name", func(c *echo.Context) error {
-		name := c.Param("name")
-		url := "https://api.battlefield.rip/archive/bfbc2/players/ps3/" + name + "/stats?key=all"
-		resp, err := http.Get(url)
-		if err != nil {
-			return c.String(http.StatusInternalServerError, "Error fetching stats")
-		}
-		defer resp.Body.Close()
-		if resp.StatusCode != 200 {
-			return c.String(http.StatusNotFound, "Player not found")
-		}
-		var stats PlayerStats
-		if err := json.NewDecoder(resp.Body).Decode(&stats); err != nil {
-			return c.String(http.StatusInternalServerError, "Error parsing stats")
-		}
-		return c.Render(http.StatusOK, "stats.html", stats)
-	})
-
-	e.POST("/stats_ps3", func(c *echo.Context) error {
-		name := c.FormValue("searchplayer[name]")
-		if name == "" {
-			return c.String(http.StatusBadRequest, "Player name is required")
-		}
-		return c.Redirect(http.StatusFound, "/stats_ps3/"+name)
-	})
+	e.GET("/stats_:platform/:name", h.HandleStatsGET)
+	e.POST("/stats_:platform", h.HandleStatsPOST)
 
 	if err := e.Start(":1323"); err != nil {
 		e.Logger.Error("failed to start server", "error", err)
