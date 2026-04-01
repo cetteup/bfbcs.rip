@@ -84,18 +84,18 @@
         <div id="content">
             <div class="subnavi">
                 <a href="/stats_{{.Player.Platform}}/{{.Player.Name}}"
-                   style="background-image:url(/static/img/bfbcs/ranks%2Fr{{printf "%03.0f" .Values.rank}}.png)"
+                   style="background-image:url(/static/img/bfbcs/ranks/r{{printf "%03.0f" .Values.rank}}.png)"
                 class="active">Overview</a>
                 <a href="/stats_{{.Player.Platform}}/{{.Player.Name}}/dogtags"
-                   style="background-image:url(/static/img/bfbcs/misc_icons%2Fdt1.png)">Dogtags</a>
+                   style="background-image:url(/static/img/bfbcs/misc_icons/dt1.png)">Dogtags</a>
                 <a href="/stats_{{.Player.Platform}}/{{.Player.Name}}/nemesis_dogtags"
-                   style="background-image:url(/static/img/bfbcs/misc_icons%2Fdt3.png)">Nemesis dogtags</a>
+                   style="background-image:url(/static/img/bfbcs/misc_icons/dt3.png)">Nemesis dogtags</a>
                 <div class="clear"></div>
             </div>
             <h1><strong>{{.Player.Name}}</strong> &nbsp;<em>{{getRankName .Values.rank}}</em> &nbsp;BFBC2 Stats</h1>
             <div class="cont">
                 <div class="pstats">
-                    <div class="rankcol"><img src="/static/img/bfbcs/ranks_big%2Fr{{printf "%03.0f" .Values.rank}}.png"
+                    <div class="rankcol"><img src="/static/img/bfbcs/ranks_big/r{{printf "%03.0f" .Values.rank}}.png"
                         width="100" height="100" alt="{{.Player.Name}} Player Stats" /><br/><br/><br/></div>
                     <div class="littlecol_1"><h2>General Data</h2>
                         <dl>

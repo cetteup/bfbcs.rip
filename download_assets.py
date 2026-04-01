@@ -8,6 +8,7 @@ import re
 import sys
 import time
 from urllib.error import URLError
+from urllib.parse import unquote
 from urllib.request import urlopen, Request
 
 # Configuration
@@ -33,6 +34,7 @@ def extract_urls_from_css(css_file):
     for match in matches:
         # Remove quotes if present
         url = match.strip('\'"')
+        url = unquote(url)
 
         # Only process web archive URLs
         if url.startswith('/web/'):
@@ -52,6 +54,7 @@ def extract_urls_from_html(html_file):
     matches = re.findall(pattern, content)
 
     for match in matches:
+        match = unquote(match)
         # Convert to archive URL
         archive_url = f"/web/20140209014926im_/{match}"
         urls.add(archive_url)
