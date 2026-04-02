@@ -15,8 +15,9 @@ type TemplateRenderer struct {
 func NewTemplateRenderer(glob string) (*TemplateRenderer, error) {
 	tmpl, err := template.New("bfbcs").
 		Funcs(template.FuncMap{
-			"div":                div,
+			"add":                add,
 			"mul":                mul,
+			"div":                div,
 			"gt":                 gt,
 			"formatNumber":       formatNumber,
 			"formatDuration":     formatDuration,

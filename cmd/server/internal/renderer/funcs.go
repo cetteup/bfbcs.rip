@@ -7,6 +7,10 @@ import (
 	"time"
 )
 
+func add(a, b float64) float64 {
+	return a + b
+}
+
 func mul(a, b float64) float64 {
 	return a * b
 }
