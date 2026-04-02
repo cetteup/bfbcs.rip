@@ -157,3 +157,23 @@ func getRankName(rank float64) string {
 		return fmt.Sprintf("%.0f", rank)
 	}
 }
+
+func getWeaponStarClass(values map[string]any, key string) string {
+	if getFloat(values, fmt.Sprintf("pl%s_00", key)) > 0 {
+		return "plat"
+	}
+
+	if value := getFloat(values, fmt.Sprintf("go%s_00", key)); value > 0 {
+		return fmt.Sprintf("gold%.0f", value)
+	}
+
+	if getFloat(values, fmt.Sprintf("si%s_00", key)) > 0 {
+		return "silv"
+	}
+
+	if getFloat(values, fmt.Sprintf("br%s_00", key)) > 0 {
+		return "bron"
+	}
+
+	return "none"
+}

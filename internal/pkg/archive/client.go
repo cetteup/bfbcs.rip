@@ -59,6 +59,10 @@ func (c *Client) GetStats(ctx context.Context, platform string, name string) (St
 
 	u = u.JoinPath(platform, name, "stats")
 
+	q := u.Query()
+	q.Set("keySet", "all")
+	u.RawQuery = q.Encode()
+
 	req, err := http.NewRequestWithContext(ctx, http.MethodGet, u.String(), nil)
 	if err != nil {
 		return StatsResponse{}, err

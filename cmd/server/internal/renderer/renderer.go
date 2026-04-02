@@ -15,14 +15,15 @@ type TemplateRenderer struct {
 func NewTemplateRenderer(glob string) (*TemplateRenderer, error) {
 	tmpl, err := template.New("bfbcs").
 		Funcs(template.FuncMap{
-			"div":            div,
-			"mul":            mul,
-			"gt":             gt,
-			"formatNumber":   formatNumber,
-			"formatDuration": formatDuration,
-			"formatTime":     formatTime,
-			"getRankName":    getRankName,
-			"toUpper":        strings.ToUpper,
+			"div":                div,
+			"mul":                mul,
+			"gt":                 gt,
+			"formatNumber":       formatNumber,
+			"formatDuration":     formatDuration,
+			"formatTime":         formatTime,
+			"getRankName":        getRankName,
+			"getWeaponStarClass": getWeaponStarClass,
+			"toUpper":            strings.ToUpper,
 		}).
 		ParseGlob(glob)
 	if err != nil {
