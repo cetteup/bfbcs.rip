@@ -119,9 +119,7 @@
                             <dt>Deaths:</dt>
                             <dd>{{formatNumber .Values.deaths}}</dd>
                             <dt>K/D Ratio:</dt>
-                            <dd>{{if gt .Values.deaths 0.0}}<span class="kdp">{{printf "%.2f" (div .Values.kills .Values.deaths)}}</span>{{else}}<span
-                                    class="kdp">-</span>{{end}}
-                            </dd>
+                            <dd>{{if gt .Values.deaths 0.0}}{{$ratio := div .Values.kills .Values.deaths}}<span class="{{if ge $ratio 1.0}}kdp{{else}}kdn{{end}}">{{printf "%.2f" $ratio}}</span>{{else}}<span>-</span>{{end}}</dd>
                             <dt>Last Update:</dt>
                             <dd class="datetime">{{formatTime .Player.Updated}}</dd>
                             <dt>Last Check:</dt>
@@ -169,9 +167,7 @@
                             <dt>Losses:</dt>
                             <dd class="right">{{formatNumber .Values.losses}}</dd>
                             <dt>W/L Ratio:</dt>
-                            <dd class="right">{{if gt .Values.losses 0.0}}<span class="kdn">{{printf "%.2f" (div .Values.wins .Values.losses)}}</span>{{else}}<span
-                                    class="kdn">-</span>{{end}}
-                            </dd>
+                            <dd class="right">{{if gt .Values.losses 0.0}}{{$ratio := div .Values.wins .Values.losses}}<span class="{{if ge $ratio 1.0}}kdp{{else}}kdn{{end}}">{{printf "%.2f" $ratio}}</span>{{else}}<span>-</span>{{end}}</dd>
                             <dt>Teamkills:</dt>
                             <dd class="right">{{formatNumber .Values.teamkills}}</dd>
                             <dt>Demolition kills:</dt>
@@ -211,36 +207,28 @@
                                 <td>{{formatNumber .Values.sc_assault}}</td>
                                 <td>{{formatNumber .Values.c__as_ko_g}}</td>
                                 <td>{{formatNumber .Values.c_as__da_g}}</td>
-                                <td>{{if gt .Values.c_as__da_g 0.0}}<span class="kdp">{{printf "%.2f" (div .Values.c__as_ko_g .Values.c_as__da_g)}}</span>{{else}}<span
-                                        class="kdp">-</span>{{end}}
-                                </td>
+                                <td>{{if gt .Values.c_as__da_g 0.0}}{{$ratio := div .Values.c__as_ko_g .Values.c_as__da_g}}<span class="{{if ge $ratio 1.0}}kdp{{else}}kdn{{end}}">{{printf "%.2f" $ratio}}</span>{{else}}<span>-</span>{{end}}</td>
                             </tr>
                             <tr>
                                 <td class="left">Engineer</td>
                                 <td>{{formatNumber .Values.sc_demo}}</td>
                                 <td>{{formatNumber .Values.c__de_ko_g}}</td>
                                 <td>{{formatNumber .Values.c_de__da_g}}</td>
-                                <td>{{if gt .Values.c_de__da_g 0.0}}<span class="kdp">{{printf "%.2f" (div .Values.c__de_ko_g .Values.c_de__da_g)}}</span>{{else}}<span
-                                        class="kdp">-</span>{{end}}
-                                </td>
+                                <td>{{if gt .Values.c_de__da_g 0.0}}{{$ratio := div .Values.c__de_ko_g .Values.c_de__da_g}}<span class="{{if ge $ratio 1.0}}kdp{{else}}kdn{{end}}">{{printf "%.2f" $ratio}}</span>{{else}}<span>-</span>{{end}}</td>
                             </tr>
                             <tr>
                                 <td class="left">Medic</td>
                                 <td>{{formatNumber .Values.sc_support}}</td>
                                 <td>{{formatNumber .Values.c__su_ko_g}}</td>
                                 <td>{{formatNumber .Values.c_su__da_g}}</td>
-                                <td>{{if gt .Values.c_su__da_g 0.0}}<span class="kdp">{{printf "%.2f" (div .Values.c__su_ko_g .Values.c_su__da_g)}}</span>{{else}}<span
-                                        class="kdp">-</span>{{end}}
-                                </td>
+                                <td>{{if gt .Values.c_su__da_g 0.0}}{{$ratio := div .Values.c__su_ko_g .Values.c_su__da_g}}<span class="{{if ge $ratio 1.0}}kdp{{else}}kdn{{end}}">{{printf "%.2f" $ratio}}</span>{{else}}<span>-</span>{{end}}</td>
                             </tr>
                             <tr>
                                 <td class="left">Recon</td>
                                 <td>{{formatNumber .Values.sc_recon}}</td>
                                 <td>{{formatNumber .Values.c__re_ko_g}}</td>
                                 <td>{{formatNumber .Values.c_re__da_g}}</td>
-                                <td>{{if gt .Values.c_re__da_g 0.0}}<span class="kdp">{{printf "%.2f" (div .Values.c__re_ko_g .Values.c_re__da_g)}}</span>{{else}}<span
-                                        class="kdp">-</span>{{end}}
-                                </td>
+                                <td>{{if gt .Values.c_re__da_g 0.0}}{{$ratio := div .Values.c__re_ko_g .Values.c_re__da_g}}<span class="{{if ge $ratio 1.0}}kdp{{else}}kdn{{end}}">{{printf "%.2f" $ratio}}</span>{{else}}<span>-</span>{{end}}</td>
                             </tr>
                             </tbody>
                         </table>
@@ -261,17 +249,13 @@
                                 <td class="left">Attacker</td>
                                 <td>{{formatNumber .Values.c_win_att_out_g}}</td>
                                 <td>{{formatNumber .Values.c_loss_att_out_g}}</td>
-                                <td>{{if gt .Values.c_loss_att_out_g 0.0}}<span class="kdp">{{printf "%.2f" (div .Values.c_win_att_out_g .Values.c_loss_att_out_g)}}</span>{{else}}<span
-                                        class="kdp">-</span>{{end}}
-                                </td>
+                                <td>{{if gt .Values.c_loss_att_out_g 0.0}}{{$ratio := div .Values.c_win_att_out_g .Values.c_loss_att_out_g}}<span class="{{if ge $ratio 1.0}}kdp{{else}}kdn{{end}}">{{printf "%.2f" $ratio}}</span>{{else}}<span>-</span>{{end}}</td>
                             </tr>
                             <tr>
                                 <td class="left">Defender</td>
                                 <td>{{formatNumber .Values.c_win_def_out_g}}</td>
                                 <td>{{formatNumber .Values.c_loss_def_out_g}}</td>
-                                <td>{{if gt .Values.c_loss_def_out_g 0.0}}<span class="kdp">{{printf "%.2f" (div .Values.c_win_def_out_g .Values.c_loss_def_out_g)}}</span>{{else}}<span
-                                        class="kdp">-</span>{{end}}
-                                </td>
+                                <td>{{if gt .Values.c_loss_def_out_g 0.0}}{{$ratio := div .Values.c_win_def_out_g .Values.c_loss_def_out_g}}<span class="{{if ge $ratio 1.0}}kdp{{else}}kdn{{end}}">{{printf "%.2f" $ratio}}</span>{{else}}<span>-</span>{{end}}</td>
                             </tr>
                             </tbody>
                         </table>
