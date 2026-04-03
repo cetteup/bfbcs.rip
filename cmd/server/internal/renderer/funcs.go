@@ -2,6 +2,7 @@ package renderer
 
 import (
 	"fmt"
+	"math"
 	"strconv"
 	"strings"
 	"time"
@@ -180,4 +181,16 @@ func getServiceStarClass(values map[string]any, key string) string {
 	}
 
 	return "none"
+}
+
+func calculateProgress(current, threshold float64) float64 {
+	if threshold == 0 {
+		return 0
+	}
+	percentage := (current / threshold) * 100
+	// Cap at 100 and round to 2 decimal places
+	if percentage > 100 {
+		percentage = 100
+	}
+	return math.Round(percentage*100) / 100
 }

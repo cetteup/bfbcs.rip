@@ -3469,6 +3469,701 @@
                         </div>
                     </div>
                     <div class="clear"></div>
+                    <br />
+                    <h2>Specializations</h2>
+                    <div class="stcol_1 special">
+                        <div class="gadget linetitle">Assault</div>
+                        <div class="gadget{{if eq .Values.ul_sp_assault_r 0.0}} inactive{{end}}"
+                             onmouseover="bfbcs.showDetail('specials','sp_assault0','spa_assault0')" id="spa_assault0"><img
+                                src="/static/img/bfbcs/special_small/reddotscopear.png" alt="Red Dot Sight" width="75"
+                                height="19"/>
+                            {{if eq .Values.ul_sp_assault_r 0.0}}
+                            <div class="progressbar">
+                                <div class="bar" style="width:{{calculateProgress .Values.sc_assault 14000}}%"></div>
+                            </div>
+                            {{end}}
+                        </div>
+                        <div class="gadget{{if eq .Values.ul_sp_assault_s 0.0}} inactive{{end}}"
+                             onmouseover="bfbcs.showDetail('specials','sp_assault1','spa_assault1')" id="spa_assault1"><img
+                                src="/static/img/bfbcs/special_small/scopear.png" alt="4x Rifle Scope" width="75"
+                                height="19"/>
+                            {{if eq .Values.ul_sp_assault_s 0.0}}
+                            <div class="progressbar">
+                                <div class="bar" style="width:{{calculateProgress .Values.sc_assault 17000}}%"></div>
+                            </div>
+                            {{end}}
+                        </div>
+                        <div class="gadget{{if eq .Values.ul_sp_assault_a 0.0}} inactive{{end}}"
+                             onmouseover="bfbcs.showDetail('specials','sp_assault2','spa_assault2')" id="spa_assault2"><img
+                                src="/static/img/bfbcs/special_small/arplus.png" alt="Marksman Assault Rifle Training"
+                                width="75" height="19"/>
+                            {{if eq .Values.ul_sp_assault_a 0.0}}
+                            <div class="progressbar">
+                                <div class="bar" style="width:{{calculateProgress .Values.sc_assault 24000}}%"></div>
+                            </div>
+                            {{end}}
+                        </div>
+                        <div class="clear"></div>
+                        <div class="gadget linetitle">Engineer</div>
+                        <div class="gadget{{if eq .Values.ul_sp_smg_r 0.0}} inactive{{end}}"
+                             onmouseover="bfbcs.showDetail('specials','sp_demo0','spa_demo0')" id="spa_demo0"><img
+                                src="/static/img/bfbcs/special_small/reddotscopesmg.png" alt="Red Dot Sight" width="75"
+                                height="19"/>
+                            {{if eq .Values.ul_sp_smg_r 0.0}}
+                            <div class="progressbar">
+                                <div class="bar" style="width:{{calculateProgress .Values.sc_demo 11100}}%"></div>
+                            </div>
+                            {{end}}
+                        </div>
+                        <div class="gadget{{if eq .Values.ul_sp_smg_s 0.0}} inactive{{end}}"
+                             onmouseover="bfbcs.showDetail('specials','sp_demo1','spa_demo1')" id="spa_demo1"><img
+                                src="/static/img/bfbcs/special_small/scopesmg.png" alt="4x Rifle Scope" width="75"
+                                height="19"/>
+                            {{if eq .Values.ul_sp_smg_s 0.0}}
+                            <div class="progressbar">
+                                <div class="bar" style="width:{{calculateProgress .Values.sc_demo 13500}}%"></div>
+                            </div>
+                            {{end}}
+                        </div>
+                        <div class="gadget{{if eq .Values.ul_sp_smg_a 0.0}} inactive{{end}}"
+                             onmouseover="bfbcs.showDetail('specials','sp_demo2','spa_demo2')" id="spa_demo2"><img
+                                src="/static/img/bfbcs/special_small/smgplus.png" alt="Marksman SMG Training" width="75"
+                                height="19"/>
+                            {{if eq .Values.ul_sp_smg_a 0.0}}
+                            <div class="progressbar">
+                                <div class="bar" style="width:{{calculateProgress .Values.sc_demo 21500}}%"></div>
+                            </div>
+                            {{end}}
+                        </div>
+                        <div class="clear"></div>
+                        <div class="gadget linetitle">Medic</div>
+                        <div class="gadget{{if eq .Values.ul_sp_medheal 0.0}} inactive{{end}}"
+                             onmouseover="bfbcs.showDetail('specials','sp_medic0','spa_medic0')" id="spa_medic0"><img
+                                src="/static/img/bfbcs/special_small/medkitspeed.png" alt="Medkit Heal+" width="75"
+                                height="19"/>
+                            {{if eq .Values.ul_sp_medheal 0.0}}
+                            <div class="progressbar">
+                                <div class="bar" style="width:{{calculateProgress .Values.sc_support 12000}}%"></div>
+                            </div>
+                            {{end}}
+                        </div>
+                        <div class="gadget{{if eq .Values.ul_sp_lmg_r 0.0}} inactive{{end}}"
+                             onmouseover="bfbcs.showDetail('specials','sp_medic1','spa_medic1')" id="spa_medic1"><img
+                                src="/static/img/bfbcs/special_small/reddotscopelmg.png" alt="Red Dot Sight" width="75"
+                                height="19"/>
+                            {{if eq .Values.ul_sp_lmg_r 0.0}}
+                            <div class="progressbar">
+                                <div class="bar" style="width:{{calculateProgress .Values.sc_support 15000}}%"></div>
+                            </div>
+                            {{end}}
+                        </div>
+                        <div class="gadget{{if eq .Values.ul_sp_lmg_s 0.0}} inactive{{end}}"
+                             onmouseover="bfbcs.showDetail('specials','sp_medic2','spa_medic2')" id="spa_medic2"><img
+                                src="/static/img/bfbcs/special_small/scopelmg.png" alt="4x Rifle Scope" width="75"
+                                height="19"/>
+                            {{if eq .Values.ul_sp_lmg_s 0.0}}
+                            <div class="progressbar">
+                                <div class="bar" style="width:{{calculateProgress .Values.sc_support 18000}}%"></div>
+                            </div>
+                            {{end}}
+                        </div>
+                        <div class="gadget{{if eq .Values.ul_sp_medradius 0.0}} inactive{{end}}"
+                             onmouseover="bfbcs.showDetail('specials','sp_medic3','spa_medic3')" id="spa_medic3"><img
+                                src="/static/img/bfbcs/special_small/medkitrange.png" alt="Medkit Radius+" width="75"
+                                height="19"/>
+                            {{if eq .Values.ul_sp_medradius 0.0}}
+                            <div class="progressbar">
+                                <div class="bar" style="width:{{calculateProgress .Values.sc_support 21000}}%"></div>
+                            </div>
+                            {{end}}
+                        </div>
+                        <div class="gadget{{if eq .Values.ul_sp_lmg_aim 0.0}} inactive{{end}}"
+                             onmouseover="bfbcs.showDetail('specials','sp_medic4','spa_medic4')" id="spa_medic4"><img
+                                src="/static/img/bfbcs/special_small/lmgplus.png" alt="Marksman LMG Training" width="75"
+                                height="19"/>
+                            {{if eq .Values.ul_sp_lmg_aim 0.0}}
+                            <div class="progressbar">
+                                <div class="bar" style="width:{{calculateProgress .Values.sc_support 28000}}%"></div>
+                            </div>
+                            {{end}}
+                        </div>
+                        <div class="clear"></div>
+                        <div class="gadget linetitle">Recon</div>
+                        <div class="gadget{{if eq .Values.ul_sp_sniper_s 0.0}} inactive{{end}}"
+                             onmouseover="bfbcs.showDetail('specials','sp_recon0','spa_recon0')" id="spa_recon0"><img
+                                src="/static/img/bfbcs/special_small/scopesr.png" alt="4x Rifle Scope" width="75"
+                                height="19"/>
+                            {{if eq .Values.ul_sp_sniper_s 0.0}}
+                            <div class="progressbar">
+                                <div class="bar" style="width:{{calculateProgress .Values.sc_recon 8000}}%"></div>
+                            </div>
+                            {{end}}
+                        </div>
+                        <div class="gadget{{if eq .Values.ul_sp_sczmplus 0.0}} inactive{{end}}"
+                             onmouseover="bfbcs.showDetail('specials','sp_recon1','spa_recon1')" id="spa_recon1"><img
+                                src="/static/img/bfbcs/special_small/srscopeplus.png" alt="12x High Power Scope"
+                                width="75" height="19"/>
+                            {{if eq .Values.ul_sp_sczmplus 0.0}}
+                            <div class="progressbar">
+                                <div class="bar" style="width:{{calculateProgress .Values.sc_recon 10000}}%"></div>
+                            </div>
+                            {{end}}
+                        </div>
+                        <div class="gadget{{if eq .Values.ul_sp_sniper_r 0.0}} inactive{{end}}"
+                             onmouseover="bfbcs.showDetail('specials','sp_recon2','spa_recon2')" id="spa_recon2"><img
+                                src="/static/img/bfbcs/special_small/reddotscopesr.png" alt="Red Dot Sight" width="75"
+                                height="19"/>
+                            {{if eq .Values.ul_sp_sniper_r 0.0}}
+                            <div class="progressbar">
+                                <div class="bar" style="width:{{calculateProgress .Values.sc_recon 12500}}%"></div>
+                            </div>
+                            {{end}}
+                        </div>
+                        <div class="gadget{{if eq .Values.ul_sp_spscope 0.0}} inactive{{end}}"
+                             onmouseover="bfbcs.showDetail('specials','sp_recon3','spa_recon3')" id="spa_recon3"><img
+                                src="/static/img/bfbcs/special_small/sniperspotter.png" alt="Sniper Spotter" width="75"
+                                height="19"/>
+                            {{if eq .Values.ul_sp_spscope 0.0}}
+                            <div class="progressbar">
+                                <div class="bar" style="width:{{calculateProgress .Values.sc_recon 17000}}%"></div>
+                            </div>
+                            {{end}}
+                        </div>
+                        <div class="clear"></div>
+                        <div class="gadget linetitle">All</div>
+                        <div class="gadget{{if eq .Values.ul_sp_sprint 0.0}} inactive{{end}}"
+                             onmouseover="bfbcs.showDetail('specials','sp_all0','spa_all0')" id="spa_all0"><img
+                                src="/static/img/bfbcs/special_small/physcond.png" alt="Lightweight Combat Equipment"
+                                width="75" height="19"/>
+                            {{if eq .Values.ul_sp_sprint 0.0}}
+                            <div class="progressbar">
+                                <div class="bar" style="width:{{calculateProgress .Values.rank 5}}%"></div>
+                            </div>
+                            {{end}}
+                        </div>
+                        <div class="gadget{{if eq .Values.ul_sp_ammsupp 0.0}} inactive{{end}}"
+                             onmouseover="bfbcs.showDetail('specials','sp_all1','spa_all1')" id="spa_all1"><img
+                                src="/static/img/bfbcs/special_small/maxclips.png" alt="Ammo Hip Bandolier" width="75"
+                                height="19"/>
+                            {{if eq .Values.ul_sp_ammsupp 0.0}}
+                            <div class="progressbar">
+                                <div class="bar" style="width:{{calculateProgress .Values.rank 6}}%"></div>
+                            </div>
+                            {{end}}
+                        </div>
+                        <div class="gadget{{if eq .Values.ul_sp_grsupp 0.0}} inactive{{end}}"
+                             onmouseover="bfbcs.showDetail('specials','sp_all2','spa_all2')" id="spa_all2"><img
+                                src="/static/img/bfbcs/special_small/maxnades.png" alt="Grenade Vest" width="75"
+                                height="19"/>
+                            {{if eq .Values.ul_sp_grsupp 0.0}}
+                            <div class="progressbar">
+                                <div class="bar" style="width:{{calculateProgress .Values.rank 7}}%"></div>
+                            </div>
+                            {{end}}
+                        </div>
+                        <div class="gadget{{if eq .Values.ul_sp_bodarm 0.0}} inactive{{end}}"
+                             onmouseover="bfbcs.showDetail('specials','sp_all3','spa_all3')" id="spa_all3"><img
+                                src="/static/img/bfbcs/special_small/heavyarmor.png" alt="Ceramic Body Armor" width="75"
+                                height="19"/>
+                            {{if eq .Values.ul_sp_bodarm 0.0}}
+                            <div class="progressbar">
+                                <div class="bar" style="width:{{calculateProgress .Values.rank 14}}%"></div>
+                            </div>
+                            {{end}}
+                        </div>
+                        <div class="gadget{{if eq .Values.ul_sp_buldmplus 0.0}} inactive{{end}}"
+                             onmouseover="bfbcs.showDetail('specials','sp_all4','spa_all4')" id="spa_all4"><img
+                                src="/static/img/bfbcs/special_small/bulletdamage.png" alt="Magnum Ammunition" width="75"
+                                height="19"/>
+                            {{if eq .Values.ul_sp_buldmplus 0.0}}
+                            <div class="progressbar">
+                                <div class="bar" style="width:{{calculateProgress .Values.rank 15}}%"></div>
+                            </div>
+                            {{end}}
+                        </div>
+                        <div class="gadget{{if eq .Values.ul_sp_expdmplus 0.0}} inactive{{end}}"
+                             onmouseover="bfbcs.showDetail('specials','sp_all5','spa_all5')" id="spa_all5"><img
+                                src="/static/img/bfbcs/special_small/demolition.png" alt="Improved Demolitions" width="75"
+                                height="19"/>
+                            {{if eq .Values.ul_sp_expdmplus 0.0}}
+                            <div class="progressbar">
+                                <div class="bar" style="width:{{calculateProgress .Values.rank 17}}%"></div>
+                            </div>
+                            {{end}}
+                        </div>
+                        <div class="gadget{{if eq .Values.ul_sp_expsupp 0.0}} inactive{{end}}"
+                             onmouseover="bfbcs.showDetail('specials','sp_all6','spa_all6')" id="spa_all6"><img
+                                src="/static/img/bfbcs/special_small/maxc4.png" alt="Explosives Leg Pouch" width="75"
+                                height="19"/>
+                            {{if eq .Values.ul_sp_expsupp 0.0}}
+                            <div class="progressbar">
+                                <div class="bar" style="width:{{calculateProgress .Values.rank 8}}%"></div>
+                            </div>
+                            {{end}}
+                        </div>
+                        <div class="gadget{{if eq .Values.ul_sp_shotgun_s 0.0}} inactive{{end}}"
+                             onmouseover="bfbcs.showDetail('specials','sp_all7','spa_all7')" id="spa_all7"><img
+                                src="/static/img/bfbcs/special_small/sgslug.png" alt="12 Gauge Slugs" width="75"
+                                height="19"/>
+                            {{if eq .Values.ul_sp_shotgun_s 0.0}}
+                            <div class="progressbar">
+                                <div class="bar" style="width:{{calculateProgress .Values.rank 16}}%"></div>
+                            </div>
+                            {{end}}
+                        </div>
+                        <div class="gadget{{if eq .Values.ul_sp_shotgun_c 0.0}} inactive{{end}}"
+                             onmouseover="bfbcs.showDetail('specials','sp_all8','spa_all8')" id="spa_all8"><img
+                                src="/static/img/bfbcs/special_small/sgplus.png" alt="Extended Shotgun Magazine"
+                                width="75" height="19"/>
+                            {{if eq .Values.ul_sp_shotgun_c 0.0}}
+                            <div class="progressbar">
+                                <div class="bar" style="width:{{calculateProgress .Values.rank 9}}%"></div>
+                            </div>
+                            {{end}}
+                        </div>
+                        <div class="clear"></div>
+                        <div class="gadget linetitle">Vehicle</div>
+                        <div class="gadget{{if eq .Values.ul_sp_vehmosens 0.0}} inactive{{end}}"
+                             onmouseover="bfbcs.showDetail('specials','sp_vehicle0','spa_vehicle0')" id="spa_vehicle0"><img
+                                src="/static/img/bfbcs/special_small/vehiclemotionsensor.png"
+                                alt="Electronic Warfare Package" width="75" height="19"/>
+                            {{if eq .Values.ul_sp_vehmosens 0.0}}
+                            <div class="progressbar">
+                                <div class="bar" style="width:{{calculateProgress .Values.sc_vehicle 1200}}%"></div>
+                            </div>
+                            {{end}}
+                        </div>
+                        <div class="gadget{{if eq .Values.ul_sp_harveharm 0.0}} inactive{{end}}"
+                             onmouseover="bfbcs.showDetail('specials','sp_vehicle1','spa_vehicle1')" id="spa_vehicle1"><img
+                                src="/static/img/bfbcs/special_small/hardenedarmor.png" alt="Active Armor Upgrade"
+                                width="75" height="19"/>
+                            {{if eq .Values.ul_sp_harveharm 0.0}}
+                            <div class="progressbar">
+                                <div class="bar" style="width:{{calculateProgress .Values.sc_vehicle 2300}}%"></div>
+                            </div>
+                            {{end}}
+                        </div>
+                        <div class="gadget{{if eq .Values.ul_sp_vdamage 0.0}} inactive{{end}}"
+                             onmouseover="bfbcs.showDetail('specials','sp_vehicle2','spa_vehicle2')" id="spa_vehicle2"><img
+                                src="/static/img/bfbcs/special_small/extradamage.png" alt="Improved Warheads Package"
+                                width="75" height="19"/>
+                            {{if eq .Values.ul_sp_vdamage 0.0}}
+                            <div class="progressbar">
+                                <div class="bar" style="width:{{calculateProgress .Values.sc_vehicle 3600}}%"></div>
+                            </div>
+                            {{end}}
+                        </div>
+                        <div class="gadget{{if eq .Values.ul_sp_vreload 0.0}} inactive{{end}}"
+                             onmouseover="bfbcs.showDetail('specials','sp_vehicle3','spa_vehicle3')" id="spa_vehicle3"><img
+                                src="/static/img/bfbcs/special_small/reloadtimer.png" alt="Quick Reload Package"
+                                width="75" height="19"/>
+                            {{if eq .Values.ul_sp_vreload 0.0}}
+                            <div class="progressbar">
+                                <div class="bar" style="width:{{calculateProgress .Values.sc_vehicle 5000}}%"></div>
+                            </div>
+                            {{end}}
+                        </div>
+                        <div class="gadget{{if eq .Values.ul_sp_tnsmk 0.0}} inactive{{end}}"
+                             onmouseover="bfbcs.showDetail('specials','sp_vehicle4','spa_vehicle4')" id="spa_vehicle4"><img
+                                src="/static/img/bfbcs/special_small/smokelaunchers.png" alt="Smoke Countermeasures"
+                                width="75" height="19"/>
+                            {{if eq .Values.ul_sp_tnsmk 0.0}}
+                            <div class="progressbar">
+                                <div class="bar" style="width:{{calculateProgress .Values.sc_vehicle 6500}}%"></div>
+                            </div>
+                            {{end}}
+                        </div>
+                        <div class="gadget{{if eq .Values.ul_sp_tnzm 0.0}} inactive{{end}}"
+                             onmouseover="bfbcs.showDetail('specials','sp_vehicle5','spa_vehicle5')" id="spa_vehicle5"><img
+                                src="/static/img/bfbcs/special_small/canonoptics.png" alt="High Power Optics Package"
+                                width="75" height="19"/>
+                            {{if eq .Values.ul_sp_tnzm 0.0}}
+                            <div class="progressbar">
+                                <div class="bar" style="width:{{calculateProgress .Values.sc_vehicle 8000}}%"></div>
+                            </div>
+                            {{end}}
+                        </div>
+                        <div class="gadget{{if eq .Values.ul_sp_coaxmg 0.0}} inactive{{end}}"
+                             onmouseover="bfbcs.showDetail('specials','sp_vehicle6','spa_vehicle6')" id="spa_vehicle6"><img
+                                src="/static/img/bfbcs/special_small/coaxmg.png" alt="Alternate Weapon Package" width="75"
+                                height="19"/>
+                            {{if eq .Values.ul_sp_coaxmg 0.0}}
+                            <div class="progressbar">
+                                <div class="bar" style="width:{{calculateProgress .Values.sc_vehicle 10000}}%"></div>
+                            </div>
+                            {{end}}
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="stcol_2">
+                        <div class="itemdetails" id="sp_assault0">
+                            <div class="name">Red Dot Sight</div>
+                            <img src="/static/img/bfbcs/special_normal/reddotscopear.png" alt="Red Dot Sight" width="180"
+                                 height="45"/>
+                            <div class="desc">Aids in rapid and swift target acquisition.</div>
+                            <br/>
+                            <div class="desc">Needs Assault Score 14000</div>
+                            <ul class="criteria">
+                                <li>{{formatNumber .Values.sc_assault}} / 14 000 Assault Score</li>
+                            </ul>
+                        </div>
+                        <div class="itemdetails" id="sp_assault1">
+                            <div class="name">4x Rifle Scope</div>
+                            <img src="/static/img/bfbcs/special_normal/scopear.png" alt="4x Rifle Scope" width="180"
+                                 height="45"/>
+                            <div class="desc">4X optical sight that increases medium range accuracy.</div>
+                            <br/>
+                            <div class="desc">Needs Assault Score 17000</div>
+                            <ul class="criteria">
+                                <li>{{formatNumber .Values.sc_assault}} / 17 000 Assault Score</li>
+                            </ul>
+                        </div>
+                        <div class="itemdetails" id="sp_assault2">
+                            <div class="name">Marksman Assault Rifle Training</div>
+                            <img src="/static/img/bfbcs/special_normal/arplus.png" alt="Marksman Assault Rifle Training"
+                                 width="180" height="45"/>
+                            <div class="desc">Adjustable fore grip which greatly improves handling characteristics.</div>
+                            <br/>
+                            <div class="desc">Needs Assault Score 24000</div>
+                            <ul class="criteria">
+                                <li>{{formatNumber .Values.sc_assault}} / 24 000 Assault Score</li>
+                            </ul>
+                        </div>
+                        <div class="itemdetails" id="sp_demo0">
+                            <div class="name">Red Dot Sight</div>
+                            <img src="/static/img/bfbcs/special_normal/reddotscopesmg.png" alt="Red Dot Sight" width="180"
+                                 height="45"/>
+                            <div class="desc">Aids in rapid and swift target acquisition.</div>
+                            <br/>
+                            <div class="desc">Need Engineer Score 11100</div>
+                            <ul class="criteria">
+                                <li>{{formatNumber .Values.sc_demo}} / 11 100 Engineer Score</li>
+                            </ul>
+                        </div>
+                        <div class="itemdetails" id="sp_demo1">
+                            <div class="name">4x Rifle Scope</div>
+                            <img src="/static/img/bfbcs/special_normal/scopesmg.png" alt="4x Rifle Scope" width="180"
+                                 height="45"/>
+                            <div class="desc">4X optical sight that increases medium range accuracy.</div>
+                            <br/>
+                            <div class="desc">Need Engineer Score 13500</div>
+                            <ul class="criteria">
+                                <li>{{formatNumber .Values.sc_demo}} / 13 500 Engineer Score</li>
+                            </ul>
+                        </div>
+                        <div class="itemdetails" id="sp_demo2">
+                            <div class="name">Marksman SMG Training</div>
+                            <img src="/static/img/bfbcs/special_normal/smgplus.png" alt="Marksman SMG Training"
+                                 width="180" height="45"/>
+                            <div class="desc">Custom made silencer that reduces noise and increases accuracy of aimed fire.</div>
+                            <br/>
+                            <div class="desc">Need Engineer Score 21500</div>
+                            <ul class="criteria">
+                                <li>{{formatNumber .Values.sc_demo}} / 21 500 Engineer Score</li>
+                            </ul>
+                        </div>
+                        <div class="itemdetails" id="sp_medic0">
+                            <div class="name">Medkit Heal+</div>
+                            <img src="/static/img/bfbcs/special_normal/medkitspeed.png" alt="Medkit Heal+" width="180"
+                                 height="45"/>
+                            <div class="desc">Medical equipment created to facilitate quick injury diagnosis and vastly improve the healing
+                                times.
+                            </div>
+                            <br/>
+                            <div class="desc">Need Medic Score 12000</div>
+                            <ul class="criteria">
+                                <li>{{formatNumber .Values.sc_support}} / 12 000 Medic Score</li>
+                            </ul>
+                        </div>
+                        <div class="itemdetails" id="sp_medic1">
+                            <div class="name">Red Dot Sight</div>
+                            <img src="/static/img/bfbcs/special_normal/reddotscopelmg.png" alt="Red Dot Sight" width="180"
+                                 height="45"/>
+                            <div class="desc">Aids in rapid and swift target acquisition.</div>
+                            <br/>
+                            <div class="desc">Need Medic Score 15000</div>
+                            <ul class="criteria">
+                                <li>{{formatNumber .Values.sc_support}} / 15 000 Medic Score</li>
+                            </ul>
+                        </div>
+                        <div class="itemdetails" id="sp_medic2">
+                            <div class="name">4x Rifle Scope</div>
+                            <img src="/static/img/bfbcs/special_normal/scopelmg.png" alt="4x Rifle Scope" width="180"
+                                 height="45"/>
+                            <div class="desc">4X optical sight that increases medium range accuracy.</div>
+                            <br/>
+                            <div class="desc">Need Medic Score 18000</div>
+                            <ul class="criteria">
+                                <li>{{formatNumber .Values.sc_support}} / 18 000 Medic Score</li>
+                            </ul>
+                        </div>
+                        <div class="itemdetails" id="sp_medic3">
+                            <div class="name">Medkit Radius+</div>
+                            <img src="/static/img/bfbcs/special_normal/medkitrange.png" alt="Medkit Radius+" width="180"
+                                 height="45"/>
+                            <div class="desc">Med kit which augments the effective range of kits already deployed on the battle field.</div>
+                            <br/>
+                            <div class="desc">Need Medic Score 21000</div>
+                            <ul class="criteria">
+                                <li>{{formatNumber .Values.sc_support}} / 21 000 Medic Score</li>
+                            </ul>
+                        </div>
+                        <div class="itemdetails" id="sp_medic4">
+                            <div class="name">Marksman LMG Training</div>
+                            <img src="/static/img/bfbcs/special_normal/lmgplus.png" alt="Marksman LMG Training"
+                                 width="180" height="45"/>
+                            <div class="desc">Custom made silencer that reduces noise and increases accuracy of aimed fire.</div>
+                            <br/>
+                            <div class="desc">Need Medic Score 28000</div>
+                            <ul class="criteria">
+                                <li>{{formatNumber .Values.sc_support}} / 28 000 Medic Score</li>
+                            </ul>
+                        </div>
+                        <div class="itemdetails" id="sp_recon0">
+                            <div class="name">4x Rifle Scope</div>
+                            <img src="/static/img/bfbcs/special_normal/scopesr.png" alt="4x Rifle Scope" width="180"
+                                 height="45"/>
+                            <div class="desc">4X optical sight that increases medium range accuracy.</div>
+                            <br/>
+                            <div class="desc">Need Recon Score 8000</div>
+                            <ul class="criteria">
+                                <li>{{formatNumber .Values.sc_recon}} / 8 000 Recon Score</li>
+                            </ul>
+                        </div>
+                        <div class="itemdetails" id="sp_recon1">
+                            <div class="name">12x High Power Scope</div>
+                            <img src="/static/img/bfbcs/special_normal/srscopeplus.png" alt="12x High Power Scope"
+                                 width="180" height="45"/>
+                            <div class="desc">12X optical rifle sight that provides zoom capability resulting in exceptional long range
+                                spotting and accuracy.
+                            </div>
+                            <br/>
+                            <div class="desc">Need Recon Score 10000</div>
+                            <ul class="criteria">
+                                <li>{{formatNumber .Values.sc_recon}} / 10 000 Recon Score</li>
+                            </ul>
+                        </div>
+                        <div class="itemdetails" id="sp_recon2">
+                            <div class="name">Red Dot Sight</div>
+                            <img src="/static/img/bfbcs/special_normal/reddotscopesr.png" alt="Red Dot Sight" width="180"
+                                 height="45"/>
+                            <div class="desc">Aids in rapid and swift target acquisition.</div>
+                            <br/>
+                            <div class="desc">Need Recon Score 12500</div>
+                            <ul class="criteria">
+                                <li>{{formatNumber .Values.sc_recon}} / 12 500 Recon Score</li>
+                            </ul>
+                        </div>
+                        <div class="itemdetails" id="sp_recon3">
+                            <div class="name">Sniper Spotter</div>
+                            <img src="/static/img/bfbcs/special_normal/sniperspotter.png" alt="Sniper Spotter" width="180"
+                                 height="45"/>
+                            <div class="desc">Advanced Spotting Scope with integral tracking computer it can relay enemy positions in
+                                real-time to the rest of the Combat Team.
+                            </div>
+                            <br/>
+                            <div class="desc">Need Recon Score 17000</div>
+                            <ul class="criteria">
+                                <li>{{formatNumber .Values.sc_recon}} / 17 000 Recon Score</li>
+                            </ul>
+                        </div>
+                        <div class="itemdetails" id="sp_all0">
+                            <div class="name">Lightweight Combat Equipment</div>
+                            <img src="/static/img/bfbcs/special_normal/physcond.png" alt="Lightweight Combat Equipment"
+                                 width="180" height="45"/>
+                            <div class="desc">Lightweight equipment and packs that produce a more efficient carrying resulting in better
+                                mobility and speed.
+                            </div>
+                            <br/>
+                            <div class="desc">Need rank SPECIALIST II</div>
+                            <ul class="criteria">
+                                <li>{{printf "%.0f" .Values.rank}} / 5 Rank</li>
+                            </ul>
+                        </div>
+                        <div class="itemdetails" id="sp_all1">
+                            <div class="name">Ammo Hip Bandolier</div>
+                            <img src="/static/img/bfbcs/special_normal/maxclips.png" alt="Ammo Hip Bandolier" width="180"
+                                 height="45"/>
+                            <div class="desc">Modified hip pack able to hold a higher magazine count.</div>
+                            <br/>
+                            <div class="desc">Need rank SPECIALIST III</div>
+                            <ul class="criteria">
+                                <li>{{printf "%.0f" .Values.rank}} / 6 Rank</li>
+                            </ul>
+                        </div>
+                        <div class="itemdetails" id="sp_all2">
+                            <div class="name">Grenade Vest</div>
+                            <img src="/static/img/bfbcs/special_normal/maxnades.png" alt="Grenade Vest" width="180"
+                                 height="45"/>
+                            <div class="desc">Upgraded combat vest permitting the operator to carry twice the amount of 40mm and hand
+                                grenades ammunition.
+                            </div>
+                            <br/>
+                            <div class="desc">Need rank CORPORAL I</div>
+                            <ul class="criteria">
+                                <li>{{printf "%.0f" .Values.rank}} / 7 Rank</li>
+                            </ul>
+                        </div>
+                        <div class="itemdetails" id="sp_all3">
+                            <div class="name">Ceramic Body Armor</div>
+                            <img src="/static/img/bfbcs/special_normal/heavyarmor.png" alt="Ceramic Body Armor"
+                                 width="180" height="45"/>
+                            <div class="desc">Reinforced ceramic plates located in the outer layer of a vest which diminishes damage
+                                sustained from enemy fire.
+                            </div>
+                            <br/>
+                            <div class="desc">Need rank STAFF SERGEANT II</div>
+                            <ul class="criteria">
+                                <li>{{printf "%.0f" .Values.rank}} / 14 Rank</li>
+                            </ul>
+                        </div>
+                        <div class="itemdetails" id="sp_all4">
+                            <div class="name">Magnum Ammunition</div>
+                            <img src="/static/img/bfbcs/special_normal/bulletdamage.png" alt="Magnum Ammunition"
+                                 width="180" height="45"/>
+                            <div class="desc">Capable of considerable damage and notable range this larger round delivers man stopping
+                                energy.
+                            </div>
+                            <br/>
+                            <div class="desc">Need rank STAFF SERGEANT III</div>
+                            <ul class="criteria">
+                                <li>{{printf "%.0f" .Values.rank}} / 15 Rank</li>
+                            </ul>
+                        </div>
+                        <div class="itemdetails" id="sp_all5">
+                            <div class="name">Improved Demolitions</div>
+                            <img src="/static/img/bfbcs/special_normal/demolition.png" alt="Improved Demolitions"
+                                 width="180" height="45"/>
+                            <div class="desc">Refined Explosive engineered to produce more energy and damage.</div>
+                            <br/>
+                            <div class="desc">Need rank MASTER SERGEANT II</div>
+                            <ul class="criteria">
+                                <li>{{printf "%.0f" .Values.rank}} / 17 Rank</li>
+                            </ul>
+                        </div>
+                        <div class="itemdetails" id="sp_all6">
+                            <div class="name">Explosives Leg Pouch</div>
+                            <img src="/static/img/bfbcs/special_normal/maxc4.png" alt="Explosives Leg Pouch" width="180"
+                                 height="45"/>
+                            <div class="desc">Additional pouches capable of doubling the amount of explosives and rockets carried.</div>
+                            <br/>
+                            <div class="desc">Need rank CORPORAL II</div>
+                            <ul class="criteria">
+                                <li>{{printf "%.0f" .Values.rank}} / 8 Rank</li>
+                            </ul>
+                        </div>
+                        <div class="itemdetails" id="sp_all7">
+                            <div class="name">12 Gauge Slugs</div>
+                            <img src="/static/img/bfbcs/special_normal/sgslug.png" alt="12 Gauge Slugs" width="180"
+                                 height="45"/>
+                            <div class="desc">12 gauge sabot round that sacrifices power for long range accuracy.</div>
+                            <br/>
+                            <div class="desc">Need rank MASTER SERGEANT I</div>
+                            <ul class="criteria">
+                                <li>{{printf "%.0f" .Values.rank}} / 16 Rank</li>
+                            </ul>
+                        </div>
+                        <div class="itemdetails" id="sp_all8">
+                            <div class="name">Extended Shotgun Magazine</div>
+                            <img src="/static/img/bfbcs/special_normal/sgplus.png" alt="Extended Shotgun Magazine"
+                                 width="180" height="45"/>
+                            <div class="desc">Modified shotgun loading tubes and magazines which expand ammunition capacity.</div>
+                            <br/>
+                            <div class="desc">Need Rank CORPORAL III</div>
+                            <ul class="criteria">
+                                <li>{{printf "%.0f" .Values.rank}} / 9 Rank</li>
+                            </ul>
+                        </div>
+                        <div class="itemdetails" id="sp_vehicle0">
+                            <div class="name">Electronic Warfare Package</div>
+                            <img src="/static/img/bfbcs/special_normal/vehiclemotionsensor.png"
+                                 alt="Electronic Warfare Package" width="180" height="45"/>
+                            <div class="desc">Vehicle Sensor Package that locates and displays enemy positions in direct proximity of the
+                                vehicle.
+                            </div>
+                            <br/>
+                            <div class="desc">Need Vehicle Score 1200</div>
+                            <ul class="criteria">
+                                <li>{{formatNumber .Values.sc_vehicle}} / 1 200 Vehicle Score</li>
+                            </ul>
+                        </div>
+                        <div class="itemdetails" id="sp_vehicle1">
+                            <div class="name">Active Armor Upgrade</div>
+                            <img src="/static/img/bfbcs/special_normal/hardenedarmor.png" alt="Active Armor Upgrade"
+                                 width="180" height="45"/>
+                            <div class="desc">An armor package enabling a vehicle to sustain a higher level of damage.</div>
+                            <br/>
+                            <div class="desc">Need Vehicle Score 2300</div>
+                            <ul class="criteria">
+                                <li>{{formatNumber .Values.sc_vehicle}} / 2 300 Vehicle Score</li>
+                            </ul>
+                        </div>
+                        <div class="itemdetails" id="sp_vehicle2">
+                            <div class="name">Improved Warheads Package</div>
+                            <img src="/static/img/bfbcs/special_normal/extradamage.png" alt="Improved Warheads Package"
+                                 width="180" height="45"/>
+                            <div class="desc">Hardened steel warheads and upgraded explosive compounds combine to boost the damage
+                                effectiveness of munitions.
+                            </div>
+                            <br/>
+                            <div class="desc">Need Vehicle Score 3600</div>
+                            <ul class="criteria">
+                                <li>{{formatNumber .Values.sc_vehicle}} / 3 600 Vehicle Score</li>
+                            </ul>
+                        </div>
+                        <div class="itemdetails" id="sp_vehicle3">
+                            <div class="name">Quick Reload Package</div>
+                            <img src="/static/img/bfbcs/special_normal/reloadtimer.png" alt="Quick Reload Package"
+                                 width="180" height="45"/>
+                            <div class="desc">Upgraded ammunition racks designed to substantially reduce time spent re-loading primary
+                                weapons.
+                            </div>
+                            <br/>
+                            <div class="desc">Need Vehicle Score 5000</div>
+                            <ul class="criteria">
+                                <li>{{formatNumber .Values.sc_vehicle}} / 5 000 Vehicle Score</li>
+                            </ul>
+                        </div>
+                        <div class="itemdetails" id="sp_vehicle4">
+                            <div class="name">Smoke Countermeasures</div>
+                            <img src="/static/img/bfbcs/special_normal/smokelaunchers.png" alt="Smoke Countermeasures"
+                                 width="180" height="45"/>
+                            <div class="desc">360 degree smoke screen generated by 6 launchers provides vehicles and infantry with cover to
+                                avoid a enemy fire.
+                            </div>
+                            <br/>
+                            <div class="desc">Need Vehicle Score 6500</div>
+                            <ul class="criteria">
+                                <li>{{formatNumber .Values.sc_vehicle}} / 6 500 Vehicle Score</li>
+                            </ul>
+                        </div>
+                        <div class="itemdetails" id="sp_vehicle5">
+                            <div class="name">High Power Optics Package</div>
+                            <img src="/static/img/bfbcs/special_normal/canonoptics.png" alt="High Power Optics Package"
+                                 width="180" height="45"/>
+                            <div class="desc">Digital and optical package allowing a driver to engage long range targets.</div>
+                            <br/>
+                            <div class="desc">Need Vehicle Score 8000</div>
+                            <ul class="criteria">
+                                <li>{{formatNumber .Values.sc_vehicle}} / 8 000 Vehicle Score</li>
+                            </ul>
+                        </div>
+                        <div class="itemdetails" id="sp_vehicle6">
+                            <div class="name">Alternate Weapon Package</div>
+                            <img src="/static/img/bfbcs/special_normal/coaxmg.png" alt="Alternate Weapon Package"
+                                 width="180" height="45"/>
+                            <div class="desc">Targeting System upgrade for vehicles and helicopters that extends the effective range and
+                                accuracy of mounted weapons.
+                            </div>
+                            <br/>
+                            <div class="desc">Need Vehicle Score 10000</div>
+                            <ul class="criteria">
+                                <li>{{formatNumber .Values.sc_vehicle}} / 10 000 Vehicle Score</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                    <br/>
                 </div>
             </div>
         </div>

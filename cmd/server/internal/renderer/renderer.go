@@ -24,6 +24,7 @@ func NewTemplateRenderer(glob string) (*TemplateRenderer, error) {
 			"formatTime":          formatTime,
 			"getRankName":         getRankName,
 			"getServiceStarClass": getServiceStarClass,
+			"calculateProgress":   calculateProgress,
 			"toUpper":             strings.ToUpper,
 		}).
 		ParseGlob(glob)
