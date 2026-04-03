@@ -2160,16 +2160,16 @@
                             <br/>
                             <div class="name">Class stars</div>
                             <div class="stars bron{{if eq .Values.brtveh_00 0.0}} inactive{{end}}">Bronze
-                                <div>7/10</div>
+                                <div>{{.Values.c_brtveh__tveh_ki_g}}/10</div>
                             </div>
                             <div class="stars silv{{if eq .Values.sitveh_00 0.0}} inactive{{end}}">Silver
-                                <div>7/25</div>
+                                <div>{{.Values.c_sitveh__tveh_ki_g}}/25</div>
                             </div>
                             <div class="stars {{printf "gold%.0f" .Values.gotveh_00}}{{if le .Values.gotveh_00 0.0}} inactive{{end}}">{{if gt .Values.gotveh_00 0.0}}Gold {{printf "%.0f" .Values.gotveh_00}}x{{else}}Gold{{end}}
-                                <div>7/50</div>
+                                <div>{{.Values.c_gotveh__tveh_ki_g}}/{{if ge .Values.gotveh_00 9.0}}450{{else}}{{mul (add .Values.gotveh_00 1) 50}}{{end}}</div>
                             </div>
                             <div class="stars plat{{if eq .Values.pltveh_00 0.0}} inactive{{end}}">Platin
-                                <div>7/500</div>
+                                <div>{{.Values.c_pltveh__tveh_ki_g}}/500</div>
                             </div>
                             <br/>
                             <div class="name">Vehicle stars (calculated)</div>
@@ -2196,16 +2196,16 @@
                             <br/>
                             <div class="name">Class stars</div>
                             <div class="stars bron{{if eq .Values.brtveh_00 0.0}} inactive{{end}}">Bronze
-                                <div>7/10</div>
+                                <div>{{.Values.c_brtveh__tveh_ki_g}}/10</div>
                             </div>
                             <div class="stars silv{{if eq .Values.sitveh_00 0.0}} inactive{{end}}">Silver
-                                <div>7/25</div>
+                                <div>{{.Values.c_sitveh__tveh_ki_g}}/25</div>
                             </div>
                             <div class="stars {{printf "gold%.0f" .Values.gotveh_00}}{{if le .Values.gotveh_00 0.0}} inactive{{end}}">{{if gt .Values.gotveh_00 0.0}}Gold {{printf "%.0f" .Values.gotveh_00}}x{{else}}Gold{{end}}
-                                <div>7/50</div>
+                                <div>{{.Values.c_gotveh__tveh_ki_g}}/{{if ge .Values.gotveh_00 9.0}}450{{else}}{{mul (add .Values.gotveh_00 1) 50}}{{end}}</div>
                             </div>
                             <div class="stars plat{{if eq .Values.pltveh_00 0.0}} inactive{{end}}">Platin
-                                <div>7/500</div>
+                                <div>{{.Values.c_pltveh__tveh_ki_g}}/500</div>
                             </div>
                             <br/>
                             <div class="name">Vehicle stars (calculated)</div>
@@ -2232,16 +2232,16 @@
                             <br/>
                             <div class="name">Class stars</div>
                             <div class="stars bron{{if eq .Values.brtveh_00 0.0}} inactive{{end}}">Bronze
-                                <div>7/10</div>
+                                <div>{{.Values.c_brtveh__tveh_ki_g}}/10</div>
                             </div>
                             <div class="stars silv{{if eq .Values.sitveh_00 0.0}} inactive{{end}}">Silver
-                                <div>7/25</div>
+                                <div>{{.Values.c_sitveh__tveh_ki_g}}/25</div>
                             </div>
                             <div class="stars {{printf "gold%.0f" .Values.gotveh_00}}{{if le .Values.gotveh_00 0.0}} inactive{{end}}">{{if gt .Values.gotveh_00 0.0}}Gold {{printf "%.0f" .Values.gotveh_00}}x{{else}}Gold{{end}}
-                                <div>7/50</div>
+                                <div>{{.Values.c_gotveh__tveh_ki_g}}/{{if ge .Values.gotveh_00 9.0}}450{{else}}{{mul (add .Values.gotveh_00 1) 50}}{{end}}</div>
                             </div>
                             <div class="stars plat{{if eq .Values.pltveh_00 0.0}} inactive{{end}}">Platin
-                                <div>7/500</div>
+                                <div>{{.Values.c_pltveh__tveh_ki_g}}/500</div>
                             </div>
                             <br/>
                             <div class="name">Vehicle stars (calculated)</div>
@@ -2268,16 +2268,16 @@
                             <br/>
                             <div class="name">Class stars</div>
                             <div class="stars bron{{if eq .Values.brtveh_00 0.0}} inactive{{end}}">Bronze
-                                <div>7/10</div>
+                                <div>{{.Values.c_brtveh__tveh_ki_g}}/10</div>
                             </div>
                             <div class="stars silv{{if eq .Values.sitveh_00 0.0}} inactive{{end}}">Silver
-                                <div>7/25</div>
+                                <div>{{.Values.c_sitveh__tveh_ki_g}}/25</div>
                             </div>
                             <div class="stars {{printf "gold%.0f" .Values.gotveh_00}}{{if le .Values.gotveh_00 0.0}} inactive{{end}}">{{if gt .Values.gotveh_00 0.0}}Gold {{printf "%.0f" .Values.gotveh_00}}x{{else}}Gold{{end}}
-                                <div>7/50</div>
+                                <div>{{.Values.c_gotveh__tveh_ki_g}}/{{if ge .Values.gotveh_00 9.0}}450{{else}}{{mul (add .Values.gotveh_00 1) 50}}{{end}}</div>
                             </div>
                             <div class="stars plat{{if eq .Values.pltveh_00 0.0}} inactive{{end}}">Platin
-                                <div>7/500</div>
+                                <div>{{.Values.c_pltveh__tveh_ki_g}}/500</div>
                             </div>
                             <br/>
                             <div class="name">Vehicle stars (calculated)</div>
@@ -2302,16 +2302,16 @@
                             <br/>
                             <div class="name">Class stars</div>
                             <div class="stars bron{{if eq .Values.brtveh_00 0.0}} inactive{{end}}">Bronze
-                                <div>7/10</div>
+                                <div>{{.Values.c_brtveh__tveh_ki_g}}/10</div>
                             </div>
                             <div class="stars silv{{if eq .Values.sitveh_00 0.0}} inactive{{end}}">Silver
-                                <div>7/25</div>
+                                <div>{{.Values.c_sitveh__tveh_ki_g}}/25</div>
                             </div>
                             <div class="stars {{printf "gold%.0f" .Values.gotveh_00}}{{if le .Values.gotveh_00 0.0}} inactive{{end}}">{{if gt .Values.gotveh_00 0.0}}Gold {{printf "%.0f" .Values.gotveh_00}}x{{else}}Gold{{end}}
-                                <div>7/50</div>
+                                <div>{{.Values.c_gotveh__tveh_ki_g}}/{{if ge .Values.gotveh_00 9.0}}450{{else}}{{mul (add .Values.gotveh_00 1) 50}}{{end}}</div>
                             </div>
                             <div class="stars plat{{if eq .Values.pltveh_00 0.0}} inactive{{end}}">Platin
-                                <div>7/500</div>
+                                <div>{{.Values.c_pltveh__tveh_ki_g}}/500</div>
                             </div>
                             <br/>
                             <div class="name">Vehicle stars (calculated)</div>
@@ -2336,16 +2336,16 @@
                             <br/>
                             <div class="name">Class stars</div>
                             <div class="stars bron{{if eq .Values.brtveh_00 0.0}} inactive{{end}}">Bronze
-                                <div>7/10</div>
+                                <div>{{.Values.c_brtveh__tveh_ki_g}}/10</div>
                             </div>
                             <div class="stars silv{{if eq .Values.sitveh_00 0.0}} inactive{{end}}">Silver
-                                <div>7/25</div>
+                                <div>{{.Values.c_sitveh__tveh_ki_g}}/25</div>
                             </div>
                             <div class="stars {{printf "gold%.0f" .Values.gotveh_00}}{{if le .Values.gotveh_00 0.0}} inactive{{end}}">{{if gt .Values.gotveh_00 0.0}}Gold {{printf "%.0f" .Values.gotveh_00}}x{{else}}Gold{{end}}
-                                <div>7/50</div>
+                                <div>{{.Values.c_gotveh__tveh_ki_g}}/{{if ge .Values.gotveh_00 9.0}}450{{else}}{{mul (add .Values.gotveh_00 1) 50}}{{end}}</div>
                             </div>
                             <div class="stars plat{{if eq .Values.pltveh_00 0.0}} inactive{{end}}">Platin
-                                <div>7/500</div>
+                                <div>{{.Values.c_pltveh__tveh_ki_g}}/500</div>
                             </div>
                             <br/>
                             <div class="name">Vehicle stars (calculated)</div>
@@ -2372,16 +2372,16 @@
                             <br/>
                             <div class="name">Class stars</div>
                             <div class="stars bron{{if eq .Values.brarm_00 0.0}} inactive{{end}}">Bronze
-                                <div>10/10</div>
+                                <div>{{.Values.c_brarm__arm_ki_g}}/10</div>
                             </div>
                             <div class="stars silv{{if eq .Values.siarm_00 0.0}} inactive{{end}}">Silver
-                                <div>25/25</div>
+                                <div>{{.Values.c_siarm__arm_ki_g}}/25</div>
                             </div>
                             <div class="stars {{printf "gold%.0f" .Values.goarm_00}}{{if le .Values.goarm_00 0.0}} inactive{{end}}">{{if gt .Values.goarm_00 0.0}}Gold {{printf "%.0f" .Values.goarm_00}}x{{else}}Gold{{end}}
-                                <div>160/200</div>
+                                <div>{{.Values.c_goarm__arm_ki_g}}/{{if ge .Values.goarm_00 9.0}}450{{else}}{{mul (add .Values.goarm_00 1) 50}}{{end}}</div>
                             </div>
                             <div class="stars plat{{if eq .Values.plarm_00 0.0}} inactive{{end}}">Platin
-                                <div>160/500</div>
+                                <div>{{.Values.c_plarm__arm_ki_g}}/500</div>
                             </div>
                             <br/>
                             <div class="name">Vehicle stars (calculated)</div>
@@ -2408,16 +2408,16 @@
                             <br/>
                             <div class="name">Class stars</div>
                             <div class="stars bron{{if eq .Values.brarm_00 0.0}} inactive{{end}}">Bronze
-                                <div>10/10</div>
+                                <div>{{.Values.c_brarm__arm_ki_g}}/10</div>
                             </div>
                             <div class="stars silv{{if eq .Values.siarm_00 0.0}} inactive{{end}}">Silver
-                                <div>25/25</div>
+                                <div>{{.Values.c_siarm__arm_ki_g}}/25</div>
                             </div>
                             <div class="stars {{printf "gold%.0f" .Values.goarm_00}}{{if le .Values.goarm_00 0.0}} inactive{{end}}">{{if gt .Values.goarm_00 0.0}}Gold {{printf "%.0f" .Values.goarm_00}}x{{else}}Gold{{end}}
-                                <div>160/200</div>
+                                <div>{{.Values.c_goarm__arm_ki_g}}/{{if ge .Values.goarm_00 9.0}}450{{else}}{{mul (add .Values.goarm_00 1) 50}}{{end}}</div>
                             </div>
                             <div class="stars plat{{if eq .Values.plarm_00 0.0}} inactive{{end}}">Platin
-                                <div>160/500</div>
+                                <div>{{.Values.c_plarm__arm_ki_g}}/500</div>
                             </div>
                             <br/>
                             <div class="name">Vehicle stars (calculated)</div>
@@ -2444,16 +2444,16 @@
                             <br/>
                             <div class="name">Class stars</div>
                             <div class="stars bron{{if eq .Values.brarm_00 0.0}} inactive{{end}}">Bronze
-                                <div>10/10</div>
+                                <div>{{.Values.c_brarm__arm_ki_g}}/10</div>
                             </div>
                             <div class="stars silv{{if eq .Values.siarm_00 0.0}} inactive{{end}}">Silver
-                                <div>25/25</div>
+                                <div>{{.Values.c_siarm__arm_ki_g}}/25</div>
                             </div>
                             <div class="stars {{printf "gold%.0f" .Values.goarm_00}}{{if le .Values.goarm_00 0.0}} inactive{{end}}">{{if gt .Values.goarm_00 0.0}}Gold {{printf "%.0f" .Values.goarm_00}}x{{else}}Gold{{end}}
-                                <div>160/200</div>
+                                <div>{{.Values.c_goarm__arm_ki_g}}/{{if ge .Values.goarm_00 9.0}}450{{else}}{{mul (add .Values.goarm_00 1) 50}}{{end}}</div>
                             </div>
                             <div class="stars plat{{if eq .Values.plarm_00 0.0}} inactive{{end}}">Platin
-                                <div>160/500</div>
+                                <div>{{.Values.c_plarm__arm_ki_g}}/500</div>
                             </div>
                             <br/>
                             <div class="name">Vehicle stars (calculated)</div>
@@ -2480,16 +2480,16 @@
                             <br/>
                             <div class="name">Class stars</div>
                             <div class="stars bron{{if eq .Values.brarm_00 0.0}} inactive{{end}}">Bronze
-                                <div>10/10</div>
+                                <div>{{.Values.c_brarm__arm_ki_g}}/10</div>
                             </div>
                             <div class="stars silv{{if eq .Values.siarm_00 0.0}} inactive{{end}}">Silver
-                                <div>25/25</div>
+                                <div>{{.Values.c_siarm__arm_ki_g}}/25</div>
                             </div>
                             <div class="stars {{printf "gold%.0f" .Values.goarm_00}}{{if le .Values.goarm_00 0.0}} inactive{{end}}">{{if gt .Values.goarm_00 0.0}}Gold {{printf "%.0f" .Values.goarm_00}}x{{else}}Gold{{end}}
-                                <div>160/200</div>
+                                <div>{{.Values.c_goarm__arm_ki_g}}/{{if ge .Values.goarm_00 9.0}}450{{else}}{{mul (add .Values.goarm_00 1) 50}}{{end}}</div>
                             </div>
                             <div class="stars plat{{if eq .Values.plarm_00 0.0}} inactive{{end}}">Platin
-                                <div>160/500</div>
+                                <div>{{.Values.c_plarm__arm_ki_g}}/500</div>
                             </div>
                             <br/>
                             <div class="name">Vehicle stars (calculated)</div>
@@ -2516,16 +2516,16 @@
                             <br/>
                             <div class="name">Class stars</div>
                             <div class="stars bron{{if eq .Values.brarm_00 0.0}} inactive{{end}}">Bronze
-                                <div>10/10</div>
+                                <div>{{.Values.c_brarm__arm_ki_g}}/10</div>
                             </div>
                             <div class="stars silv{{if eq .Values.siarm_00 0.0}} inactive{{end}}">Silver
-                                <div>25/25</div>
+                                <div>{{.Values.c_siarm__arm_ki_g}}/25</div>
                             </div>
                             <div class="stars {{printf "gold%.0f" .Values.goarm_00}}{{if le .Values.goarm_00 0.0}} inactive{{end}}">{{if gt .Values.goarm_00 0.0}}Gold {{printf "%.0f" .Values.goarm_00}}x{{else}}Gold{{end}}
-                                <div>160/200</div>
+                                <div>{{.Values.c_goarm__arm_ki_g}}/{{if ge .Values.goarm_00 9.0}}450{{else}}{{mul (add .Values.goarm_00 1) 50}}{{end}}</div>
                             </div>
                             <div class="stars plat{{if eq .Values.plarm_00 0.0}} inactive{{end}}">Platin
-                                <div>160/500</div>
+                                <div>{{.Values.c_plarm__arm_ki_g}}/500</div>
                             </div>
                             <br/>
                             <div class="name">Vehicle stars (calculated)</div>
@@ -2550,16 +2550,16 @@
                             <br/>
                             <div class="name">Class stars</div>
                             <div class="stars bron{{if eq .Values.brsea_00 0.0}} inactive{{end}}">Bronze
-                                <div>9/10</div>
+                                <div>{{.Values.c_brsea__sea_ki_g}}/10</div>
                             </div>
                             <div class="stars silv{{if eq .Values.sisea_00 0.0}} inactive{{end}}">Silver
-                                <div>9/25</div>
+                                <div>{{.Values.c_sisea__sea_ki_g}}/25</div>
                             </div>
                             <div class="stars {{printf "gold%.0f" .Values.gosea_00}}{{if le .Values.gosea_00 0.0}} inactive{{end}}">{{if gt .Values.gosea_00 0.0}}Gold {{printf "%.0f" .Values.gosea_00}}x{{else}}Gold{{end}}
-                                <div>9/50</div>
+                                <div>{{.Values.c_gosea__sea_ki_g}}/{{if ge .Values.gosea_00 9.0}}450{{else}}{{mul (add .Values.gosea_00 1) 50}}{{end}}</div>
                             </div>
                             <div class="stars plat{{if eq .Values.plsea_00 0.0}} inactive{{end}}">Platin
-                                <div>9/500</div>
+                                <div>{{.Values.c_plsea__sea_ki_g}}/500</div>
                             </div>
                             <br/>
                             <div class="name">Vehicle stars (calculated)</div>
@@ -2586,16 +2586,16 @@
                             <br/>
                             <div class="name">Class stars</div>
                             <div class="stars bron{{if eq .Values.brsea_00 0.0}} inactive{{end}}">Bronze
-                                <div>9/10</div>
+                                <div>{{.Values.c_brsea__sea_ki_g}}/10</div>
                             </div>
                             <div class="stars silv{{if eq .Values.sisea_00 0.0}} inactive{{end}}">Silver
-                                <div>9/25</div>
+                                <div>{{.Values.c_sisea__sea_ki_g}}/25</div>
                             </div>
                             <div class="stars {{printf "gold%.0f" .Values.gosea_00}}{{if le .Values.gosea_00 0.0}} inactive{{end}}">{{if gt .Values.gosea_00 0.0}}Gold {{printf "%.0f" .Values.gosea_00}}x{{else}}Gold{{end}}
-                                <div>9/50</div>
+                                <div>{{.Values.c_gosea__sea_ki_g}}/{{if ge .Values.gosea_00 9.0}}450{{else}}{{mul (add .Values.gosea_00 1) 50}}{{end}}</div>
                             </div>
                             <div class="stars plat{{if eq .Values.plsea_00 0.0}} inactive{{end}}">Platin
-                                <div>9/500</div>
+                                <div>{{.Values.c_plsea__sea_ki_g}}/500</div>
                             </div>
                             <br/>
                             <div class="name">Vehicle stars (calculated)</div>
@@ -2620,16 +2620,16 @@
                             <br/>
                             <div class="name">Class stars</div>
                             <div class="stars bron{{if eq .Values.brsea_00 0.0}} inactive{{end}}">Bronze
-                                <div>9/10</div>
+                                <div>{{.Values.c_brsea__sea_ki_g}}/10</div>
                             </div>
                             <div class="stars silv{{if eq .Values.sisea_00 0.0}} inactive{{end}}">Silver
-                                <div>9/25</div>
+                                <div>{{.Values.c_sisea__sea_ki_g}}/25</div>
                             </div>
                             <div class="stars {{printf "gold%.0f" .Values.gosea_00}}{{if le .Values.gosea_00 0.0}} inactive{{end}}">{{if gt .Values.gosea_00 0.0}}Gold {{printf "%.0f" .Values.gosea_00}}x{{else}}Gold{{end}}
-                                <div>9/50</div>
+                                <div>{{.Values.c_gosea__sea_ki_g}}/{{if ge .Values.gosea_00 9.0}}450{{else}}{{mul (add .Values.gosea_00 1) 50}}{{end}}</div>
                             </div>
                             <div class="stars plat{{if eq .Values.plsea_00 0.0}} inactive{{end}}">Platin
-                                <div>9/500</div>
+                                <div>{{.Values.c_plsea__sea_ki_g}}/500</div>
                             </div>
                             <br/>
                             <div class="name">Vehicle stars (calculated)</div>
@@ -2656,16 +2656,16 @@
                             <br/>
                             <div class="name">Class stars</div>
                             <div class="stars bron{{if eq .Values.brair_00 0.0}} inactive{{end}}">Bronze
-                                <div>10/10</div>
+                                <div>{{.Values.c_brair__air_ki_g}}/10</div>
                             </div>
                             <div class="stars silv{{if eq .Values.siair_00 0.0}} inactive{{end}}">Silver
-                                <div>25/25</div>
+                                <div>{{.Values.c_siair__air_ki_g}}/25</div>
                             </div>
                             <div class="stars {{printf "gold%.0f" .Values.goair_00}}{{if le .Values.goair_00 0.0}} inactive{{end}}">{{if gt .Values.goair_00 0.0}}Gold {{printf "%.0f" .Values.goair_00}}x{{else}}Gold{{end}}
-                                <div>57/100</div>
+                                <div>{{.Values.c_goair__air_ki_g}}/{{if ge .Values.goair_00 9.0}}450{{else}}{{mul (add .Values.goair_00 1) 50}}{{end}}</div>
                             </div>
                             <div class="stars plat{{if eq .Values.plair_00 0.0}} inactive{{end}}">Platin
-                                <div>57/500</div>
+                                <div>{{.Values.c_plair__air_ki_g}}/500</div>
                             </div>
                             <br/>
                             <div class="name">Vehicle stars (calculated)</div>
@@ -2692,16 +2692,16 @@
                             <br/>
                             <div class="name">Class stars</div>
                             <div class="stars bron{{if eq .Values.brair_00 0.0}} inactive{{end}}">Bronze
-                                <div>10/10</div>
+                                <div>{{.Values.c_brair__air_ki_g}}/10</div>
                             </div>
                             <div class="stars silv{{if eq .Values.siair_00 0.0}} inactive{{end}}">Silver
-                                <div>25/25</div>
+                                <div>{{.Values.c_siair__air_ki_g}}/25</div>
                             </div>
                             <div class="stars {{printf "gold%.0f" .Values.goair_00}}{{if le .Values.goair_00 0.0}} inactive{{end}}">{{if gt .Values.goair_00 0.0}}Gold {{printf "%.0f" .Values.goair_00}}x{{else}}Gold{{end}}
-                                <div>57/100</div>
+                                <div>{{.Values.c_goair__air_ki_g}}/{{if ge .Values.goair_00 9.0}}450{{else}}{{mul (add .Values.goair_00 1) 50}}{{end}}</div>
                             </div>
                             <div class="stars plat{{if eq .Values.plair_00 0.0}} inactive{{end}}">Platin
-                                <div>57/500</div>
+                                <div>{{.Values.c_plair__air_ki_g}}/500</div>
                             </div>
                             <br/>
                             <div class="name">Vehicle stars (calculated)</div>
@@ -2728,16 +2728,16 @@
                             <br/>
                             <div class="name">Class stars</div>
                             <div class="stars bron{{if eq .Values.brair_00 0.0}} inactive{{end}}">Bronze
-                                <div>10/10</div>
+                                <div>{{.Values.c_brair__air_ki_g}}/10</div>
                             </div>
                             <div class="stars silv{{if eq .Values.siair_00 0.0}} inactive{{end}}">Silver
-                                <div>25/25</div>
+                                <div>{{.Values.c_siair__air_ki_g}}/25</div>
                             </div>
                             <div class="stars {{printf "gold%.0f" .Values.goair_00}}{{if le .Values.goair_00 0.0}} inactive{{end}}">{{if gt .Values.goair_00 0.0}}Gold {{printf "%.0f" .Values.goair_00}}x{{else}}Gold{{end}}
-                                <div>57/100</div>
+                                <div>{{.Values.c_goair__air_ki_g}}/{{if ge .Values.goair_00 9.0}}450{{else}}{{mul (add .Values.goair_00 1) 50}}{{end}}</div>
                             </div>
                             <div class="stars plat{{if eq .Values.plair_00 0.0}} inactive{{end}}">Platin
-                                <div>57/500</div>
+                                <div>{{.Values.c_plair__air_ki_g}}/500</div>
                             </div>
                             <br/>
                             <div class="name">Vehicle stars (calculated)</div>
@@ -2764,16 +2764,16 @@
                             <br/>
                             <div class="name">Class stars</div>
                             <div class="stars bron{{if eq .Values.brair_00 0.0}} inactive{{end}}">Bronze
-                                <div>10/10</div>
+                                <div>{{.Values.c_brair__air_ki_g}}/10</div>
                             </div>
                             <div class="stars silv{{if eq .Values.siair_00 0.0}} inactive{{end}}">Silver
-                                <div>25/25</div>
+                                <div>{{.Values.c_siair__air_ki_g}}/25</div>
                             </div>
                             <div class="stars {{printf "gold%.0f" .Values.goair_00}}{{if le .Values.goair_00 0.0}} inactive{{end}}">{{if gt .Values.goair_00 0.0}}Gold {{printf "%.0f" .Values.goair_00}}x{{else}}Gold{{end}}
-                                <div>57/100</div>
+                                <div>{{.Values.c_goair__air_ki_g}}/{{if ge .Values.goair_00 9.0}}450{{else}}{{mul (add .Values.goair_00 1) 50}}{{end}}</div>
                             </div>
                             <div class="stars plat{{if eq .Values.plair_00 0.0}} inactive{{end}}">Platin
-                                <div>57/500</div>
+                                <div>{{.Values.c_plair__air_ki_g}}/500</div>
                             </div>
                             <br/>
                             <div class="name">Vehicle stars (calculated)</div>
@@ -2800,16 +2800,16 @@
                             <br/>
                             <div class="name">Class stars</div>
                             <div class="stars bron{{if eq .Values.brair_00 0.0}} inactive{{end}}">Bronze
-                                <div>10/10</div>
+                                <div>{{.Values.c_brair__air_ki_g}}/10</div>
                             </div>
                             <div class="stars silv{{if eq .Values.siair_00 0.0}} inactive{{end}}">Silver
-                                <div>25/25</div>
+                                <div>{{.Values.c_siair__air_ki_g}}/25</div>
                             </div>
                             <div class="stars {{printf "gold%.0f" .Values.goair_00}}{{if le .Values.goair_00 0.0}} inactive{{end}}">{{if gt .Values.goair_00 0.0}}Gold {{printf "%.0f" .Values.goair_00}}x{{else}}Gold{{end}}
-                                <div>57/100</div>
+                                <div>{{.Values.c_goair__air_ki_g}}/{{if ge .Values.goair_00 9.0}}450{{else}}{{mul (add .Values.goair_00 1) 50}}{{end}}</div>
                             </div>
                             <div class="stars plat{{if eq .Values.plair_00 0.0}} inactive{{end}}">Platin
-                                <div>57/500</div>
+                                <div>{{.Values.c_plair__air_ki_g}}/500</div>
                             </div>
                             <br/>
                             <div class="name">Vehicle stars (calculated)</div>
@@ -2836,16 +2836,16 @@
                             <br/>
                             <div class="name">Class stars</div>
                             <div class="stars bron{{if eq .Values.brstav_00 0.0}} inactive{{end}}">Bronze
-                                <div>10/10</div>
+                                <div>{{.Values.c_brstav__stav_ki_g}}/10</div>
                             </div>
                             <div class="stars silv{{if eq .Values.sistav_00 0.0}} inactive{{end}}">Silver
-                                <div>25/25</div>
+                                <div>{{.Values.c_sistav__stav_ki_g}}/25</div>
                             </div>
                             <div class="stars {{printf "gold%.0f" .Values.gostav_00}}{{if le .Values.gostav_00 0.0}} inactive{{end}}">{{if gt .Values.gostav_00 0.0}}Gold {{printf "%.0f" .Values.gostav_00}}x{{else}}Gold{{end}}
-                                <div>25/50</div>
+                                <div>{{.Values.c_gostav__stav_ki_g}}/{{if ge .Values.gostav_00 9.0}}450{{else}}{{mul (add .Values.gostav_00 1) 50}}{{end}}</div>
                             </div>
                             <div class="stars plat{{if eq .Values.plstav_00 0.0}} inactive{{end}}">Platin
-                                <div>25/500</div>
+                                <div>{{.Values.c_plstav__stav_ki_g}}/500</div>
                             </div>
                             <br/>
                             <div class="name">Vehicle stars (calculated)</div>
@@ -2872,16 +2872,16 @@
                             <br/>
                             <div class="name">Class stars</div>
                             <div class="stars bron{{if eq .Values.brstav_00 0.0}} inactive{{end}}">Bronze
-                                <div>10/10</div>
+                                <div>{{.Values.c_brstav__stav_ki_g}}/10</div>
                             </div>
                             <div class="stars silv{{if eq .Values.sistav_00 0.0}} inactive{{end}}">Silver
-                                <div>25/25</div>
+                                <div>{{.Values.c_sistav__stav_ki_g}}/25</div>
                             </div>
                             <div class="stars {{printf "gold%.0f" .Values.gostav_00}}{{if le .Values.gostav_00 0.0}} inactive{{end}}">{{if gt .Values.gostav_00 0.0}}Gold {{printf "%.0f" .Values.gostav_00}}x{{else}}Gold{{end}}
-                                <div>25/50</div>
+                                <div>{{.Values.c_gostav__stav_ki_g}}/{{if ge .Values.gostav_00 9.0}}450{{else}}{{mul (add .Values.gostav_00 1) 50}}{{end}}</div>
                             </div>
                             <div class="stars plat{{if eq .Values.plstav_00 0.0}} inactive{{end}}">Platin
-                                <div>25/500</div>
+                                <div>{{.Values.c_plstav__stav_ki_g}}/500</div>
                             </div>
                             <br/>
                             <div class="name">Vehicle stars (calculated)</div>
@@ -2908,16 +2908,16 @@
                             <br/>
                             <div class="name">Class stars</div>
                             <div class="stars bron{{if eq .Values.brstav_00 0.0}} inactive{{end}}">Bronze
-                                <div>10/10</div>
+                                <div>{{.Values.c_brstav__stav_ki_g}}/10</div>
                             </div>
                             <div class="stars silv{{if eq .Values.sistav_00 0.0}} inactive{{end}}">Silver
-                                <div>25/25</div>
+                                <div>{{.Values.c_sistav__stav_ki_g}}/25</div>
                             </div>
                             <div class="stars {{printf "gold%.0f" .Values.gostav_00}}{{if le .Values.gostav_00 0.0}} inactive{{end}}">{{if gt .Values.gostav_00 0.0}}Gold {{printf "%.0f" .Values.gostav_00}}x{{else}}Gold{{end}}
-                                <div>25/50</div>
+                                <div>{{.Values.c_gostav__stav_ki_g}}/{{if ge .Values.gostav_00 9.0}}450{{else}}{{mul (add .Values.gostav_00 1) 50}}{{end}}</div>
                             </div>
                             <div class="stars plat{{if eq .Values.plstav_00 0.0}} inactive{{end}}">Platin
-                                <div>25/500</div>
+                                <div>{{.Values.c_plstav__stav_ki_g}}/500</div>
                             </div>
                             <br/>
                             <div class="name">Vehicle stars (calculated)</div>
@@ -2944,16 +2944,16 @@
                             <br/>
                             <div class="name">Class stars</div>
                             <div class="stars bron{{if eq .Values.brstav_00 0.0}} inactive{{end}}">Bronze
-                                <div>10/10</div>
+                                <div>{{.Values.c_brstav__stav_ki_g}}/10</div>
                             </div>
                             <div class="stars silv{{if eq .Values.sistav_00 0.0}} inactive{{end}}">Silver
-                                <div>25/25</div>
+                                <div>{{.Values.c_sistav__stav_ki_g}}/25</div>
                             </div>
                             <div class="stars {{printf "gold%.0f" .Values.gostav_00}}{{if le .Values.gostav_00 0.0}} inactive{{end}}">{{if gt .Values.gostav_00 0.0}}Gold {{printf "%.0f" .Values.gostav_00}}x{{else}}Gold{{end}}
-                                <div>25/50</div>
+                                <div>{{.Values.c_gostav__stav_ki_g}}/{{if ge .Values.gostav_00 9.0}}450{{else}}{{mul (add .Values.gostav_00 1) 50}}{{end}}</div>
                             </div>
                             <div class="stars plat{{if eq .Values.plstav_00 0.0}} inactive{{end}}">Platin
-                                <div>25/500</div>
+                                <div>{{.Values.c_plstav__stav_ki_g}}/500</div>
                             </div>
                             <br/>
                             <div class="name">Vehicle stars (calculated)</div>
@@ -2980,16 +2980,16 @@
                             <br/>
                             <div class="name">Class stars</div>
                             <div class="stars bron{{if eq .Values.brstav_00 0.0}} inactive{{end}}">Bronze
-                                <div>10/10</div>
+                                <div>{{.Values.c_brstav__stav_ki_g}}/10</div>
                             </div>
                             <div class="stars silv{{if eq .Values.sistav_00 0.0}} inactive{{end}}">Silver
-                                <div>25/25</div>
+                                <div>{{.Values.c_sistav__stav_ki_g}}/25</div>
                             </div>
                             <div class="stars {{printf "gold%.0f" .Values.gostav_00}}{{if le .Values.gostav_00 0.0}} inactive{{end}}">{{if gt .Values.gostav_00 0.0}}Gold {{printf "%.0f" .Values.gostav_00}}x{{else}}Gold{{end}}
-                                <div>25/50</div>
+                                <div>{{.Values.c_gostav__stav_ki_g}}/{{if ge .Values.gostav_00 9.0}}450{{else}}{{mul (add .Values.gostav_00 1) 50}}{{end}}</div>
                             </div>
                             <div class="stars plat{{if eq .Values.plstav_00 0.0}} inactive{{end}}">Platin
-                                <div>25/500</div>
+                                <div>{{.Values.c_plstav__stav_ki_g}}/500</div>
                             </div>
                             <br/>
                             <div class="name">Vehicle stars (calculated)</div>
@@ -3014,16 +3014,16 @@
                             <br/>
                             <div class="name">Class stars</div>
                             <div class="stars bron{{if eq .Values.brstav_00 0.0}} inactive{{end}}">Bronze
-                                <div>10/10</div>
+                                <div>{{.Values.c_brstav__stav_ki_g}}/10</div>
                             </div>
                             <div class="stars silv{{if eq .Values.sistav_00 0.0}} inactive{{end}}">Silver
-                                <div>25/25</div>
+                                <div>{{.Values.c_sistav__stav_ki_g}}/25</div>
                             </div>
                             <div class="stars {{printf "gold%.0f" .Values.gostav_00}}{{if le .Values.gostav_00 0.0}} inactive{{end}}">{{if gt .Values.gostav_00 0.0}}Gold {{printf "%.0f" .Values.gostav_00}}x{{else}}Gold{{end}}
-                                <div>25/50</div>
+                                <div>{{.Values.c_gostav__stav_ki_g}}/{{if ge .Values.gostav_00 9.0}}450{{else}}{{mul (add .Values.gostav_00 1) 50}}{{end}}</div>
                             </div>
                             <div class="stars plat{{if eq .Values.plstav_00 0.0}} inactive{{end}}">Platin
-                                <div>25/500</div>
+                                <div>{{.Values.c_plstav__stav_ki_g}}/500</div>
                             </div>
                             <br/>
                             <div class="name">Vehicle stars (calculated)</div>
