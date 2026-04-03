@@ -162,7 +162,7 @@ func getRankName(rank float64) string {
 	}
 }
 
-func getWeaponStarClass(values map[string]any, key string) string {
+func getServiceStarClass(values map[string]any, key string) string {
 	if getFloat(values, fmt.Sprintf("pl%s_00", key)) > 0 {
 		return "plat"
 	}
