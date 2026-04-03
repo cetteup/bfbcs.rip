@@ -520,15 +520,15 @@
                                 </td>
                             </tr>
                             <tr onmouseover="bfbcs.showDetail('weapon','wep_22','wepa_22')" id="wepa_22">
-                                <td class="left stars {{getServiceStarClass .Values "qbu88"}}">Type 88 Sniper</td>
-                                <td>{{formatDuration .Values.c_qbu88__sw_g}}</td>
-                                <td>{{formatNumber .Values.c_qbu88__kw_g}}</td>
-                                <td>{{formatNumber .Values.c__qbu88_hsh_g}}</td>
-                                <td>{{formatNumber .Values.c_qbu88__sfw_g}}</td>
-                                <td>{{formatNumber .Values.c_qbu88__shw_g}}</td>
-                                <td>{{if gt .Values.c_qbu88__sfw_g 0.0}}{{printf "%.2f %%" (mul (div
-                                    .Values.c_qbu88__shw_g .Values.c_qbu88__sfw_g) 100)}}{{else}}0.00 %{{end}}
-                                </td>
+                                {{$key := "qbu88"}}{{if or (eq .Player.Platform "ps3") (eq .Player.Platform "xbox360")}}{{$key = "qby88"}}{{end}}<td class="left stars {{getServiceStarClass .Values $key}}">Type 88 Sniper</td>
+                                 <td>{{formatDuration (index .Values (printf "c_%s__sw_g" $key))}}</td>
+                                 <td>{{formatNumber (index .Values (printf "c_%s__kw_g" $key))}}</td>
+                                 <td>{{formatNumber (index .Values (printf "c__%s_hsh_g" $key))}}</td>
+                                 <td>{{formatNumber (index .Values (printf "c_%s__sfw_g" $key))}}</td>
+                                 <td>{{formatNumber (index .Values (printf "c_%s__shw_g" $key))}}</td>
+                                 <td>{{if gt (index .Values (printf "c_%s__sfw_g" $key)) 0.0}}{{printf "%.2f %%" (mul (div
+                                     (index .Values (printf "c_%s__shw_g" $key)) (index .Values (printf "c_%s__sfw_g" $key))) 100)}}{{else}}0.00 %{{end}}
+                                 </td>
                             </tr>
                             <tr onmouseover="bfbcs.showDetail('weapon','wep_23','wepa_23')" id="wepa_23">
                                 <td class="left stars {{getServiceStarClass .Values "sv98"}}">SV98 Snaiperskaya</td>
@@ -1312,17 +1312,18 @@
                             <div class="desc">A 10 round, semiautomatic rifle with a rugged design produces average
                                 accuracy and stopping power.
                             </div>
-                            <div class="stars bron{{if eq .Values.brqbu88_00 0.0}} inactive{{end}}">Bronze
-                                <div>{{.Values.c_brqbu88_qbu88__kw_g}}/25</div>
+                            {{$key := "qbu88"}}{{if or (eq .Player.Platform "ps3") (eq .Player.Platform "xbox360")}}{{$key = "qby88"}}{{end}}
+                            <div class="stars bron{{if eq (index .Values (printf "br%s_00" $key)) 0.0}} inactive{{end}}">Bronze
+                                <div>{{(index .Values (printf "c_br%s_%s__kw_g" $key $key))}}/25</div>
                             </div>
-                            <div class="stars silv{{if eq .Values.siqbu88_00 0.0}} inactive{{end}}">Silver
-                                <div>{{.Values.c_siqbu88_qbu88__kw_g}}/50</div>
+                            <div class="stars silv{{if eq (index .Values (printf "si%s_00" $key)) 0.0}} inactive{{end}}">Silver
+                                <div>{{(index .Values (printf "c_si%s_%s__kw_g" $key $key))}}/50</div>
                             </div>
-                            <div class="stars {{printf "gold%.0f" .Values.goqbu88_00}}{{if le .Values.goqbu88_00 0.0}} inactive{{end}}">{{if gt .Values.goqbu88_00 0.0}}Gold {{printf "%.0f" .Values.goqbu88_00}}x{{else}}Gold{{end}}
-                                <div>{{.Values.c_goqbu88_qbu88__kw_g}}/{{if ge .Values.goqbu88_00 9.0}}900{{else}}{{mul (add .Values.goqbu88_00 1) 100}}{{end}}</div>
+                            <div class="stars {{printf "gold%.0f" (index .Values (printf "go%s_00" $key))}}{{if le (index .Values (printf "go%s_00" $key)) 0.0}} inactive{{end}}">{{if gt (index .Values (printf "go%s_00" $key)) 0.0}}Gold {{printf "%.0f" (index .Values (printf "go%s_00" $key))}}x{{else}}Gold{{end}}
+                                <div>{{(index .Values (printf "c_go%s_%s__kw_g" $key $key))}}/{{if ge (index .Values (printf "go%s_00" $key)) 9.0}}900{{else}}{{mul (add (index .Values (printf "go%s_00" $key)) 1) 100}}{{end}}</div>
                             </div>
-                            <div class="stars plat{{if eq .Values.plqbu88_00 0.0}} inactive{{end}}">Platin
-                                <div>{{.Values.c_plqbu88_qbu88__kw_g}}/1000</div>
+                            <div class="stars plat{{if eq (index .Values (printf "pl%s_00" $key)) 0.0}} inactive{{end}}">Platin
+                                <div>{{(index .Values (printf "c_pl%s_%s__kw_g" $key $key))}}/1000</div>
                             </div>
                         </div>
                         <div class="itemdetails" id="wep_23" style="display: none; margin-top: 0px;">
