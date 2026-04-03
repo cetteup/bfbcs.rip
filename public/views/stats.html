@@ -3047,7 +3047,7 @@
                     <h2>Gadgets</h2>
                     <div class="stcol_1">
                         <div class="gadget linetitle">Assault</div>
-                        <div class="gadget stars gold1" onmouseover="bfbcs.showDetail('gadgets','gad_assault0','gada_assault0')"
+                        <div class="gadget stars {{getServiceStarClass .Values "40mmgl"}}" onmouseover="bfbcs.showDetail('gadgets','gad_assault0','gada_assault0')"
                              id="gada_assault0"><img src="/static/img/bfbcs/gadgets_small/gl_frag.png" alt="40MM Grenade"
                                                      width="75" height="19"/></div>
                         <div class="gadget" onmouseover="bfbcs.showDetail('gadgets','gad_assault1','gada_assault1')" id="gada_assault1"><img
@@ -3056,24 +3056,24 @@
                         <div class="gadget" onmouseover="bfbcs.showDetail('gadgets','gad_assault2','gada_assault2')" id="gada_assault2"><img
                                 src="/static/img/bfbcs/gadgets_small/gl_smoke.png" alt="40MM Smoke Launcher" width="75"
                                 height="19"/></div>
-                        <div class="gadget stars none" onmouseover="bfbcs.showDetail('gadgets','gad_assault3','gada_assault3')"
+                        <div class="gadget stars {{getServiceStarClass .Values "40mmsg"}}" onmouseover="bfbcs.showDetail('gadgets','gad_assault3','gada_assault3')"
                              id="gada_assault3"><img src="/static/img/bfbcs/gadgets_small/gl_shotgun.png"
                                                      alt="40MM Shotgun" width="75" height="19"/></div>
                         <div class="clear"></div>
                         <div class="gadget linetitle">Engineer</div>
-                        <div class="gadget stars none" onmouseover="bfbcs.showDetail('gadgets','gad_demo0','gada_demo0')" id="gada_demo0">
+                        <div class="gadget stars {{getServiceStarClass .Values "rpg7"}}" onmouseover="bfbcs.showDetail('gadgets','gad_demo0','gada_demo0')" id="gada_demo0">
                             <img src="/static/img/bfbcs/gadgets_small/rpg7.png" alt="RPG-7 AT" width="75" height="19"/>
                         </div>
                         <div class="gadget" onmouseover="bfbcs.showDetail('gadgets','gad_demo1','gada_demo1')" id="gada_demo1"><img
                                 src="/static/img/bfbcs/gadgets_small/powertool.png" alt="Repair Tool" width="75"
                                 height="19"/></div>
-                        <div class="gadget stars none" onmouseover="bfbcs.showDetail('gadgets','gad_demo2','gada_demo2')" id="gada_demo2">
+                        <div class="gadget stars {{getServiceStarClass .Values "atm"}}" onmouseover="bfbcs.showDetail('gadgets','gad_demo2','gada_demo2')" id="gada_demo2">
                             <img src="/static/img/bfbcs/gadgets_small/atmine.png" alt="Anti-Tank Mine" width="75"
                                  height="19"/></div>
-                        <div class="gadget stars gold7" onmouseover="bfbcs.showDetail('gadgets','gad_demo3','gada_demo3')" id="gada_demo3">
+                        <div class="gadget stars {{getServiceStarClass .Values "m2cg"}}" onmouseover="bfbcs.showDetail('gadgets','gad_demo3','gada_demo3')" id="gada_demo3">
                             <img src="/static/img/bfbcs/gadgets_small/carlgustaf.png" alt="M2 Carl Gustav AT" width="75"
                                  height="19"/></div>
-                        <div class="gadget stars bron" onmouseover="bfbcs.showDetail('gadgets','gad_demo4','gada_demo4')" id="gada_demo4">
+                        <div class="gadget stars {{getServiceStarClass .Values "m136"}}" onmouseover="bfbcs.showDetail('gadgets','gad_demo4','gada_demo4')" id="gada_demo4">
                             <img src="/static/img/bfbcs/gadgets_small/m136.png" alt="M136 AT4" width="75" height="19"/>
                         </div>
                         <div class="clear"></div>
@@ -3089,18 +3089,18 @@
                         <div class="gadget" onmouseover="bfbcs.showDetail('gadgets','gad_recon0','gada_recon0')" id="gada_recon0"><img
                                 src="/static/img/bfbcs/gadgets_small/motionsensor.png" alt="Motion Sensor" width="75"
                                 height="19"/></div>
-                        <div class="gadget stars silv" onmouseover="bfbcs.showDetail('gadgets','gad_recon1','gada_recon1')"
+                        <div class="gadget stars {{getServiceStarClass .Values "c4"}}" onmouseover="bfbcs.showDetail('gadgets','gad_recon1','gada_recon1')"
                              id="gada_recon1"><img src="/static/img/bfbcs/gadgets_small/c4.png" alt="C4 Explosive"
                                                    width="75" height="19"/></div>
-                        <div class="gadget stars silv" onmouseover="bfbcs.showDetail('gadgets','gad_recon2','gada_recon2')"
+                        <div class="gadget stars {{getServiceStarClass .Values "mst"}}" onmouseover="bfbcs.showDetail('gadgets','gad_recon2','gada_recon2')"
                              id="gada_recon2"><img src="/static/img/bfbcs/gadgets_small/mortarstrike.png"
                                                    alt="Mortar Strike" width="75" height="19"/></div>
                         <div class="clear"></div>
                         <div class="gadget linetitle">All</div>
-                        <div class="gadget stars gold8" onmouseover="bfbcs.showDetail('gadgets','gad_all0','gada_all0')" id="gada_all0"><img
+                        <div class="gadget stars {{getServiceStarClass .Values "mel"}}" onmouseover="bfbcs.showDetail('gadgets','gad_all0','gada_all0')" id="gada_all0"><img
                                 src="/static/img/bfbcs/gadgets_small/knife.png" alt="Combat Knife" width="75"
                                 height="19"/></div>
-                        <div class="gadget stars gold1" onmouseover="bfbcs.showDetail('gadgets','gad_all1','gada_all1')" id="gada_all1"><img
+                        <div class="gadget stars {{getServiceStarClass .Values "hgr"}}" onmouseover="bfbcs.showDetail('gadgets','gad_all1','gada_all1')" id="gada_all1"><img
                                 src="/static/img/bfbcs/gadgets_small/grenade.png" alt="Hand Grenade" width="75"
                                 height="19"/></div>
                         <div class="gadget" onmouseover="bfbcs.showDetail('gadgets','gad_all2','gada_all2')" id="gada_all2"><img
