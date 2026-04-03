@@ -2173,16 +2173,16 @@
                             </div>
                             <br/>
                             <div class="name">Vehicle stars (calculated)</div>
-                            <div class="stars bron inactive">Bronze
+                            <div class="stars bron{{if lt .Values.c__hmv_ki_g 10.0}} inactive{{end}}">Bronze
                                 <div></div>
                             </div>
-                            <div class="stars silv inactive">Silver
+                            <div class="stars silv{{if lt .Values.c__hmv_ki_g 25.0}} inactive{{end}}">Silver
                                 <div></div>
                             </div>
-                            <div class="stars gold0 inactive">Gold
+                            {{$level := 0}}{{if ge .Values.c__hmv_ki_g 50.0}}{{$level = 1}}{{end}}{{if ge .Values.c__hmv_ki_g 100.0}}{{$level = 2}}{{end}}{{if ge .Values.c__hmv_ki_g 150.0}}{{$level = 3}}{{end}}{{if ge .Values.c__hmv_ki_g 200.0}}{{$level = 4}}{{end}}{{if ge .Values.c__hmv_ki_g 250.0}}{{$level = 5}}{{end}}{{if ge .Values.c__hmv_ki_g 300.0}}{{$level = 6}}{{end}}{{if ge .Values.c__hmv_ki_g 350.0}}{{$level = 7}}{{end}}{{if ge .Values.c__hmv_ki_g 400.0}}{{$level = 8}}{{end}}{{if ge .Values.c__hmv_ki_g 450.0}}{{$level = 9}}{{end}}<div class="stars {{if lt .Values.c__hmv_ki_g 50.0}}gold0{{else}}gold{{$level}}{{end}}{{if lt .Values.c__hmv_ki_g 50.0}} inactive{{end}}">{{if lt .Values.c__hmv_ki_g 50.0}}Gold{{else}}Gold {{$level}}x{{end}}
                                 <div></div>
                             </div>
-                            <div class="stars plat inactive">Platin
+                            <div class="stars plat{{if lt .Values.c__hmv_ki_g 500.0}} inactive{{end}}">Platin
                                 <div></div>
                             </div>
                             <br/></div>
@@ -2209,16 +2209,16 @@
                             </div>
                             <br/>
                             <div class="name">Vehicle stars (calculated)</div>
-                            <div class="stars bron inactive">Bronze
+                            <div class="stars bron{{if lt .Values.c__vodn_ki_g 10.0}} inactive{{end}}">Bronze
                                 <div></div>
                             </div>
-                            <div class="stars silv inactive">Silver
+                            <div class="stars silv{{if lt .Values.c__vodn_ki_g 25.0}} inactive{{end}}">Silver
                                 <div></div>
                             </div>
-                            <div class="stars gold0 inactive">Gold
+                            {{$level := 0}}{{if ge .Values.c__vodn_ki_g 50.0}}{{$level = 1}}{{end}}{{if ge .Values.c__vodn_ki_g 100.0}}{{$level = 2}}{{end}}{{if ge .Values.c__vodn_ki_g 150.0}}{{$level = 3}}{{end}}{{if ge .Values.c__vodn_ki_g 200.0}}{{$level = 4}}{{end}}{{if ge .Values.c__vodn_ki_g 250.0}}{{$level = 5}}{{end}}{{if ge .Values.c__vodn_ki_g 300.0}}{{$level = 6}}{{end}}{{if ge .Values.c__vodn_ki_g 350.0}}{{$level = 7}}{{end}}{{if ge .Values.c__vodn_ki_g 400.0}}{{$level = 8}}{{end}}{{if ge .Values.c__vodn_ki_g 450.0}}{{$level = 9}}{{end}}<div class="stars {{if lt .Values.c__vodn_ki_g 50.0}}gold0{{else}}gold{{$level}}{{end}}{{if lt .Values.c__vodn_ki_g 50.0}} inactive{{end}}">{{if lt .Values.c__vodn_ki_g 50.0}}Gold{{else}}Gold {{$level}}x{{end}}
                                 <div></div>
                             </div>
-                            <div class="stars plat inactive">Platin
+                            <div class="stars plat{{if lt .Values.c__vodn_ki_g 500.0}} inactive{{end}}">Platin
                                 <div></div>
                             </div>
                             <br/></div>
@@ -2245,16 +2245,16 @@
                             </div>
                             <br/>
                             <div class="name">Vehicle stars (calculated)</div>
-                            <div class="stars bron inactive">Bronze
+                            <div class="stars bron{{if lt .Values.c__cobr_ki_g 10.0}} inactive{{end}}">Bronze
                                 <div></div>
                             </div>
-                            <div class="stars silv inactive">Silver
+                            <div class="stars silv{{if lt .Values.c__cobr_ki_g 25.0}} inactive{{end}}">Silver
                                 <div></div>
                             </div>
-                            <div class="stars gold0 inactive">Gold
+                            {{$level := 0}}{{if ge .Values.c__cobr_ki_g 50.0}}{{$level = 1}}{{end}}{{if ge .Values.c__cobr_ki_g 100.0}}{{$level = 2}}{{end}}{{if ge .Values.c__cobr_ki_g 150.0}}{{$level = 3}}{{end}}{{if ge .Values.c__cobr_ki_g 200.0}}{{$level = 4}}{{end}}{{if ge .Values.c__cobr_ki_g 250.0}}{{$level = 5}}{{end}}{{if ge .Values.c__cobr_ki_g 300.0}}{{$level = 6}}{{end}}{{if ge .Values.c__cobr_ki_g 350.0}}{{$level = 7}}{{end}}{{if ge .Values.c__cobr_ki_g 400.0}}{{$level = 8}}{{end}}{{if ge .Values.c__cobr_ki_g 450.0}}{{$level = 9}}{{end}}<div class="stars {{if lt .Values.c__cobr_ki_g 50.0}}gold0{{else}}gold{{$level}}{{end}}{{if lt .Values.c__cobr_ki_g 50.0}} inactive{{end}}">{{if lt .Values.c__cobr_ki_g 50.0}}Gold{{else}}Gold {{$level}}x{{end}}
                                 <div></div>
                             </div>
-                            <div class="stars plat inactive">Platin
+                            <div class="stars plat{{if lt .Values.c__cobr_ki_g 500.0}} inactive{{end}}">Platin
                                 <div></div>
                             </div>
                             <br/></div>
@@ -2281,16 +2281,16 @@
                             </div>
                             <br/>
                             <div class="name">Vehicle stars (calculated)</div>
-                            <div class="stars bron inactive">Bronze
+                            <div class="stars bron{{if lt .Values.c__quad_ki_g 10.0}} inactive{{end}}">Bronze
                                 <div></div>
                             </div>
-                            <div class="stars silv inactive">Silver
+                            <div class="stars silv{{if lt .Values.c__quad_ki_g 25.0}} inactive{{end}}">Silver
                                 <div></div>
                             </div>
-                            <div class="stars gold0 inactive">Gold
+                            {{$level := 0}}{{if ge .Values.c__quad_ki_g 50.0}}{{$level = 1}}{{end}}{{if ge .Values.c__quad_ki_g 100.0}}{{$level = 2}}{{end}}{{if ge .Values.c__quad_ki_g 150.0}}{{$level = 3}}{{end}}{{if ge .Values.c__quad_ki_g 200.0}}{{$level = 4}}{{end}}{{if ge .Values.c__quad_ki_g 250.0}}{{$level = 5}}{{end}}{{if ge .Values.c__quad_ki_g 300.0}}{{$level = 6}}{{end}}{{if ge .Values.c__quad_ki_g 350.0}}{{$level = 7}}{{end}}{{if ge .Values.c__quad_ki_g 400.0}}{{$level = 8}}{{end}}{{if ge .Values.c__quad_ki_g 450.0}}{{$level = 9}}{{end}}<div class="stars {{if lt .Values.c__quad_ki_g 50.0}}gold0{{else}}gold{{$level}}{{end}}{{if lt .Values.c__quad_ki_g 50.0}} inactive{{end}}">{{if lt .Values.c__quad_ki_g 50.0}}Gold{{else}}Gold {{$level}}x{{end}}
                                 <div></div>
                             </div>
-                            <div class="stars plat inactive">Platin
+                            <div class="stars plat{{if lt .Values.c__quad_ki_g 500.0}} inactive{{end}}">Platin
                                 <div></div>
                             </div>
                             <br/></div>
@@ -2315,16 +2315,16 @@
                             </div>
                             <br/>
                             <div class="name">Vehicle stars (calculated)</div>
-                            <div class="stars bron inactive">Bronze
+                            <div class="stars bron{{if lt .Values.c__cav_ki_g 10.0}} inactive{{end}}">Bronze
                                 <div></div>
                             </div>
-                            <div class="stars silv inactive">Silver
+                            <div class="stars silv{{if lt .Values.c__cav_ki_g 25.0}} inactive{{end}}">Silver
                                 <div></div>
                             </div>
-                            <div class="stars gold0 inactive">Gold
+                            {{$level := 0}}{{if ge .Values.c__cav_ki_g 50.0}}{{$level = 1}}{{end}}{{if ge .Values.c__cav_ki_g 100.0}}{{$level = 2}}{{end}}{{if ge .Values.c__cav_ki_g 150.0}}{{$level = 3}}{{end}}{{if ge .Values.c__cav_ki_g 200.0}}{{$level = 4}}{{end}}{{if ge .Values.c__cav_ki_g 250.0}}{{$level = 5}}{{end}}{{if ge .Values.c__cav_ki_g 300.0}}{{$level = 6}}{{end}}{{if ge .Values.c__cav_ki_g 350.0}}{{$level = 7}}{{end}}{{if ge .Values.c__cav_ki_g 400.0}}{{$level = 8}}{{end}}{{if ge .Values.c__cav_ki_g 450.0}}{{$level = 9}}{{end}}<div class="stars {{if lt .Values.c__cav_ki_g 50.0}}gold0{{else}}gold{{$level}}{{end}}{{if lt .Values.c__cav_ki_g 50.0}} inactive{{end}}">{{if lt .Values.c__cav_ki_g 50.0}}Gold{{else}}Gold {{$level}}x{{end}}
                                 <div></div>
                             </div>
-                            <div class="stars plat inactive">Platin
+                            <div class="stars plat{{if lt .Values.c__cav_ki_g 500.0}} inactive{{end}}">Platin
                                 <div></div>
                             </div>
                             <br/></div>
@@ -2349,16 +2349,16 @@
                             </div>
                             <br/>
                             <div class="name">Vehicle stars (calculated)</div>
-                            <div class="stars bron inactive">Bronze
+                            <div class="stars bron{{if lt .Values.c__tru_ki_g 10.0}} inactive{{end}}">Bronze
                                 <div></div>
                             </div>
-                            <div class="stars silv inactive">Silver
+                            <div class="stars silv{{if lt .Values.c__tru_ki_g 25.0}} inactive{{end}}">Silver
                                 <div></div>
                             </div>
-                            <div class="stars gold0 inactive">Gold
+                            {{$level := 0}}{{if ge .Values.c__tru_ki_g 50.0}}{{$level = 1}}{{end}}{{if ge .Values.c__tru_ki_g 100.0}}{{$level = 2}}{{end}}{{if ge .Values.c__tru_ki_g 150.0}}{{$level = 3}}{{end}}{{if ge .Values.c__tru_ki_g 200.0}}{{$level = 4}}{{end}}{{if ge .Values.c__tru_ki_g 250.0}}{{$level = 5}}{{end}}{{if ge .Values.c__tru_ki_g 300.0}}{{$level = 6}}{{end}}{{if ge .Values.c__tru_ki_g 350.0}}{{$level = 7}}{{end}}{{if ge .Values.c__tru_ki_g 400.0}}{{$level = 8}}{{end}}{{if ge .Values.c__tru_ki_g 450.0}}{{$level = 9}}{{end}}<div class="stars {{if lt .Values.c__tru_ki_g 50.0}}gold0{{else}}gold{{$level}}{{end}}{{if lt .Values.c__tru_ki_g 50.0}} inactive{{end}}">{{if lt .Values.c__tru_ki_g 50.0}}Gold{{else}}Gold {{$level}}x{{end}}
                                 <div></div>
                             </div>
-                            <div class="stars plat inactive">Platin
+                            <div class="stars plat{{if lt .Values.c__tru_ki_g 500.0}} inactive{{end}}">Platin
                                 <div></div>
                             </div>
                             <br/></div>
@@ -2385,16 +2385,16 @@
                             </div>
                             <br/>
                             <div class="name">Vehicle stars (calculated)</div>
-                            <div class="stars bron">Bronze
+                            <div class="stars bron{{if lt .Values.c__m1a2_ki_g 10.0}} inactive{{end}}">Bronze
                                 <div></div>
                             </div>
-                            <div class="stars silv inactive">Silver
+                            <div class="stars silv{{if lt .Values.c__m1a2_ki_g 25.0}} inactive{{end}}">Silver
                                 <div></div>
                             </div>
-                            <div class="stars gold0 inactive">Gold
+                            {{$level := 0}}{{if ge .Values.c__m1a2_ki_g 50.0}}{{$level = 1}}{{end}}{{if ge .Values.c__m1a2_ki_g 100.0}}{{$level = 2}}{{end}}{{if ge .Values.c__m1a2_ki_g 150.0}}{{$level = 3}}{{end}}{{if ge .Values.c__m1a2_ki_g 200.0}}{{$level = 4}}{{end}}{{if ge .Values.c__m1a2_ki_g 250.0}}{{$level = 5}}{{end}}{{if ge .Values.c__m1a2_ki_g 300.0}}{{$level = 6}}{{end}}{{if ge .Values.c__m1a2_ki_g 350.0}}{{$level = 7}}{{end}}{{if ge .Values.c__m1a2_ki_g 400.0}}{{$level = 8}}{{end}}{{if ge .Values.c__m1a2_ki_g 450.0}}{{$level = 9}}{{end}}<div class="stars {{if lt .Values.c__m1a2_ki_g 50.0}}gold0{{else}}gold{{$level}}{{end}}{{if lt .Values.c__m1a2_ki_g 50.0}} inactive{{end}}">{{if lt .Values.c__m1a2_ki_g 50.0}}Gold{{else}}Gold {{$level}}x{{end}}
                                 <div></div>
                             </div>
-                            <div class="stars plat inactive">Platin
+                            <div class="stars plat{{if lt .Values.c__m1a2_ki_g 500.0}} inactive{{end}}">Platin
                                 <div></div>
                             </div>
                             <br/></div>
@@ -2421,16 +2421,16 @@
                             </div>
                             <br/>
                             <div class="name">Vehicle stars (calculated)</div>
-                            <div class="stars bron">Bronze
+                            <div class="stars bron{{if lt .Values.c__t90_ki_g 10.0}} inactive{{end}}">Bronze
                                 <div></div>
                             </div>
-                            <div class="stars silv">Silver
+                            <div class="stars silv{{if lt .Values.c__t90_ki_g 25.0}} inactive{{end}}">Silver
                                 <div></div>
                             </div>
-                            <div class="stars gold0 inactive">Gold
+                            {{$level := 0}}{{if ge .Values.c__t90_ki_g 50.0}}{{$level = 1}}{{end}}{{if ge .Values.c__t90_ki_g 100.0}}{{$level = 2}}{{end}}{{if ge .Values.c__t90_ki_g 150.0}}{{$level = 3}}{{end}}{{if ge .Values.c__t90_ki_g 200.0}}{{$level = 4}}{{end}}{{if ge .Values.c__t90_ki_g 250.0}}{{$level = 5}}{{end}}{{if ge .Values.c__t90_ki_g 300.0}}{{$level = 6}}{{end}}{{if ge .Values.c__t90_ki_g 350.0}}{{$level = 7}}{{end}}{{if ge .Values.c__t90_ki_g 400.0}}{{$level = 8}}{{end}}{{if ge .Values.c__t90_ki_g 450.0}}{{$level = 9}}{{end}}<div class="stars {{if lt .Values.c__t90_ki_g 50.0}}gold0{{else}}gold{{$level}}{{end}}{{if lt .Values.c__t90_ki_g 50.0}} inactive{{end}}">{{if lt .Values.c__t90_ki_g 50.0}}Gold{{else}}Gold {{$level}}x{{end}}
                                 <div></div>
                             </div>
-                            <div class="stars plat inactive">Platin
+                            <div class="stars plat{{if lt .Values.c__t90_ki_g 500.0}} inactive{{end}}">Platin
                                 <div></div>
                             </div>
                             <br/></div>
@@ -2457,16 +2457,16 @@
                             </div>
                             <br/>
                             <div class="name">Vehicle stars (calculated)</div>
-                            <div class="stars bron">Bronze
+                            <div class="stars bron{{if lt .Values.c__m3a3_ki_g 10.0}} inactive{{end}}">Bronze
                                 <div></div>
                             </div>
-                            <div class="stars silv">Silver
+                            <div class="stars silv{{if lt .Values.c__m3a3_ki_g 25.0}} inactive{{end}}">Silver
                                 <div></div>
                             </div>
-                            <div class="stars gold1">Gold 1x
+                            {{$level := 0}}{{if ge .Values.c__m3a3_ki_g 50.0}}{{$level = 1}}{{end}}{{if ge .Values.c__m3a3_ki_g 100.0}}{{$level = 2}}{{end}}{{if ge .Values.c__m3a3_ki_g 150.0}}{{$level = 3}}{{end}}{{if ge .Values.c__m3a3_ki_g 200.0}}{{$level = 4}}{{end}}{{if ge .Values.c__m3a3_ki_g 250.0}}{{$level = 5}}{{end}}{{if ge .Values.c__m3a3_ki_g 300.0}}{{$level = 6}}{{end}}{{if ge .Values.c__m3a3_ki_g 350.0}}{{$level = 7}}{{end}}{{if ge .Values.c__m3a3_ki_g 400.0}}{{$level = 8}}{{end}}{{if ge .Values.c__m3a3_ki_g 450.0}}{{$level = 9}}{{end}}<div class="stars {{if lt .Values.c__m3a3_ki_g 50.0}}gold0{{else}}gold{{$level}}{{end}}{{if lt .Values.c__m3a3_ki_g 50.0}} inactive{{end}}">{{if lt .Values.c__m3a3_ki_g 50.0}}Gold{{else}}Gold {{$level}}x{{end}}
                                 <div></div>
                             </div>
-                            <div class="stars plat inactive">Platin
+                            <div class="stars plat{{if lt .Values.c__m3a3_ki_g 500.0}} inactive{{end}}">Platin
                                 <div></div>
                             </div>
                             <br/></div>
@@ -2493,16 +2493,16 @@
                             </div>
                             <br/>
                             <div class="name">Vehicle stars (calculated)</div>
-                            <div class="stars bron inactive">Bronze
+                            <div class="stars bron{{if lt .Values.c__bmd3_ki_g 10.0}} inactive{{end}}">Bronze
                                 <div></div>
                             </div>
-                            <div class="stars silv inactive">Silver
+                            <div class="stars silv{{if lt .Values.c__bmd3_ki_g 25.0}} inactive{{end}}">Silver
                                 <div></div>
                             </div>
-                            <div class="stars gold0 inactive">Gold
+                            {{$level := 0}}{{if ge .Values.c__bmd3_ki_g 50.0}}{{$level = 1}}{{end}}{{if ge .Values.c__bmd3_ki_g 100.0}}{{$level = 2}}{{end}}{{if ge .Values.c__bmd3_ki_g 150.0}}{{$level = 3}}{{end}}{{if ge .Values.c__bmd3_ki_g 200.0}}{{$level = 4}}{{end}}{{if ge .Values.c__bmd3_ki_g 250.0}}{{$level = 5}}{{end}}{{if ge .Values.c__bmd3_ki_g 300.0}}{{$level = 6}}{{end}}{{if ge .Values.c__bmd3_ki_g 350.0}}{{$level = 7}}{{end}}{{if ge .Values.c__bmd3_ki_g 400.0}}{{$level = 8}}{{end}}{{if ge .Values.c__bmd3_ki_g 450.0}}{{$level = 9}}{{end}}<div class="stars {{if lt .Values.c__bmd3_ki_g 50.0}}gold0{{else}}gold{{$level}}{{end}}{{if lt .Values.c__bmd3_ki_g 50.0}} inactive{{end}}">{{if lt .Values.c__bmd3_ki_g 50.0}}Gold{{else}}Gold {{$level}}x{{end}}
                                 <div></div>
                             </div>
-                            <div class="stars plat inactive">Platin
+                            <div class="stars plat{{if lt .Values.c__bmd3_ki_g 500.0}} inactive{{end}}">Platin
                                 <div></div>
                             </div>
                             <br/></div>
@@ -2529,16 +2529,16 @@
                             </div>
                             <br/>
                             <div class="name">Vehicle stars (calculated)</div>
-                            <div class="stars bron inactive">Bronze
+                            <div class="stars bron{{if lt .Values.c__bmda_ki_g 10.0}} inactive{{end}}">Bronze
                                 <div></div>
                             </div>
-                            <div class="stars silv inactive">Silver
+                            <div class="stars silv{{if lt .Values.c__bmda_ki_g 25.0}} inactive{{end}}">Silver
                                 <div></div>
                             </div>
-                            <div class="stars gold0 inactive">Gold
+                            {{$level := 0}}{{if ge .Values.c__bmda_ki_g 50.0}}{{$level = 1}}{{end}}{{if ge .Values.c__bmda_ki_g 100.0}}{{$level = 2}}{{end}}{{if ge .Values.c__bmda_ki_g 150.0}}{{$level = 3}}{{end}}{{if ge .Values.c__bmda_ki_g 200.0}}{{$level = 4}}{{end}}{{if ge .Values.c__bmda_ki_g 250.0}}{{$level = 5}}{{end}}{{if ge .Values.c__bmda_ki_g 300.0}}{{$level = 6}}{{end}}{{if ge .Values.c__bmda_ki_g 350.0}}{{$level = 7}}{{end}}{{if ge .Values.c__bmda_ki_g 400.0}}{{$level = 8}}{{end}}{{if ge .Values.c__bmda_ki_g 450.0}}{{$level = 9}}{{end}}<div class="stars {{if lt .Values.c__bmda_ki_g 50.0}}gold0{{else}}gold{{$level}}{{end}}{{if lt .Values.c__bmda_ki_g 50.0}} inactive{{end}}">{{if lt .Values.c__bmda_ki_g 50.0}}Gold{{else}}Gold {{$level}}x{{end}}
                                 <div></div>
                             </div>
-                            <div class="stars plat inactive">Platin
+                            <div class="stars plat{{if lt .Values.c__bmda_ki_g 500.0}} inactive{{end}}">Platin
                                 <div></div>
                             </div>
                             <br/></div>
@@ -2563,16 +2563,16 @@
                             </div>
                             <br/>
                             <div class="name">Vehicle stars (calculated)</div>
-                            <div class="stars bron inactive">Bronze
+                            <div class="stars bron{{if lt .Values.c__jets_ki_g 10.0}} inactive{{end}}">Bronze
                                 <div></div>
                             </div>
-                            <div class="stars silv inactive">Silver
+                            <div class="stars silv{{if lt .Values.c__jets_ki_g 25.0}} inactive{{end}}">Silver
                                 <div></div>
                             </div>
-                            <div class="stars gold0 inactive">Gold
+                            {{$level := 0}}{{if ge .Values.c__jets_ki_g 50.0}}{{$level = 1}}{{end}}{{if ge .Values.c__jets_ki_g 100.0}}{{$level = 2}}{{end}}{{if ge .Values.c__jets_ki_g 150.0}}{{$level = 3}}{{end}}{{if ge .Values.c__jets_ki_g 200.0}}{{$level = 4}}{{end}}{{if ge .Values.c__jets_ki_g 250.0}}{{$level = 5}}{{end}}{{if ge .Values.c__jets_ki_g 300.0}}{{$level = 6}}{{end}}{{if ge .Values.c__jets_ki_g 350.0}}{{$level = 7}}{{end}}{{if ge .Values.c__jets_ki_g 400.0}}{{$level = 8}}{{end}}{{if ge .Values.c__jets_ki_g 450.0}}{{$level = 9}}{{end}}<div class="stars {{if lt .Values.c__jets_ki_g 50.0}}gold0{{else}}gold{{$level}}{{end}}{{if lt .Values.c__jets_ki_g 50.0}} inactive{{end}}">{{if lt .Values.c__jets_ki_g 50.0}}Gold{{else}}Gold {{$level}}x{{end}}
                                 <div></div>
                             </div>
-                            <div class="stars plat inactive">Platin
+                            <div class="stars plat{{if lt .Values.c__jets_ki_g 500.0}} inactive{{end}}">Platin
                                 <div></div>
                             </div>
                             <br/></div>
@@ -2599,16 +2599,16 @@
                             </div>
                             <br/>
                             <div class="name">Vehicle stars (calculated)</div>
-                            <div class="stars bron inactive">Bronze
+                            <div class="stars bron{{if lt .Values.c__PBLB_ki_g 10.0}} inactive{{end}}">Bronze
                                 <div></div>
                             </div>
-                            <div class="stars silv inactive">Silver
+                            <div class="stars silv{{if lt .Values.c__PBLB_ki_g 25.0}} inactive{{end}}">Silver
                                 <div></div>
                             </div>
-                            <div class="stars gold0 inactive">Gold
+                            {{$level := 0}}{{if ge .Values.c__PBLB_ki_g 50.0}}{{$level = 1}}{{end}}{{if ge .Values.c__PBLB_ki_g 100.0}}{{$level = 2}}{{end}}{{if ge .Values.c__PBLB_ki_g 150.0}}{{$level = 3}}{{end}}{{if ge .Values.c__PBLB_ki_g 200.0}}{{$level = 4}}{{end}}{{if ge .Values.c__PBLB_ki_g 250.0}}{{$level = 5}}{{end}}{{if ge .Values.c__PBLB_ki_g 300.0}}{{$level = 6}}{{end}}{{if ge .Values.c__PBLB_ki_g 350.0}}{{$level = 7}}{{end}}{{if ge .Values.c__PBLB_ki_g 400.0}}{{$level = 8}}{{end}}{{if ge .Values.c__PBLB_ki_g 450.0}}{{$level = 9}}{{end}}<div class="stars {{if lt .Values.c__PBLB_ki_g 50.0}}gold0{{else}}gold{{$level}}{{end}}{{if lt .Values.c__PBLB_ki_g 50.0}} inactive{{end}}">{{if lt .Values.c__PBLB_ki_g 50.0}}Gold{{else}}Gold {{$level}}x{{end}}
                                 <div></div>
                             </div>
-                            <div class="stars plat inactive">Platin
+                            <div class="stars plat{{if lt .Values.c__PBLB_ki_g 500.0}} inactive{{end}}">Platin
                                 <div></div>
                             </div>
                             <br/></div>
@@ -2633,16 +2633,16 @@
                             </div>
                             <br/>
                             <div class="name">Vehicle stars (calculated)</div>
-                            <div class="stars bron inactive">Bronze
+                            <div class="stars bron{{if lt .Values.c__pbrv_ki_g 10.0}} inactive{{end}}">Bronze
                                 <div></div>
                             </div>
-                            <div class="stars silv inactive">Silver
+                            <div class="stars silv{{if lt .Values.c__pbrv_ki_g 25.0}} inactive{{end}}">Silver
                                 <div></div>
                             </div>
-                            <div class="stars gold0 inactive">Gold
+                            {{$level := 0}}{{if ge .Values.c__pbrv_ki_g 50.0}}{{$level = 1}}{{end}}{{if ge .Values.c__pbrv_ki_g 100.0}}{{$level = 2}}{{end}}{{if ge .Values.c__pbrv_ki_g 150.0}}{{$level = 3}}{{end}}{{if ge .Values.c__pbrv_ki_g 200.0}}{{$level = 4}}{{end}}{{if ge .Values.c__pbrv_ki_g 250.0}}{{$level = 5}}{{end}}{{if ge .Values.c__pbrv_ki_g 300.0}}{{$level = 6}}{{end}}{{if ge .Values.c__pbrv_ki_g 350.0}}{{$level = 7}}{{end}}{{if ge .Values.c__pbrv_ki_g 400.0}}{{$level = 8}}{{end}}{{if ge .Values.c__pbrv_ki_g 450.0}}{{$level = 9}}{{end}}<div class="stars {{if lt .Values.c__pbrv_ki_g 50.0}}gold0{{else}}gold{{$level}}{{end}}{{if lt .Values.c__pbrv_ki_g 50.0}} inactive{{end}}">{{if lt .Values.c__pbrv_ki_g 50.0}}Gold{{else}}Gold {{$level}}x{{end}}
                                 <div></div>
                             </div>
-                            <div class="stars plat inactive">Platin
+                            <div class="stars plat{{if lt .Values.c__pbrv_ki_g 500.0}} inactive{{end}}">Platin
                                 <div></div>
                             </div>
                             <br/></div>
@@ -2669,16 +2669,16 @@
                             </div>
                             <br/>
                             <div class="name">Vehicle stars (calculated)</div>
-                            <div class="stars bron">Bronze
+                            <div class="stars bron{{if lt .Values.c__ah60_ki_g 10.0}} inactive{{end}}">Bronze
                                 <div></div>
                             </div>
-                            <div class="stars silv inactive">Silver
+                            <div class="stars silv{{if lt .Values.c__ah60_ki_g 25.0}} inactive{{end}}">Silver
                                 <div></div>
                             </div>
-                            <div class="stars gold0 inactive">Gold
+                            {{$level := 0}}{{if ge .Values.c__ah60_ki_g 50.0}}{{$level = 1}}{{end}}{{if ge .Values.c__ah60_ki_g 100.0}}{{$level = 2}}{{end}}{{if ge .Values.c__ah60_ki_g 150.0}}{{$level = 3}}{{end}}{{if ge .Values.c__ah60_ki_g 200.0}}{{$level = 4}}{{end}}{{if ge .Values.c__ah60_ki_g 250.0}}{{$level = 5}}{{end}}{{if ge .Values.c__ah60_ki_g 300.0}}{{$level = 6}}{{end}}{{if ge .Values.c__ah60_ki_g 350.0}}{{$level = 7}}{{end}}{{if ge .Values.c__ah60_ki_g 400.0}}{{$level = 8}}{{end}}{{if ge .Values.c__ah60_ki_g 450.0}}{{$level = 9}}{{end}}<div class="stars {{if lt .Values.c__ah60_ki_g 50.0}}gold0{{else}}gold{{$level}}{{end}}{{if lt .Values.c__ah60_ki_g 50.0}} inactive{{end}}">{{if lt .Values.c__ah60_ki_g 50.0}}Gold{{else}}Gold {{$level}}x{{end}}
                                 <div></div>
                             </div>
-                            <div class="stars plat inactive">Platin
+                            <div class="stars plat{{if lt .Values.c__ah60_ki_g 500.0}} inactive{{end}}">Platin
                                 <div></div>
                             </div>
                             <br/></div>
@@ -2705,16 +2705,16 @@
                             </div>
                             <br/>
                             <div class="name">Vehicle stars (calculated)</div>
-                            <div class="stars bron">Bronze
+                            <div class="stars bron{{if lt .Values.c__ah64_ki_g 10.0}} inactive{{end}}">Bronze
                                 <div></div>
                             </div>
-                            <div class="stars silv">Silver
+                            <div class="stars silv{{if lt .Values.c__ah64_ki_g 25.0}} inactive{{end}}">Silver
                                 <div></div>
                             </div>
-                            <div class="stars gold0 inactive">Gold
+                            {{$level := 0}}{{if ge .Values.c__ah64_ki_g 50.0}}{{$level = 1}}{{end}}{{if ge .Values.c__ah64_ki_g 100.0}}{{$level = 2}}{{end}}{{if ge .Values.c__ah64_ki_g 150.0}}{{$level = 3}}{{end}}{{if ge .Values.c__ah64_ki_g 200.0}}{{$level = 4}}{{end}}{{if ge .Values.c__ah64_ki_g 250.0}}{{$level = 5}}{{end}}{{if ge .Values.c__ah64_ki_g 300.0}}{{$level = 6}}{{end}}{{if ge .Values.c__ah64_ki_g 350.0}}{{$level = 7}}{{end}}{{if ge .Values.c__ah64_ki_g 400.0}}{{$level = 8}}{{end}}{{if ge .Values.c__ah64_ki_g 450.0}}{{$level = 9}}{{end}}<div class="stars {{if lt .Values.c__ah64_ki_g 50.0}}gold0{{else}}gold{{$level}}{{end}}{{if lt .Values.c__ah64_ki_g 50.0}} inactive{{end}}">{{if lt .Values.c__ah64_ki_g 50.0}}Gold{{else}}Gold {{$level}}x{{end}}
                                 <div></div>
                             </div>
-                            <div class="stars plat inactive">Platin
+                            <div class="stars plat{{if lt .Values.c__ah64_ki_g 500.0}} inactive{{end}}">Platin
                                 <div></div>
                             </div>
                             <br/></div>
@@ -2741,16 +2741,16 @@
                             </div>
                             <br/>
                             <div class="name">Vehicle stars (calculated)</div>
-                            <div class="stars bron inactive">Bronze
+                            <div class="stars bron{{if lt .Values.c__MI28_ki_g 10.0}} inactive{{end}}">Bronze
                                 <div></div>
                             </div>
-                            <div class="stars silv inactive">Silver
+                            <div class="stars silv{{if lt .Values.c__MI28_ki_g 25.0}} inactive{{end}}">Silver
                                 <div></div>
                             </div>
-                            <div class="stars gold0 inactive">Gold
+                            {{$level := 0}}{{if ge .Values.c__MI28_ki_g 50.0}}{{$level = 1}}{{end}}{{if ge .Values.c__MI28_ki_g 100.0}}{{$level = 2}}{{end}}{{if ge .Values.c__MI28_ki_g 150.0}}{{$level = 3}}{{end}}{{if ge .Values.c__MI28_ki_g 200.0}}{{$level = 4}}{{end}}{{if ge .Values.c__MI28_ki_g 250.0}}{{$level = 5}}{{end}}{{if ge .Values.c__MI28_ki_g 300.0}}{{$level = 6}}{{end}}{{if ge .Values.c__MI28_ki_g 350.0}}{{$level = 7}}{{end}}{{if ge .Values.c__MI28_ki_g 400.0}}{{$level = 8}}{{end}}{{if ge .Values.c__MI28_ki_g 450.0}}{{$level = 9}}{{end}}<div class="stars {{if lt .Values.c__MI28_ki_g 50.0}}gold0{{else}}gold{{$level}}{{end}}{{if lt .Values.c__MI28_ki_g 50.0}} inactive{{end}}">{{if lt .Values.c__MI28_ki_g 50.0}}Gold{{else}}Gold {{$level}}x{{end}}
                                 <div></div>
                             </div>
-                            <div class="stars plat inactive">Platin
+                            <div class="stars plat{{if lt .Values.c__MI28_ki_g 500.0}} inactive{{end}}">Platin
                                 <div></div>
                             </div>
                             <br/></div>
@@ -2777,16 +2777,16 @@
                             </div>
                             <br/>
                             <div class="name">Vehicle stars (calculated)</div>
-                            <div class="stars bron inactive">Bronze
+                            <div class="stars bron{{if lt .Values.c__havoc_ki_g 10.0}} inactive{{end}}">Bronze
                                 <div></div>
                             </div>
-                            <div class="stars silv inactive">Silver
+                            <div class="stars silv{{if lt .Values.c__havoc_ki_g 25.0}} inactive{{end}}">Silver
                                 <div></div>
                             </div>
-                            <div class="stars gold0 inactive">Gold
+                            {{$level := 0}}{{if ge .Values.c__havoc_ki_g 50.0}}{{$level = 1}}{{end}}{{if ge .Values.c__havoc_ki_g 100.0}}{{$level = 2}}{{end}}{{if ge .Values.c__havoc_ki_g 150.0}}{{$level = 3}}{{end}}{{if ge .Values.c__havoc_ki_g 200.0}}{{$level = 4}}{{end}}{{if ge .Values.c__havoc_ki_g 250.0}}{{$level = 5}}{{end}}{{if ge .Values.c__havoc_ki_g 300.0}}{{$level = 6}}{{end}}{{if ge .Values.c__havoc_ki_g 350.0}}{{$level = 7}}{{end}}{{if ge .Values.c__havoc_ki_g 400.0}}{{$level = 8}}{{end}}{{if ge .Values.c__havoc_ki_g 450.0}}{{$level = 9}}{{end}}<div class="stars {{if lt .Values.c__havoc_ki_g 50.0}}gold0{{else}}gold{{$level}}{{end}}{{if lt .Values.c__havoc_ki_g 50.0}} inactive{{end}}">{{if lt .Values.c__havoc_ki_g 50.0}}Gold{{else}}Gold {{$level}}x{{end}}
                                 <div></div>
                             </div>
-                            <div class="stars plat inactive">Platin
+                            <div class="stars plat{{if lt .Values.c__havoc_ki_g 500.0}} inactive{{end}}">Platin
                                 <div></div>
                             </div>
                             <br/></div>
@@ -2813,16 +2813,16 @@
                             </div>
                             <br/>
                             <div class="name">Vehicle stars (calculated)</div>
-                            <div class="stars bron inactive">Bronze
+                            <div class="stars bron{{if lt .Values.c__uav_ki_g 10.0}} inactive{{end}}">Bronze
                                 <div></div>
                             </div>
-                            <div class="stars silv inactive">Silver
+                            <div class="stars silv{{if lt .Values.c__uav_ki_g 25.0}} inactive{{end}}">Silver
                                 <div></div>
                             </div>
-                            <div class="stars gold0 inactive">Gold
+                            {{$level := 0}}{{if ge .Values.c__uav_ki_g 50.0}}{{$level = 1}}{{end}}{{if ge .Values.c__uav_ki_g 100.0}}{{$level = 2}}{{end}}{{if ge .Values.c__uav_ki_g 150.0}}{{$level = 3}}{{end}}{{if ge .Values.c__uav_ki_g 200.0}}{{$level = 4}}{{end}}{{if ge .Values.c__uav_ki_g 250.0}}{{$level = 5}}{{end}}{{if ge .Values.c__uav_ki_g 300.0}}{{$level = 6}}{{end}}{{if ge .Values.c__uav_ki_g 350.0}}{{$level = 7}}{{end}}{{if ge .Values.c__uav_ki_g 400.0}}{{$level = 8}}{{end}}{{if ge .Values.c__uav_ki_g 450.0}}{{$level = 9}}{{end}}<div class="stars {{if lt .Values.c__uav_ki_g 50.0}}gold0{{else}}gold{{$level}}{{end}}{{if lt .Values.c__uav_ki_g 50.0}} inactive{{end}}">{{if lt .Values.c__uav_ki_g 50.0}}Gold{{else}}Gold {{$level}}x{{end}}
                                 <div></div>
                             </div>
-                            <div class="stars plat inactive">Platin
+                            <div class="stars plat{{if lt .Values.c__uav_ki_g 500.0}} inactive{{end}}">Platin
                                 <div></div>
                             </div>
                             <br/></div>
@@ -2849,16 +2849,16 @@
                             </div>
                             <br/>
                             <div class="name">Vehicle stars (calculated)</div>
-                            <div class="stars bron inactive">Bronze
+                            <div class="stars bron{{if lt .Values.c__XM312_ki_g 10.0}} inactive{{end}}">Bronze
                                 <div></div>
                             </div>
-                            <div class="stars silv inactive">Silver
+                            <div class="stars silv{{if lt .Values.c__XM312_ki_g 25.0}} inactive{{end}}">Silver
                                 <div></div>
                             </div>
-                            <div class="stars gold0 inactive">Gold
+                            {{$level := 0}}{{if ge .Values.c__XM312_ki_g 50.0}}{{$level = 1}}{{end}}{{if ge .Values.c__XM312_ki_g 100.0}}{{$level = 2}}{{end}}{{if ge .Values.c__XM312_ki_g 150.0}}{{$level = 3}}{{end}}{{if ge .Values.c__XM312_ki_g 200.0}}{{$level = 4}}{{end}}{{if ge .Values.c__XM312_ki_g 250.0}}{{$level = 5}}{{end}}{{if ge .Values.c__XM312_ki_g 300.0}}{{$level = 6}}{{end}}{{if ge .Values.c__XM312_ki_g 350.0}}{{$level = 7}}{{end}}{{if ge .Values.c__XM312_ki_g 400.0}}{{$level = 8}}{{end}}{{if ge .Values.c__XM312_ki_g 450.0}}{{$level = 9}}{{end}}<div class="stars {{if lt .Values.c__XM312_ki_g 50.0}}gold0{{else}}gold{{$level}}{{end}}{{if lt .Values.c__XM312_ki_g 50.0}} inactive{{end}}">{{if lt .Values.c__XM312_ki_g 50.0}}Gold{{else}}Gold {{$level}}x{{end}}
                                 <div></div>
                             </div>
-                            <div class="stars plat inactive">Platin
+                            <div class="stars plat{{if lt .Values.c__XM312_ki_g 500.0}} inactive{{end}}">Platin
                                 <div></div>
                             </div>
                             <br/></div>
@@ -2885,16 +2885,16 @@
                             </div>
                             <br/>
                             <div class="name">Vehicle stars (calculated)</div>
-                            <div class="stars bron">Bronze
+                            <div class="stars bron{{if lt .Values.c__KORD_ki_g 10.0}} inactive{{end}}">Bronze
                                 <div></div>
                             </div>
-                            <div class="stars silv inactive">Silver
+                            <div class="stars silv{{if lt .Values.c__KORD_ki_g 25.0}} inactive{{end}}">Silver
                                 <div></div>
                             </div>
-                            <div class="stars gold0 inactive">Gold
+                            {{$level := 0}}{{if ge .Values.c__KORD_ki_g 50.0}}{{$level = 1}}{{end}}{{if ge .Values.c__KORD_ki_g 100.0}}{{$level = 2}}{{end}}{{if ge .Values.c__KORD_ki_g 150.0}}{{$level = 3}}{{end}}{{if ge .Values.c__KORD_ki_g 200.0}}{{$level = 4}}{{end}}{{if ge .Values.c__KORD_ki_g 250.0}}{{$level = 5}}{{end}}{{if ge .Values.c__KORD_ki_g 300.0}}{{$level = 6}}{{end}}{{if ge .Values.c__KORD_ki_g 350.0}}{{$level = 7}}{{end}}{{if ge .Values.c__KORD_ki_g 400.0}}{{$level = 8}}{{end}}{{if ge .Values.c__KORD_ki_g 450.0}}{{$level = 9}}{{end}}<div class="stars {{if lt .Values.c__KORD_ki_g 50.0}}gold0{{else}}gold{{$level}}{{end}}{{if lt .Values.c__KORD_ki_g 50.0}} inactive{{end}}">{{if lt .Values.c__KORD_ki_g 50.0}}Gold{{else}}Gold {{$level}}x{{end}}
                                 <div></div>
                             </div>
-                            <div class="stars plat inactive">Platin
+                            <div class="stars plat{{if lt .Values.c__KORD_ki_g 500.0}} inactive{{end}}">Platin
                                 <div></div>
                             </div>
                             <br/></div>
@@ -2921,16 +2921,16 @@
                             </div>
                             <br/>
                             <div class="name">Vehicle stars (calculated)</div>
-                            <div class="stars bron inactive">Bronze
+                            <div class="stars bron{{if lt .Values.c__KORN_ki_g 10.0}} inactive{{end}}">Bronze
                                 <div></div>
                             </div>
-                            <div class="stars silv inactive">Silver
+                            <div class="stars silv{{if lt .Values.c__KORN_ki_g 25.0}} inactive{{end}}">Silver
                                 <div></div>
                             </div>
-                            <div class="stars gold0 inactive">Gold
+                            {{$level := 0}}{{if ge .Values.c__KORN_ki_g 50.0}}{{$level = 1}}{{end}}{{if ge .Values.c__KORN_ki_g 100.0}}{{$level = 2}}{{end}}{{if ge .Values.c__KORN_ki_g 150.0}}{{$level = 3}}{{end}}{{if ge .Values.c__KORN_ki_g 200.0}}{{$level = 4}}{{end}}{{if ge .Values.c__KORN_ki_g 250.0}}{{$level = 5}}{{end}}{{if ge .Values.c__KORN_ki_g 300.0}}{{$level = 6}}{{end}}{{if ge .Values.c__KORN_ki_g 350.0}}{{$level = 7}}{{end}}{{if ge .Values.c__KORN_ki_g 400.0}}{{$level = 8}}{{end}}{{if ge .Values.c__KORN_ki_g 450.0}}{{$level = 9}}{{end}}<div class="stars {{if lt .Values.c__KORN_ki_g 50.0}}gold0{{else}}gold{{$level}}{{end}}{{if lt .Values.c__KORN_ki_g 50.0}} inactive{{end}}">{{if lt .Values.c__KORN_ki_g 50.0}}Gold{{else}}Gold {{$level}}x{{end}}
                                 <div></div>
                             </div>
-                            <div class="stars plat inactive">Platin
+                            <div class="stars plat{{if lt .Values.c__KORN_ki_g 500.0}} inactive{{end}}">Platin
                                 <div></div>
                             </div>
                             <br/></div>
@@ -2957,16 +2957,16 @@
                             </div>
                             <br/>
                             <div class="name">Vehicle stars (calculated)</div>
-                            <div class="stars bron inactive">Bronze
+                            <div class="stars bron{{if lt .Values.c__TOW2_ki_g 10.0}} inactive{{end}}">Bronze
                                 <div></div>
                             </div>
-                            <div class="stars silv inactive">Silver
+                            <div class="stars silv{{if lt .Values.c__TOW2_ki_g 25.0}} inactive{{end}}">Silver
                                 <div></div>
                             </div>
-                            <div class="stars gold0 inactive">Gold
+                            {{$level := 0}}{{if ge .Values.c__TOW2_ki_g 50.0}}{{$level = 1}}{{end}}{{if ge .Values.c__TOW2_ki_g 100.0}}{{$level = 2}}{{end}}{{if ge .Values.c__TOW2_ki_g 150.0}}{{$level = 3}}{{end}}{{if ge .Values.c__TOW2_ki_g 200.0}}{{$level = 4}}{{end}}{{if ge .Values.c__TOW2_ki_g 250.0}}{{$level = 5}}{{end}}{{if ge .Values.c__TOW2_ki_g 300.0}}{{$level = 6}}{{end}}{{if ge .Values.c__TOW2_ki_g 350.0}}{{$level = 7}}{{end}}{{if ge .Values.c__TOW2_ki_g 400.0}}{{$level = 8}}{{end}}{{if ge .Values.c__TOW2_ki_g 450.0}}{{$level = 9}}{{end}}<div class="stars {{if lt .Values.c__TOW2_ki_g 50.0}}gold0{{else}}gold{{$level}}{{end}}{{if lt .Values.c__TOW2_ki_g 50.0}} inactive{{end}}">{{if lt .Values.c__TOW2_ki_g 50.0}}Gold{{else}}Gold {{$level}}x{{end}}
                                 <div></div>
                             </div>
-                            <div class="stars plat inactive">Platin
+                            <div class="stars plat{{if lt .Values.c__TOW2_ki_g 500.0}} inactive{{end}}">Platin
                                 <div></div>
                             </div>
                             <br/></div>
@@ -2993,16 +2993,16 @@
                             </div>
                             <br/>
                             <div class="name">Vehicle stars (calculated)</div>
-                            <div class="stars bron inactive">Bronze
+                            <div class="stars bron{{if lt .Values.c__aav_ki_g 10.0}} inactive{{end}}">Bronze
                                 <div></div>
                             </div>
-                            <div class="stars silv inactive">Silver
+                            <div class="stars silv{{if lt .Values.c__aav_ki_g 25.0}} inactive{{end}}">Silver
                                 <div></div>
                             </div>
-                            <div class="stars gold0 inactive">Gold
+                            {{$level := 0}}{{if ge .Values.c__aav_ki_g 50.0}}{{$level = 1}}{{end}}{{if ge .Values.c__aav_ki_g 100.0}}{{$level = 2}}{{end}}{{if ge .Values.c__aav_ki_g 150.0}}{{$level = 3}}{{end}}{{if ge .Values.c__aav_ki_g 200.0}}{{$level = 4}}{{end}}{{if ge .Values.c__aav_ki_g 250.0}}{{$level = 5}}{{end}}{{if ge .Values.c__aav_ki_g 300.0}}{{$level = 6}}{{end}}{{if ge .Values.c__aav_ki_g 350.0}}{{$level = 7}}{{end}}{{if ge .Values.c__aav_ki_g 400.0}}{{$level = 8}}{{end}}{{if ge .Values.c__aav_ki_g 450.0}}{{$level = 9}}{{end}}<div class="stars {{if lt .Values.c__aav_ki_g 50.0}}gold0{{else}}gold{{$level}}{{end}}{{if lt .Values.c__aav_ki_g 50.0}} inactive{{end}}">{{if lt .Values.c__aav_ki_g 50.0}}Gold{{else}}Gold {{$level}}x{{end}}
                                 <div></div>
                             </div>
-                            <div class="stars plat inactive">Platin
+                            <div class="stars plat{{if lt .Values.c__aav_ki_g 500.0}} inactive{{end}}">Platin
                                 <div></div>
                             </div>
                             <br/></div>
@@ -3027,16 +3027,16 @@
                             </div>
                             <br/>
                             <div class="name">Vehicle stars (calculated)</div>
-                            <div class="stars bron inactive">Bronze
+                            <div class="stars bron{{if lt .Values.c__VADS_ki_g 10.0}} inactive{{end}}">Bronze
                                 <div></div>
                             </div>
-                            <div class="stars silv inactive">Silver
+                            <div class="stars silv{{if lt .Values.c__VADS_ki_g 25.0}} inactive{{end}}">Silver
                                 <div></div>
                             </div>
-                            <div class="stars gold0 inactive">Gold
+                            {{$level := 0}}{{if ge .Values.c__VADS_ki_g 50.0}}{{$level = 1}}{{end}}{{if ge .Values.c__VADS_ki_g 100.0}}{{$level = 2}}{{end}}{{if ge .Values.c__VADS_ki_g 150.0}}{{$level = 3}}{{end}}{{if ge .Values.c__VADS_ki_g 200.0}}{{$level = 4}}{{end}}{{if ge .Values.c__VADS_ki_g 250.0}}{{$level = 5}}{{end}}{{if ge .Values.c__VADS_ki_g 300.0}}{{$level = 6}}{{end}}{{if ge .Values.c__VADS_ki_g 350.0}}{{$level = 7}}{{end}}{{if ge .Values.c__VADS_ki_g 400.0}}{{$level = 8}}{{end}}{{if ge .Values.c__VADS_ki_g 450.0}}{{$level = 9}}{{end}}<div class="stars {{if lt .Values.c__VADS_ki_g 50.0}}gold0{{else}}gold{{$level}}{{end}}{{if lt .Values.c__VADS_ki_g 50.0}} inactive{{end}}">{{if lt .Values.c__VADS_ki_g 50.0}}Gold{{else}}Gold {{$level}}x{{end}}
                                 <div></div>
                             </div>
-                            <div class="stars plat inactive">Platin
+                            <div class="stars plat{{if lt .Values.c__VADS_ki_g 500.0}} inactive{{end}}">Platin
                                 <div></div>
                             </div>
                             <br/></div>
