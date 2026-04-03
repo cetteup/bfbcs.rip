@@ -3121,17 +3121,17 @@
                                 <li>{{formatNumber .Values.c__40mmgl_hsh_g}} Headshots</li>
                                 <li>{{formatDuration .Values.c_40mmgl__sw_g}} Time with</li>
                             </ul>
-                            <div class="stars bron">Bronze
-                                <div>10/10</div>
+                            <div class="stars bron{{if eq .Values.br40mmgl_00 0.0}} inactive{{end}}">Bronze
+                                <div>{{.Values.c_br40mmgl_40mmgl__kw_g}}/10</div>
                             </div>
-                            <div class="stars silv">Silver
-                                <div>25/25</div>
+                            <div class="stars silv{{if eq .Values.si40mmgl_00 0.0}} inactive{{end}}">Silver
+                                <div>{{.Values.c_si40mmgl_40mmgl__kw_g}}/25</div>
                             </div>
-                            <div class="stars gold1">Gold 1x
-                                <div>82/100</div>
+                            <div class="stars {{printf "gold%.0f" .Values.go40mmgl_00}}{{if le .Values.go40mmgl_00 0.0}} inactive{{end}}">{{if gt .Values.go40mmgl_00 0.0}}Gold {{printf "%.0f" .Values.go40mmgl_00}}x{{else}}Gold{{end}}
+                                <div>{{.Values.c_go40mmgl_40mmgl__kw_g}}/{{if ge .Values.go40mmgl_00 9.0}}500{{else}}{{mul (add .Values.go40mmgl_00 1) 50}}{{end}}</div>
                             </div>
-                            <div class="stars plat inactive">Platin
-                                <div>82/500</div>
+                            <div class="stars plat{{if lt .Values.c_pl40mmgl_40mmgl__kw_g 500.0}} inactive{{end}}">Platin
+                                <div>{{.Values.c_pl40mmgl_40mmgl__kw_g}}/500</div>
                             </div>
                         </div>
                         <div class="itemdetails" id="gad_assault1">
@@ -3170,17 +3170,17 @@
                                 <li>{{formatNumber .Values.c__40mmsg_hsh_g}} Headshots</li>
                                 <li>{{formatDuration .Values.c_40mmsg__sw_g}} Time with</li>
                             </ul>
-                            <div class="stars bron inactive">Bronze
-                                <div>0/25</div>
+                            <div class="stars bron{{if eq .Values.br40mmsg_00 0.0}} inactive{{end}}">Bronze
+                                <div>{{.Values.c_br40mmsg_40mmsg__kw_g}}/10</div>
                             </div>
-                            <div class="stars silv inactive">Silver
-                                <div>0/50</div>
+                            <div class="stars silv{{if eq .Values.si40mmsg_00 0.0}} inactive{{end}}">Silver
+                                <div>{{.Values.c_si40mmsg_40mmsg__kw_g}}/25</div>
                             </div>
-                            <div class="stars gold0 inactive">Gold
-                                <div>0/100</div>
+                            <div class="stars {{printf "gold%.0f" .Values.go40mmsg_00}}{{if le .Values.go40mmsg_00 0.0}} inactive{{end}}">{{if gt .Values.go40mmsg_00 0.0}}Gold {{printf "%.0f" .Values.go40mmsg_00}}x{{else}}Gold{{end}}
+                                <div>{{.Values.c_go40mmsg_40mmsg__kw_g}}/{{if ge .Values.go40mmsg_00 9.0}}500{{else}}{{mul (add .Values.go40mmsg_00 1) 50}}{{end}}</div>
                             </div>
-                            <div class="stars plat inactive">Platin
-                                <div>0/1000</div>
+                            <div class="stars plat{{if lt .Values.c_pl40mmsg_40mmsg__kw_g 500.0}} inactive{{end}}">Platin
+                                <div>{{.Values.c_pl40mmsg_40mmsg__kw_g}}/500</div>
                             </div>
                         </div>
                         <div class="itemdetails" id="gad_demo0">
@@ -3196,17 +3196,17 @@
                                 <li>{{formatNumber .Values.c__rpg7_hsh_g}} Headshots</li>
                                 <li>{{formatDuration .Values.c_rpg7__sw_g}} Time with</li>
                             </ul>
-                            <div class="stars bron inactive">Bronze
-                                <div>7/10</div>
+                            <div class="stars bron{{if eq .Values.brrpg7_00 0.0}} inactive{{end}}">Bronze
+                                <div>{{.Values.c_brrpg7_rpg7__kw_g}}/10</div>
                             </div>
-                            <div class="stars silv inactive">Silver
-                                <div>7/25</div>
+                            <div class="stars silv{{if eq .Values.sirpg7_00 0.0}} inactive{{end}}">Silver
+                                <div>{{.Values.c_sirpg7_rpg7__kw_g}}/25</div>
                             </div>
-                            <div class="stars gold0 inactive">Gold
-                                <div>7/50</div>
+                            <div class="stars {{printf "gold%.0f" .Values.gorpg7_00}}{{if le .Values.gorpg7_00 0.0}} inactive{{end}}">{{if gt .Values.gorpg7_00 0.0}}Gold {{printf "%.0f" .Values.gorpg7_00}}x{{else}}Gold{{end}}
+                                <div>{{.Values.c_gorpg7_rpg7__kw_g}}/{{if ge .Values.gorpg7_00 9.0}}500{{else}}{{mul (add .Values.gorpg7_00 1) 50}}{{end}}</div>
                             </div>
-                            <div class="stars plat inactive">Platin
-                                <div>7/500</div>
+                            <div class="stars plat{{if lt .Values.c_plrpg7_rpg7__kw_g 500.0}} inactive{{end}}">Platin
+                                <div>{{.Values.c_plrpg7_rpg7__kw_g}}/500</div>
                             </div>
                         </div>
                         <div class="itemdetails" id="gad_demo1">
@@ -3239,17 +3239,17 @@
                                 <li>{{formatNumber .Values.c__atm_hsh_g}} Headshots</li>
                                 <li>{{formatDuration .Values.c_atm__sw_g}} Time with</li>
                             </ul>
-                            <div class="stars bron inactive">Bronze
-                                <div>1/10</div>
+                            <div class="stars bron{{if eq .Values.bratm_00 0.0}} inactive{{end}}">Bronze
+                                <div>{{.Values.c_bratm_atm__kw_g}}/10</div>
                             </div>
-                            <div class="stars silv inactive">Silver
-                                <div>1/25</div>
+                            <div class="stars silv{{if eq .Values.siatm_00 0.0}} inactive{{end}}">Silver
+                                <div>{{.Values.c_siatm_atm__kw_g}}/25</div>
                             </div>
-                            <div class="stars gold0 inactive">Gold
-                                <div>1/50</div>
+                            <div class="stars {{printf "gold%.0f" .Values.goatm_00}}{{if le .Values.goatm_00 0.0}} inactive{{end}}">{{if gt .Values.goatm_00 0.0}}Gold {{printf "%.0f" .Values.goatm_00}}x{{else}}Gold{{end}}
+                                <div>{{.Values.c_goatm_atm__kw_g}}/{{if ge .Values.goatm_00 9.0}}500{{else}}{{mul (add .Values.goatm_00 1) 50}}{{end}}</div>
                             </div>
-                            <div class="stars plat inactive">Platin
-                                <div>1/500</div>
+                            <div class="stars plat{{if lt .Values.c_platm_atm__kw_g 500.0}} inactive{{end}}">Platin
+                                <div>{{.Values.c_platm_atm__kw_g}}/500</div>
                             </div>
                         </div>
                         <div class="itemdetails" id="gad_demo3">
@@ -3266,17 +3266,17 @@
                                 <li>{{formatNumber .Values.c__m2cg_hsh_g}} Headshots</li>
                                 <li>{{formatDuration .Values.c_m2cg__sw_g}} Time with</li>
                             </ul>
-                            <div class="stars bron">Bronze
-                                <div>10/10</div>
+                            <div class="stars bron{{if eq .Values.brm2cg_00 0.0}} inactive{{end}}">Bronze
+                                <div>{{.Values.c_brm2cg_m2cg__kw_g}}/10</div>
                             </div>
-                            <div class="stars silv">Silver
-                                <div>25/25</div>
+                            <div class="stars silv{{if eq .Values.sim2cg_00 0.0}} inactive{{end}}">Silver
+                                <div>{{.Values.c_sim2cg_m2cg__kw_g}}/25</div>
                             </div>
-                            <div class="stars gold7">Gold 7x
-                                <div>372/400</div>
+                            <div class="stars {{printf "gold%.0f" .Values.gom2cg_00}}{{if le .Values.gom2cg_00 0.0}} inactive{{end}}">{{if gt .Values.gom2cg_00 0.0}}Gold {{printf "%.0f" .Values.gom2cg_00}}x{{else}}Gold{{end}}
+                                <div>{{.Values.c_gom2cg_m2cg__kw_g}}/{{if ge .Values.gom2cg_00 9.0}}500{{else}}{{mul (add .Values.gom2cg_00 1) 50}}{{end}}</div>
                             </div>
-                            <div class="stars plat inactive">Platin
-                                <div>372/500</div>
+                            <div class="stars plat{{if lt .Values.c_plm2cg_m2cg__kw_g 500.0}} inactive{{end}}">Platin
+                                <div>{{.Values.c_plm2cg_m2cg__kw_g}}/500</div>
                             </div>
                         </div>
                         <div class="itemdetails" id="gad_demo4">
@@ -3292,17 +3292,17 @@
                                 <li>{{formatNumber .Values.c__m136_hsh_g}} Headshots</li>
                                 <li>{{formatDuration .Values.c_m136__sw_g}} Time with</li>
                             </ul>
-                            <div class="stars bron">Bronze
-                                <div>10/10</div>
+                            <div class="stars bron{{if eq .Values.brm136_00 0.0}} inactive{{end}}">Bronze
+                                <div>{{.Values.c_brm136_m136__kw_g}}/10</div>
                             </div>
-                            <div class="stars silv inactive">Silver
-                                <div>16/25</div>
+                            <div class="stars silv{{if eq .Values.sim136_00 0.0}} inactive{{end}}">Silver
+                                <div>{{.Values.c_sim136_m136__kw_g}}/25</div>
                             </div>
-                            <div class="stars gold0 inactive">Gold
-                                <div>16/50</div>
+                            <div class="stars {{printf "gold%.0f" .Values.gom136_00}}{{if le .Values.gom136_00 0.0}} inactive{{end}}">{{if gt .Values.gom136_00 0.0}}Gold {{printf "%.0f" .Values.gom136_00}}x{{else}}Gold{{end}}
+                                <div>{{.Values.c_gom136_m136__kw_g}}/{{if ge .Values.gom136_00 9.0}}500{{else}}{{mul (add .Values.gom136_00 1) 50}}{{end}}</div>
                             </div>
-                            <div class="stars plat inactive">Platin
-                                <div>16/500</div>
+                            <div class="stars plat{{if lt .Values.c_plm136_m136__kw_g 500.0}} inactive{{end}}">Platin
+                                <div>{{.Values.c_plm136_m136__kw_g}}/500</div>
                             </div>
                         </div>
                         <div class="itemdetails" id="gad_medic0">
@@ -3361,17 +3361,17 @@
                                 <li>{{formatNumber .Values.c__c4_hsh_g}} Headshots</li>
                                 <li>{{formatDuration .Values.c_c4__sw_g}} Time with</li>
                             </ul>
-                            <div class="stars bron">Bronze
-                                <div>10/10</div>
+                            <div class="stars bron{{if eq .Values.brc4_00 0.0}} inactive{{end}}">Bronze
+                                <div>{{.Values.c_brc4_c4__kw_g}}/10</div>
                             </div>
-                            <div class="stars silv">Silver
-                                <div>25/25</div>
+                            <div class="stars silv{{if eq .Values.sic4_00 0.0}} inactive{{end}}">Silver
+                                <div>{{.Values.c_sic4_c4__kw_g}}/25</div>
                             </div>
-                            <div class="stars gold0 inactive">Gold
-                                <div>30/50</div>
+                            <div class="stars {{printf "gold%.0f" .Values.goc4_00}}{{if le .Values.goc4_00 0.0}} inactive{{end}}">{{if gt .Values.goc4_00 0.0}}Gold {{printf "%.0f" .Values.goc4_00}}x{{else}}Gold{{end}}
+                                <div>{{.Values.c_goc4_c4__kw_g}}/{{if ge .Values.goc4_00 9.0}}500{{else}}{{mul (add .Values.goc4_00 1) 50}}{{end}}</div>
                             </div>
-                            <div class="stars plat inactive">Platin
-                                <div>30/500</div>
+                            <div class="stars plat{{if lt .Values.c_plc4_c4__kw_g 500.0}} inactive{{end}}">Platin
+                                <div>{{.Values.c_plc4_c4__kw_g}}/500</div>
                             </div>
                         </div>
                         <div class="itemdetails" id="gad_recon2">
@@ -3388,17 +3388,17 @@
                                 <li>{{formatNumber .Values.c__mst_hsh_g}} Headshots</li>
                                 <li>{{formatDuration .Values.c_mst__sw_g}} Time with</li>
                             </ul>
-                            <div class="stars bron">Bronze
-                                <div>10/10</div>
+                            <div class="stars bron{{if eq .Values.brmst_00 0.0}} inactive{{end}}">Bronze
+                                <div>{{.Values.c_brmst_mst__kw_g}}/10</div>
                             </div>
-                            <div class="stars silv">Silver
-                                <div>25/25</div>
+                            <div class="stars silv{{if eq .Values.simst_00 0.0}} inactive{{end}}">Silver
+                                <div>{{.Values.c_simst_mst__kw_g}}/25</div>
                             </div>
-                            <div class="stars gold0 inactive">Gold
-                                <div>41/50</div>
+                            <div class="stars {{printf "gold%.0f" .Values.gomst_00}}{{if le .Values.gomst_00 0.0}} inactive{{end}}">{{if gt .Values.gomst_00 0.0}}Gold {{printf "%.0f" .Values.gomst_00}}x{{else}}Gold{{end}}
+                                <div>{{.Values.c_gomst_mst__kw_g}}/{{if ge .Values.gomst_00 9.0}}500{{else}}{{mul (add .Values.gomst_00 1) 50}}{{end}}</div>
                             </div>
-                            <div class="stars plat inactive">Platin
-                                <div>41/500</div>
+                            <div class="stars plat{{if lt .Values.c_plmst_mst__kw_g 500.0}} inactive{{end}}">Platin
+                                <div>{{.Values.c_plmst_mst__kw_g}}/500</div>
                             </div>
                         </div>
                         <div class="itemdetails" id="gad_all0">
@@ -3414,17 +3414,17 @@
                                 <li>{{formatNumber .Values.c__knv_hsh_g}} Headshots</li>
                                 <li>{{formatDuration .Values.c_knv__sw_g}} Time with</li>
                             </ul>
-                            <div class="stars bron">Bronze
-                                <div>10/10</div>
+                            <div class="stars bron{{if eq .Values.brmel_00 0.0}} inactive{{end}}">Bronze
+                                <div>{{.Values.c_brmel_mel__kw_g}}/10</div>
                             </div>
-                            <div class="stars silv">Silver
-                                <div>25/25</div>
+                            <div class="stars silv{{if eq .Values.simel_00 0.0}} inactive{{end}}">Silver
+                                <div>{{.Values.c_simel_mel__kw_g}}/25</div>
                             </div>
-                            <div class="stars gold8">Gold 8x
-                                <div>408/450</div>
+                            <div class="stars {{printf "gold%.0f" .Values.gomel_00}}{{if le .Values.gomel_00 0.0}} inactive{{end}}">{{if gt .Values.gomel_00 0.0}}Gold {{printf "%.0f" .Values.gomel_00}}x{{else}}Gold{{end}}
+                                <div>{{.Values.c_gomel_mel__kw_g}}/{{if ge .Values.gomel_00 9.0}}500{{else}}{{mul (add .Values.gomel_00 1) 50}}{{end}}</div>
                             </div>
-                            <div class="stars plat inactive">Platin
-                                <div>408/500</div>
+                            <div class="stars plat{{if lt .Values.c_plmel_mel__kw_g 500.0}} inactive{{end}}">Platin
+                                <div>{{.Values.c_plmel_mel__kw_g}}/500</div>
                             </div>
                         </div>
                         <div class="itemdetails" id="gad_all1">
@@ -3439,17 +3439,17 @@
                                 <li>{{formatNumber .Values.c__hgr_hsh_g}} Headshots</li>
                                 <li>{{formatDuration .Values.c_hgr__sw_g}} Time with</li>
                             </ul>
-                            <div class="stars bron">Bronze
-                                <div>10/10</div>
+                            <div class="stars bron{{if eq .Values.brhgr_00 0.0}} inactive{{end}}">Bronze
+                                <div>{{.Values.c_brhgr_hgr__kw_g}}/10</div>
                             </div>
-                            <div class="stars silv">Silver
-                                <div>25/25</div>
+                            <div class="stars silv{{if eq .Values.sihgr_00 0.0}} inactive{{end}}">Silver
+                                <div>{{.Values.c_sihgr_hgr__kw_g}}/25</div>
                             </div>
-                            <div class="stars gold1">Gold 1x
-                                <div>54/100</div>
+                            <div class="stars {{printf "gold%.0f" .Values.gohgr_00}}{{if le .Values.gohgr_00 0.0}} inactive{{end}}">{{if gt .Values.gohgr_00 0.0}}Gold {{printf "%.0f" .Values.gohgr_00}}x{{else}}Gold{{end}}
+                                <div>{{.Values.c_gohgr_hgr__kw_g}}/{{if ge .Values.gohgr_00 9.0}}500{{else}}{{mul (add .Values.gohgr_00 1) 50}}{{end}}</div>
                             </div>
-                            <div class="stars plat inactive">Platin
-                                <div>54/500</div>
+                            <div class="stars plat{{if lt .Values.c_plhgr_hgr__kw_g 500.0}} inactive{{end}}">Platin
+                                <div>{{.Values.c_plhgr_hgr__kw_g}}/500</div>
                             </div>
                         </div>
                         <div class="itemdetails" id="gad_all2">
