@@ -2184,6 +2184,33 @@
                                 <td>{{formatNumber .Values.c_tru__ddw_g}}</td>
                                 <td>{{if gt .Values.c_tru__si_g 0.0}}{{printf "%.2f d/s" (div .Values.c_tru__ddw_g .Values.c_tru__si_g)}}{{else}}-{{end}}</td>
                             </tr>
+                            <tr onmouseover="bfbcs.showDetail('vehicle','veh_6','veha_6')" id="veha_6">
+                                <td class="left">GAZ69 Vietnam</td>
+                                <td class="right stars {{getServiceStarClass .Values "tveh"}}">light</td>
+                                <td>{{formatDuration .Values.c_gaz69v__si_g}}</td>
+                                <td>{{formatNumber .Values.c__gaz69v_ki_g}}</td>
+                                <td>{{formatNumber .Values.c_rok_gaz69v_kwi_g}}</td>
+                                <td>{{formatNumber .Values.c_gaz69v__ddw_g}}</td>
+                                <td>{{if gt .Values.c_gaz69v__si_g 0.0}}{{printf "%.2f d/s" (div .Values.c_gaz69v__ddw_g .Values.c_gaz69v__si_g)}}{{else}}-{{end}}</td>
+                            </tr>
+                            <tr onmouseover="bfbcs.showDetail('vehicle','veh_7','veha_7')" id="veha_7">
+                                <td class="left">TUK-TUK Vietnam</td>
+                                <td class="right stars {{getServiceStarClass .Values "tveh"}}">light</td>
+                                <td>{{formatDuration .Values.c_minitruckv__si_g}}</td>
+                                <td>{{formatNumber .Values.c__minitruckv_ki_g}}</td>
+                                <td>{{formatNumber .Values.c_rok_minitruckv_kwi_g}}</td>
+                                <td>{{formatNumber .Values.c_minitruckv__ddw_g}}</td>
+                                <td>{{if gt .Values.c_minitruckv__si_g 0.0}}{{printf "%.2f d/s" (div .Values.c_minitruckv__ddw_g .Values.c_minitruckv__si_g)}}{{else}}-{{end}}</td>
+                            </tr>
+                            <tr onmouseover="bfbcs.showDetail('vehicle','veh_8','veha_8')" id="veha_8">
+                                <td class="left">M151 Vietnam</td>
+                                <td class="right stars {{getServiceStarClass .Values "tveh"}}">light</td>
+                                <td>{{formatDuration .Values.c_m15v__si_g}}</td>
+                                <td>{{formatNumber .Values.c__m15v_ki_g}}</td>
+                                <td>{{formatNumber .Values.c_rok_m15v_kwi_g}}</td>
+                                <td>{{formatNumber .Values.c_m15v__ddw_g}}</td>
+                                <td>{{if gt .Values.c_m15v__si_g 0.0}}{{printf "%.2f d/s" (div .Values.c_m15v__ddw_g .Values.c_m15v__si_g)}}{{else}}-{{end}}</td>
+                            </tr>
                             <tr onmouseover="bfbcs.showDetail('vehicle','veh_9','veha_9')" id="veha_9">
                                 <td class="left">M1A2 Abrams</td>
                                 <td class="right stars {{getServiceStarClass .Values "arm"}}">heavy</td>
@@ -2228,6 +2255,24 @@
                                 <td>{{formatNumber .Values.c_rok_bmda_kwi_g}}</td>
                                 <td>{{formatNumber .Values.c_bmda__ddw_g}}</td>
                                 <td>{{if gt .Values.c_bmda__si_g 0.0}}{{printf "%.2f d/s" (div .Values.c_bmda__ddw_g .Values.c_bmda__si_g)}}{{else}}-{{end}}</td>
+                            </tr>
+                            <tr onmouseover="bfbcs.showDetail('vehicle','veh_15','veha_15')" id="veha_15">
+                                <td class="left">M48 Tank Vietnam</td>
+                                <td class="right stars {{getServiceStarClass .Values "arm"}}">heavy</td>
+                                <td>{{formatDuration .Values.c_m48v__si_g}}</td>
+                                <td>{{formatNumber .Values.c__m48v_ki_g}}</td>
+                                <td>{{formatNumber .Values.c_rok_m48v_kwi_g}}</td>
+                                <td>{{formatNumber .Values.c_m48v__ddw_g}}</td>
+                                <td>{{if gt .Values.c_m48v__si_g 0.0}}{{printf "%.2f d/s" (div .Values.c_m48v__ddw_g .Values.c_m48v__si_g)}}{{else}}-{{end}}</td>
+                            </tr>
+                            <tr onmouseover="bfbcs.showDetail('vehicle','veh_16','veha_16')" id="veha_16">
+                                <td class="left">T54 Tank Vietnam</td>
+                                <td class="right stars {{getServiceStarClass .Values "arm"}}">heavy</td>
+                                <td>{{formatDuration .Values.c_t54v__si_g}}</td>
+                                <td>{{formatNumber .Values.c__t54v_ki_g}}</td>
+                                <td>{{formatNumber .Values.c_rok_t54v_kwi_g}}</td>
+                                <td>{{formatNumber .Values.c_t54v__ddw_g}}</td>
+                                <td>{{if gt .Values.c_t54v__si_g 0.0}}{{printf "%.2f d/s" (div .Values.c_t54v__ddw_g .Values.c_t54v__si_g)}}{{else}}-{{end}}</td>
                             </tr>
                             <tr onmouseover="bfbcs.showDetail('vehicle','veh_17','veha_17')" id="veha_17">
                                 <td class="left">Personal Water Craft</td>
@@ -2301,6 +2346,15 @@
                                 <td>{{formatNumber .Values.c_uav__ddw_g}}</td>
                                 <td>{{if gt .Values.c_uav__si_g 0.0}}{{printf "%.2f d/s" (div .Values.c_uav__ddw_g .Values.c_uav__si_g)}}{{else}}-{{end}}</td>
                             </tr>
+                            <tr onmouseover="bfbcs.showDetail('vehicle','veh_25','veha_25')" id="veha_25">
+                                <td class="left">HUEY Vietnam</td>
+                                <td class="right stars {{getServiceStarClass .Values "air"}}">air</td>
+                                <td>{{formatDuration .Values.c_hueyv__si_g}}</td>
+                                <td>{{formatNumber .Values.c__hueyv_ki_g}}</td>
+                                <td>{{formatNumber .Values.c_rok_hueyv_kwi_g}}</td>
+                                <td>{{formatNumber .Values.c_hueyv__ddw_g}}</td>
+                                <td>{{if gt .Values.c_hueyv__si_g 0.0}}{{printf "%.2f d/s" (div .Values.c_hueyv__ddw_g .Values.c_hueyv__si_g)}}{{else}}-{{end}}</td>
+                            </tr>
                             <tr onmouseover="bfbcs.showDetail('vehicle','veh_26','veha_26')" id="veha_26">
                                 <td class="left">Heavy MG X312</td>
                                 <td class="right stars {{getServiceStarClass .Values "stav"}}">stationary</td>
@@ -2351,6 +2405,24 @@
                                 <td class="right stars {{getServiceStarClass .Values "stav"}}">stationary</td>
                                 <td>{{formatDuration .Values.c_VADS__si_g}}</td>
                                 <td>{{formatNumber .Values.c__VADS_ki_g}}</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr onmouseover="bfbcs.showDetail('vehicle','veh_32','veha_32')" id="veha_32">
+                                <td class="left">XM307</td>
+                                <td class="right stars {{getServiceStarClass .Values "stav"}}">stationary</td>
+                                <td>{{formatDuration .Values.c_XM307__si_g}}</td>
+                                <td>{{formatNumber .Values.c__XM307_ki_g}}</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr onmouseover="bfbcs.showDetail('vehicle','veh_33','veha_33')" id="veha_33">
+                                <td class="left">QLZ8</td>
+                                <td class="right stars {{getServiceStarClass .Values "stav"}}">stationary</td>
+                                <td>{{formatDuration .Values.c_QLZ8__si_g}}</td>
+                                <td>{{formatNumber .Values.c__QLZ8_ki_g}}</td>
                                 <td></td>
                                 <td></td>
                                 <td></td>
@@ -2571,6 +2643,108 @@
                                 <div></div>
                             </div>
                             <br/></div>
+                        <div class="itemdetails" id="veh_6">
+                            <div class="name">GAZ69 Vietnam</div>
+                            <img src="/static/img/bfbcs/vehicles_normal/gaz69.png"
+                                 alt="GAZ69 Vietnam" width="180" height="45">
+                            <div class="desc"></div>
+                            <br>
+                            <div class="name">Class stars</div>
+                            <div class="stars bron{{if eq .Values.brtveh_00 0.0}} inactive{{end}}">Bronze
+                                <div>{{.Values.c_brtveh__tveh_ki_g}}/10</div>
+                            </div>
+                            <div class="stars silv{{if eq .Values.sitveh_00 0.0}} inactive{{end}}">Silver
+                                <div>{{.Values.c_sitveh__tveh_ki_g}}/25</div>
+                            </div>
+                            <div class="stars {{printf "gold%.0f" .Values.gotveh_00}}{{if le .Values.gotveh_00 0.0}} inactive{{end}}">{{if gt .Values.gotveh_00 0.0}}Gold {{printf "%.0f" .Values.gotveh_00}}x{{else}}Gold{{end}}
+                                <div>{{.Values.c_gotveh__tveh_ki_g}}/{{if ge .Values.gotveh_00 9.0}}450{{else}}{{mul (add .Values.gotveh_00 1) 50}}{{end}}</div>
+                            </div>
+                            <div class="stars plat{{if eq .Values.pltveh_00 0.0}} inactive{{end}}">Platin
+                                <div>{{.Values.c_pltveh__tveh_ki_g}}/500</div>
+                            </div>
+                            <br/>
+                            <div class="name">Vehicle stars (calculated)</div>
+                            <div class="stars bron{{if lt .Values.c__gaz69v_ki_g 10.0}} inactive{{end}}">Bronze
+                                <div></div>
+                            </div>
+                            <div class="stars silv{{if lt .Values.c__gaz69v_ki_g 25.0}} inactive{{end}}">Silver
+                                <div></div>
+                            </div>
+                            {{$level := 0}}{{if ge .Values.c__gaz69v_ki_g 50.0}}{{$level = 1}}{{end}}{{if ge .Values.c__gaz69v_ki_g 100.0}}{{$level = 2}}{{end}}{{if ge .Values.c__gaz69v_ki_g 150.0}}{{$level = 3}}{{end}}{{if ge .Values.c__gaz69v_ki_g 200.0}}{{$level = 4}}{{end}}{{if ge .Values.c__gaz69v_ki_g 250.0}}{{$level = 5}}{{end}}{{if ge .Values.c__gaz69v_ki_g 300.0}}{{$level = 6}}{{end}}{{if ge .Values.c__gaz69v_ki_g 350.0}}{{$level = 7}}{{end}}{{if ge .Values.c__gaz69v_ki_g 400.0}}{{$level = 8}}{{end}}{{if ge .Values.c__gaz69v_ki_g 450.0}}{{$level = 9}}{{end}}<div class="stars {{if lt .Values.c__gaz69v_ki_g 50.0}}gold0{{else}}gold{{$level}}{{end}}{{if lt .Values.c__gaz69v_ki_g 50.0}} inactive{{end}}">{{if lt .Values.c__gaz69v_ki_g 50.0}}Gold{{else}}Gold {{$level}}x{{end}}
+                                <div></div>
+                            </div>
+                            <div class="stars plat{{if lt .Values.c__gaz69v_ki_g 500.0}} inactive{{end}}">Platin
+                                <div></div>
+                            </div>
+                            <br></div>
+                        <div class="itemdetails" id="veh_7">
+                            <div class="name">TUK-TUK Vietnam</div>
+                            <img src="/static/img/bfbcs/vehicles_normal/minitruck.png"
+                                 alt="TUK-TUK Vietnam" width="180" height="45">
+                            <div class="desc"></div>
+                            <br>
+                            <div class="name">Class stars</div>
+                            <div class="stars bron{{if eq .Values.brtveh_00 0.0}} inactive{{end}}">Bronze
+                                <div>{{.Values.c_brtveh__tveh_ki_g}}/10</div>
+                            </div>
+                            <div class="stars silv{{if eq .Values.sitveh_00 0.0}} inactive{{end}}">Silver
+                                <div>{{.Values.c_sitveh__tveh_ki_g}}/25</div>
+                            </div>
+                            <div class="stars {{printf "gold%.0f" .Values.gotveh_00}}{{if le .Values.gotveh_00 0.0}} inactive{{end}}">{{if gt .Values.gotveh_00 0.0}}Gold {{printf "%.0f" .Values.gotveh_00}}x{{else}}Gold{{end}}
+                                <div>{{.Values.c_gotveh__tveh_ki_g}}/{{if ge .Values.gotveh_00 9.0}}450{{else}}{{mul (add .Values.gotveh_00 1) 50}}{{end}}</div>
+                            </div>
+                            <div class="stars plat{{if eq .Values.pltveh_00 0.0}} inactive{{end}}">Platin
+                                <div>{{.Values.c_pltveh__tveh_ki_g}}/500</div>
+                            </div>
+                            <br/>
+                            <div class="name">Vehicle stars (calculated)</div>
+                            <div class="stars bron{{if lt .Values.c__minitruckv_ki_g 10.0}} inactive{{end}}">Bronze
+                                <div></div>
+                            </div>
+                            <div class="stars silv{{if lt .Values.c__minitruckv_ki_g 25.0}} inactive{{end}}">Silver
+                                <div></div>
+                            </div>
+                            {{$level := 0}}{{if ge .Values.c__minitruckv_ki_g 50.0}}{{$level = 1}}{{end}}{{if ge .Values.c__minitruckv_ki_g 100.0}}{{$level = 2}}{{end}}{{if ge .Values.c__minitruckv_ki_g 150.0}}{{$level = 3}}{{end}}{{if ge .Values.c__minitruckv_ki_g 200.0}}{{$level = 4}}{{end}}{{if ge .Values.c__minitruckv_ki_g 250.0}}{{$level = 5}}{{end}}{{if ge .Values.c__minitruckv_ki_g 300.0}}{{$level = 6}}{{end}}{{if ge .Values.c__minitruckv_ki_g 350.0}}{{$level = 7}}{{end}}{{if ge .Values.c__minitruckv_ki_g 400.0}}{{$level = 8}}{{end}}{{if ge .Values.c__minitruckv_ki_g 450.0}}{{$level = 9}}{{end}}<div class="stars {{if lt .Values.c__minitruckv_ki_g 50.0}}gold0{{else}}gold{{$level}}{{end}}{{if lt .Values.c__minitruckv_ki_g 50.0}} inactive{{end}}">{{if lt .Values.c__minitruckv_ki_g 50.0}}Gold{{else}}Gold {{$level}}x{{end}}
+                                <div></div>
+                            </div>
+                            <div class="stars plat{{if lt .Values.c__minitruckv_ki_g 500.0}} inactive{{end}}">Platin
+                                <div></div>
+                            </div>
+                            <br></div>
+                        <div class="itemdetails" id="veh_8">
+                            <div class="name">M151 Vietnam</div>
+                            <img src="/static/img/bfbcs/vehicles_normal/m151.png"
+                                 alt="M151 Vietnam" width="180" height="45">
+                            <div class="desc"></div>
+                            <br>
+                            <div class="name">Class stars</div>
+                            <div class="stars bron{{if eq .Values.brtveh_00 0.0}} inactive{{end}}">Bronze
+                                <div>{{.Values.c_brtveh__tveh_ki_g}}/10</div>
+                            </div>
+                            <div class="stars silv{{if eq .Values.sitveh_00 0.0}} inactive{{end}}">Silver
+                                <div>{{.Values.c_sitveh__tveh_ki_g}}/25</div>
+                            </div>
+                            <div class="stars {{printf "gold%.0f" .Values.gotveh_00}}{{if le .Values.gotveh_00 0.0}} inactive{{end}}">{{if gt .Values.gotveh_00 0.0}}Gold {{printf "%.0f" .Values.gotveh_00}}x{{else}}Gold{{end}}
+                                <div>{{.Values.c_gotveh__tveh_ki_g}}/{{if ge .Values.gotveh_00 9.0}}450{{else}}{{mul (add .Values.gotveh_00 1) 50}}{{end}}</div>
+                            </div>
+                            <div class="stars plat{{if eq .Values.pltveh_00 0.0}} inactive{{end}}">Platin
+                                <div>{{.Values.c_pltveh__tveh_ki_g}}/500</div>
+                            </div>
+                            <br/>
+                            <div class="name">Vehicle stars (calculated)</div>
+                            <div class="stars bron{{if lt .Values.c__m15v_ki_g 10.0}} inactive{{end}}">Bronze
+                                <div></div>
+                            </div>
+                            <div class="stars silv{{if lt .Values.c__m15v_ki_g 25.0}} inactive{{end}}">Silver
+                                <div></div>
+                            </div>
+                            {{$level := 0}}{{if ge .Values.c__m15v_ki_g 50.0}}{{$level = 1}}{{end}}{{if ge .Values.c__m15v_ki_g 100.0}}{{$level = 2}}{{end}}{{if ge .Values.c__m15v_ki_g 150.0}}{{$level = 3}}{{end}}{{if ge .Values.c__m15v_ki_g 200.0}}{{$level = 4}}{{end}}{{if ge .Values.c__m15v_ki_g 250.0}}{{$level = 5}}{{end}}{{if ge .Values.c__m15v_ki_g 300.0}}{{$level = 6}}{{end}}{{if ge .Values.c__m15v_ki_g 350.0}}{{$level = 7}}{{end}}{{if ge .Values.c__m15v_ki_g 400.0}}{{$level = 8}}{{end}}{{if ge .Values.c__m15v_ki_g 450.0}}{{$level = 9}}{{end}}<div class="stars {{if lt .Values.c__m15v_ki_g 50.0}}gold0{{else}}gold{{$level}}{{end}}{{if lt .Values.c__m15v_ki_g 50.0}} inactive{{end}}">{{if lt .Values.c__m15v_ki_g 50.0}}Gold{{else}}Gold {{$level}}x{{end}}
+                                <div></div>
+                            </div>
+                            <div class="stars plat{{if lt .Values.c__m15v_ki_g 500.0}} inactive{{end}}">Platin
+                                <div></div>
+                            </div>
+                            <br></div>
                         <div class="itemdetails" id="veh_9">
                             <div class="name">M1A2 Abrams</div>
                             <img src="/static/img/bfbcs/vehicles_normal/m1a2.png" alt="M1A2 Abrams"
@@ -2751,6 +2925,77 @@
                                 <div></div>
                             </div>
                             <br/></div>
+                        <!--
+                        It is currently unclear whether a vehicle is missing here.
+                        -->
+                        <div class="itemdetails" id="veh_15">
+                            <div class="name">M48 Tank Vietnam</div>
+                            <img src="/static/img/bfbcs/vehicles_normal/m48.png"
+                                 alt="M48 Tank Vietnam" width="180" height="45">
+                            <div class="desc"></div>
+                            <br>
+                            <div class="name">Class stars</div>
+                            <div class="stars bron{{if eq .Values.brarm_00 0.0}} inactive{{end}}">Bronze
+                                <div>{{.Values.c_brarm__arm_ki_g}}/10</div>
+                            </div>
+                            <div class="stars silv{{if eq .Values.siarm_00 0.0}} inactive{{end}}">Silver
+                                <div>{{.Values.c_siarm__arm_ki_g}}/25</div>
+                            </div>
+                            <div class="stars {{printf "gold%.0f" .Values.goarm_00}}{{if le .Values.goarm_00 0.0}} inactive{{end}}">{{if gt .Values.goarm_00 0.0}}Gold {{printf "%.0f" .Values.goarm_00}}x{{else}}Gold{{end}}
+                                <div>{{.Values.c_goarm__arm_ki_g}}/{{if ge .Values.goarm_00 9.0}}450{{else}}{{mul (add .Values.goarm_00 1) 50}}{{end}}</div>
+                            </div>
+                            <div class="stars plat{{if eq .Values.plarm_00 0.0}} inactive{{end}}">Platin
+                                <div>{{.Values.c_plarm__arm_ki_g}}/500</div>
+                            </div>
+                            <br/>
+                            <div class="name">Vehicle stars (calculated)</div>
+                            <div class="stars bron{{if lt .Values.c__m48v_ki_g 10.0}} inactive{{end}}">Bronze
+                                <div></div>
+                            </div>
+                            <div class="stars silv{{if lt .Values.c__m48v_ki_g 25.0}} inactive{{end}}">Silver
+                                <div></div>
+                            </div>
+                            {{$level := 0}}{{if ge .Values.c__m48v_ki_g 50.0}}{{$level = 1}}{{end}}{{if ge .Values.c__m48v_ki_g 100.0}}{{$level = 2}}{{end}}{{if ge .Values.c__m48v_ki_g 150.0}}{{$level = 3}}{{end}}{{if ge .Values.c__m48v_ki_g 200.0}}{{$level = 4}}{{end}}{{if ge .Values.c__m48v_ki_g 250.0}}{{$level = 5}}{{end}}{{if ge .Values.c__m48v_ki_g 300.0}}{{$level = 6}}{{end}}{{if ge .Values.c__m48v_ki_g 350.0}}{{$level = 7}}{{end}}{{if ge .Values.c__m48v_ki_g 400.0}}{{$level = 8}}{{end}}{{if ge .Values.c__m48v_ki_g 450.0}}{{$level = 9}}{{end}}<div class="stars {{if lt .Values.c__m48v_ki_g 50.0}}gold0{{else}}gold{{$level}}{{end}}{{if lt .Values.c__m48v_ki_g 50.0}} inactive{{end}}">{{if lt .Values.c__m48v_ki_g 50.0}}Gold{{else}}Gold {{$level}}x{{end}}
+                                <div></div>
+                            </div>
+                            <div class="stars plat{{if lt .Values.c__m48v_ki_g 500.0}} inactive{{end}}">Platin
+                                <div></div>
+                            </div>
+                            <br></div>
+                        <div class="itemdetails" id="veh_16">
+                            <div class="name">T54 Tank Vietnam</div>
+                            <img src="/static/img/bfbcs/vehicles_normal/t54.png"
+                                 alt="T54 Tank Vietnam" width="180" height="45">
+                            <div class="desc"></div>
+                            <br>
+                            <div class="name">Class stars</div>
+                            <div class="stars bron{{if eq .Values.brarm_00 0.0}} inactive{{end}}">Bronze
+                                <div>{{.Values.c_brarm__arm_ki_g}}/10</div>
+                            </div>
+                            <div class="stars silv{{if eq .Values.siarm_00 0.0}} inactive{{end}}">Silver
+                                <div>{{.Values.c_siarm__arm_ki_g}}/25</div>
+                            </div>
+                            <div class="stars {{printf "gold%.0f" .Values.goarm_00}}{{if le .Values.goarm_00 0.0}} inactive{{end}}">{{if gt .Values.goarm_00 0.0}}Gold {{printf "%.0f" .Values.goarm_00}}x{{else}}Gold{{end}}
+                                <div>{{.Values.c_goarm__arm_ki_g}}/{{if ge .Values.goarm_00 9.0}}450{{else}}{{mul (add .Values.goarm_00 1) 50}}{{end}}</div>
+                            </div>
+                            <div class="stars plat{{if eq .Values.plarm_00 0.0}} inactive{{end}}">Platin
+                                <div>{{.Values.c_plarm__arm_ki_g}}/500</div>
+                            </div>
+                            <br/>
+                            <div class="name">Vehicle stars (calculated)</div>
+                            <div class="stars bron{{if lt .Values.c__t54v_ki_g 10.0}} inactive{{end}}">Bronze
+                                <div></div>
+                            </div>
+                            <div class="stars silv{{if lt .Values.c__t54v_ki_g 25.0}} inactive{{end}}">Silver
+                                <div></div>
+                            </div>
+                            {{$level := 0}}{{if ge .Values.c__t54v_ki_g 50.0}}{{$level = 1}}{{end}}{{if ge .Values.c__t54v_ki_g 100.0}}{{$level = 2}}{{end}}{{if ge .Values.c__t54v_ki_g 150.0}}{{$level = 3}}{{end}}{{if ge .Values.c__t54v_ki_g 200.0}}{{$level = 4}}{{end}}{{if ge .Values.c__t54v_ki_g 250.0}}{{$level = 5}}{{end}}{{if ge .Values.c__t54v_ki_g 300.0}}{{$level = 6}}{{end}}{{if ge .Values.c__t54v_ki_g 350.0}}{{$level = 7}}{{end}}{{if ge .Values.c__t54v_ki_g 400.0}}{{$level = 8}}{{end}}{{if ge .Values.c__t54v_ki_g 450.0}}{{$level = 9}}{{end}}<div class="stars {{if lt .Values.c__t54v_ki_g 50.0}}gold0{{else}}gold{{$level}}{{end}}{{if lt .Values.c__t54v_ki_g 50.0}} inactive{{end}}">{{if lt .Values.c__t54v_ki_g 50.0}}Gold{{else}}Gold {{$level}}x{{end}}
+                                <div></div>
+                            </div>
+                            <div class="stars plat{{if lt .Values.c__t54v_ki_g 500.0}} inactive{{end}}">Platin
+                                <div></div>
+                            </div>
+                            <br></div>
                         <div class="itemdetails" id="veh_17">
                             <div class="name">Personal Water Craft</div>
                             <img src="/static/img/bfbcs/vehicles_normal/jetski.png"
@@ -3035,6 +3280,40 @@
                                 <div></div>
                             </div>
                             <br/></div>
+                        <div class="itemdetails" id="veh_25">
+                            <div class="name">HUEY Vietnam</div>
+                            <img src="/static/img/bfbcs/vehicles_normal/huey.png"
+                                 alt="HUEY Vietnam" width="180" height="45">
+                            <div class="desc"></div>
+                            <br>
+                            <div class="name">Class stars</div>
+                            <div class="stars bron{{if eq .Values.brair_00 0.0}} inactive{{end}}">Bronze
+                                <div>{{.Values.c_brair__air_ki_g}}/10</div>
+                            </div>
+                            <div class="stars silv{{if eq .Values.siair_00 0.0}} inactive{{end}}">Silver
+                                <div>{{.Values.c_siair__air_ki_g}}/25</div>
+                            </div>
+                            <div class="stars {{printf "gold%.0f" .Values.goair_00}}{{if le .Values.goair_00 0.0}} inactive{{end}}">{{if gt .Values.goair_00 0.0}}Gold {{printf "%.0f" .Values.goair_00}}x{{else}}Gold{{end}}
+                                <div>{{.Values.c_goair__air_ki_g}}/{{if ge .Values.goair_00 9.0}}450{{else}}{{mul (add .Values.goair_00 1) 50}}{{end}}</div>
+                            </div>
+                            <div class="stars plat{{if eq .Values.plair_00 0.0}} inactive{{end}}">Platin
+                                <div>{{.Values.c_plair__air_ki_g}}/500</div>
+                            </div>
+                            <br/>
+                            <div class="name">Vehicle stars (calculated)</div>
+                            <div class="stars bron{{if lt .Values.c__hueyv_ki_g 10.0}} inactive{{end}}">Bronze
+                                <div></div>
+                            </div>
+                            <div class="stars silv{{if lt .Values.c__hueyv_ki_g 25.0}} inactive{{end}}">Silver
+                                <div></div>
+                            </div>
+                            {{$level := 0}}{{if ge .Values.c__hueyv_ki_g 50.0}}{{$level = 1}}{{end}}{{if ge .Values.c__hueyv_ki_g 100.0}}{{$level = 2}}{{end}}{{if ge .Values.c__hueyv_ki_g 150.0}}{{$level = 3}}{{end}}{{if ge .Values.c__hueyv_ki_g 200.0}}{{$level = 4}}{{end}}{{if ge .Values.c__hueyv_ki_g 250.0}}{{$level = 5}}{{end}}{{if ge .Values.c__hueyv_ki_g 300.0}}{{$level = 6}}{{end}}{{if ge .Values.c__hueyv_ki_g 350.0}}{{$level = 7}}{{end}}{{if ge .Values.c__hueyv_ki_g 400.0}}{{$level = 8}}{{end}}{{if ge .Values.c__hueyv_ki_g 450.0}}{{$level = 9}}{{end}}<div class="stars {{if lt .Values.c__hueyv_ki_g 50.0}}gold0{{else}}gold{{$level}}{{end}}{{if lt .Values.c__hueyv_ki_g 50.0}} inactive{{end}}">{{if lt .Values.c__hueyv_ki_g 50.0}}Gold{{else}}Gold {{$level}}x{{end}}
+                                <div></div>
+                            </div>
+                            <div class="stars plat{{if lt .Values.c__hueyv_ki_g 500.0}} inactive{{end}}">Platin
+                                <div></div>
+                            </div>
+                            <br></div>
                         <div class="itemdetails" id="veh_26">
                             <div class="name">Heavy MG X312</div>
                             <img src="/static/img/bfbcs/vehicles_normal/x312.png" alt="Heavy MG X312"
@@ -3249,6 +3528,74 @@
                                 <div></div>
                             </div>
                             <br/></div>
+                        <div class="itemdetails" id="veh_32">
+                            <div class="name">XM307</div>
+                            <img src="/static/img/bfbcs/vehicles_normal/x307.png"
+                                 alt="XM307" width="180" height="45">
+                            <div class="desc"></div>
+                            <br>
+                            <div class="name">Class stars</div>
+                            <div class="stars bron{{if eq .Values.brstav_00 0.0}} inactive{{end}}">Bronze
+                                <div>{{.Values.c_brstav__stav_ki_g}}/10</div>
+                            </div>
+                            <div class="stars silv{{if eq .Values.sistav_00 0.0}} inactive{{end}}">Silver
+                                <div>{{.Values.c_sistav__stav_ki_g}}/25</div>
+                            </div>
+                            <div class="stars {{printf "gold%.0f" .Values.gostav_00}}{{if le .Values.gostav_00 0.0}} inactive{{end}}">{{if gt .Values.gostav_00 0.0}}Gold {{printf "%.0f" .Values.gostav_00}}x{{else}}Gold{{end}}
+                                <div>{{.Values.c_gostav__stav_ki_g}}/{{if ge .Values.gostav_00 9.0}}450{{else}}{{mul (add .Values.gostav_00 1) 50}}{{end}}</div>
+                            </div>
+                            <div class="stars plat{{if eq .Values.plstav_00 0.0}} inactive{{end}}">Platin
+                                <div>{{.Values.c_plstav__stav_ki_g}}/500</div>
+                            </div>
+                            <br/>
+                            <div class="name">Vehicle stars (calculated)</div>
+                            <div class="stars bron{{if lt .Values.c__XM307_ki_g 10.0}} inactive{{end}}">Bronze
+                                <div></div>
+                            </div>
+                            <div class="stars silv{{if lt .Values.c__XM307_ki_g 25.0}} inactive{{end}}">Silver
+                                <div></div>
+                            </div>
+                            {{$level := 0}}{{if ge .Values.c__XM307_ki_g 50.0}}{{$level = 1}}{{end}}{{if ge .Values.c__XM307_ki_g 100.0}}{{$level = 2}}{{end}}{{if ge .Values.c__XM307_ki_g 150.0}}{{$level = 3}}{{end}}{{if ge .Values.c__XM307_ki_g 200.0}}{{$level = 4}}{{end}}{{if ge .Values.c__XM307_ki_g 250.0}}{{$level = 5}}{{end}}{{if ge .Values.c__XM307_ki_g 300.0}}{{$level = 6}}{{end}}{{if ge .Values.c__XM307_ki_g 350.0}}{{$level = 7}}{{end}}{{if ge .Values.c__XM307_ki_g 400.0}}{{$level = 8}}{{end}}{{if ge .Values.c__XM307_ki_g 450.0}}{{$level = 9}}{{end}}<div class="stars {{if lt .Values.c__XM307_ki_g 50.0}}gold0{{else}}gold{{$level}}{{end}}{{if lt .Values.c__XM307_ki_g 50.0}} inactive{{end}}">{{if lt .Values.c__XM307_ki_g 50.0}}Gold{{else}}Gold {{$level}}x{{end}}
+                                <div></div>
+                            </div>
+                            <div class="stars plat{{if lt .Values.c__XM307_ki_g 500.0}} inactive{{end}}">Platin
+                                <div></div>
+                            </div>
+                            <br></div>
+                        <div class="itemdetails" id="veh_33">
+                            <div class="name">QLZ8</div>
+                            <img src="/static/img/bfbcs/vehicles_normal/qlz8.png"
+                                 alt="QLZ8" width="180" height="45">
+                            <div class="desc"></div>
+                            <br>
+                            <div class="name">Class stars</div>
+                            <div class="stars bron{{if eq .Values.brstav_00 0.0}} inactive{{end}}">Bronze
+                                <div>{{.Values.c_brstav__stav_ki_g}}/10</div>
+                            </div>
+                            <div class="stars silv{{if eq .Values.sistav_00 0.0}} inactive{{end}}">Silver
+                                <div>{{.Values.c_sistav__stav_ki_g}}/25</div>
+                            </div>
+                            <div class="stars {{printf "gold%.0f" .Values.gostav_00}}{{if le .Values.gostav_00 0.0}} inactive{{end}}">{{if gt .Values.gostav_00 0.0}}Gold {{printf "%.0f" .Values.gostav_00}}x{{else}}Gold{{end}}
+                                <div>{{.Values.c_gostav__stav_ki_g}}/{{if ge .Values.gostav_00 9.0}}450{{else}}{{mul (add .Values.gostav_00 1) 50}}{{end}}</div>
+                            </div>
+                            <div class="stars plat{{if eq .Values.plstav_00 0.0}} inactive{{end}}">Platin
+                                <div>{{.Values.c_plstav__stav_ki_g}}/500</div>
+                            </div>
+                            <br/>
+                            <div class="name">Vehicle stars (calculated)</div>
+                            <div class="stars bron{{if lt .Values.c__QLZ8_ki_g 10.0}} inactive{{end}}">Bronze
+                                <div></div>
+                            </div>
+                            <div class="stars silv{{if lt .Values.c__QLZ8_ki_g 25.0}} inactive{{end}}">Silver
+                                <div></div>
+                            </div>
+                            {{$level := 0}}{{if ge .Values.c__QLZ8_ki_g 50.0}}{{$level = 1}}{{end}}{{if ge .Values.c__QLZ8_ki_g 100.0}}{{$level = 2}}{{end}}{{if ge .Values.c__QLZ8_ki_g 150.0}}{{$level = 3}}{{end}}{{if ge .Values.c__QLZ8_ki_g 200.0}}{{$level = 4}}{{end}}{{if ge .Values.c__QLZ8_ki_g 250.0}}{{$level = 5}}{{end}}{{if ge .Values.c__QLZ8_ki_g 300.0}}{{$level = 6}}{{end}}{{if ge .Values.c__QLZ8_ki_g 350.0}}{{$level = 7}}{{end}}{{if ge .Values.c__QLZ8_ki_g 400.0}}{{$level = 8}}{{end}}{{if ge .Values.c__QLZ8_ki_g 450.0}}{{$level = 9}}{{end}}<div class="stars {{if lt .Values.c__QLZ8_ki_g 50.0}}gold0{{else}}gold{{$level}}{{end}}{{if lt .Values.c__QLZ8_ki_g 50.0}} inactive{{end}}">{{if lt .Values.c__QLZ8_ki_g 50.0}}Gold{{else}}Gold {{$level}}x{{end}}
+                                <div></div>
+                            </div>
+                            <div class="stars plat{{if lt .Values.c__QLZ8_ki_g 500.0}} inactive{{end}}">Platin
+                                <div></div>
+                            </div>
+                            <br></div>
                     </div>
                     <div class="clear"></div>
                     <br/>
