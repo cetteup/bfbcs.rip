@@ -1,12 +1,3 @@
-var _____WB$wombat$assign$function_____=function(name){return (self._wb_wombat && self._wb_wombat.local_init && self._wb_wombat.local_init(name))||self[name];};if(!self.__WB_pmw){self.__WB_pmw=function(obj){this.__WB_source=obj;return this;}}{
-let window = _____WB$wombat$assign$function_____("window");
-let self = _____WB$wombat$assign$function_____("self");
-let document = _____WB$wombat$assign$function_____("document");
-let location = _____WB$wombat$assign$function_____("location");
-let top = _____WB$wombat$assign$function_____("top");
-let parent = _____WB$wombat$assign$function_____("parent");
-let frames = _____WB$wombat$assign$function_____("frames");
-let opens = _____WB$wombat$assign$function_____("opens");
 /* © Copyright by Dominik "1ApRiL" Herbst */
 
 var bfbcs = {
@@ -635,29 +626,3 @@ $(document).ready(function(){
 	bfbcs.loadFavourite();
 	
 });
-
-
-
-
-}
-
-/*
-     FILE ARCHIVED ON 03:38:21 Feb 08, 2014 AND RETRIEVED FROM THE
-     INTERNET ARCHIVE ON 17:37:32 Apr 01, 2026.
-     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
-
-     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
-     SECTION 108(a)(3)).
-*/
-/*
-playback timings (ms):
-  captures_list: 0.651
-  exclusion.robots: 0.05
-  exclusion.robots.policy: 0.036
-  esindex: 0.011
-  cdx.remote: 21.29
-  LoadShardBlock: 197.169 (3)
-  PetaboxLoader3.datanode: 118.722 (5)
-  PetaboxLoader3.resolve: 208.886 (3)
-  load_resource: 196.815 (2)
-*/

@@ -1,12 +1,3 @@
-var _____WB$wombat$assign$function_____=function(name){return (self._wb_wombat && self._wb_wombat.local_init && self._wb_wombat.local_init(name))||self[name];};if(!self.__WB_pmw){self.__WB_pmw=function(obj){this.__WB_source=obj;return this;}}{
-let window = _____WB$wombat$assign$function_____("window");
-let self = _____WB$wombat$assign$function_____("self");
-let document = _____WB$wombat$assign$function_____("document");
-let location = _____WB$wombat$assign$function_____("location");
-let top = _____WB$wombat$assign$function_____("top");
-let parent = _____WB$wombat$assign$function_____("parent");
-let frames = _____WB$wombat$assign$function_____("frames");
-let opens = _____WB$wombat$assign$function_____("opens");
 /*
  * Metadata - jQuery plugin for parsing metadata from elements
  *
@@ -155,25 +146,3 @@ $.fn.metadata = function( opts ){
 };
 
 })(jQuery);
-}
-
-/*
-     FILE ARCHIVED ON 04:49:11 Feb 10, 2014 AND RETRIEVED FROM THE
-     INTERNET ARCHIVE ON 17:38:08 Apr 01, 2026.
-     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
-
-     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
-     SECTION 108(a)(3)).
-*/
-/*
-playback timings (ms):
-  captures_list: 1.085
-  exclusion.robots: 0.078
-  exclusion.robots.policy: 0.066
-  esindex: 0.013
-  cdx.remote: 76.717
-  LoadShardBlock: 652.207 (6)
-  PetaboxLoader3.datanode: 755.398 (8)
-  PetaboxLoader3.resolve: 285.267 (3)
-  load_resource: 663.371 (2)
-*/
