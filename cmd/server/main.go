@@ -35,14 +35,13 @@ func main() {
 	e.GET("/xbox360", h.HandleHomeGET("xbox360"))
 	e.GET("/ps3", h.HandleHomeGET("ps3"))
 
-	e.POST("/stats_:platform", h.HandleStatsPOST)
-	e.GET("/stats_:platform/:name", h.HandleStatsGET)
-
 	// Redirect old URLs for Xbox 360, which was originally referred to as just "360" in stats URLs
-	e.GET("/stats_360/:path", func(c *echo.Context) error {
-		return c.Redirect(http.StatusFound, strings.Replace(c.Request().URL.Path, "/stats_360/", "/stats_xbox360/", 1))
+	e.GET("/stats_360/*", func(c *echo.Context) error {
+		return c.Redirect(http.StatusFound, strings.Replace(c.Request().URL.RequestURI(), "/stats_360/", "/stats_xbox360/", 1))
 	})
 
+	e.POST("/stats_:platform", h.HandleStatsPOST)
+	e.GET("/stats_:platform/:name", h.HandleStatsGET)
 	if err = e.Start(":1323"); err != nil {
 		e.Logger.Error("failed to start server", "error", err)
 	}
