@@ -42,7 +42,8 @@ func main() {
 
 	e.POST("/stats_:platform", h.HandleStatsPOST)
 	e.GET("/stats_:platform/:name", h.HandleStatsGET)
-	if err = e.Start(":1323"); err != nil {
+
+	if err = e.Start(":8080"); err != nil {
 		e.Logger.Error("failed to start server", "error", err)
 	}
 }
