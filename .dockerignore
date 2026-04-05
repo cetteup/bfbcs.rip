@@ -1,0 +1,39 @@
+# Version control
+.git
+.gitignore
+.github
+
+# Python files and cache
+*.py
+__pycache__/
+*.pyc
+
+# Documentation
+README.md
+docs/
+
+# Test/snapshot data
+snapshots/
+values/
+
+# Development and CI/CD
+.tool-versions
+renovate.json
+.env
+.env.local
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Docker-related
+Dockerfile
+.dockerignore
+
