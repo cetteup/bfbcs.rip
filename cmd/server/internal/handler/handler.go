@@ -160,7 +160,14 @@ func (h *Handler) HandleStatsGET(c *echo.Context) error {
 	stats, err := h.client.GetStats(c.Request().Context(), params.Platform, params.Name)
 	if err != nil {
 		if errors.Is(err, archive.ErrPlayerNotFound) {
-			return echo.NewHTTPError(http.StatusNotFound, "Player not found")
+			return c.Render(http.StatusNotFound, "default/stats-not-found.html", renderer.Data{
+				"Title":    fmt.Sprintf("%s - BFBC2 Stats", params.Name),
+				"Platform": params.Platform,
+				"Player": archive.Player{
+					Name:     params.Name,
+					Platform: params.Platform,
+				},
+			})
 		}
 		return echo.NewHTTPError(http.StatusInternalServerError, http.StatusText(http.StatusInternalServerError)).Wrap(err)
 	}
