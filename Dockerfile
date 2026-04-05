@@ -1,8 +1,11 @@
 FROM golang:1.26.1-alpine AS build
 
+ARG TARGETOS=linux
+ARG TARGETARCH=amd64
+
 ENV CGO_ENABLED=0
-ENV GOOS=linux
-ENV GOARCH=amd64
+ENV GOOS=$TARGETOS
+ENV GOARCH=$TARGETARCH
 
 RUN mkdir -p /app/src  \
     && mkdir -p /app/bin
