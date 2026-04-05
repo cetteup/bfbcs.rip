@@ -1,0 +1,92 @@
+{{define "content"}}
+    <div class="halfcol">
+        <h1>Welcome to BFBC2 Stats</h1>
+        <div class="cont">
+            On this BFBC2 Stats web page you can find archived stats for all Battlefield Bad Company 2 players on all platforms.<br/><br/>
+            Choose your Platform:<br/>
+            <div class="plbox">
+                <h3>PC</h3>
+                <a href="/pc">PC Home</a><br/>
+                <a href="/BFBC2_leaderboard/pc">PC Leaderboard</a>
+            </div>
+            <div class="plbox">
+                <h3>XBOX360</h3>
+                <a href="/xbox360">360 Home</a><br/>
+                <a href="/BFBC2_leaderboard/360">360 Leaderboard</a>
+            </div>
+            <div class="plbox">
+                <h3>PS3</h3>
+                <a href="/ps3">PS3 Home</a><br/>
+                <a href="/BFBC2_leaderboard/ps3">PS3 Leaderboard</a>
+            </div>
+            <div class="clear"></div>
+            <br/>
+            You may update every player you want within a few minutes.<br/><br/>
+            <a href="https://web.archive.org/web/20191022043117/http://c2stats.com/" target="_blank">
+                <img src="/static/img/bfbcs/c2stats.jpg" width="370" height="95" alt="Crysis 2 Stats"/>
+            </a>
+            <br/><br/>
+            <a href="https://web.archive.org/web/20191027052819/http://bf3stats.com/" target="_blank">
+                <img src="/static/img/bfbcs/bf3_stats.jpg" width="370" height="95" alt="Battlefield3 Stats"/>
+            </a>
+            <br/><br/>
+            <a href="https://web.archive.org/web/20191022101432/http://mohstats.com/" target="_blank">
+                <img src="/static/img/bfbcs/moh_stats.jpg" width="370" height="95" alt="MOH Stats"/>
+            </a>
+            <br/><br/>
+            <a href="https://web.archive.org/web/20191023022022/http://nfstimes.com/" target="_blank">
+                <img src="/static/img/bfbcs/nfsw_stats.jpg" width="370" height="100" alt="NFS Stats"/>
+            </a>
+            <br/>
+            <h3>News and updates</h3>
+            <ul>
+                <li>12/07: Added BFBC2 Vietnam stats.</li>
+                <li>8/01: Added history graphs and server history.</li>
+                <li>7/23: Added ranking positions.</li>
+                <li>6/28: Added Atom RSS Feed to subscribe and to see the previous stats.</li>
+                <li>6/25: Added 'My leaderboards' for logged in users.</li>
+                <li>6/02: Added next events to all player stats. Extended appearance of stars.</li>
+                <li>5/29: Added <a href="/bfbc2_server/list">Server list</a> and country to servers.</li>
+                <li>5/26: All date and times are now displayed in your system's timezone.</li>
+                <li>5/22: Server moved successfully.</li>
+                <li>5/15: Player online status and clan tag for PC players available.</li>
+                <li>4/27: XBOX360 and PS3 Player search is now available.</li>
+                <li>4/17: <b><a href="/graphics">Stats graphics / sigs</a> are online now.</b></li>
+                <li>3/28: Dogtags are added to the BFBC2 Player stats</li>
+                <li>3/22: JSON API for pulling stats is online</li>
+                <li>3/22: PC Stats Search problems fixed</li>
+            </ul>
+            <br/></div>
+    </div>
+    <div class="halfcol"><h1>BFBC2 last updated players</h1>
+        <div class="cont">
+            <table class="lbtable">
+                <thead>
+                <tr>
+                    <th class="le">Rank</th>
+                    <th class="le">Name</th>
+                    <th>Score</th>
+                    <th>Time of update</th>
+                </tr>
+                </thead>
+                {{range .Players}}
+                    <tr>
+                        <td class="le">
+                            <img src="/static/img/bfbcs/ranks/r{{printf "%03.0f" .Rank}}.png" alt="{{.Name}} {{getRankName .Rank}}" width="16" height="16"/> {{printf "%.0f" .Rank}}
+                        </td>
+                        <td class="le p_{{.Platform}}">
+                            <a href="/stats_{{.Platform}}/{{.Name}}">{{.Name}}</a>
+                        </td>
+                        <td>
+                            {{formatNumber .Score}}
+                        </td>
+                        <td class="datetime" pasttime="1456555304">
+                            {{formatTime .Updated}}
+                        </td>
+                    </tr>
+                {{end}}
+            </table>
+        </div>
+    </div>
+    <div class="clear"></div>
+{{end}}

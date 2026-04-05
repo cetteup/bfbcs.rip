@@ -1,18 +1,21 @@
 package renderer
 
 import (
+	"fmt"
 	"html/template"
 	"io"
+	"path/filepath"
 	"strings"
 
 	"github.com/labstack/echo/v5"
 )
 
 type TemplateRenderer struct {
-	templates *template.Template
+	layouts *template.Template
+	views   map[string]*template.Template
 }
 
-func NewTemplateRenderer(glob string) (*TemplateRenderer, error) {
+func NewTemplateRenderer(layouts string, views string) (*TemplateRenderer, error) {
 	tmpl, err := template.New("bfbcs").
 		Funcs(template.FuncMap{
 			"add":                 add,
@@ -27,16 +30,44 @@ func NewTemplateRenderer(glob string) (*TemplateRenderer, error) {
 			"calculateProgress":   calculateProgress,
 			"toUpper":             strings.ToUpper,
 		}).
-		ParseGlob(glob)
+		ParseGlob(layouts)
 	if err != nil {
 		return nil, err
 	}
 
+	matches, err := filepath.Glob(views)
+	if err != nil {
+		return nil, err
+	}
+
+	v := make(map[string]*template.Template, len(matches))
+	for _, match := range matches {
+		view, err2 := tmpl.Clone()
+		if err2 != nil {
+			return nil, err2
+		}
+
+		view, err2 = view.ParseFiles(match)
+		if err2 != nil {
+			return nil, err2
+		}
+
+		v[filepath.Base(match)] = view
+	}
+
 	return &TemplateRenderer{
-		templates: tmpl,
+		layouts: tmpl,
+		views:   v,
 	}, nil
 }
 
 func (r *TemplateRenderer) Render(_ *echo.Context, w io.Writer, name string, data any) error {
-	return r.templates.ExecuteTemplate(w, name, data)
+	layout, view, _ := strings.Cut(name, "/")
+
+	tmpl, ok := r.views[view]
+	if !ok {
+		return fmt.Errorf("no such view: %s", view)
+	}
+
+	return tmpl.ExecuteTemplate(w, layout, data)
 }
