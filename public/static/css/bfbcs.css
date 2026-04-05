@@ -195,7 +195,7 @@ img {
     height:15px;
     width:60px;
     background-position:50% 50%;
-    background-image:url(/static/img/bfbcs/select_360.png);
+    background-image:url(/static/img/bfbcs/select_xbox360.png);
     background-repeat:no-repeat;
 }
 
@@ -532,7 +532,7 @@ littlecol_3 218
     background-position:right;
 }
 .stable td.left.p_pc,
-.stable td.left.p_360,
+.stable td.left.p_xbox360,
 .stable td.left.p_ps3 {
     background-position:left;
 }
@@ -893,9 +893,9 @@ ul.criteria {
     background-repeat:no-repeat;
     background-position:0px 4px;
 }
-.p_360 {
+.p_xbox360 {
     padding-left:22px;
-    background-image:url(/static/img/bfbcs/platform_360.png);
+    background-image:url(/static/img/bfbcs/platform_xbox360.png);
     background-repeat:no-repeat;
     background-position:0px 4px;
 }
