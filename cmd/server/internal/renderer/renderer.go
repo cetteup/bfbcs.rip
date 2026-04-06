@@ -29,6 +29,7 @@ func NewTemplateRenderer(layouts string, views string) (*TemplateRenderer, error
 			"getServiceStarClass": getServiceStarClass,
 			"calculateProgress":   calculateProgress,
 			"toUpper":             strings.ToUpper,
+			"toLower":             strings.ToLower,
 			"hasPrefix":           strings.HasPrefix,
 		}).
 		ParseGlob(layouts)
