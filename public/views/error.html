@@ -1,0 +1,12 @@
+{{define "content"}}
+    <h1>Error {{.Code}}</h1>
+    <div class="cont">
+        {{if eq .Code 404}}
+            The File was not found.
+        {{else if eq .Code 500}}
+            Server is overloaded. Try again later.
+        {{else}}
+            An error occurred while processing your request. Please try again later.
+        {{end}}
+    </div>
+{{end}}
