@@ -1,0 +1,26 @@
+{{define "content"}}
+    <h1>BFBC2 {{toUpper .Platform}} Leaderboard</h1>
+    <div class="cont">
+        <table class="lbtable">
+            <thead>
+            <tr>
+                <th></th>
+                <th class="le">Rank</th>
+                <th class="le">Name</th>
+                <th>Score</th>
+                <th>Squad Score</th>
+                <th>Skill</th>
+                <th>Time</th>
+                <th>Kills</th>
+                <th>Deaths</th>
+                <th>K/D</th>
+            </tr>
+            </thead>
+            <tbody id="list1" grfilter="top" grequest="getlist">
+            <tr>
+                <td colspan="10" class="le">Leaderboard is currently not available</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+{{end}}

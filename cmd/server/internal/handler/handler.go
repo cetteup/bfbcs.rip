@@ -140,11 +140,28 @@ func (h *Handler) HandleHomeGET(platform string) echo.HandlerFunc {
 
 	return func(c *echo.Context) error {
 		return c.Render(http.StatusOK, "default/home.html", renderer.NewPageContext(
+			renderer.WithPath(c.Request().URL.Path),
 			renderer.WithTitle(fmt.Sprintf("%s - Battlefield Bad Company 2 Stats", strings.ToUpper(platform))),
 			renderer.WithPlatform(platform),
 			renderer.With("Players", players),
 		))
 	}
+}
+
+func (h *Handler) HandleLeaderboardGET(c *echo.Context) error {
+	params := struct {
+		Platform string `param:"platform"`
+	}{}
+
+	if err := c.Bind(&params); err != nil {
+		return echo.NewHTTPError(http.StatusBadRequest, http.StatusText(http.StatusBadRequest)).Wrap(err)
+	}
+
+	return c.Render(http.StatusOK, "default/leaderboard.html", renderer.NewPageContext(
+		renderer.WithPath(c.Request().URL.Path),
+		renderer.WithTitle("Leaderboard - BFBC2 Stats"),
+		renderer.WithPlatform(params.Platform),
+	))
 }
 
 func (h *Handler) HandleStatsGET(c *echo.Context) error {
@@ -161,6 +178,7 @@ func (h *Handler) HandleStatsGET(c *echo.Context) error {
 	if err != nil {
 		if errors.Is(err, archive.ErrPlayerNotFound) {
 			return c.Render(http.StatusNotFound, "default/stats-not-found.html", renderer.NewPageContext(
+				renderer.WithPath(c.Request().URL.Path),
 				renderer.WithTitle(fmt.Sprintf("%s - BFBC2 Stats", params.Name)),
 				renderer.WithPlatform(params.Platform),
 				renderer.With("Player", archive.Player{
@@ -173,6 +191,7 @@ func (h *Handler) HandleStatsGET(c *echo.Context) error {
 	}
 
 	return c.Render(http.StatusOK, "default/stats.html", renderer.NewPageContext(
+		renderer.WithPath(c.Request().URL.Path),
 		renderer.WithTitle(fmt.Sprintf("%s - BFBC2 Stats", stats.Player.Name)),
 		renderer.WithPlatform(stats.Player.Platform),
 		renderer.With("Player", stats.Player),

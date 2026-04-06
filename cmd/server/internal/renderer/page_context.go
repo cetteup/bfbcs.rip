@@ -8,6 +8,12 @@ type PageContext map[string]any
 
 type Setter func(c PageContext)
 
+func WithPath(path string) Setter {
+	return func(c PageContext) {
+		c["Path"] = path
+	}
+}
+
 func WithTitle(title string) Setter {
 	return func(c PageContext) {
 		c["Title"] = title
