@@ -39,6 +39,11 @@ func main() {
 	e.GET("/stats_360/*", func(c *echo.Context) error {
 		return c.Redirect(http.StatusFound, strings.Replace(c.Request().URL.RequestURI(), "/stats_360/", "/stats_xbox360/", 1))
 	})
+	e.GET("/BFBC2_leaderboard/360", func(c *echo.Context) error {
+		return c.Redirect(http.StatusFound, strings.Replace(c.Request().URL.RequestURI(), "/BFBC2_leaderboard/360", "/BFBC2_leaderboard/xbox360", 1))
+	})
+
+	e.GET("/BFBC2_leaderboard/:platform", h.HandleLeaderboardGET)
 
 	e.POST("/stats_:platform", h.HandleStatsPOST)
 	e.GET("/stats_:platform/:name", h.HandleStatsGET)
