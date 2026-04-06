@@ -139,11 +139,11 @@ func (h *Handler) HandleHomeGET(platform string) echo.HandlerFunc {
 	}
 
 	return func(c *echo.Context) error {
-		return c.Render(http.StatusOK, "default/home.html", renderer.Data{
-			"Title":    fmt.Sprintf("%s - Battlefield Bad Company 2 Stats", strings.ToUpper(platform)),
-			"Platform": platform,
-			"Players":  players,
-		})
+		return c.Render(http.StatusOK, "default/home.html", renderer.NewPageContext(
+			renderer.WithTitle(fmt.Sprintf("%s - Battlefield Bad Company 2 Stats", strings.ToUpper(platform))),
+			renderer.WithPlatform(platform),
+			renderer.With("Players", players),
+		))
 	}
 }
 
@@ -160,24 +160,24 @@ func (h *Handler) HandleStatsGET(c *echo.Context) error {
 	stats, err := h.client.GetStats(c.Request().Context(), params.Platform, params.Name)
 	if err != nil {
 		if errors.Is(err, archive.ErrPlayerNotFound) {
-			return c.Render(http.StatusNotFound, "default/stats-not-found.html", renderer.Data{
-				"Title":    fmt.Sprintf("%s - BFBC2 Stats", params.Name),
-				"Platform": params.Platform,
-				"Player": archive.Player{
+			return c.Render(http.StatusNotFound, "default/stats-not-found.html", renderer.NewPageContext(
+				renderer.WithTitle(fmt.Sprintf("%s - BFBC2 Stats", params.Name)),
+				renderer.WithPlatform(params.Platform),
+				renderer.With("Player", archive.Player{
 					Name:     params.Name,
 					Platform: params.Platform,
-				},
-			})
+				}),
+			))
 		}
 		return echo.NewHTTPError(http.StatusInternalServerError, http.StatusText(http.StatusInternalServerError)).Wrap(err)
 	}
 
-	return c.Render(http.StatusOK, "default/stats.html", renderer.Data{
-		"Title":    fmt.Sprintf("%s - BFBC2 Stats", stats.Player.Name),
-		"Platform": stats.Player.Platform,
-		"Player":   stats.Player,
-		"Values":   stats.Values,
-	})
+	return c.Render(http.StatusOK, "default/stats.html", renderer.NewPageContext(
+		renderer.WithTitle(fmt.Sprintf("%s - BFBC2 Stats", stats.Player.Name)),
+		renderer.WithPlatform(stats.Player.Platform),
+		renderer.With("Player", stats.Player),
+		renderer.With("Values", stats.Values),
+	))
 }
 
 func (h *Handler) HandleStatsPOST(c *echo.Context) error {
