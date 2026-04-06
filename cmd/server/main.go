@@ -1,7 +1,9 @@
 package main
 
 import (
+	"cmp"
 	"context"
+	"errors"
 	"net"
 	"net/http"
 	"os"
@@ -33,6 +35,35 @@ func main() {
 	}
 
 	e := echo.NewWithConfig(echo.Config{
+		HTTPErrorHandler: func(c *echo.Context, err error) {
+			if res, _ := echo.UnwrapResponse(c.Response()); res != nil && res.Committed {
+				return
+			}
+
+			code := http.StatusInternalServerError
+			var sc echo.HTTPStatusCoder
+			if errors.As(err, &sc) {
+				code = cmp.Or(sc.StatusCode(), code)
+			}
+
+			var cerr error
+			if c.Request().Method == http.MethodHead {
+				cerr = c.NoContent(code)
+			} else {
+				cerr = c.Render(code, "default/error.html", renderer.NewPageContext(
+					renderer.WithPath(c.Request().URL.Path),
+					renderer.WithTitle("Error"),
+					renderer.WithPlatform("pc"),
+					renderer.With("Code", code),
+				))
+			}
+
+			if cerr != nil {
+				log.Error().
+					Err(cerr).
+					Msg("Failed to send error to client")
+			}
+		},
 		Renderer:    r,
 		IPExtractor: echo.ExtractIPFromXFFHeader(),
 	})
