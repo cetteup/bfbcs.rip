@@ -1,0 +1,17 @@
+{{define "content"}}
+    <div class="subnavi">
+        <a href="/stats_{{.Platform}}/{{.Player.Name}}"
+           style="background-image:url(/static/img/bfbcs/ranks/r000.png)">Overview</a>
+        <a href="/stats_{{.Platform}}/{{.Player.Name}}/dogtags"
+           style="background-image:url(/static/img/bfbcs/misc_icons/dt1.png)"
+           class="active">Dogtags</a>
+        <a href="/stats_{{.Platform}}/{{.Player.Name}}/nemesis_dogtags"
+           style="background-image:url(/static/img/bfbcs/misc_icons/dt3.png)">Nemesis dogtags</a>
+        <div class="clear"></div>
+    </div>
+    <h1><strong>{{.Player.Name}}</strong> &nbsp; Dogtags</h1>
+    <div class="cont">
+        We have currently no dogtags for this player in our database.<br/>
+        The player either did not exist on this platform or their dogtags were not archived.
+    </div>
+{{end}}

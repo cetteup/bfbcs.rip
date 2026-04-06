@@ -84,6 +84,35 @@ func (c *Client) GetStats(ctx context.Context, platform string, name string) (St
 	return resp, nil
 }
 
+func (c *Client) GetDogtags(ctx context.Context, platform string, name string) (DogtagsResponse, error) {
+	u, err := url.Parse(c.baseURL)
+	if err != nil {
+		return DogtagsResponse{}, err
+	}
+
+	u = u.JoinPath(platform, name, "dogtags")
+
+	req, err := http.NewRequestWithContext(ctx, http.MethodGet, u.String(), nil)
+	if err != nil {
+		return DogtagsResponse{}, err
+	}
+
+	body, err := c.do(req)
+	if err != nil {
+		if rerr, ok := errors.AsType[*RequestError](err); ok && rerr.statusCode == http.StatusNotFound {
+			return DogtagsResponse{}, ErrPlayerNotFound
+		}
+		return DogtagsResponse{}, err
+	}
+
+	var resp DogtagsResponse
+	if err = json.Unmarshal(body, &resp); err != nil {
+		return DogtagsResponse{}, err
+	}
+
+	return resp, nil
+}
+
 func (c *Client) do(req *http.Request) ([]byte, error) {
 	res, err := c.client.Do(req)
 	if err != nil {

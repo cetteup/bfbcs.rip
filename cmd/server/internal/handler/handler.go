@@ -1,11 +1,13 @@
 package handler
 
 import (
+	"cmp"
 	"context"
 	"errors"
 	"fmt"
 	"net/http"
 	"net/url"
+	"slices"
 	"strings"
 
 	"github.com/labstack/echo/v5"
@@ -16,6 +18,7 @@ import (
 
 type client interface {
 	GetStats(ctx context.Context, platform string, name string) (archive.StatsResponse, error)
+	GetDogtags(ctx context.Context, platform string, name string) (archive.DogtagsResponse, error)
 }
 
 type Handler struct {
@@ -213,4 +216,78 @@ func (h *Handler) HandleStatsPOST(c *echo.Context) error {
 		http.StatusFound,
 		fmt.Sprintf("/stats_%s/%s", url.PathEscape(params.Platform), url.PathEscape(params.Name)),
 	)
+}
+
+func (h *Handler) HandleDogtagsGET(c *echo.Context) error {
+	params := struct {
+		Platform string `param:"platform"`
+		Name     string `param:"name"`
+	}{}
+
+	if err := c.Bind(&params); err != nil {
+		return echo.NewHTTPError(http.StatusBadRequest, http.StatusText(http.StatusBadRequest)).Wrap(err)
+	}
+
+	stats, serr := h.client.GetStats(c.Request().Context(), params.Platform, params.Name)
+	dogtags, derr := h.client.GetDogtags(c.Request().Context(), params.Platform, params.Name)
+	if err := cmp.Or(serr, derr); err != nil {
+		if errors.Is(err, archive.ErrPlayerNotFound) {
+			return c.Render(http.StatusNotFound, "default/dogtags-not-found.html", renderer.NewPageContext(
+				renderer.WithPath(c.Request().URL.Path),
+				renderer.WithTitle(fmt.Sprintf("%s - Dogtags", params.Name)),
+				renderer.WithPlatform(params.Platform),
+				renderer.With("Player", archive.Player{
+					Name:     params.Name,
+					Platform: params.Platform,
+				}),
+			))
+		}
+		return echo.NewHTTPError(http.StatusInternalServerError, http.StatusText(http.StatusInternalServerError)).Wrap(err)
+	}
+
+	// Maintain original site's sort order (total dogtags descending, no tiebreaker)
+	slices.SortStableFunc(dogtags.Records, func(a, b archive.DogtagRecord) int {
+		return cmp.Compare(b.Total, a.Total)
+	})
+
+	summary := struct {
+		Total        int
+		TotalUnique  int
+		Bronze       int
+		BronzeUnique int
+		Silver       int
+		SilverUnique int
+		Gold         int
+		GoldUnique   int
+	}{}
+
+	for _, record := range dogtags.Records {
+		summary.Total += record.Total
+		summary.Bronze += record.Bronze
+		summary.Silver += record.Silver
+		summary.Gold += record.Gold
+
+		if record.Total > 0 {
+			summary.TotalUnique += 1
+		}
+		if record.Bronze > 0 {
+			summary.BronzeUnique += 1
+		}
+		if record.Silver > 0 {
+			summary.SilverUnique += 1
+		}
+		if record.Gold > 0 {
+			summary.GoldUnique += 1
+		}
+	}
+
+	return c.Render(http.StatusOK, "default/dogtags.html", renderer.NewPageContext(
+		renderer.WithPath(c.Request().URL.Path),
+		renderer.WithTitle(fmt.Sprintf("%s - Dogtags", stats.Player.Name)),
+		renderer.WithPlatform(stats.Player.Platform),
+		renderer.With("Player", stats.Player),
+		renderer.With("Values", stats.Values),
+		renderer.With("Records", dogtags.Records),
+		renderer.With("Summary", summary),
+	))
 }
