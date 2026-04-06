@@ -53,7 +53,7 @@ func main() {
 				cerr = c.Render(code, "default/error.html", renderer.NewPageContext(
 					renderer.WithPath(c.Request().URL.Path),
 					renderer.WithTitle("Error"),
-					renderer.WithPlatform("pc"),
+					renderer.WithPlatform(c.ParamOr("platform", "pc")),
 					renderer.With("Code", code),
 				))
 			}
