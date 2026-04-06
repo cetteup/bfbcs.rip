@@ -10,72 +10,70 @@
         <div class="clear"></div>
     </div>
     <h1><strong>{{.Player.Name}}</strong> &nbsp; <em>{{getRankName .Values.rank}}</em> &nbsp; Dogtags</h1>
-    <div class="cont">
-        <div class="pstats">
-            <div class="stcol_1">
-                <h2>Dogtags</h2>
-                <table class="stable sortable">
-                    <thead>
+    <div class="pstats">
+        <div class="stcol_1">
+            <h2>Dogtags</h2>
+            <table class="stable sortable">
+                <thead>
+                <tr>
+                    <th class="left">Rank</th>
+                    <th class="left">Name</th>
+                    <th>Bronze</th>
+                    <th>Silver</th>
+                    <th>Gold</th>
+                </tr>
+                </thead>
+                {{range .Records}}
                     <tr>
-                        <th class="left">Rank</th>
-                        <th class="left">Name</th>
-                        <th>Bronze</th>
-                        <th>Silver</th>
-                        <th>Gold</th>
+                        <td class="left">
+                            <img src="/static/img/bfbcs/ranks/r{{printf "%03.0f" .Rank}}.png" alt="{{.Player.Name}} {{getRankName .Rank}}"
+                                 width="16" height="16"/> {{printf "%.0f" .Rank}}
+                        </td>
+                        <td class="left">
+                            <a href="/stats_{{toLower .Player.Platform}}/{{.Player.Name}}">{{.Player.Name}}</a>
+                        </td>
+                        <td class="dogt_bron">
+                            {{.Bronze}}
+                        </td>
+                        <td class="dogt_silv">
+                            {{.Silver}}
+                        </td>
+                        <td class="dogt_gold">
+                            {{.Gold}}
+                        </td>
                     </tr>
-                    </thead>
-                    {{range .Records}}
-                        <tr>
-                            <td class="left">
-                                <img src="/static/img/bfbcs/ranks/r{{printf "%03.0f" .Rank}}.png" alt="{{.Player.Name}} {{getRankName .Rank}}"
-                                     width="16" height="16"/> {{printf "%.0f" .Rank}}
-                            </td>
-                            <td class="left">
-                                <a href="/stats_{{toLower .Player.Platform}}/{{.Player.Name}}">{{.Player.Name}}</a>
-                            </td>
-                            <td class="dogt_bron">
-                                {{.Bronze}}
-                            </td>
-                            <td class="dogt_silv">
-                                {{.Silver}}
-                            </td>
-                            <td class="dogt_gold">
-                                {{.Gold}}
-                            </td>
-                        </tr>
-                    {{end}}
-                </table>
-            </div>
-            <div class="stcol_2">
-                <h2>Summary</h2>
-                <dl>
-                    <dt>Dogtags total:</dt>
-                    <dd class="right">{{.Summary.Total}}</dd>
-
-                    <dt>Dogtags unique:</dt>
-                    <dd class="right">{{.Summary.TotalUnique}}</dd>
-
-                    <dt>Bronze total:</dt>
-                    <dd class="dogt_bron">{{.Summary.Bronze}}</dd>
-
-                    <dt>Bronze unique:</dt>
-                    <dd class="dogt_bron">{{.Summary.BronzeUnique}}</dd>
-
-                    <dt>Silver total:</dt>
-                    <dd class="dogt_silv">{{.Summary.Silver}}</dd>
-
-                    <dt>Silver unique:</dt>
-                    <dd class="dogt_silv">{{.Summary.SilverUnique}}</dd>
-
-                    <dt>Gold total:</dt>
-                    <dd class="dogt_gold">{{.Summary.Gold}}</dd>
-
-                    <dt>Gold unique:</dt>
-                    <dd class="dogt_gold">{{.Summary.GoldUnique}}</dd>
-                </dl>
-            </div>
-            <div class="clear"></div>
-            <br/>
+                {{end}}
+            </table>
         </div>
+        <div class="stcol_2">
+            <h2>Summary</h2>
+            <dl>
+                <dt>Dogtags total:</dt>
+                <dd class="right">{{.Summary.Total}}</dd>
+
+                <dt>Dogtags unique:</dt>
+                <dd class="right">{{.Summary.TotalUnique}}</dd>
+
+                <dt>Bronze total:</dt>
+                <dd class="dogt_bron">{{.Summary.Bronze}}</dd>
+
+                <dt>Bronze unique:</dt>
+                <dd class="dogt_bron">{{.Summary.BronzeUnique}}</dd>
+
+                <dt>Silver total:</dt>
+                <dd class="dogt_silv">{{.Summary.Silver}}</dd>
+
+                <dt>Silver unique:</dt>
+                <dd class="dogt_silv">{{.Summary.SilverUnique}}</dd>
+
+                <dt>Gold total:</dt>
+                <dd class="dogt_gold">{{.Summary.Gold}}</dd>
+
+                <dt>Gold unique:</dt>
+                <dd class="dogt_gold">{{.Summary.GoldUnique}}</dd>
+            </dl>
+        </div>
+        <div class="clear"></div>
+        <br/>
     </div>
 {{end}}

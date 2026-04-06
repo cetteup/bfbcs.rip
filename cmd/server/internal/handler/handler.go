@@ -291,3 +291,38 @@ func (h *Handler) HandleDogtagsGET(c *echo.Context) error {
 		renderer.With("Summary", summary),
 	))
 }
+
+func (h *Handler) HandleNemesisDogtagsGET(c *echo.Context) error {
+	params := struct {
+		Platform string `param:"platform"`
+		Name     string `param:"name"`
+	}{}
+
+	if err := c.Bind(&params); err != nil {
+		return echo.NewHTTPError(http.StatusBadRequest, http.StatusText(http.StatusBadRequest)).Wrap(err)
+	}
+
+	stats, err := h.client.GetStats(c.Request().Context(), params.Platform, params.Name)
+	if err != nil {
+		if errors.Is(err, archive.ErrPlayerNotFound) {
+			return c.Render(http.StatusNotFound, "default/nemesis-dogtags-not-found.html", renderer.NewPageContext(
+				renderer.WithPath(c.Request().URL.Path),
+				renderer.WithTitle(fmt.Sprintf("%s - Nemesis Dogtags", params.Name)),
+				renderer.WithPlatform(params.Platform),
+				renderer.With("Player", archive.Player{
+					Name:     params.Name,
+					Platform: params.Platform,
+				}),
+			))
+		}
+		return echo.NewHTTPError(http.StatusInternalServerError, http.StatusText(http.StatusInternalServerError)).Wrap(err)
+	}
+
+	return c.Render(http.StatusOK, "default/nemesis-dogtags.html", renderer.NewPageContext(
+		renderer.WithPath(c.Request().URL.Path),
+		renderer.WithTitle(fmt.Sprintf("%s - Dogtags", stats.Player.Name)),
+		renderer.WithPlatform(stats.Player.Platform),
+		renderer.With("Player", stats.Player),
+		renderer.With("Values", stats.Values),
+	))
+}
