@@ -246,7 +246,7 @@ func (h *Handler) HandleDogtagsGET(c *echo.Context) error {
 	}
 
 	// Maintain original site's sort order (total dogtags descending, no tiebreaker)
-	slices.SortFunc(dogtags.Records, func(a, b archive.DogtagRecord) int {
+	slices.SortStableFunc(dogtags.Records, func(a, b archive.DogtagRecord) int {
 		return cmp.Compare(b.Total, a.Total)
 	})
 
