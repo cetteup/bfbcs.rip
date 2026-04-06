@@ -1,11 +1,19 @@
 package main
 
 import (
+	"context"
+	"net"
 	"net/http"
+	"os"
+	"os/signal"
 	"strings"
+	"syscall"
+	"time"
 
 	"github.com/labstack/echo/v5"
 	"github.com/labstack/echo/v5/middleware"
+	"github.com/rs/zerolog"
+	"github.com/rs/zerolog/log"
 
 	"github.com/cetteup/bfbcs.rip/cmd/server/internal/handler"
 	"github.com/cetteup/bfbcs.rip/cmd/server/internal/renderer"
@@ -13,14 +21,42 @@ import (
 )
 
 func main() {
-	e := echo.New()
-	e.Use(middleware.RequestLogger())
+	log.Logger = log.Output(zerolog.ConsoleWriter{
+		Out:        os.Stdout,
+		NoColor:    true,
+		TimeFormat: time.RFC3339,
+	})
 
 	r, err := renderer.NewTemplateRenderer("public/layouts/*.html", "public/views/*.html")
 	if err != nil {
-		panic(err)
+		log.Fatal().Err(err).Msg("Failed to initialize template renderer")
 	}
-	e.Renderer = r
+
+	e := echo.NewWithConfig(echo.Config{
+		Renderer: r,
+	})
+	e.Use(middleware.Recover())
+	e.Use(middleware.RequestLoggerWithConfig(middleware.RequestLoggerConfig{
+		LogRemoteIP:  true,
+		LogMethod:    true,
+		LogURI:       true,
+		LogStatus:    true,
+		LogLatency:   true,
+		LogUserAgent: true,
+		LogValuesFunc: func(c *echo.Context, v middleware.RequestLoggerValues) error {
+			log.Info().
+				Err(v.Error).
+				Str("remote", v.RemoteIP).
+				Str("method", v.Method).
+				Str("URI", v.URI).
+				Int("status", v.Status).
+				Stringer("latency", v.Latency).
+				Str("agent", v.UserAgent).
+				Msg("request")
+
+			return nil
+		},
+	}))
 
 	client := archive.NewClient(archive.BaseURL)
 	h := handler.NewHandler(client)
@@ -50,7 +86,21 @@ func main() {
 	e.GET("/stats_:platform/:name/dogtags", h.HandleDogtagsGET)
 	e.GET("/stats_:platform/:name/nemesis_dogtags", h.HandleNemesisDogtagsGET)
 
-	if err = e.Start(":8080"); err != nil {
-		e.Logger.Error("failed to start server", "error", err)
+	ctx, stop := signal.NotifyContext(context.Background(), os.Interrupt, syscall.SIGTERM)
+	defer stop()
+
+	sc := echo.StartConfig{
+		Address:         ":8080",
+		HideBanner:      true,
+		HidePort:        true,
+		GracefulTimeout: 5 * time.Second,
+		ListenerAddrFunc: func(addr net.Addr) {
+			log.Info().
+				Stringer("address", addr).
+				Msg("Server started")
+		},
+	}
+	if err = sc.Start(ctx, e); err != nil {
+		log.Fatal().Err(err).Msg("Failed to start server")
 	}
 }
