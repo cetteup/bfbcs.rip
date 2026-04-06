@@ -1,11 +1,11 @@
 {{define "content"}}
     <div class="subnavi">
-        <a href="/stats_{{.Player.Platform}}/{{.Player.Name}}"
+        <a href="/stats_{{.Platform}}/{{.Player.Name}}"
            style="background-image:url(/static/img/bfbcs/ranks/r{{printf "%03.0f" .Values.rank}}.png)"
            class="active">Overview</a>
-        <a href="/stats_{{.Player.Platform}}/{{.Player.Name}}/dogtags"
+        <a href="/stats_{{.Platform}}/{{.Player.Name}}/dogtags"
            style="background-image:url(/static/img/bfbcs/misc_icons/dt1.png)">Dogtags</a>
-        <a href="/stats_{{.Player.Platform}}/{{.Player.Name}}/nemesis_dogtags"
+        <a href="/stats_{{.Platform}}/{{.Player.Name}}/nemesis_dogtags"
            style="background-image:url(/static/img/bfbcs/misc_icons/dt3.png)">Nemesis dogtags</a>
         <div class="clear"></div>
     </div>
@@ -444,7 +444,7 @@
                         </td>
                     </tr>
                     <tr onmouseover="bfbcs.showDetail('weapon','wep_22','wepa_22')" id="wepa_22">
-                        {{$key := "qbu88"}}{{if or (eq .Player.Platform "ps3") (eq .Player.Platform "xbox360")}}{{$key = "qby88"}}{{end}}
+                        {{$key := "qbu88"}}{{if or (eq .Platform "ps3") (eq .Platform "xbox360")}}{{$key = "qby88"}}{{end}}
                         <td class="left stars {{getServiceStarClass .Values $key}}">Type 88 Sniper</td>
                         <td>{{formatDuration (index .Values (printf "c_%s__sw_g" $key))}}</td>
                         <td>{{formatNumber (index .Values (printf "c_%s__kw_g" $key))}}</td>
@@ -1339,7 +1339,7 @@
                     <div class="desc">A 10 round, semiautomatic rifle with a rugged design produces average
                         accuracy and stopping power.
                     </div>
-                    {{$key := "qbu88"}}{{if or (eq .Player.Platform "ps3") (eq .Player.Platform "xbox360")}}{{$key = "qby88"}}{{end}}
+                    {{$key := "qbu88"}}{{if or (eq .Platform "ps3") (eq .Platform "xbox360")}}{{$key = "qby88"}}{{end}}
                     <div class="stars bron{{if eq (index .Values (printf "br%s_00" $key)) 0.0}} inactive{{end}}">Bronze
                         <div>{{(index .Values (printf "c_br%s_%s__kw_g" $key $key))}}/25</div>
                     </div>
