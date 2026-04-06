@@ -320,7 +320,7 @@ func (h *Handler) HandleNemesisDogtagsGET(c *echo.Context) error {
 
 	return c.Render(http.StatusOK, "default/nemesis-dogtags.html", renderer.NewPageContext(
 		renderer.WithPath(c.Request().URL.Path),
-		renderer.WithTitle(fmt.Sprintf("%s - Dogtags", stats.Player.Name)),
+		renderer.WithTitle(fmt.Sprintf("%s - Nemesis Dogtags", stats.Player.Name)),
 		renderer.WithPlatform(stats.Player.Platform),
 		renderer.With("Player", stats.Player),
 		renderer.With("Values", stats.Values),
