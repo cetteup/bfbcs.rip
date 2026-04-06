@@ -33,7 +33,8 @@ func main() {
 	}
 
 	e := echo.NewWithConfig(echo.Config{
-		Renderer: r,
+		Renderer:    r,
+		IPExtractor: echo.ExtractIPFromXFFHeader(),
 	})
 	e.Use(middleware.Recover())
 	e.Use(middleware.RequestLoggerWithConfig(middleware.RequestLoggerConfig{
