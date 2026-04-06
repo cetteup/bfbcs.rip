@@ -267,10 +267,18 @@ func (h *Handler) HandleDogtagsGET(c *echo.Context) error {
 		summary.Silver += record.Silver
 		summary.Gold += record.Gold
 
-		summary.TotalUnique += 1
-		summary.BronzeUnique += 1
-		summary.SilverUnique += 1
-		summary.GoldUnique += 1
+		if record.Total > 0 {
+			summary.TotalUnique += 1
+		}
+		if record.Bronze > 0 {
+			summary.BronzeUnique += 1
+		}
+		if record.Silver > 0 {
+			summary.SilverUnique += 1
+		}
+		if record.Gold > 0 {
+			summary.GoldUnique += 1
+		}
 	}
 
 	return c.Render(http.StatusOK, "default/dogtags.html", renderer.NewPageContext(
