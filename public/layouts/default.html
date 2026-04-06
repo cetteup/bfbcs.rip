@@ -25,9 +25,9 @@
         <div id="site">
             <div id="header"></div>
             <div id="head_navi">
-                <a href="/pc" title="PC" class="pc active"></a>
-                <a href="/xbox360" title="XBOX 360" class="xbox360"></a>
-                <a href="/ps3" title="PS3" class="ps3"></a>
+                <a href="/pc" title="PC" class="pc{{if eq .Platform "pc"}} active{{end}}"></a>
+                <a href="/xbox360" title="XBOX 360" class="xbox360{{if eq .Platform "xbox360"}} active{{end}}"></a>
+                <a href="/ps3" title="PS3" class="ps3{{if eq .Platform "ps3"}} active{{end}}"></a>
                 <a href="/">Home</a>
                 <a href="/BFBC2_leaderboard/{{.Platform}}">Leaderboard</a>
                 <a href="https://api.battlefield.rip/docs/index.html" target="_blank">API</a>
