@@ -7,18 +7,19 @@ Usage: python3 compare_html.py <url1> <url2>
 """
 
 import sys
-import requests
 from difflib import unified_diff
+import urllib.error
 import urllib.parse
+import urllib.request
 
 
 def fetch_html(url):
     """Fetch HTML content from a URL."""
     try:
-        response = requests.get(url, timeout=10)
-        response.raise_for_status()
-        return response.text
-    except requests.exceptions.RequestException as e:
+        with urllib.request.urlopen(url, timeout=10) as response:
+            charset = response.headers.get_content_charset() or "utf-8"
+            return response.read().decode(charset, errors="replace")
+    except (urllib.error.URLError, ValueError) as e:
         print(f"Error fetching {url}: {e}", file=sys.stderr)
         sys.exit(1)
 
