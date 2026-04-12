@@ -1541,7 +1541,16 @@
             </div>
             <div class="clear"></div>
             <br/>
-            <h2>Insignias (29 / 54)</h2>
+            {{$insignias := 0.0}}
+            {{range $i := 52}}
+                {{if eq (index $.Values (printf "i%02d_00" $i)) 1.0}}
+                    {{$insignias = add $insignias 1.0}}
+                {{end}}
+                {{if eq (index $.Values (printf "di%02d_00" $i)) 1.0}}
+                    {{$insignias = add $insignias 1.0}}
+                {{end}}
+            {{end}}
+            <h2>Insignias ({{$insignias}} / 54)</h2>
             <div class="stcol_1">
                 <div class="award{{if eq .Values.i01_00 0.0}} inactive{{end}}" onmouseover="bfbcs.showDetail('insignia','ins_0','insa_0')" id="insa_0"><img
                             src="/static/img/bfbcs/insignia_small/i01.png" alt="Elite Marksman Combat" width="75" height="75"/>
