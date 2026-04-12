@@ -11,6 +11,10 @@ import (
 
 func seq(start, end int) []int {
 	n := end - start
+	if n < 0 {
+		return nil
+	}
+
 	s := make([]int, 0, n)
 	for i := 0; i < n; i++ {
 		s = append(s, start+i)
