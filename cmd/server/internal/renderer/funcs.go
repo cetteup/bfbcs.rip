@@ -168,7 +168,7 @@ type weapon struct {
 	Index       int
 	Key         string
 	Name        string
-	Description template.HTML
+	Description template.HTML // Using template.HTML to render special characters correctly
 	Image       string
 	IsPistol    bool
 }
@@ -250,7 +250,7 @@ type vehicle struct {
 	Key         string
 	Class       string
 	Name        string
-	Description template.HTML
+	Description template.HTML // Using template.HTML to render special characters correctly
 	Image       string
 }
 
