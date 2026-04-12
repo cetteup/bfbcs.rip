@@ -26,6 +26,8 @@ func NewTemplateRenderer(layouts string, views string) (*TemplateRenderer, error
 			"formatDuration":      formatDuration,
 			"formatTime":          formatTime,
 			"getRankName":         getRankName,
+			"getWeapons":          getWeapons,
+			"getVehicles":         getVehicles,
 			"getServiceStarClass": getServiceStarClass,
 			"calculateProgress":   calculateProgress,
 			"toUpper":             strings.ToUpper,
