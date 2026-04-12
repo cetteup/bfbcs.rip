@@ -241,7 +241,7 @@ func getWeapons(platform string) []weapon {
 		{Index: 57, Key: "m40v", Name: "M40 Vietnam", Description: "", Image: "vm40.png"},
 		{Index: 58, Key: "svdv", Name: "SVD Vietnam", Description: "", Image: "vsvd.png"},
 		{Index: 59, Key: "m21v", Name: "M21 Vietnam", Description: "", Image: "vm21.png"},
-		{Index: 60, Key: "tt33v", Name: "TT33 Vietnam", Description: "", Image: "vtt-33.png"},
+		{Index: 60, Key: "tt33v", Name: "TT33 Vietnam", Description: "", Image: "vtt-33.png"}, // Not tracked as a pistol on the original site
 	}
 }
 
