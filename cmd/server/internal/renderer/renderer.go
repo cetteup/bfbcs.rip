@@ -18,10 +18,12 @@ type TemplateRenderer struct {
 func NewTemplateRenderer(layouts string, views string) (*TemplateRenderer, error) {
 	tmpl, err := template.New("bfbcs").
 		Funcs(template.FuncMap{
+			"seq":                 seq,
 			"add":                 add,
 			"mul":                 mul,
 			"div":                 div,
 			"gt":                  gt,
+			"gte":                 gte,
 			"formatNumber":        formatNumber,
 			"formatDuration":      formatDuration,
 			"formatTime":          formatTime,
