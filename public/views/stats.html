@@ -1542,7 +1542,7 @@
             <div class="clear"></div>
             <br/>
             {{$insignias := 0.0}}
-            {{range $i := 52}}
+            {{range $i := seq 1 52}}
                 {{if eq (index $.Values (printf "i%02d_00" $i)) 1.0}}
                     {{$insignias = add $insignias 1.0}}
                 {{end}}
@@ -2411,543 +2411,554 @@
             </div>
             <div class="clear"></div>
             <br/>
-            <h2>Pins (37 / 48)</h2>
-            <div class="stcol_1">
-                <div class="award" onmouseover="bfbcs.showDetail('pins','pin_0','pina_0')" id="pina_0"><img
-                            src="/static/img/bfbcs/pins_small/p01.png" alt="Assault Rifle Efficiency Pin" width="75" height="75"/></div>
-                <div class="award" onmouseover="bfbcs.showDetail('pins','pin_1','pina_1')" id="pina_1"><img
-                            src="/static/img/bfbcs/pins_small/p02.png" alt="Grenade Launcher Efficiency Pin" width="75"
-                            height="75"/></div>
-                <div class="award" onmouseover="bfbcs.showDetail('pins','pin_2','pina_2')" id="pina_2"><img
-                            src="/static/img/bfbcs/pins_small/p03.png" alt="Sniper Rifle Efficiency Pin" width="75" height="75"/></div>
-                <div class="award" onmouseover="bfbcs.showDetail('pins','pin_3','pina_3')" id="pina_3"><img
-                            src="/static/img/bfbcs/pins_small/p04.png" alt="Handgun Efficiency Pin" width="75" height="75"/></div>
-                <div class="award" onmouseover="bfbcs.showDetail('pins','pin_4','pina_4')" id="pina_4"><img
-                            src="/static/img/bfbcs/pins_small/p05.png" alt="Shotgun Efficiency Pin" width="75" height="75"/></div>
-                <div class="award" onmouseover="bfbcs.showDetail('pins','pin_5','pina_5')" id="pina_5"><img
-                            src="/static/img/bfbcs/pins_small/p06.png" alt="Rocket Launcher Efficiency Pin" width="75" height="75"/></div>
-                <div class="award" onmouseover="bfbcs.showDetail('pins','pin_6','pina_6')" id="pina_6"><img
-                            src="/static/img/bfbcs/pins_small/p07.png" alt="Light Machine Gun Efficiency Pin" width="75"
-                            height="75"/></div>
-                <div class="award" onmouseover="bfbcs.showDetail('pins','pin_7','pina_7')" id="pina_7"><img
-                            src="/static/img/bfbcs/pins_small/p08.png" alt="Submachine Gun Efficiency Pin" width="75" height="75"/></div>
-                <div class="award" onmouseover="bfbcs.showDetail('pins','pin_8','pina_8')" id="pina_8"><img
-                            src="/static/img/bfbcs/pins_small/p09.png" alt="Emplacement Efficiency Pin" width="75" height="75"/></div>
-                <div class="award" onmouseover="bfbcs.showDetail('pins','pin_9','pina_9')" id="pina_9"><img
-                            src="/static/img/bfbcs/pins_small/p10.png" alt="Explosive Efficiency Pin" width="75" height="75"/></div>
-                <div class="award" onmouseover="bfbcs.showDetail('pins','pin_10','pina_10')" id="pina_10"><img
-                            src="/static/img/bfbcs/pins_small/p11.png" alt="Melee Efficiency Pin" width="75" height="75"/></div>
-                <div class="award" onmouseover="bfbcs.showDetail('pins','pin_11','pina_11')" id="pina_11"><img
-                            src="/static/img/bfbcs/pins_small/p12.png" alt="Anti Vehicle Efficiency Pin" width="75" height="75"/></div>
-                <div class="award" onmouseover="bfbcs.showDetail('pins','pin_12','pina_12')" id="pina_12"><img
-                            src="/static/img/bfbcs/pins_small/p13.png" alt="Combat Efficiency Pin" width="75" height="75"/></div>
-                <div class="award" onmouseover="bfbcs.showDetail('pins','pin_13','pina_13')" id="pina_13"><img
-                            src="/static/img/bfbcs/pins_small/p14.png" alt="Combat Excellence Pin" width="75" height="75"/></div>
-                <div class="award" onmouseover="bfbcs.showDetail('pins','pin_14','pina_14')" id="pina_14"><img
-                            src="/static/img/bfbcs/pins_small/p15.png" alt="Kill Assist Pin" width="75" height="75"/></div>
-                <div class="award" onmouseover="bfbcs.showDetail('pins','pin_15','pina_15')" id="pina_15"><img
-                            src="/static/img/bfbcs/pins_small/p16.png" alt="Savior Pin" width="75" height="75"/></div>
-                <div class="award" onmouseover="bfbcs.showDetail('pins','pin_16','pina_16')" id="pina_16"><img
-                            src="/static/img/bfbcs/pins_small/p17.png" alt="Avenger Pin" width="75" height="75"/></div>
-                <div class="award" onmouseover="bfbcs.showDetail('pins','pin_17','pina_17')" id="pina_17"><img
-                            src="/static/img/bfbcs/pins_small/p18.png" alt="Marksman Pin" width="75" height="75"/></div>
-                <div class="award" onmouseover="bfbcs.showDetail('pins','pin_18','pina_18')" id="pina_18"><img
-                            src="/static/img/bfbcs/pins_small/p19.png" alt="Ace Pin" width="75" height="75"/></div>
-                <div class="award" onmouseover="bfbcs.showDetail('pins','pin_19','pina_19')" id="pina_19"><img
-                            src="/static/img/bfbcs/pins_small/p20.png" alt="Gold Squad Pin" width="75" height="75"/></div>
-                <div class="award" onmouseover="bfbcs.showDetail('pins','pin_20','pina_20')" id="pina_20"><img
-                            src="/static/img/bfbcs/pins_small/p21.png" alt="Nemesis Pin" width="75" height="75"/></div>
-                <div class="award" onmouseover="bfbcs.showDetail('pins','pin_21','pina_21')" id="pina_21"><img
-                            src="/static/img/bfbcs/pins_small/p22.png" alt="Payback! Pin" width="75" height="75"/></div>
-                <div class="award" onmouseover="bfbcs.showDetail('pins','pin_22','pina_22')" id="pina_22"><img
-                            src="/static/img/bfbcs/pins_small/p23.png" alt="Squad Member Pin" width="75" height="75"/></div>
-                <div class="award inactive" onmouseover="bfbcs.showDetail('pins','pin_23','pina_23')" id="pina_23"><img
-                            src="/static/img/bfbcs/pins_small/p24.png" alt="Wheels of Hazard Pin" width="75" height="75"/></div>
-                <div class="award inactive" onmouseover="bfbcs.showDetail('pins','pin_24','pina_24')" id="pina_24"><img
-                            src="/static/img/bfbcs/pins_small/p25.png" alt="Car Warfare Pin" width="75" height="75"/></div>
-                <div class="award" onmouseover="bfbcs.showDetail('pins','pin_25','pina_25')" id="pina_25"><img
-                            src="/static/img/bfbcs/pins_small/p26.png" alt="Tank Warfare Pin" width="75" height="75"/></div>
-                <div class="award inactive" onmouseover="bfbcs.showDetail('pins','pin_26','pina_26')" id="pina_26"><img
-                            src="/static/img/bfbcs/pins_small/p27.png" alt="Naval Warfare Pin" width="75" height="75"/></div>
-                <div class="award" onmouseover="bfbcs.showDetail('pins','pin_27','pina_27')" id="pina_27"><img
-                            src="/static/img/bfbcs/pins_small/p28.png" alt="Air Warfare Pin" width="75" height="75"/></div>
-                <div class="award" onmouseover="bfbcs.showDetail('pins','pin_28','pina_28')" id="pina_28"><img
-                            src="/static/img/bfbcs/pins_small/p29.png" alt="M-Com Attacker Pin" width="75" height="75"/></div>
-                <div class="award" onmouseover="bfbcs.showDetail('pins','pin_29','pina_29')" id="pina_29"><img
-                            src="/static/img/bfbcs/pins_small/p30.png" alt="M-Com Defender Pin" width="75" height="75"/></div>
-                <div class="award" onmouseover="bfbcs.showDetail('pins','pin_30','pina_30')" id="pina_30"><img
-                            src="/static/img/bfbcs/pins_small/p31.png" alt="Rush Winner Pin" width="75" height="75"/></div>
-                <div class="award" onmouseover="bfbcs.showDetail('pins','pin_31','pina_31')" id="pina_31"><img
-                            src="/static/img/bfbcs/pins_small/p32.png" alt="Conquest Winner Pin" width="75" height="75"/></div>
-                <div class="award" onmouseover="bfbcs.showDetail('pins','pin_32','pina_32')" id="pina_32"><img
-                            src="/static/img/bfbcs/pins_small/p33.png" alt="Squad Deathmatch Winner Pin" width="75" height="75"/></div>
-                <div class="award" onmouseover="bfbcs.showDetail('pins','pin_33','pina_33')" id="pina_33"><img
-                            src="/static/img/bfbcs/pins_small/p34.png" alt="Squad Rush Winner Pin" width="75" height="75"/></div>
-                <div class="award" onmouseover="bfbcs.showDetail('pins','pin_34','pina_34')" id="pina_34"><img
-                            src="/static/img/bfbcs/pins_small/p35.png" alt="Flag Attacker Pin" width="75" height="75"/></div>
-                <div class="award" onmouseover="bfbcs.showDetail('pins','pin_35','pina_35')" id="pina_35"><img
-                            src="/static/img/bfbcs/pins_small/p36.png" alt="Flag Defender Pin" width="75" height="75"/></div>
-                <div class="award" onmouseover="bfbcs.showDetail('pins','pin_36','pina_36')" id="pina_36"><img
-                            src="/static/img/bfbcs/pins_small/p37.png" alt="Resupply Ops Pin" width="75" height="75"/></div>
-                <div class="award" onmouseover="bfbcs.showDetail('pins','pin_37','pina_37')" id="pina_37"><img
-                            src="/static/img/bfbcs/pins_small/p38.png" alt="Surveillance Ops Pin" width="75" height="75"/></div>
-                <div class="award" onmouseover="bfbcs.showDetail('pins','pin_38','pina_38')" id="pina_38"><img
-                            src="/static/img/bfbcs/pins_small/p39.png" alt="Medical Ops Pin" width="75" height="75"/></div>
-                <div class="award" onmouseover="bfbcs.showDetail('pins','pin_39','pina_39')" id="pina_39"><img
-                            src="/static/img/bfbcs/pins_small/p40.png" alt="Maintenance Ops Pin" width="75" height="75"/></div>
-                <div class="award inactive" onmouseover="bfbcs.showDetail('pins','pin_40','pina_40')" id="pina_40"><img
-                            src="/static/img/bfbcs/pins_small/dp01.png" alt="SPECACT Assault Excellence Pin" width="75"
-                            height="75"/></div>
-                <div class="award inactive" onmouseover="bfbcs.showDetail('pins','pin_41','pina_41')" id="pina_41"><img
-                            src="/static/img/bfbcs/pins_small/dp02.png" alt="SPECACT Engineer Excellence Pin" width="75"
-                            height="75"/></div>
-                <div class="award inactive" onmouseover="bfbcs.showDetail('pins','pin_42','pina_42')" id="pina_42"><img
-                            src="/static/img/bfbcs/pins_small/dp03.png" alt="SPECACT Medic Excellence Pin" width="75" height="75"/></div>
-                <div class="award inactive" onmouseover="bfbcs.showDetail('pins','pin_43','pina_43')" id="pina_43"><img
-                            src="/static/img/bfbcs/pins_small/dp04.png" alt="SPECACT Recon Excellence Pin" width="75" height="75"/></div>
-                <div class="award inactive" onmouseover="bfbcs.showDetail('pins','pin_44','pina_44')" id="pina_44"><img
-                            src="/static/img/bfbcs/pins_small/dp05.png" alt="M16 SPECACT Efficiency Pin" width="75" height="75"/></div>
-                <div class="award inactive" onmouseover="bfbcs.showDetail('pins','pin_45','pina_45')" id="pina_45"><img
-                            src="/static/img/bfbcs/pins_small/dp06.png" alt="UMP SPECACT Efficiency Pin" width="75" height="75"/></div>
-                <div class="award inactive" onmouseover="bfbcs.showDetail('pins','pin_46','pina_46')" id="pina_46"><img
-                            src="/static/img/bfbcs/pins_small/dp07.png" alt="MG3 SPECACT Efficiency Pin" width="75" height="75"/></div>
-                <div class="award inactive" onmouseover="bfbcs.showDetail('pins','pin_47','pina_47')" id="pina_47"><img
-                            src="/static/img/bfbcs/pins_small/dp08.png" alt="M95 SPECACT Efficiency Pin" width="75" height="75"/></div>
-            </div>
-            <div class="stcol_2">
-                <div class="itemdetails" id="pin_0">
-                    <div class="name">Assault Rifle Efficiency Pin</div>
-                    <img src="/static/img/bfbcs/pins_small/p01.png" alt="Assault Rifle Efficiency Pin" width="75" height="75"/>
-                    <div class="desc">In a round, kill 7 enemies with assault rifles.</div>
-                    <div class="score">Score: +100</div>
-                    <ul class="criteria">
-                        <li><b>55x</b> awarded</li>
-                    </ul>
-                </div>
-                <div class="itemdetails" id="pin_1">
-                    <div class="name">Grenade Launcher Efficiency Pin</div>
-                    <img src="/static/img/bfbcs/pins_small/p02.png" alt="Grenade Launcher Efficiency Pin" width="75" height="75"/>
-                    <div class="desc">In a round, kill 4 enemies with grenade launchers.</div>
-                    <div class="score">Score: +100</div>
-                    <ul class="criteria">
-                        <li><b>5x</b> awarded</li>
-                    </ul>
-                </div>
-                <div class="itemdetails" id="pin_2">
-                    <div class="name">Sniper Rifle Efficiency Pin</div>
-                    <img src="/static/img/bfbcs/pins_small/p03.png" alt="Sniper Rifle Efficiency Pin" width="75" height="75"/>
-                    <div class="desc">In a round, kill 7 enemies with sniper rifles.</div>
-                    <div class="score">Score: +100</div>
-                    <ul class="criteria">
-                        <li><b>11x</b> awarded</li>
-                    </ul>
-                </div>
-                <div class="itemdetails" id="pin_3">
-                    <div class="name">Handgun Efficiency Pin</div>
-                    <img src="/static/img/bfbcs/pins_small/p04.png" alt="Handgun Efficiency Pin" width="75" height="75"/>
-                    <div class="desc">In a round, kill 4 enemies with handguns.</div>
-                    <div class="score">Score: +100</div>
-                    <ul class="criteria">
-                        <li><b>38x</b> awarded</li>
-                    </ul>
-                </div>
-                <div class="itemdetails" id="pin_4">
-                    <div class="name">Shotgun Efficiency Pin</div>
-                    <img src="/static/img/bfbcs/pins_small/p05.png" alt="Shotgun Efficiency Pin" width="75" height="75"/>
-                    <div class="desc">In a round, kill 4 enemies with shotguns.</div>
-                    <div class="score">Score: +100</div>
-                    <ul class="criteria">
-                        <li><b>49x</b> awarded</li>
-                    </ul>
-                </div>
-                <div class="itemdetails" id="pin_5">
-                    <div class="name">Rocket Launcher Efficiency Pin</div>
-                    <img src="/static/img/bfbcs/pins_small/p06.png" alt="Rocket Launcher Efficiency Pin" width="75" height="75"/>
-                    <div class="desc">In a round, kill 5 enemies with rocket launchers.</div>
-                    <div class="score">Score: +100</div>
-                    <ul class="criteria">
-                        <li><b>37x</b> awarded</li>
-                    </ul>
-                </div>
-                <div class="itemdetails" id="pin_6">
-                    <div class="name">Light Machine Gun Efficiency Pin</div>
-                    <img src="/static/img/bfbcs/pins_small/p07.png" alt="Light Machine Gun Efficiency Pin" width="75" height="75"/>
-                    <div class="desc">In a round, kill 7 enemies with light machine guns.</div>
-                    <div class="score">Score: +100</div>
-                    <ul class="criteria">
-                        <li><b>70x</b> awarded</li>
-                    </ul>
-                </div>
-                <div class="itemdetails" id="pin_7">
-                    <div class="name">Submachine Gun Efficiency Pin</div>
-                    <img src="/static/img/bfbcs/pins_small/p08.png" alt="Submachine Gun Efficiency Pin" width="75" height="75"/>
-                    <div class="desc">In a round, kill 7 enemies with submachine guns.</div>
-                    <div class="score">Score: +100</div>
-                    <ul class="criteria">
-                        <li><b>37x</b> awarded</li>
-                    </ul>
-                </div>
-                <div class="itemdetails" id="pin_8">
-                    <div class="name">Emplacement Efficiency Pin</div>
-                    <img src="/static/img/bfbcs/pins_small/p09.png" alt="Emplacement Efficiency Pin" width="75" height="75"/>
-                    <div class="desc">In a round, kill 5 enemies with stationary weapons.</div>
-                    <div class="score">Score: +100</div>
-                    <ul class="criteria">
-                        <li><b>1x</b> awarded</li>
-                    </ul>
-                </div>
-                <div class="itemdetails" id="pin_9">
-                    <div class="name">Explosive Efficiency Pin</div>
-                    <img src="/static/img/bfbcs/pins_small/p10.png" alt="Explosive Efficiency Pin" width="75" height="75"/>
-                    <div class="desc">In a round, kill 4 enemies with explosives.</div>
-                    <div class="score">Score: +100</div>
-                    <ul class="criteria">
-                        <li><b>13x</b> awarded</li>
-                    </ul>
-                </div>
-                <div class="itemdetails" id="pin_10">
-                    <div class="name">Melee Efficiency Pin</div>
-                    <img src="/static/img/bfbcs/pins_small/p11.png" alt="Melee Efficiency Pin" width="75" height="75"/>
-                    <div class="desc">In a round, kill 4 enemies with melee weapons.</div>
-                    <div class="score">Score: +200</div>
-                    <ul class="criteria">
-                        <li><b>34x</b> awarded</li>
-                    </ul>
-                </div>
-                <div class="itemdetails" id="pin_11">
-                    <div class="name">Anti Vehicle Efficiency Pin</div>
-                    <img src="/static/img/bfbcs/pins_small/p12.png" alt="Anti Vehicle Efficiency Pin" width="75" height="75"/>
-                    <div class="desc">In a round, destroy 4 enemy vehicles.</div>
-                    <div class="score">Score: +100</div>
-                    <ul class="criteria">
-                        <li><b>6x</b> awarded</li>
-                    </ul>
-                </div>
-                <div class="itemdetails" id="pin_12">
-                    <div class="name">Combat Efficiency Pin</div>
-                    <img src="/static/img/bfbcs/pins_small/p13.png" alt="Combat Efficiency Pin" width="75" height="75"/>
-                    <div class="desc">In a round, reach a kill streak of 6.</div>
-                    <div class="score">Score: +100</div>
-                    <ul class="criteria">
-                        <li><b>103x</b> awarded</li>
-                    </ul>
-                </div>
-                <div class="itemdetails" id="pin_13">
-                    <div class="name">Combat Excellence Pin</div>
-                    <img src="/static/img/bfbcs/pins_small/p14.png" alt="Combat Excellence Pin" width="75" height="75"/>
-                    <div class="desc">In a round, reach a kill streak of 8.</div>
-                    <div class="score">Score: +200</div>
-                    <ul class="criteria">
-                        <li><b>45x</b> awarded</li>
-                    </ul>
-                </div>
-                <div class="itemdetails" id="pin_14">
-                    <div class="name">Kill Assist Pin</div>
-                    <img src="/static/img/bfbcs/pins_small/p15.png" alt="Kill Assist Pin" width="75" height="75"/>
-                    <div class="desc">In a round, do 7 kill assists.</div>
-                    <div class="score">Score: +100</div>
-                    <ul class="criteria">
-                        <li><b>104x</b> awarded</li>
-                    </ul>
-                </div>
-                <div class="itemdetails" id="pin_15">
-                    <div class="name">Savior Pin</div>
-                    <img src="/static/img/bfbcs/pins_small/p16.png" alt="Savior Pin" width="75" height="75"/>
-                    <div class="desc">In a round, do 2 savior kills.</div>
-                    <div class="score">Score: +100</div>
-                    <ul class="criteria">
-                        <li><b>77x</b> awarded</li>
-                    </ul>
-                </div>
-                <div class="itemdetails" id="pin_16">
-                    <div class="name">Avenger Pin</div>
-                    <img src="/static/img/bfbcs/pins_small/p17.png" alt="Avenger Pin" width="75" height="75"/>
-                    <div class="desc">In a round, do 2 avenger kills.</div>
-                    <div class="score">Score: +100</div>
-                    <ul class="criteria">
-                        <li><b>61x</b> awarded</li>
-                    </ul>
-                </div>
-                <div class="itemdetails" id="pin_17">
-                    <div class="name">Marksman Pin</div>
-                    <img src="/static/img/bfbcs/pins_small/p18.png" alt="Marksman Pin" width="75" height="75"/>
-                    <div class="desc">In a round, do 5 headshots.</div>
-                    <div class="score">Score: +100</div>
-                    <ul class="criteria">
-                        <li><b>53x</b> awarded</li>
-                    </ul>
-                </div>
-                <div class="itemdetails" id="pin_18">
-                    <div class="name">Ace Pin</div>
-                    <img src="/static/img/bfbcs/pins_small/p19.png" alt="Ace Pin" width="75" height="75"/>
-                    <div class="desc">In a round, be the best player.</div>
-                    <div class="score">Score: +200</div>
-                    <ul class="criteria">
-                        <li><b>20x</b> awarded</li>
-                    </ul>
-                </div>
-                <div class="itemdetails" id="pin_19">
-                    <div class="name">Gold Squad Pin</div>
-                    <img src="/static/img/bfbcs/pins_small/p20.png" alt="Gold Squad Pin" width="75" height="75"/>
-                    <div class="desc">In a round, be part of the best squad.</div>
-                    <div class="score">Score: +200</div>
-                    <ul class="criteria">
-                        <li><b>93x</b> awarded</li>
-                    </ul>
-                </div>
-                <div class="itemdetails" id="pin_20">
-                    <div class="name">Nemesis Pin</div>
-                    <img src="/static/img/bfbcs/pins_small/p21.png" alt="Nemesis Pin" width="75" height="75"/>
-                    <div class="desc">In a round, kill an enemy 5 times.</div>
-                    <div class="score">Score: +200</div>
-                    <ul class="criteria">
-                        <li><b>37x</b> awarded</li>
-                    </ul>
-                </div>
-                <div class="itemdetails" id="pin_21">
-                    <div class="name">Payback! Pin</div>
-                    <img src="/static/img/bfbcs/pins_small/p22.png" alt="Payback! Pin" width="75" height="75"/>
-                    <div class="desc">In a round, kill your nemesis.</div>
-                    <div class="score">Score: +200</div>
-                    <ul class="criteria">
-                        <li><b>16x</b> awarded</li>
-                    </ul>
-                </div>
-                <div class="itemdetails" id="pin_22">
-                    <div class="name">Squad Member Pin</div>
-                    <img src="/static/img/bfbcs/pins_small/p23.png" alt="Squad Member Pin" width="75" height="75"/>
-                    <div class="desc">In a round, obtain one attack and one defend order.</div>
-                    <div class="score">Score: +200</div>
-                    <ul class="criteria">
-                        <li><b>3x</b> awarded</li>
-                    </ul>
-                </div>
-                <div class="itemdetails" id="pin_23">
-                    <div class="name">Wheels of Hazard Pin</div>
-                    <img src="/static/img/bfbcs/pins_small/p24.png" alt="Wheels of Hazard Pin" width="75" height="75"/>
-                    <div class="desc">In a round, do 3 roadkills with any vehicle.</div>
-                    <div class="score">Score: +200</div>
-                    <ul class="criteria">
-                        <li><b>0x</b> awarded</li>
-                    </ul>
-                </div>
-                <div class="itemdetails" id="pin_24">
-                    <div class="name">Car Warfare Pin</div>
-                    <img src="/static/img/bfbcs/pins_small/p25.png" alt="Car Warfare Pin" width="75" height="75"/>
-                    <div class="desc">In a round, kill 3 enemies with cars.</div>
-                    <div class="score">Score: +100</div>
-                    <ul class="criteria">
-                        <li><b>0x</b> awarded</li>
-                    </ul>
-                </div>
-                <div class="itemdetails" id="pin_25">
-                    <div class="name">Tank Warfare Pin</div>
-                    <img src="/static/img/bfbcs/pins_small/p26.png" alt="Tank Warfare Pin" width="75" height="75"/>
-                    <div class="desc">In a round, kill 7 enemies with tanks.</div>
-                    <div class="score">Score: +100</div>
-                    <ul class="criteria">
-                        <li><b>7x</b> awarded</li>
-                    </ul>
-                </div>
-                <div class="itemdetails" id="pin_26">
-                    <div class="name">Naval Warfare Pin</div>
-                    <img src="/static/img/bfbcs/pins_small/p27.png" alt="Naval Warfare Pin" width="75" height="75"/>
-                    <div class="desc">In a round, kill 2 enemies with sea vehicles.</div>
-                    <div class="score">Score: +100</div>
-                    <ul class="criteria">
-                        <li><b>0x</b> awarded</li>
-                    </ul>
-                </div>
-                <div class="itemdetails" id="pin_27">
-                    <div class="name">Air Warfare Pin</div>
-                    <img src="/static/img/bfbcs/pins_small/p28.png" alt="Air Warfare Pin" width="75" height="75"/>
-                    <div class="desc">In a round, kill 5 enemies with air vehicles.</div>
-                    <div class="score">Score: +100</div>
-                    <ul class="criteria">
-                        <li><b>5x</b> awarded</li>
-                    </ul>
-                </div>
-                <div class="itemdetails" id="pin_28">
-                    <div class="name">M-Com Attacker Pin</div>
-                    <img src="/static/img/bfbcs/pins_small/p29.png" alt="M-Com Attacker Pin" width="75" height="75"/>
-                    <div class="desc">In a round, blow up 4 M-COM stations.</div>
-                    <div class="score">Score: +100</div>
-                    <ul class="criteria">
-                        <li><b>1x</b> awarded</li>
-                    </ul>
-                </div>
-                <div class="itemdetails" id="pin_29">
-                    <div class="name">M-Com Defender Pin</div>
-                    <img src="/static/img/bfbcs/pins_small/p30.png" alt="M-Com Defender Pin" width="75" height="75"/>
-                    <div class="desc">In a round, defend 4 M-COM stations.</div>
-                    <div class="score">Score: +100</div>
-                    <ul class="criteria">
-                        <li><b>121x</b> awarded</li>
-                    </ul>
-                </div>
-                <div class="itemdetails" id="pin_30">
-                    <div class="name">Rush Winner Pin</div>
-                    <img src="/static/img/bfbcs/pins_small/p31.png" alt="Rush Winner Pin" width="75" height="75"/>
-                    <div class="desc">Win a Rush round.</div>
-                    <div class="score">Score: +200</div>
-                    <ul class="criteria">
-                        <li><b>115x</b> awarded</li>
-                    </ul>
-                </div>
-                <div class="itemdetails" id="pin_31">
-                    <div class="name">Conquest Winner Pin</div>
-                    <img src="/static/img/bfbcs/pins_small/p32.png" alt="Conquest Winner Pin" width="75" height="75"/>
-                    <div class="desc">Win a Conquest round.</div>
-                    <div class="score">Score: +200</div>
-                    <ul class="criteria">
-                        <li><b>23x</b> awarded</li>
-                    </ul>
-                </div>
-                <div class="itemdetails" id="pin_32">
-                    <div class="name">Squad Deathmatch Winner Pin</div>
-                    <img src="/static/img/bfbcs/pins_small/p33.png" alt="Squad Deathmatch Winner Pin" width="75" height="75"/>
-                    <div class="desc">Win a Squad Deathmatch round.</div>
-                    <div class="score">Score: +200</div>
-                    <ul class="criteria">
-                        <li><b>13x</b> awarded</li>
-                    </ul>
-                </div>
-                <div class="itemdetails" id="pin_33">
-                    <div class="name">Squad Rush Winner Pin</div>
-                    <img src="/static/img/bfbcs/pins_small/p34.png" alt="Squad Rush Winner Pin" width="75" height="75"/>
-                    <div class="desc">Win a Squad Rush round.</div>
-                    <div class="score">Score: +200</div>
-                    <ul class="criteria">
-                        <li><b>37x</b> awarded</li>
-                    </ul>
-                </div>
-                <div class="itemdetails" id="pin_34">
-                    <div class="name">Flag Attacker Pin</div>
-                    <img src="/static/img/bfbcs/pins_small/p35.png" alt="Flag Attacker Pin" width="75" height="75"/>
-                    <div class="desc">In a round, capture 4 flags.</div>
-                    <div class="score">Score: +100</div>
-                    <ul class="criteria">
-                        <li><b>3x</b> awarded</li>
-                    </ul>
-                </div>
-                <div class="itemdetails" id="pin_35">
-                    <div class="name">Flag Defender Pin</div>
-                    <img src="/static/img/bfbcs/pins_small/p36.png" alt="Flag Defender Pin" width="75" height="75"/>
-                    <div class="desc">In a round, defend 4 flags.</div>
-                    <div class="score">Score: +100</div>
-                    <ul class="criteria">
-                        <li><b>1x</b> awarded</li>
-                    </ul>
-                </div>
-                <div class="itemdetails" id="pin_36">
-                    <div class="name">Resupply Ops Pin</div>
-                    <img src="/static/img/bfbcs/pins_small/p37.png" alt="Resupply Ops Pin" width="75" height="75"/>
-                    <div class="desc">In a round, do 7 resupplies.</div>
-                    <div class="score">Score: +100</div>
-                    <ul class="criteria">
-                        <li><b>29x</b> awarded</li>
-                    </ul>
-                </div>
-                <div class="itemdetails" id="pin_37">
-                    <div class="name">Surveillance Ops Pin</div>
-                    <img src="/static/img/bfbcs/pins_small/p38.png" alt="Surveillance Ops Pin" width="75" height="75"/>
-                    <div class="desc">In a round, do 5 motion mine assists.</div>
-                    <div class="score">Score: +100</div>
-                    <ul class="criteria">
-                        <li><b>28x</b> awarded</li>
-                    </ul>
-                </div>
-                <div class="itemdetails" id="pin_38">
-                    <div class="name">Medical Ops Pin</div>
-                    <img src="/static/img/bfbcs/pins_small/p39.png" alt="Medical Ops Pin" width="75" height="75"/>
-                    <div class="desc">In a round, do 5 revives.</div>
-                    <div class="score">Score: +100</div>
-                    <ul class="criteria">
-                        <li><b>59x</b> awarded</li>
-                    </ul>
-                </div>
-                <div class="itemdetails" id="pin_39">
-                    <div class="name">Maintenance Ops Pin</div>
-                    <img src="/static/img/bfbcs/pins_small/p40.png" alt="Maintenance Ops Pin" width="75" height="75"/>
-                    <div class="desc">In a round, do 7 repairs.</div>
-                    <div class="score">Score: +100</div>
-                    <ul class="criteria">
-                        <li><b>26x</b> awarded</li>
-                    </ul>
-                </div>
-                <div class="itemdetails" id="pin_40">
-                    <div class="name">SPECACT Assault Excellence Pin</div>
-                    <img src="/static/img/bfbcs/pins_small/dp01.png" alt="SPECACT Assault Excellence Pin" width="75" height="75"/>
-                    <div class="desc">In a round, get 8 kills with the M16 SPECACT.</div>
-                    <div class="score">Score: +100</div>
-                    <ul class="criteria">
-                        <li><b>0x</b> awarded</li>
-                    </ul>
-                </div>
-                <div class="itemdetails" id="pin_41">
-                    <div class="name">SPECACT Engineer Excellence Pin</div>
-                    <img src="/static/img/bfbcs/pins_small/dp02.png" alt="SPECACT Engineer Excellence Pin" width="75" height="75"/>
-                    <div class="desc">In a round, get 8 kills with the UMP SPECACT.</div>
-                    <div class="score">Score: +100</div>
-                    <ul class="criteria">
-                        <li><b>0x</b> awarded</li>
-                    </ul>
-                </div>
-                <div class="itemdetails" id="pin_42">
-                    <div class="name">SPECACT Medic Excellence Pin</div>
-                    <img src="/static/img/bfbcs/pins_small/dp03.png" alt="SPECACT Medic Excellence Pin" width="75" height="75"/>
-                    <div class="desc">In a round, get 8 kills with the MG3 SPECACT.</div>
-                    <div class="score">Score: +100</div>
-                    <ul class="criteria">
-                        <li><b>0x</b> awarded</li>
-                    </ul>
-                </div>
-                <div class="itemdetails" id="pin_43">
-                    <div class="name">SPECACT Recon Excellence Pin</div>
-                    <img src="/static/img/bfbcs/pins_small/dp04.png" alt="SPECACT Recon Excellence Pin" width="75" height="75"/>
-                    <div class="desc">In a round, get 8 kills with the M95 SPECACT.</div>
-                    <div class="score">Score: +100</div>
-                    <ul class="criteria">
-                        <li><b>0x</b> awarded</li>
-                    </ul>
-                </div>
-                <div class="itemdetails" id="pin_44">
-                    <div class="name">M16 SPECACT Efficiency Pin</div>
-                    <img src="/static/img/bfbcs/pins_small/dp05.png" alt="M16 SPECACT Efficiency Pin" width="75" height="75"/>
-                    <div class="desc">Reach a kill streak of 5 with the M16 SPECACT.</div>
-                    <div class="score">Score: +100</div>
-                    <ul class="criteria">
-                        <li><b>0x</b> awarded</li>
-                    </ul>
-                </div>
-                <div class="itemdetails" id="pin_45">
-                    <div class="name">UMP SPECACT Efficiency Pin</div>
-                    <img src="/static/img/bfbcs/pins_small/dp06.png" alt="UMP SPECACT Efficiency Pin" width="75" height="75"/>
-                    <div class="desc">Reach a kill streak of 5 with the UMP SPECACT.</div>
-                    <div class="score">Score: +100</div>
-                    <ul class="criteria">
-                        <li><b>0x</b> awarded</li>
-                    </ul>
-                </div>
-                <div class="itemdetails" id="pin_46">
-                    <div class="name">MG3 SPECACT Efficiency Pin</div>
-                    <img src="/static/img/bfbcs/pins_small/dp07.png" alt="MG3 SPECACT Efficiency Pin" width="75" height="75"/>
-                    <div class="desc">Reach a kill streak of 5 with the MG3 SPECACT.</div>
-                    <div class="score">Score: +100</div>
-                    <ul class="criteria">
-                        <li><b>0x</b> awarded</li>
-                    </ul>
-                </div>
-                <div class="itemdetails" id="pin_47">
-                    <div class="name">M95 SPECACT Efficiency Pin</div>
-                    <img src="/static/img/bfbcs/pins_small/dp08.png" alt="M95 SPECACT Efficiency Pin" width="75" height="75"/>
-                    <div class="desc">Reach a kill streak of 5 with the M95 SPECACT.</div>
-                    <div class="score">Score: +100</div>
-                    <ul class="criteria">
-                        <li><b>0x</b> awarded</li>
-                    </ul>
-                </div>
-            </div>
+            {{$pins := 0.0}}
+            {{range $i := seq 1 41}}
+                {{if gte (index $.Values (printf "p%02d_00" $i)) 1.0}}
+                    {{$pins = add $pins 1.0}}
+                {{end}}
+            {{end}}
+            {{range $i := seq 1 9}}
+                {{if gte (index $.Values (printf "dp%02d_00" $i)) 1.0}}
+                    {{$pins = add $pins 1.0}}
+                {{end}}
+            {{end}}
+             <h2>Pins ({{$pins}} / 48)</h2>
+             <div class="stcol_1">
+                 <div class="award{{if eq .Values.p01_00 0.0}} inactive{{end}}" onmouseover="bfbcs.showDetail('pins','pin_0','pina_0')" id="pina_0"><img
+                             src="/static/img/bfbcs/pins_small/p01.png" alt="Assault Rifle Efficiency Pin" width="75" height="75"/></div>
+                 <div class="award{{if eq .Values.p02_00 0.0}} inactive{{end}}" onmouseover="bfbcs.showDetail('pins','pin_1','pina_1')" id="pina_1"><img
+                             src="/static/img/bfbcs/pins_small/p02.png" alt="Grenade Launcher Efficiency Pin" width="75"
+                             height="75"/></div>
+                 <div class="award{{if eq .Values.p03_00 0.0}} inactive{{end}}" onmouseover="bfbcs.showDetail('pins','pin_2','pina_2')" id="pina_2"><img
+                             src="/static/img/bfbcs/pins_small/p03.png" alt="Sniper Rifle Efficiency Pin" width="75" height="75"/></div>
+                 <div class="award{{if eq .Values.p04_00 0.0}} inactive{{end}}" onmouseover="bfbcs.showDetail('pins','pin_3','pina_3')" id="pina_3"><img
+                             src="/static/img/bfbcs/pins_small/p04.png" alt="Handgun Efficiency Pin" width="75" height="75"/></div>
+                 <div class="award{{if eq .Values.p05_00 0.0}} inactive{{end}}" onmouseover="bfbcs.showDetail('pins','pin_4','pina_4')" id="pina_4"><img
+                             src="/static/img/bfbcs/pins_small/p05.png" alt="Shotgun Efficiency Pin" width="75" height="75"/></div>
+                 <div class="award{{if eq .Values.p06_00 0.0}} inactive{{end}}" onmouseover="bfbcs.showDetail('pins','pin_5','pina_5')" id="pina_5"><img
+                             src="/static/img/bfbcs/pins_small/p06.png" alt="Rocket Launcher Efficiency Pin" width="75" height="75"/></div>
+                 <div class="award{{if eq .Values.p07_00 0.0}} inactive{{end}}" onmouseover="bfbcs.showDetail('pins','pin_6','pina_6')" id="pina_6"><img
+                             src="/static/img/bfbcs/pins_small/p07.png" alt="Light Machine Gun Efficiency Pin" width="75"
+                             height="75"/></div>
+                 <div class="award{{if eq .Values.p08_00 0.0}} inactive{{end}}" onmouseover="bfbcs.showDetail('pins','pin_7','pina_7')" id="pina_7"><img
+                             src="/static/img/bfbcs/pins_small/p08.png" alt="Submachine Gun Efficiency Pin" width="75" height="75"/></div>
+                 <div class="award{{if eq .Values.p09_00 0.0}} inactive{{end}}" onmouseover="bfbcs.showDetail('pins','pin_8','pina_8')" id="pina_8"><img
+                             src="/static/img/bfbcs/pins_small/p09.png" alt="Emplacement Efficiency Pin" width="75" height="75"/></div>
+                 <div class="award{{if eq .Values.p10_00 0.0}} inactive{{end}}" onmouseover="bfbcs.showDetail('pins','pin_9','pina_9')" id="pina_9"><img
+                             src="/static/img/bfbcs/pins_small/p10.png" alt="Explosive Efficiency Pin" width="75" height="75"/></div>
+                 <div class="award{{if eq .Values.p11_00 0.0}} inactive{{end}}" onmouseover="bfbcs.showDetail('pins','pin_10','pina_10')" id="pina_10"><img
+                             src="/static/img/bfbcs/pins_small/p11.png" alt="Melee Efficiency Pin" width="75" height="75"/></div>
+                 <div class="award{{if eq .Values.p12_00 0.0}} inactive{{end}}" onmouseover="bfbcs.showDetail('pins','pin_11','pina_11')" id="pina_11"><img
+                             src="/static/img/bfbcs/pins_small/p12.png" alt="Anti Vehicle Efficiency Pin" width="75" height="75"/></div>
+                 <div class="award{{if eq .Values.p13_00 0.0}} inactive{{end}}" onmouseover="bfbcs.showDetail('pins','pin_12','pina_12')" id="pina_12"><img
+                             src="/static/img/bfbcs/pins_small/p13.png" alt="Combat Efficiency Pin" width="75" height="75"/></div>
+                 <div class="award{{if eq .Values.p14_00 0.0}} inactive{{end}}" onmouseover="bfbcs.showDetail('pins','pin_13','pina_13')" id="pina_13"><img
+                             src="/static/img/bfbcs/pins_small/p14.png" alt="Combat Excellence Pin" width="75" height="75"/></div>
+                 <div class="award{{if eq .Values.p15_00 0.0}} inactive{{end}}" onmouseover="bfbcs.showDetail('pins','pin_14','pina_14')" id="pina_14"><img
+                             src="/static/img/bfbcs/pins_small/p15.png" alt="Kill Assist Pin" width="75" height="75"/></div>
+                 <div class="award{{if eq .Values.p16_00 0.0}} inactive{{end}}" onmouseover="bfbcs.showDetail('pins','pin_15','pina_15')" id="pina_15"><img
+                             src="/static/img/bfbcs/pins_small/p16.png" alt="Savior Pin" width="75" height="75"/></div>
+                 <div class="award{{if eq .Values.p17_00 0.0}} inactive{{end}}" onmouseover="bfbcs.showDetail('pins','pin_16','pina_16')" id="pina_16"><img
+                             src="/static/img/bfbcs/pins_small/p17.png" alt="Avenger Pin" width="75" height="75"/></div>
+                 <div class="award{{if eq .Values.p18_00 0.0}} inactive{{end}}" onmouseover="bfbcs.showDetail('pins','pin_17','pina_17')" id="pina_17"><img
+                             src="/static/img/bfbcs/pins_small/p18.png" alt="Marksman Pin" width="75" height="75"/></div>
+                 <div class="award{{if eq .Values.p19_00 0.0}} inactive{{end}}" onmouseover="bfbcs.showDetail('pins','pin_18','pina_18')" id="pina_18"><img
+                             src="/static/img/bfbcs/pins_small/p19.png" alt="Ace Pin" width="75" height="75"/></div>
+                 <div class="award{{if eq .Values.p20_00 0.0}} inactive{{end}}" onmouseover="bfbcs.showDetail('pins','pin_19','pina_19')" id="pina_19"><img
+                             src="/static/img/bfbcs/pins_small/p20.png" alt="Gold Squad Pin" width="75" height="75"/></div>
+                 <div class="award{{if eq .Values.p21_00 0.0}} inactive{{end}}" onmouseover="bfbcs.showDetail('pins','pin_20','pina_20')" id="pina_20"><img
+                             src="/static/img/bfbcs/pins_small/p21.png" alt="Nemesis Pin" width="75" height="75"/></div>
+                 <div class="award{{if eq .Values.p22_00 0.0}} inactive{{end}}" onmouseover="bfbcs.showDetail('pins','pin_21','pina_21')" id="pina_21"><img
+                             src="/static/img/bfbcs/pins_small/p22.png" alt="Payback! Pin" width="75" height="75"/></div>
+                 <div class="award{{if eq .Values.p23_00 0.0}} inactive{{end}}" onmouseover="bfbcs.showDetail('pins','pin_22','pina_22')" id="pina_22"><img
+                             src="/static/img/bfbcs/pins_small/p23.png" alt="Squad Member Pin" width="75" height="75"/></div>
+                 <div class="award{{if eq .Values.p24_00 0.0}} inactive{{end}}" onmouseover="bfbcs.showDetail('pins','pin_23','pina_23')" id="pina_23"><img
+                             src="/static/img/bfbcs/pins_small/p24.png" alt="Wheels of Hazard Pin" width="75" height="75"/></div>
+                 <div class="award{{if eq .Values.p25_00 0.0}} inactive{{end}}" onmouseover="bfbcs.showDetail('pins','pin_24','pina_24')" id="pina_24"><img
+                             src="/static/img/bfbcs/pins_small/p25.png" alt="Car Warfare Pin" width="75" height="75"/></div>
+                 <div class="award{{if eq .Values.p26_00 0.0}} inactive{{end}}" onmouseover="bfbcs.showDetail('pins','pin_25','pina_25')" id="pina_25"><img
+                             src="/static/img/bfbcs/pins_small/p26.png" alt="Tank Warfare Pin" width="75" height="75"/></div>
+                 <div class="award{{if eq .Values.p27_00 0.0}} inactive{{end}}" onmouseover="bfbcs.showDetail('pins','pin_26','pina_26')" id="pina_26"><img
+                             src="/static/img/bfbcs/pins_small/p27.png" alt="Naval Warfare Pin" width="75" height="75"/></div>
+                 <div class="award{{if eq .Values.p28_00 0.0}} inactive{{end}}" onmouseover="bfbcs.showDetail('pins','pin_27','pina_27')" id="pina_27"><img
+                             src="/static/img/bfbcs/pins_small/p28.png" alt="Air Warfare Pin" width="75" height="75"/></div>
+                 <div class="award{{if eq .Values.p29_00 0.0}} inactive{{end}}" onmouseover="bfbcs.showDetail('pins','pin_28','pina_28')" id="pina_28"><img
+                             src="/static/img/bfbcs/pins_small/p29.png" alt="M-Com Attacker Pin" width="75" height="75"/></div>
+                 <div class="award{{if eq .Values.p30_00 0.0}} inactive{{end}}" onmouseover="bfbcs.showDetail('pins','pin_29','pina_29')" id="pina_29"><img
+                             src="/static/img/bfbcs/pins_small/p30.png" alt="M-Com Defender Pin" width="75" height="75"/></div>
+                 <div class="award{{if eq .Values.p31_00 0.0}} inactive{{end}}" onmouseover="bfbcs.showDetail('pins','pin_30','pina_30')" id="pina_30"><img
+                             src="/static/img/bfbcs/pins_small/p31.png" alt="Rush Winner Pin" width="75" height="75"/></div>
+                 <div class="award{{if eq .Values.p32_00 0.0}} inactive{{end}}" onmouseover="bfbcs.showDetail('pins','pin_31','pina_31')" id="pina_31"><img
+                             src="/static/img/bfbcs/pins_small/p32.png" alt="Conquest Winner Pin" width="75" height="75"/></div>
+                 <div class="award{{if eq .Values.p33_00 0.0}} inactive{{end}}" onmouseover="bfbcs.showDetail('pins','pin_32','pina_32')" id="pina_32"><img
+                             src="/static/img/bfbcs/pins_small/p33.png" alt="Squad Deathmatch Winner Pin" width="75" height="75"/></div>
+                 <div class="award{{if eq .Values.p34_00 0.0}} inactive{{end}}" onmouseover="bfbcs.showDetail('pins','pin_33','pina_33')" id="pina_33"><img
+                             src="/static/img/bfbcs/pins_small/p34.png" alt="Squad Rush Winner Pin" width="75" height="75"/></div>
+                 <div class="award{{if eq .Values.p35_00 0.0}} inactive{{end}}" onmouseover="bfbcs.showDetail('pins','pin_34','pina_34')" id="pina_34"><img
+                             src="/static/img/bfbcs/pins_small/p35.png" alt="Flag Attacker Pin" width="75" height="75"/></div>
+                 <div class="award{{if eq .Values.p36_00 0.0}} inactive{{end}}" onmouseover="bfbcs.showDetail('pins','pin_35','pina_35')" id="pina_35"><img
+                             src="/static/img/bfbcs/pins_small/p36.png" alt="Flag Defender Pin" width="75" height="75"/></div>
+                 <div class="award{{if eq .Values.p37_00 0.0}} inactive{{end}}" onmouseover="bfbcs.showDetail('pins','pin_36','pina_36')" id="pina_36"><img
+                             src="/static/img/bfbcs/pins_small/p37.png" alt="Resupply Ops Pin" width="75" height="75"/></div>
+                 <div class="award{{if eq .Values.p38_00 0.0}} inactive{{end}}" onmouseover="bfbcs.showDetail('pins','pin_37','pina_37')" id="pina_37"><img
+                             src="/static/img/bfbcs/pins_small/p38.png" alt="Surveillance Ops Pin" width="75" height="75"/></div>
+                 <div class="award{{if eq .Values.p39_00 0.0}} inactive{{end}}" onmouseover="bfbcs.showDetail('pins','pin_38','pina_38')" id="pina_38"><img
+                             src="/static/img/bfbcs/pins_small/p39.png" alt="Medical Ops Pin" width="75" height="75"/></div>
+                 <div class="award{{if eq .Values.p40_00 0.0}} inactive{{end}}" onmouseover="bfbcs.showDetail('pins','pin_39','pina_39')" id="pina_39"><img
+                             src="/static/img/bfbcs/pins_small/p40.png" alt="Maintenance Ops Pin" width="75" height="75"/></div>
+                 <div class="award{{if eq .Values.dp01_00 0.0}} inactive{{end}}" onmouseover="bfbcs.showDetail('pins','pin_40','pina_40')" id="pina_40"><img
+                             src="/static/img/bfbcs/pins_small/dp01.png" alt="SPECACT Assault Excellence Pin" width="75"
+                             height="75"/></div>
+                 <div class="award{{if eq .Values.dp02_00 0.0}} inactive{{end}}" onmouseover="bfbcs.showDetail('pins','pin_41','pina_41')" id="pina_41"><img
+                             src="/static/img/bfbcs/pins_small/dp02.png" alt="SPECACT Engineer Excellence Pin" width="75"
+                             height="75"/></div>
+                 <div class="award{{if eq .Values.dp03_00 0.0}} inactive{{end}}" onmouseover="bfbcs.showDetail('pins','pin_42','pina_42')" id="pina_42"><img
+                             src="/static/img/bfbcs/pins_small/dp03.png" alt="SPECACT Medic Excellence Pin" width="75" height="75"/></div>
+                 <div class="award{{if eq .Values.dp04_00 0.0}} inactive{{end}}" onmouseover="bfbcs.showDetail('pins','pin_43','pina_43')" id="pina_43"><img
+                             src="/static/img/bfbcs/pins_small/dp04.png" alt="SPECACT Recon Excellence Pin" width="75" height="75"/></div>
+                 <div class="award{{if eq .Values.dp05_00 0.0}} inactive{{end}}" onmouseover="bfbcs.showDetail('pins','pin_44','pina_44')" id="pina_44"><img
+                             src="/static/img/bfbcs/pins_small/dp05.png" alt="M16 SPECACT Efficiency Pin" width="75" height="75"/></div>
+                 <div class="award{{if eq .Values.dp06_00 0.0}} inactive{{end}}" onmouseover="bfbcs.showDetail('pins','pin_45','pina_45')" id="pina_45"><img
+                             src="/static/img/bfbcs/pins_small/dp06.png" alt="UMP SPECACT Efficiency Pin" width="75" height="75"/></div>
+                 <div class="award{{if eq .Values.dp07_00 0.0}} inactive{{end}}" onmouseover="bfbcs.showDetail('pins','pin_46','pina_46')" id="pina_46"><img
+                             src="/static/img/bfbcs/pins_small/dp07.png" alt="MG3 SPECACT Efficiency Pin" width="75" height="75"/></div>
+                 <div class="award{{if eq .Values.dp08_00 0.0}} inactive{{end}}" onmouseover="bfbcs.showDetail('pins','pin_47','pina_47')" id="pina_47"><img
+                             src="/static/img/bfbcs/pins_small/dp08.png" alt="M95 SPECACT Efficiency Pin" width="75" height="75"/></div>
+             </div>
+             <div class="stcol_2">
+                 <div class="itemdetails" id="pin_0">
+                     <div class="name">Assault Rifle Efficiency Pin</div>
+                     <img src="/static/img/bfbcs/pins_small/p01.png" alt="Assault Rifle Efficiency Pin" width="75" height="75"/>
+                     <div class="desc">In a round, kill 7 enemies with assault rifles.</div>
+                     <div class="score">Score: +100</div>
+                     <ul class="criteria">
+                         <li><b>{{formatNumber .Values.p01_00}}x</b> awarded</li>
+                     </ul>
+                 </div>
+                 <div class="itemdetails" id="pin_1">
+                     <div class="name">Grenade Launcher Efficiency Pin</div>
+                     <img src="/static/img/bfbcs/pins_small/p02.png" alt="Grenade Launcher Efficiency Pin" width="75" height="75"/>
+                     <div class="desc">In a round, kill 4 enemies with grenade launchers.</div>
+                     <div class="score">Score: +100</div>
+                     <ul class="criteria">
+                         <li><b>{{formatNumber .Values.p02_00}}x</b> awarded</li>
+                     </ul>
+                 </div>
+                 <div class="itemdetails" id="pin_2">
+                     <div class="name">Sniper Rifle Efficiency Pin</div>
+                     <img src="/static/img/bfbcs/pins_small/p03.png" alt="Sniper Rifle Efficiency Pin" width="75" height="75"/>
+                     <div class="desc">In a round, kill 7 enemies with sniper rifles.</div>
+                     <div class="score">Score: +100</div>
+                     <ul class="criteria">
+                         <li><b>{{formatNumber .Values.p03_00}}x</b> awarded</li>
+                     </ul>
+                 </div>
+                 <div class="itemdetails" id="pin_3">
+                     <div class="name">Handgun Efficiency Pin</div>
+                     <img src="/static/img/bfbcs/pins_small/p04.png" alt="Handgun Efficiency Pin" width="75" height="75"/>
+                     <div class="desc">In a round, kill 4 enemies with handguns.</div>
+                     <div class="score">Score: +100</div>
+                     <ul class="criteria">
+                         <li><b>{{formatNumber .Values.p04_00}}x</b> awarded</li>
+                     </ul>
+                 </div>
+                 <div class="itemdetails" id="pin_4">
+                     <div class="name">Shotgun Efficiency Pin</div>
+                     <img src="/static/img/bfbcs/pins_small/p05.png" alt="Shotgun Efficiency Pin" width="75" height="75"/>
+                     <div class="desc">In a round, kill 4 enemies with shotguns.</div>
+                     <div class="score">Score: +100</div>
+                     <ul class="criteria">
+                         <li><b>{{formatNumber .Values.p05_00}}x</b> awarded</li>
+                     </ul>
+                 </div>
+                 <div class="itemdetails" id="pin_5">
+                     <div class="name">Rocket Launcher Efficiency Pin</div>
+                     <img src="/static/img/bfbcs/pins_small/p06.png" alt="Rocket Launcher Efficiency Pin" width="75" height="75"/>
+                     <div class="desc">In a round, kill 5 enemies with rocket launchers.</div>
+                     <div class="score">Score: +100</div>
+                     <ul class="criteria">
+                         <li><b>{{formatNumber .Values.p06_00}}x</b> awarded</li>
+                     </ul>
+                 </div>
+                 <div class="itemdetails" id="pin_6">
+                     <div class="name">Light Machine Gun Efficiency Pin</div>
+                     <img src="/static/img/bfbcs/pins_small/p07.png" alt="Light Machine Gun Efficiency Pin" width="75" height="75"/>
+                     <div class="desc">In a round, kill 7 enemies with light machine guns.</div>
+                     <div class="score">Score: +100</div>
+                     <ul class="criteria">
+                         <li><b>{{formatNumber .Values.p07_00}}x</b> awarded</li>
+                     </ul>
+                 </div>
+                 <div class="itemdetails" id="pin_7">
+                     <div class="name">Submachine Gun Efficiency Pin</div>
+                     <img src="/static/img/bfbcs/pins_small/p08.png" alt="Submachine Gun Efficiency Pin" width="75" height="75"/>
+                     <div class="desc">In a round, kill 7 enemies with submachine guns.</div>
+                     <div class="score">Score: +100</div>
+                     <ul class="criteria">
+                         <li><b>{{formatNumber .Values.p08_00}}x</b> awarded</li>
+                     </ul>
+                 </div>
+                 <div class="itemdetails" id="pin_8">
+                     <div class="name">Emplacement Efficiency Pin</div>
+                     <img src="/static/img/bfbcs/pins_small/p09.png" alt="Emplacement Efficiency Pin" width="75" height="75"/>
+                     <div class="desc">In a round, kill 5 enemies with stationary weapons.</div>
+                     <div class="score">Score: +100</div>
+                     <ul class="criteria">
+                         <li><b>{{formatNumber .Values.p09_00}}x</b> awarded</li>
+                     </ul>
+                 </div>
+                 <div class="itemdetails" id="pin_9">
+                     <div class="name">Explosive Efficiency Pin</div>
+                     <img src="/static/img/bfbcs/pins_small/p10.png" alt="Explosive Efficiency Pin" width="75" height="75"/>
+                     <div class="desc">In a round, kill 4 enemies with explosives.</div>
+                     <div class="score">Score: +100</div>
+                     <ul class="criteria">
+                         <li><b>{{formatNumber .Values.p10_00}}x</b> awarded</li>
+                     </ul>
+                 </div>
+                 <div class="itemdetails" id="pin_10">
+                     <div class="name">Melee Efficiency Pin</div>
+                     <img src="/static/img/bfbcs/pins_small/p11.png" alt="Melee Efficiency Pin" width="75" height="75"/>
+                     <div class="desc">In a round, kill 4 enemies with melee weapons.</div>
+                     <div class="score">Score: +200</div>
+                     <ul class="criteria">
+                         <li><b>{{formatNumber .Values.p11_00}}x</b> awarded</li>
+                     </ul>
+                 </div>
+                 <div class="itemdetails" id="pin_11">
+                     <div class="name">Anti Vehicle Efficiency Pin</div>
+                     <img src="/static/img/bfbcs/pins_small/p12.png" alt="Anti Vehicle Efficiency Pin" width="75" height="75"/>
+                     <div class="desc">In a round, destroy 4 enemy vehicles.</div>
+                     <div class="score">Score: +100</div>
+                     <ul class="criteria">
+                         <li><b>{{formatNumber .Values.p12_00}}x</b> awarded</li>
+                     </ul>
+                 </div>
+                 <div class="itemdetails" id="pin_12">
+                     <div class="name">Combat Efficiency Pin</div>
+                     <img src="/static/img/bfbcs/pins_small/p13.png" alt="Combat Efficiency Pin" width="75" height="75"/>
+                     <div class="desc">In a round, reach a kill streak of 6.</div>
+                     <div class="score">Score: +100</div>
+                     <ul class="criteria">
+                         <li><b>{{formatNumber .Values.p13_00}}x</b> awarded</li>
+                     </ul>
+                 </div>
+                 <div class="itemdetails" id="pin_13">
+                     <div class="name">Combat Excellence Pin</div>
+                     <img src="/static/img/bfbcs/pins_small/p14.png" alt="Combat Excellence Pin" width="75" height="75"/>
+                     <div class="desc">In a round, reach a kill streak of 8.</div>
+                     <div class="score">Score: +200</div>
+                     <ul class="criteria">
+                         <li><b>{{formatNumber .Values.p14_00}}x</b> awarded</li>
+                     </ul>
+                 </div>
+                 <div class="itemdetails" id="pin_14">
+                     <div class="name">Kill Assist Pin</div>
+                     <img src="/static/img/bfbcs/pins_small/p15.png" alt="Kill Assist Pin" width="75" height="75"/>
+                     <div class="desc">In a round, do 7 kill assists.</div>
+                     <div class="score">Score: +100</div>
+                     <ul class="criteria">
+                         <li><b>{{formatNumber .Values.p15_00}}x</b> awarded</li>
+                     </ul>
+                 </div>
+                 <div class="itemdetails" id="pin_15">
+                     <div class="name">Savior Pin</div>
+                     <img src="/static/img/bfbcs/pins_small/p16.png" alt="Savior Pin" width="75" height="75"/>
+                     <div class="desc">In a round, do 2 savior kills.</div>
+                     <div class="score">Score: +100</div>
+                     <ul class="criteria">
+                         <li><b>{{formatNumber .Values.p16_00}}x</b> awarded</li>
+                     </ul>
+                 </div>
+                 <div class="itemdetails" id="pin_16">
+                     <div class="name">Avenger Pin</div>
+                     <img src="/static/img/bfbcs/pins_small/p17.png" alt="Avenger Pin" width="75" height="75"/>
+                     <div class="desc">In a round, do 2 avenger kills.</div>
+                     <div class="score">Score: +100</div>
+                     <ul class="criteria">
+                         <li><b>{{formatNumber .Values.p17_00}}x</b> awarded</li>
+                     </ul>
+                 </div>
+                 <div class="itemdetails" id="pin_17">
+                     <div class="name">Marksman Pin</div>
+                     <img src="/static/img/bfbcs/pins_small/p18.png" alt="Marksman Pin" width="75" height="75"/>
+                     <div class="desc">In a round, do 5 headshots.</div>
+                     <div class="score">Score: +100</div>
+                     <ul class="criteria">
+                         <li><b>{{formatNumber .Values.p18_00}}x</b> awarded</li>
+                     </ul>
+                 </div>
+                 <div class="itemdetails" id="pin_18">
+                     <div class="name">Ace Pin</div>
+                     <img src="/static/img/bfbcs/pins_small/p19.png" alt="Ace Pin" width="75" height="75"/>
+                     <div class="desc">In a round, be the best player.</div>
+                     <div class="score">Score: +200</div>
+                     <ul class="criteria">
+                         <li><b>{{formatNumber .Values.p19_00}}x</b> awarded</li>
+                     </ul>
+                 </div>
+                 <div class="itemdetails" id="pin_19">
+                     <div class="name">Gold Squad Pin</div>
+                     <img src="/static/img/bfbcs/pins_small/p20.png" alt="Gold Squad Pin" width="75" height="75"/>
+                     <div class="desc">In a round, be part of the best squad.</div>
+                     <div class="score">Score: +200</div>
+                     <ul class="criteria">
+                         <li><b>{{formatNumber .Values.p20_00}}x</b> awarded</li>
+                     </ul>
+                 </div>
+                 <div class="itemdetails" id="pin_20">
+                     <div class="name">Nemesis Pin</div>
+                     <img src="/static/img/bfbcs/pins_small/p21.png" alt="Nemesis Pin" width="75" height="75"/>
+                     <div class="desc">In a round, kill an enemy 5 times.</div>
+                     <div class="score">Score: +200</div>
+                     <ul class="criteria">
+                         <li><b>{{formatNumber .Values.p21_00}}x</b> awarded</li>
+                     </ul>
+                 </div>
+                 <div class="itemdetails" id="pin_21">
+                     <div class="name">Payback! Pin</div>
+                     <img src="/static/img/bfbcs/pins_small/p22.png" alt="Payback! Pin" width="75" height="75"/>
+                     <div class="desc">In a round, kill your nemesis.</div>
+                     <div class="score">Score: +200</div>
+                     <ul class="criteria">
+                         <li><b>{{formatNumber .Values.p22_00}}x</b> awarded</li>
+                     </ul>
+                 </div>
+                 <div class="itemdetails" id="pin_22">
+                     <div class="name">Squad Member Pin</div>
+                     <img src="/static/img/bfbcs/pins_small/p23.png" alt="Squad Member Pin" width="75" height="75"/>
+                     <div class="desc">In a round, obtain one attack and one defend order.</div>
+                     <div class="score">Score: +200</div>
+                     <ul class="criteria">
+                         <li><b>{{formatNumber .Values.p23_00}}x</b> awarded</li>
+                     </ul>
+                 </div>
+                 <div class="itemdetails" id="pin_23">
+                     <div class="name">Wheels of Hazard Pin</div>
+                     <img src="/static/img/bfbcs/pins_small/p24.png" alt="Wheels of Hazard Pin" width="75" height="75"/>
+                     <div class="desc">In a round, do 3 roadkills with any vehicle.</div>
+                     <div class="score">Score: +200</div>
+                     <ul class="criteria">
+                         <li><b>{{formatNumber .Values.p24_00}}x</b> awarded</li>
+                     </ul>
+                 </div>
+                 <div class="itemdetails" id="pin_24">
+                     <div class="name">Car Warfare Pin</div>
+                     <img src="/static/img/bfbcs/pins_small/p25.png" alt="Car Warfare Pin" width="75" height="75"/>
+                     <div class="desc">In a round, kill 3 enemies with cars.</div>
+                     <div class="score">Score: +100</div>
+                     <ul class="criteria">
+                         <li><b>{{formatNumber .Values.p25_00}}x</b> awarded</li>
+                     </ul>
+                 </div>
+                 <div class="itemdetails" id="pin_25">
+                     <div class="name">Tank Warfare Pin</div>
+                     <img src="/static/img/bfbcs/pins_small/p26.png" alt="Tank Warfare Pin" width="75" height="75"/>
+                     <div class="desc">In a round, kill 7 enemies with tanks.</div>
+                     <div class="score">Score: +100</div>
+                     <ul class="criteria">
+                         <li><b>{{formatNumber .Values.p26_00}}x</b> awarded</li>
+                     </ul>
+                 </div>
+                 <div class="itemdetails" id="pin_26">
+                     <div class="name">Naval Warfare Pin</div>
+                     <img src="/static/img/bfbcs/pins_small/p27.png" alt="Naval Warfare Pin" width="75" height="75"/>
+                     <div class="desc">In a round, kill 2 enemies with sea vehicles.</div>
+                     <div class="score">Score: +100</div>
+                     <ul class="criteria">
+                         <li><b>{{formatNumber .Values.p27_00}}x</b> awarded</li>
+                     </ul>
+                 </div>
+                 <div class="itemdetails" id="pin_27">
+                     <div class="name">Air Warfare Pin</div>
+                     <img src="/static/img/bfbcs/pins_small/p28.png" alt="Air Warfare Pin" width="75" height="75"/>
+                     <div class="desc">In a round, kill 5 enemies with air vehicles.</div>
+                     <div class="score">Score: +100</div>
+                     <ul class="criteria">
+                         <li><b>{{formatNumber .Values.p28_00}}x</b> awarded</li>
+                     </ul>
+                 </div>
+                 <div class="itemdetails" id="pin_28">
+                     <div class="name">M-Com Attacker Pin</div>
+                     <img src="/static/img/bfbcs/pins_small/p29.png" alt="M-Com Attacker Pin" width="75" height="75"/>
+                     <div class="desc">In a round, blow up 4 M-COM stations.</div>
+                     <div class="score">Score: +100</div>
+                     <ul class="criteria">
+                         <li><b>{{formatNumber .Values.p29_00}}x</b> awarded</li>
+                     </ul>
+                 </div>
+                 <div class="itemdetails" id="pin_29">
+                     <div class="name">M-Com Defender Pin</div>
+                     <img src="/static/img/bfbcs/pins_small/p30.png" alt="M-Com Defender Pin" width="75" height="75"/>
+                     <div class="desc">In a round, defend 4 M-COM stations.</div>
+                     <div class="score">Score: +100</div>
+                     <ul class="criteria">
+                         <li><b>{{formatNumber .Values.p30_00}}x</b> awarded</li>
+                     </ul>
+                 </div>
+                 <div class="itemdetails" id="pin_30">
+                     <div class="name">Rush Winner Pin</div>
+                     <img src="/static/img/bfbcs/pins_small/p31.png" alt="Rush Winner Pin" width="75" height="75"/>
+                     <div class="desc">Win a Rush round.</div>
+                     <div class="score">Score: +200</div>
+                     <ul class="criteria">
+                         <li><b>{{formatNumber .Values.p31_00}}x</b> awarded</li>
+                     </ul>
+                 </div>
+                 <div class="itemdetails" id="pin_31">
+                     <div class="name">Conquest Winner Pin</div>
+                     <img src="/static/img/bfbcs/pins_small/p32.png" alt="Conquest Winner Pin" width="75" height="75"/>
+                     <div class="desc">Win a Conquest round.</div>
+                     <div class="score">Score: +200</div>
+                     <ul class="criteria">
+                         <li><b>{{formatNumber .Values.p32_00}}x</b> awarded</li>
+                     </ul>
+                 </div>
+                 <div class="itemdetails" id="pin_32">
+                     <div class="name">Squad Deathmatch Winner Pin</div>
+                     <img src="/static/img/bfbcs/pins_small/p33.png" alt="Squad Deathmatch Winner Pin" width="75" height="75"/>
+                     <div class="desc">Win a Squad Deathmatch round.</div>
+                     <div class="score">Score: +200</div>
+                     <ul class="criteria">
+                         <li><b>{{formatNumber .Values.p33_00}}x</b> awarded</li>
+                     </ul>
+                 </div>
+                 <div class="itemdetails" id="pin_33">
+                     <div class="name">Squad Rush Winner Pin</div>
+                     <img src="/static/img/bfbcs/pins_small/p34.png" alt="Squad Rush Winner Pin" width="75" height="75"/>
+                     <div class="desc">Win a Squad Rush round.</div>
+                     <div class="score">Score: +200</div>
+                     <ul class="criteria">
+                         <li><b>{{formatNumber .Values.p34_00}}x</b> awarded</li>
+                     </ul>
+                 </div>
+                 <div class="itemdetails" id="pin_34">
+                     <div class="name">Flag Attacker Pin</div>
+                     <img src="/static/img/bfbcs/pins_small/p35.png" alt="Flag Attacker Pin" width="75" height="75"/>
+                     <div class="desc">In a round, capture 4 flags.</div>
+                     <div class="score">Score: +100</div>
+                     <ul class="criteria">
+                         <li><b>{{formatNumber .Values.p35_00}}x</b> awarded</li>
+                     </ul>
+                 </div>
+                 <div class="itemdetails" id="pin_35">
+                     <div class="name">Flag Defender Pin</div>
+                     <img src="/static/img/bfbcs/pins_small/p36.png" alt="Flag Defender Pin" width="75" height="75"/>
+                     <div class="desc">In a round, defend 4 flags.</div>
+                     <div class="score">Score: +100</div>
+                     <ul class="criteria">
+                         <li><b>{{formatNumber .Values.p36_00}}x</b> awarded</li>
+                     </ul>
+                 </div>
+                 <div class="itemdetails" id="pin_36">
+                     <div class="name">Resupply Ops Pin</div>
+                     <img src="/static/img/bfbcs/pins_small/p37.png" alt="Resupply Ops Pin" width="75" height="75"/>
+                     <div class="desc">In a round, do 7 resupplies.</div>
+                     <div class="score">Score: +100</div>
+                     <ul class="criteria">
+                         <li><b>{{formatNumber .Values.p37_00}}x</b> awarded</li>
+                     </ul>
+                 </div>
+                 <div class="itemdetails" id="pin_37">
+                     <div class="name">Surveillance Ops Pin</div>
+                     <img src="/static/img/bfbcs/pins_small/p38.png" alt="Surveillance Ops Pin" width="75" height="75"/>
+                     <div class="desc">In a round, do 5 motion mine assists.</div>
+                     <div class="score">Score: +100</div>
+                     <ul class="criteria">
+                         <li><b>{{formatNumber .Values.p38_00}}x</b> awarded</li>
+                     </ul>
+                 </div>
+                 <div class="itemdetails" id="pin_38">
+                     <div class="name">Medical Ops Pin</div>
+                     <img src="/static/img/bfbcs/pins_small/p39.png" alt="Medical Ops Pin" width="75" height="75"/>
+                     <div class="desc">In a round, do 5 revives.</div>
+                     <div class="score">Score: +100</div>
+                     <ul class="criteria">
+                         <li><b>{{formatNumber .Values.p39_00}}x</b> awarded</li>
+                     </ul>
+                 </div>
+                 <div class="itemdetails" id="pin_39">
+                     <div class="name">Maintenance Ops Pin</div>
+                     <img src="/static/img/bfbcs/pins_small/p40.png" alt="Maintenance Ops Pin" width="75" height="75"/>
+                     <div class="desc">In a round, do 7 repairs.</div>
+                     <div class="score">Score: +100</div>
+                     <ul class="criteria">
+                         <li><b>{{formatNumber .Values.p40_00}}x</b> awarded</li>
+                     </ul>
+                 </div>
+                 <div class="itemdetails" id="pin_40">
+                     <div class="name">SPECACT Assault Excellence Pin</div>
+                     <img src="/static/img/bfbcs/pins_small/dp01.png" alt="SPECACT Assault Excellence Pin" width="75" height="75"/>
+                     <div class="desc">In a round, get 8 kills with the M16 SPECACT.</div>
+                     <div class="score">Score: +100</div>
+                     <ul class="criteria">
+                         <li><b>{{formatNumber .Values.dp01_00}}x</b> awarded</li>
+                     </ul>
+                 </div>
+                 <div class="itemdetails" id="pin_41">
+                     <div class="name">SPECACT Engineer Excellence Pin</div>
+                     <img src="/static/img/bfbcs/pins_small/dp02.png" alt="SPECACT Engineer Excellence Pin" width="75" height="75"/>
+                     <div class="desc">In a round, get 8 kills with the UMP SPECACT.</div>
+                     <div class="score">Score: +100</div>
+                     <ul class="criteria">
+                         <li><b>{{formatNumber .Values.dp02_00}}x</b> awarded</li>
+                     </ul>
+                 </div>
+                 <div class="itemdetails" id="pin_42">
+                     <div class="name">SPECACT Medic Excellence Pin</div>
+                     <img src="/static/img/bfbcs/pins_small/dp03.png" alt="SPECACT Medic Excellence Pin" width="75" height="75"/>
+                     <div class="desc">In a round, get 8 kills with the MG3 SPECACT.</div>
+                     <div class="score">Score: +100</div>
+                     <ul class="criteria">
+                         <li><b>{{formatNumber .Values.dp03_00}}x</b> awarded</li>
+                     </ul>
+                 </div>
+                 <div class="itemdetails" id="pin_43">
+                     <div class="name">SPECACT Recon Excellence Pin</div>
+                     <img src="/static/img/bfbcs/pins_small/dp04.png" alt="SPECACT Recon Excellence Pin" width="75" height="75"/>
+                     <div class="desc">In a round, get 8 kills with the M95 SPECACT.</div>
+                     <div class="score">Score: +100</div>
+                     <ul class="criteria">
+                         <li><b>{{formatNumber .Values.dp04_00}}x</b> awarded</li>
+                     </ul>
+                 </div>
+                 <div class="itemdetails" id="pin_44">
+                     <div class="name">M16 SPECACT Efficiency Pin</div>
+                     <img src="/static/img/bfbcs/pins_small/dp05.png" alt="M16 SPECACT Efficiency Pin" width="75" height="75"/>
+                     <div class="desc">Reach a kill streak of 5 with the M16 SPECACT.</div>
+                     <div class="score">Score: +100</div>
+                     <ul class="criteria">
+                         <li><b>{{formatNumber .Values.dp05_00}}x</b> awarded</li>
+                     </ul>
+                 </div>
+                 <div class="itemdetails" id="pin_45">
+                     <div class="name">UMP SPECACT Efficiency Pin</div>
+                     <img src="/static/img/bfbcs/pins_small/dp06.png" alt="UMP SPECACT Efficiency Pin" width="75" height="75"/>
+                     <div class="desc">Reach a kill streak of 5 with the UMP SPECACT.</div>
+                     <div class="score">Score: +100</div>
+                     <ul class="criteria">
+                         <li><b>{{formatNumber .Values.dp06_00}}x</b> awarded</li>
+                     </ul>
+                 </div>
+                 <div class="itemdetails" id="pin_46">
+                     <div class="name">MG3 SPECACT Efficiency Pin</div>
+                     <img src="/static/img/bfbcs/pins_small/dp07.png" alt="MG3 SPECACT Efficiency Pin" width="75" height="75"/>
+                     <div class="desc">Reach a kill streak of 5 with the MG3 SPECACT.</div>
+                     <div class="score">Score: +100</div>
+                     <ul class="criteria">
+                         <li><b>{{formatNumber .Values.dp07_00}}x</b> awarded</li>
+                     </ul>
+                 </div>
+                 <div class="itemdetails" id="pin_47">
+                     <div class="name">M95 SPECACT Efficiency Pin</div>
+                     <img src="/static/img/bfbcs/pins_small/dp08.png" alt="M95 SPECACT Efficiency Pin" width="75" height="75"/>
+                     <div class="desc">Reach a kill streak of 5 with the M95 SPECACT.</div>
+                     <div class="score">Score: +100</div>
+                     <ul class="criteria">
+                         <li><b>{{formatNumber .Values.dp08_00}}x</b> awarded</li>
+                     </ul>
+                 </div>
+             </div>
             <div class="clear"></div>
             <br/>
         </div>

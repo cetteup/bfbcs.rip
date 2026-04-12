@@ -9,6 +9,15 @@ import (
 	"time"
 )
 
+func seq(start, end int) []int {
+	n := end - start
+	s := make([]int, 0, n)
+	for i := 0; i < n; i++ {
+		s = append(s, start+i)
+	}
+	return s
+}
+
 func add(a, b float64) float64 {
 	return a + b
 }
@@ -23,6 +32,10 @@ func div(a, b float64) float64 {
 
 func gt(a, b float64) bool {
 	return a > b
+}
+
+func gte(a, b float64) bool {
+	return a >= b
 }
 
 func formatNumber(value float64) string {
