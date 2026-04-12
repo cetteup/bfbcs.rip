@@ -223,20 +223,7 @@
                         <img src="/static/img/bfbcs/weapons_normal/{{$weapon.Image}}"
                              alt="{{$weapon.Name}}" width="180" height="45">
                         <div class="desc">{{$weapon.Description}}</div>
-                        {{if eq $weapon.IsPistol false}}
-                            <div class="stars bron{{if eq (index $.Values (printf "br%s_00" $weapon.Key)) 0.0}} inactive{{end}}">Bronze
-                                <div>{{index $.Values (printf "c_br%s_%s__kw_g" $weapon.Key $weapon.Key)}}/25</div>
-                            </div>
-                            <div class="stars silv{{if eq (index $.Values (printf "si%s_00" $weapon.Key)) 0.0}} inactive{{end}}">Silver
-                                <div>{{index $.Values (printf "c_si%s_%s__kw_g" $weapon.Key $weapon.Key)}}/50</div>
-                            </div>
-                            <div class="stars {{printf "gold%.0f" (index $.Values (printf "go%s_00" $weapon.Key))}}{{if le (index $.Values (printf "go%s_00" $weapon.Key)) 0.0}} inactive{{end}}">{{if gt (index $.Values (printf "go%s_00" $weapon.Key)) 0.0}}Gold {{printf "%.0f" (index $.Values (printf "go%s_00" $weapon.Key))}}x{{else}}Gold{{end}}
-                                <div>{{index $.Values (printf "c_go%s_%s__kw_g" $weapon.Key $weapon.Key)}}/{{if ge (index $.Values (printf "go%s_00" $weapon.Key)) 9.0}}900{{else}}{{mul (add (index $.Values (printf "go%s_00" $weapon.Key)) 1) 100}}{{end}}</div>
-                            </div>
-                            <div class="stars plat{{if eq (index $.Values (printf "pl%s_00" $weapon.Key)) 0.0}} inactive{{end}}">Platin
-                                <div>{{index $.Values (printf "c_pl%s_%s__kw_g" $weapon.Key $weapon.Key)}}/1000</div>
-                            </div>
-                        {{else}}
+                        {{if $weapon.IsPistol}}
                             <div class="stars bron{{if eq (index $.Values (printf "br%s_00" $weapon.Key)) 0.0}} inactive{{end}}">Bronze
                                 <div>{{index $.Values (printf "c_br%s_%s__kw_g" $weapon.Key $weapon.Key)}}/10</div>
                             </div>
@@ -248,6 +235,19 @@
                             </div>
                             <div class="stars plat{{if eq (index $.Values (printf "pl%s_00" $weapon.Key)) 0.0}} inactive{{end}}">Platin
                                 <div>{{index $.Values (printf "c_pl%s_%s__kw_g" $weapon.Key $weapon.Key)}}/500</div>
+                            </div>
+                        {{else}}
+                            <div class="stars bron{{if eq (index $.Values (printf "br%s_00" $weapon.Key)) 0.0}} inactive{{end}}">Bronze
+                                <div>{{index $.Values (printf "c_br%s_%s__kw_g" $weapon.Key $weapon.Key)}}/25</div>
+                            </div>
+                            <div class="stars silv{{if eq (index $.Values (printf "si%s_00" $weapon.Key)) 0.0}} inactive{{end}}">Silver
+                                <div>{{index $.Values (printf "c_si%s_%s__kw_g" $weapon.Key $weapon.Key)}}/50</div>
+                            </div>
+                            <div class="stars {{printf "gold%.0f" (index $.Values (printf "go%s_00" $weapon.Key))}}{{if le (index $.Values (printf "go%s_00" $weapon.Key)) 0.0}} inactive{{end}}">{{if gt (index $.Values (printf "go%s_00" $weapon.Key)) 0.0}}Gold {{printf "%.0f" (index $.Values (printf "go%s_00" $weapon.Key))}}x{{else}}Gold{{end}}
+                                <div>{{index $.Values (printf "c_go%s_%s__kw_g" $weapon.Key $weapon.Key)}}/{{if ge (index $.Values (printf "go%s_00" $weapon.Key)) 9.0}}900{{else}}{{mul (add (index $.Values (printf "go%s_00" $weapon.Key)) 1) 100}}{{end}}</div>
+                            </div>
+                            <div class="stars plat{{if eq (index $.Values (printf "pl%s_00" $weapon.Key)) 0.0}} inactive{{end}}">Platin
+                                <div>{{index $.Values (printf "c_pl%s_%s__kw_g" $weapon.Key $weapon.Key)}}/1000</div>
                             </div>
                         {{end}}
                     </div>
