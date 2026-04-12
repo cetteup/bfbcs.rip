@@ -16,7 +16,12 @@ import urllib.request
 def fetch_html(url):
     """Fetch HTML content from a URL."""
     try:
-        with urllib.request.urlopen(url, timeout=10) as response:
+        # Create a request with a User-Agent header to avoid 403 errors from Cloudflare
+        headers = {
+            'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
+        }
+        request = urllib.request.Request(url, headers=headers)
+        with urllib.request.urlopen(request, timeout=10) as response:
             charset = response.headers.get_content_charset() or "utf-8"
             return response.read().decode(charset, errors="replace")
     except (urllib.error.URLError, ValueError) as e:
