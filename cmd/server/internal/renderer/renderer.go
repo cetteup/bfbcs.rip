@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"html/template"
 	"io"
+	"math"
 	"path/filepath"
 	"strings"
 
@@ -24,6 +25,7 @@ func NewTemplateRenderer(layouts string, views string) (*TemplateRenderer, error
 			"div":                 div,
 			"gt":                  gt,
 			"gte":                 gte,
+			"min":                 math.Min,
 			"formatNumber":        formatNumber,
 			"formatDuration":      formatDuration,
 			"formatTime":          formatTime,
