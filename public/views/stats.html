@@ -1642,7 +1642,7 @@
                             height="75"/>
                     {{if eq .Values.i11_00 0.0}}
                         <div class="progressbar">
-                            <div class="bar" style="width:{{calculateProgress (add .Values.c_i11___kn_g .Values.c_i11___nik_g) 10}}%"></div>
+                            <div class="bar" style="width:{{calculateProgress (add (min .Values.c_i11___kn_g 5) (min .Values.c_i11___nik_g 5)) 10}}%"></div>
                         </div>
                     {{end}}
                 </div>
@@ -1866,7 +1866,7 @@
                             src="/static/img/bfbcs/insignia_small/i46.png" alt="Squad Medical Ops" width="75" height="75"/>
                     {{if eq .Values.i46_00 0.0}}
                         <div class="progressbar">
-                            <div class="bar" style="width:{{calculateProgress (add .Values.c_i46___sqh_g .Values.c_i46___sqrev_g) 100}}%"></div>
+                            <div class="bar" style="width:{{calculateProgress (add (min .Values.c_i46___sqh_g 50) (min .Values.c_i46___sqrev_g 50)) 100}}%"></div>
                         </div>
                     {{end}}
                 </div>
@@ -1890,7 +1890,7 @@
                             src="/static/img/bfbcs/insignia_small/i49.png" alt="Squad Retaliation Ops" width="75" height="75"/>
                     {{if eq .Values.i49_00 0.0}}
                         <div class="progressbar">
-                            <div class="bar" style="width:{{calculateProgress (add .Values.c_i49___sqa_g .Values.c_i49___sqs_g) 70}}%"></div>
+                            <div class="bar" style="width:{{calculateProgress (add (min .Values.c_i49___sqa_g 20) (min .Values.c_i49___sqs_g 50)) 70}}%"></div>
                         </div>
                     {{end}}
                 </div>
@@ -1898,7 +1898,7 @@
                             src="/static/img/bfbcs/insignia_small/i50.png" alt="Squad Teamwork Ops" width="75" height="75"/>
                     {{if eq .Values.i50_00 0.0}}
                         <div class="progressbar">
-                            <div class="bar" style="width:{{calculateProgress (add .Values.c_i50___sqaob_g .Values.c_i50___sqdob_g) 40}}%"></div>
+                            <div class="bar" style="width:{{calculateProgress (add (min .Values.c_i50___sqaob_g 20) (min .Values.c_i50___sqdob_g 20)) 40}}%"></div>
                         </div>
                     {{end}}
                 </div>
@@ -3089,7 +3089,7 @@
                               src="/static/img/bfbcs/ta_small/ta40.png" alt="Pistol Man" width="75" height="75"/>
                       {{if eq .Values.ta40_00 0.0}}
                           <div class="progressbar">
-                              <div class="bar" style="width:{{calculateProgress (add .Values.c_ta40_m1911__kw_g (add .Values.c_ta40_m93r__kw_g (add .Values.c_ta40_m9__kw_g (add .Values.c_ta40_mp412__kw_g .Values.c_ta40_mp443__kw_g)))) 25}}%"></div>
+                              <div class="bar" style="width:{{calculateProgress (add (min .Values.c_ta40_m1911__kw_g 5) (add (min .Values.c_ta40_m93r__kw_g 5) (add (min .Values.c_ta40_m9__kw_g 5) (add (min .Values.c_ta40_mp412__kw_g 5) (min .Values.c_ta40_mp443__kw_g 5))))) 25}}%"></div>
                           </div>
                       {{end}}
                   </div>
@@ -3141,7 +3141,7 @@
                              src="/static/img/bfbcs/ta_small/ta48.png" alt="Combat Service Support" width="75" height="75"/>
                      {{if eq .Values.ta48_00 0.0}}
                          <div class="progressbar">
-                             <div class="bar" style="width:{{calculateProgress (add .Values.c_ta48___h_g (add .Values.c_ta48___msa_g (add .Values.c_ta48___r_g (add .Values.c_ta48___res_g .Values.c_ta48___rev_g)))) 50}}%"></div>
+                             <div class="bar" style="width:{{calculateProgress (add (min .Values.c_ta48___h_g 10) (add (min .Values.c_ta48___msa_g 10) (add (min .Values.c_ta48___r_g 10) (add (min .Values.c_ta48___res_g 10) (min .Values.c_ta48___rev_g 10))))) 50}}%"></div>
                          </div>
                      {{end}}
                  </div>
@@ -3173,7 +3173,7 @@
                              src="/static/img/bfbcs/ta_small/vta01.png" alt="Can I Go Home Now?" width="75" height="75"/>
                      {{if eq .Values.vta01_00 0.0}}
                          <div class="progressbar">
-                             <div class="bar" style="width:{{calculateProgress (add .Values.c_vta01_win_nam02_outon_g (add .Values.c_vta01_win_nam03_outon_g (add .Values.c_vta01_win_nam05_outon_g .Values.c_vta01_win_nam06_outon_g))) 4}}%"></div>
+                             <div class="bar" style="width:{{calculateProgress (add (min .Values.c_vta01_win_nam02_outon_g 1) (add (min .Values.c_vta01_win_nam03_outon_g 1) (add (min .Values.c_vta01_win_nam05_outon_g 1) (min .Values.c_vta01_win_nam06_outon_g 1)))) 4}}%"></div>
                          </div>
                      {{end}}
                  </div>
@@ -3185,7 +3185,7 @@
                               src="/static/img/bfbcs/ta_small/vta04.png" alt="Doing the Rounds" width="75" height="75"/>
                       {{if eq .Values.vta04_00 0.0}}
                           <div class="progressbar">
-                              <div class="bar" style="width:{{calculateProgress (add .Values.c_vta04__gaz69v_ki_g (add .Values.c_vta04__hueyv_ki_g (add .Values.c_vta04__m15v_ki_g (add .Values.c_vta04__m48v_ki_g (add .Values.c_vta04__pbrv_ki_g .Values.c_vta04__t54v_ki_g))))) 6}}%"></div>
+                              <div class="bar" style="width:{{calculateProgress (add (min .Values.c_vta04__gaz69v_ki_g 1) (add (min .Values.c_vta04__hueyv_ki_g 1) (add (min .Values.c_vta04__m15v_ki_g 1) (add (min .Values.c_vta04__m48v_ki_g 1) (add (min .Values.c_vta04__pbrv_ki_g 1) (min .Values.c_vta04__t54v_ki_g 1)))))) 6}}%"></div>
                           </div>
                       {{end}}
                   </div>
