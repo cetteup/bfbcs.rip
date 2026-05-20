@@ -4,7 +4,7 @@ go 1.26.0
 
 require (
 	github.com/labstack/echo/v5 v5.1.0
-	github.com/rs/zerolog v1.35.0
+	github.com/rs/zerolog v1.35.1
 )
 
 require (
