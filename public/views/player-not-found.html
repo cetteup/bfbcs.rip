@@ -1,0 +1,12 @@
+{{define "content"}}
+    <h1>Player not found - BFBC2 Stats</h1>
+    <div class="cont">
+        The player you searched is currently not in our database.<br/><br/>
+        The player either did not exist on this platform or their stats were not archived.<br/><br/>
+        <h2>Similar Players</h2>
+        {{range .SimilarPlayers}}
+            <a href="/stats_{{.Platform}}/{{.Name}}">{{.Name}}</a>
+            <br/>
+        {{end}}
+    </div>
+{{end}}
