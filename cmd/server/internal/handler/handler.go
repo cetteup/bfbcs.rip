@@ -235,8 +235,9 @@ func (h *Handler) HandleDogtagsGET(c *echo.Context) error {
 		return echo.NewHTTPError(http.StatusBadRequest, http.StatusText(http.StatusBadRequest)).Wrap(err)
 	}
 
-	stats, err := h.client.GetStats(c.Request().Context(), params.Platform, params.Name)
-	if err != nil {
+	stats, serr := h.client.GetStats(c.Request().Context(), params.Platform, params.Name)
+	dogtags, derr := h.client.GetDogtags(c.Request().Context(), params.Platform, params.Name)
+	if err := cmp.Or(serr, derr); err != nil {
 		if errors.Is(err, archive.ErrPlayerNotFound) {
 			players, err2 := h.client.GetPlayers(c.Request().Context(), params.Platform, "*"+params.Name+"*")
 			if err2 != nil {
@@ -254,11 +255,6 @@ func (h *Handler) HandleDogtagsGET(c *echo.Context) error {
 				renderer.With("SimilarPlayers", players),
 			))
 		}
-		return echo.NewHTTPError(http.StatusInternalServerError, http.StatusText(http.StatusInternalServerError)).Wrap(err)
-	}
-
-	dogtags, err := h.client.GetDogtags(c.Request().Context(), params.Platform, params.Name)
-	if err != nil {
 		return echo.NewHTTPError(http.StatusInternalServerError, http.StatusText(http.StatusInternalServerError)).Wrap(err)
 	}
 
