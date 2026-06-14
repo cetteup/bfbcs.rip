@@ -183,7 +183,7 @@ func (h *Handler) HandleStatsGET(c *echo.Context) error {
 		if errors.Is(err, archive.ErrPlayerNotFound) {
 			players, err2 := h.client.GetPlayers(c.Request().Context(), params.Platform, "*"+params.Name+"*")
 			if err2 != nil {
-				return echo.NewHTTPError(http.StatusInternalServerError, http.StatusText(http.StatusInternalServerError)).Wrap(err)
+				return echo.NewHTTPError(http.StatusInternalServerError, http.StatusText(http.StatusInternalServerError)).Wrap(err2)
 			}
 
 			return c.Render(http.StatusNotFound, "default/player-not-found.html", renderer.NewPageContext(
@@ -240,7 +240,7 @@ func (h *Handler) HandleDogtagsGET(c *echo.Context) error {
 		if errors.Is(err, archive.ErrPlayerNotFound) {
 			players, err2 := h.client.GetPlayers(c.Request().Context(), params.Platform, "*"+params.Name+"*")
 			if err2 != nil {
-				return echo.NewHTTPError(http.StatusInternalServerError, http.StatusText(http.StatusInternalServerError)).Wrap(err)
+				return echo.NewHTTPError(http.StatusInternalServerError, http.StatusText(http.StatusInternalServerError)).Wrap(err2)
 			}
 
 			return c.Render(http.StatusNotFound, "default/player-not-found.html", renderer.NewPageContext(
@@ -324,7 +324,7 @@ func (h *Handler) HandleNemesisDogtagsGET(c *echo.Context) error {
 		if errors.Is(err, archive.ErrPlayerNotFound) {
 			players, err2 := h.client.GetPlayers(c.Request().Context(), params.Platform, "*"+params.Name+"*")
 			if err2 != nil {
-				return echo.NewHTTPError(http.StatusInternalServerError, http.StatusText(http.StatusInternalServerError)).Wrap(err)
+				return echo.NewHTTPError(http.StatusInternalServerError, http.StatusText(http.StatusInternalServerError)).Wrap(err2)
 			}
 
 			return c.Render(http.StatusNotFound, "default/player-not-found.html", renderer.NewPageContext(
