@@ -17,6 +17,7 @@ import (
 )
 
 type client interface {
+	GetPlayers(ctx context.Context, platform string, name string) ([]archive.Player, error)
 	GetStats(ctx context.Context, platform string, name string) (archive.StatsResponse, error)
 	GetDogtags(ctx context.Context, platform string, name string) (archive.DogtagsResponse, error)
 }
@@ -180,14 +181,20 @@ func (h *Handler) HandleStatsGET(c *echo.Context) error {
 	stats, err := h.client.GetStats(c.Request().Context(), params.Platform, params.Name)
 	if err != nil {
 		if errors.Is(err, archive.ErrPlayerNotFound) {
-			return c.Render(http.StatusNotFound, "default/stats-not-found.html", renderer.NewPageContext(
+			players, err2 := h.client.GetPlayers(c.Request().Context(), params.Platform, "*"+params.Name+"*")
+			if err2 != nil {
+				return echo.NewHTTPError(http.StatusInternalServerError, http.StatusText(http.StatusInternalServerError)).Wrap(err2)
+			}
+
+			return c.Render(http.StatusNotFound, "default/player-not-found.html", renderer.NewPageContext(
 				renderer.WithPath(c.Request().URL.Path),
-				renderer.WithTitle(fmt.Sprintf("%s - BFBC2 Stats", params.Name)),
+				renderer.WithTitle("Player not found - BFBC2 Stats"),
 				renderer.WithPlatform(params.Platform),
 				renderer.With("Player", archive.Player{
 					Name:     params.Name,
 					Platform: params.Platform,
 				}),
+				renderer.With("SimilarPlayers", players),
 			))
 		}
 		return echo.NewHTTPError(http.StatusInternalServerError, http.StatusText(http.StatusInternalServerError)).Wrap(err)
@@ -232,14 +239,20 @@ func (h *Handler) HandleDogtagsGET(c *echo.Context) error {
 	dogtags, derr := h.client.GetDogtags(c.Request().Context(), params.Platform, params.Name)
 	if err := cmp.Or(serr, derr); err != nil {
 		if errors.Is(err, archive.ErrPlayerNotFound) {
-			return c.Render(http.StatusNotFound, "default/dogtags-not-found.html", renderer.NewPageContext(
+			players, err2 := h.client.GetPlayers(c.Request().Context(), params.Platform, "*"+params.Name+"*")
+			if err2 != nil {
+				return echo.NewHTTPError(http.StatusInternalServerError, http.StatusText(http.StatusInternalServerError)).Wrap(err2)
+			}
+
+			return c.Render(http.StatusNotFound, "default/player-not-found.html", renderer.NewPageContext(
 				renderer.WithPath(c.Request().URL.Path),
-				renderer.WithTitle(fmt.Sprintf("%s - Dogtags", params.Name)),
+				renderer.WithTitle("Player not found - BFBC2 Stats"),
 				renderer.WithPlatform(params.Platform),
 				renderer.With("Player", archive.Player{
 					Name:     params.Name,
 					Platform: params.Platform,
 				}),
+				renderer.With("SimilarPlayers", players),
 			))
 		}
 		return echo.NewHTTPError(http.StatusInternalServerError, http.StatusText(http.StatusInternalServerError)).Wrap(err)
@@ -305,14 +318,20 @@ func (h *Handler) HandleNemesisDogtagsGET(c *echo.Context) error {
 	stats, err := h.client.GetStats(c.Request().Context(), params.Platform, params.Name)
 	if err != nil {
 		if errors.Is(err, archive.ErrPlayerNotFound) {
-			return c.Render(http.StatusNotFound, "default/nemesis-dogtags-not-found.html", renderer.NewPageContext(
+			players, err2 := h.client.GetPlayers(c.Request().Context(), params.Platform, "*"+params.Name+"*")
+			if err2 != nil {
+				return echo.NewHTTPError(http.StatusInternalServerError, http.StatusText(http.StatusInternalServerError)).Wrap(err2)
+			}
+
+			return c.Render(http.StatusNotFound, "default/player-not-found.html", renderer.NewPageContext(
 				renderer.WithPath(c.Request().URL.Path),
-				renderer.WithTitle(fmt.Sprintf("%s - Nemesis Dogtags", params.Name)),
+				renderer.WithTitle("Player not found - BFBC2 Stats"),
 				renderer.WithPlatform(params.Platform),
 				renderer.With("Player", archive.Player{
 					Name:     params.Name,
 					Platform: params.Platform,
 				}),
+				renderer.With("SimilarPlayers", players),
 			))
 		}
 		return echo.NewHTTPError(http.StatusInternalServerError, http.StatusText(http.StatusInternalServerError)).Wrap(err)

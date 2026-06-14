@@ -11,7 +11,7 @@ import (
 )
 
 const (
-	BaseURL = "https://api.battlefield.rip/archive/bfbc2/players/"
+	BaseURL = "https://api.battlefield.rip/archive/bfbc2/"
 )
 
 var (
@@ -51,13 +51,48 @@ func NewClient(baseURL string) *Client {
 	}
 }
 
+func (c *Client) GetPlayers(ctx context.Context, platform string, name string) ([]Player, error) {
+	u, err := url.Parse(c.baseURL)
+	if err != nil {
+		return nil, err
+	}
+
+	u = u.JoinPath("players")
+
+	q := u.Query()
+	q.Set("platform", platform)
+	q.Set("name", name)
+	q.Set("perPage", "100")
+	u.RawQuery = q.Encode()
+
+	req, err := http.NewRequestWithContext(ctx, http.MethodGet, u.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	body, err := c.do(req)
+	if err != nil {
+		return nil, err
+	}
+
+	var resp struct {
+		Players []Player `json:"players"`
+		HasMore bool     `json:"hasMore"`
+	}
+	if err = json.Unmarshal(body, &resp); err != nil {
+		return nil, err
+	}
+
+	return resp.Players, nil
+}
+
 func (c *Client) GetStats(ctx context.Context, platform string, name string) (StatsResponse, error) {
 	u, err := url.Parse(c.baseURL)
 	if err != nil {
 		return StatsResponse{}, err
 	}
 
-	u = u.JoinPath(platform, name, "stats")
+	u = u.JoinPath("players", platform, name, "stats")
 
 	q := u.Query()
 	q.Set("keySet", "all")
@@ -90,7 +125,7 @@ func (c *Client) GetDogtags(ctx context.Context, platform string, name string) (
 		return DogtagsResponse{}, err
 	}
 
-	u = u.JoinPath(platform, name, "dogtags")
+	u = u.JoinPath("players", platform, name, "dogtags")
 
 	req, err := http.NewRequestWithContext(ctx, http.MethodGet, u.String(), nil)
 	if err != nil {
